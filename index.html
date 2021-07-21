@@ -255,6 +255,12 @@ var map = new mapboxgl.Map({
     transformRequest: transformRequest
 });
 
+// Add zoom and rotation controls to the map.
+map.addControl(new mapboxgl.NavigationControl());
+
+// Enable map panning
+map.dragPan.enable();
+
 if (config.showMarkers) {
     var marker = new mapboxgl.Marker({ color: config.markerColor });
     marker.setLngLat(config.chapters[0].location.center).addTo(map);
