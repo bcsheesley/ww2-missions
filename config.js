@@ -27,17 +27,18 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
-                // {
-                //     layer: 'layer-name',
-                //     opacity: 1,
-                //     duration: 5000
-                // }
+                {
+                    layer: 'route',
+                    opacity: 1,
+                    duration: 300
+                }
             ],
             onChapterExit: [
-                // {
-                //     layer: 'layer-name',
-                //     opacity: 0
-                // }
+                {
+                    layer: 'route',
+                    opacity: 0,
+                    duration: 300
+                }
             ]
         },
         {

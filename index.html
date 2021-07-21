@@ -115,6 +115,7 @@
 <div id="map"></div>
 <div id="story"></div>
 <script src="./config.js"></script>
+<script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
 <script>
 var layerTypes = {
     'fill': ['fill-opacity'],
@@ -265,6 +266,45 @@ map.dragRotate.enable();
 map.touchPitch.enable();
 map.touchZoomRotate.enable();
 
+// Mendlesham
+var origin = [1.079760, 52.249163];
+ 
+// Berlin
+var destination = [13.404954, 52.520006];
+ 
+// A simple line from origin to destination.
+var route = {
+    'type': 'FeatureCollection',
+    'features': [
+        {
+            'type': 'Feature',
+            'geometry': {
+                'type': 'LineString',
+                'coordinates': [origin, destination]
+            }
+        }
+    ]
+};
+
+// Calculate the distance in kilometers between route start/end point.
+var lineDistance = turf.length(route.features[0]);
+ 
+var arc = [];
+ 
+// Number of steps to use in the arc and animation, more steps means
+// a smoother arc and animation, but too many steps will result in a
+// low frame rate
+var steps = 500;
+ 
+// Draw an arc between the `origin` & `destination` of the two points
+for (var i = 0; i < lineDistance; i += lineDistance / steps) {
+    var segment = turf.along(route.features[0], i);
+    arc.push(segment.geometry.coordinates);
+}
+ 
+// Update the route with calculated arc coordinates
+route.features[0].geometry.coordinates = arc;
+
 if (config.showMarkers) {
     var marker = new mapboxgl.Marker({ color: config.markerColor });
     marker.setLngLat(config.chapters[0].location.center).addTo(map);
@@ -272,6 +312,23 @@ if (config.showMarkers) {
 
 // instantiate the scrollama
 var scroller = scrollama();
+
+map.on('load', function() {
+    // Add a source and layer displaying a line
+    map.addSource('route', {
+        'type': 'geojson',
+        'data': route
+    });
+    map.addLayer({
+        'id': 'route',
+        'source': 'route',
+        'type': 'line',
+        'paint': {
+            'line-width': 2,
+            'line-color': '#007cbf'
+        }
+    });
+});
 
 map.on("load", function() {
     if (config.use3dTerrain) {
