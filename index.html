@@ -261,6 +261,9 @@ map.addControl(new mapboxgl.NavigationControl());
 // Enable map panning
 map.dragPan.enable();
 
+// Enable double-click to zoom
+map.doubleClickZoom.enable();
+
 if (config.showMarkers) {
     var marker = new mapboxgl.Marker({ color: config.markerColor });
     marker.setLngLat(config.chapters[0].location.center).addTo(map);
