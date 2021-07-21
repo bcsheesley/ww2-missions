@@ -258,11 +258,12 @@ var map = new mapboxgl.Map({
 // Add zoom and rotation controls to the map.
 map.addControl(new mapboxgl.NavigationControl());
 
-// Enable map panning
+// Enable interaction handlers
 map.dragPan.enable();
-
-// Enable double-click to zoom
 map.doubleClickZoom.enable();
+map.dragRotate.enable();
+map.touchPitch.enable();
+map.touchZoomRotate.enable();
 
 if (config.showMarkers) {
     var marker = new mapboxgl.Marker({ color: config.markerColor });
