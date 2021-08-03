@@ -895,6 +895,15 @@ map.on('load', function() {
             'line-color': '#007cbf'
         }
     });
+    map.addLayer({
+        'id': 'routeBerlinActive',
+        'source': 'routeBerlin',
+        'type': 'line',
+        'paint': {
+            'line-width': 12,
+            'line-color': '#00ffff'
+        }
+    });
 });
 
 map.on('load', function() {
