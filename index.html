@@ -269,41 +269,62 @@ map.touchZoomRotate.enable();
 // Mendlesham
 var origin = [1.079760, 52.249163];
  
-// Berlin
-var destination = [13.404954, 52.520006];
+// Destinations
+var berlin = [13.404954, 52.520006];
+var kassel = [9.4797461, 51.3127114];
  
-// A simple line from origin to destination.
-var route = {
+// Simple lines from the origin to each destination.
+var routeBerlin = {
     'type': 'FeatureCollection',
     'features': [
         {
             'type': 'Feature',
             'geometry': {
                 'type': 'LineString',
-                'coordinates': [origin, destination]
+                'coordinates': [origin, berlin]
+            }
+        }
+    ]
+};
+var routeKassel = {
+    'type': 'FeatureCollection',
+    'features': [
+        {
+            'type': 'Feature',
+            'geometry': {
+                'type': 'LineString',
+                'coordinates': [origin, kassel]
             }
         }
     ]
 };
 
-// Calculate the distance in kilometers between route start/end point.
-var lineDistance = turf.length(route.features[0]);
+// Calculate the distance in kilometers between route start/end points.
+var lineDistanceBerlin = turf.length(routeBerlin.features[0]);
+var lineDistanceKassel = turf.length(routeKassel.features[0]);
  
-var arc = [];
+var arcBerlin = [];
+var arcKassel = [];
  
 // Number of steps to use in the arc and animation, more steps means
 // a smoother arc and animation, but too many steps will result in a
 // low frame rate
-var steps = 500;
+var stepsBerlin = 500;
+var stepsKassel = 500;
  
 // Draw an arc between the `origin` & `destination` of the two points
-for (var i = 0; i < lineDistance; i += lineDistance / steps) {
-    var segment = turf.along(route.features[0], i);
-    arc.push(segment.geometry.coordinates);
+for (var i = 0; i < lineDistanceBerlin; i += lineDistanceBerlin / stepsBerlin) {
+    var segmentBerlin = turf.along(routeBerlin.features[0], i);
+    arcBerlin.push(segmentBerlin.geometry.coordinates);
+}
+for (var i = 0; i < lineDistanceKassel; i += lineDistanceKassel / stepsKassel) {
+    var segmentKassel = turf.along(routeKassel.features[0], i);
+    arcKassel.push(segmentKassel.geometry.coordinates);
 }
  
 // Update the route with calculated arc coordinates
-route.features[0].geometry.coordinates = arc;
+routeBerlin.features[0].geometry.coordinates = arcBerlin;
+routeKassel.features[0].geometry.coordinates = arcKassel;
 
 if (config.showMarkers) {
     var marker = new mapboxgl.Marker({ color: config.markerColor });
@@ -315,13 +336,30 @@ var scroller = scrollama();
 
 map.on('load', function() {
     // Add a source and layer displaying a line
-    map.addSource('route', {
+    map.addSource('routeBerlin', {
         'type': 'geojson',
-        'data': route
+        'data': routeBerlin
     });
     map.addLayer({
-        'id': 'route',
-        'source': 'route',
+        'id': 'routeBerlin',
+        'source': 'routeBerlin',
+        'type': 'line',
+        'paint': {
+            'line-width': 2,
+            'line-color': '#007cbf'
+        }
+    });
+});
+
+map.on('load', function() {
+    // Add a source and layer displaying a line
+    map.addSource('routeKassel', {
+        'type': 'geojson',
+        'data': routeKassel
+    });
+    map.addLayer({
+        'id': 'routeKassel',
+        'source': 'routeKassel',
         'type': 'line',
         'paint': {
             'line-width': 2,

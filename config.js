@@ -5,13 +5,54 @@ var config = {
     markerColor: '#3FB1CE',
     theme: 'light',
     use3dTerrain: false,
-    title: 'The Title Text of this Story',
-    subtitle: 'A descriptive and interesting subtitle to draw in the reader',
-    byline: 'By a Digital Storyteller',
+    title: '',
+    subtitle: '',
+    byline: '',
     footer: 'Source: source citations, etc.',
     chapters: [
         {
-            id: 'slug-style-id',
+            id: 'overview',
+            alignment: 'left',
+            hidden: false,
+            title: 'Display Title',
+            image: './path/to/image/source.png',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            location: {
+                center: [10.05168, 51.11306],
+                zoom: 5,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [
+                {
+                    layer: 'routeBerlin',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeKassel',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routeBerlin',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeKassel',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: 'mendlesham',
             alignment: 'left',
             hidden: false,
             title: 'Display Title',
@@ -28,14 +69,24 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {
-                    layer: 'route',
+                    layer: 'routeBerlin',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeKassel',
                     opacity: 1,
                     duration: 300
                 }
             ],
             onChapterExit: [
                 {
-                    layer: 'route',
+                    layer: 'routeBerlin',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeKassel',
                     opacity: 0,
                     duration: 300
                 }
