@@ -33,7 +33,137 @@ var config = {
                     duration: 300
                 },
                 {
+                    layer: 'routeDarmstadt',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeHanover',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeAndernach',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
                     layer: 'routeKassel',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeMisburg',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routePforzheim',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeBielefeld',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeCologne',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeDerben',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeAugsburg',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeBitterfeld',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeDuisburg',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeDulmen',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeCottbus',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeBremen',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeLudwigsfelde',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeDresden',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeDedenhausen',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeDatteln',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeSoest',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeHamburg',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeSwinoujscie',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeJena',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeMarxen',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeRatingen',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeGeisecke',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeBadZwischenahn',
                     opacity: 1,
                     duration: 300
                 }
@@ -45,7 +175,137 @@ var config = {
                     duration: 300
                 },
                 {
+                    layer: 'routeDarmstadt',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeHanover',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeAndernach',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
                     layer: 'routeKassel',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeMisburg',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routePforzheim',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeBielefeld',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeCologne',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeDerben',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeAugsburg',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeBitterfeld',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeDuisburg',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeDulmen',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeCottbus',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeBremen',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeLudwigsfelde',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeDresden',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeDedenhausen',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeDatteln',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeSoest',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeHamburg',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeSwinoujscie',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeJena',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeMarxen',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeRatingen',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeGeisecke',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeBadZwischenahn',
                     opacity: 0,
                     duration: 300
                 }
