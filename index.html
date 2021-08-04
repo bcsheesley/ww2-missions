@@ -86,9 +86,10 @@
         }
 
         .step div {
-            padding:  25px 50px;
+            padding:  10px 25px;
             line-height: 25px;
             font-size: 13px;
+            border-radius: 10px;
         }
 
         .step img {
@@ -196,6 +197,10 @@ config.chapters.forEach((record, idx) => {
         var image = new Image();
         image.src = record.image;
         chapter.appendChild(image);
+    }
+    
+    if (record.imageId) {
+        image.id = record.imageId;
     }
 
     if (record.description) {
