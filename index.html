@@ -100,6 +100,12 @@
                 margin: 0 auto;
             }
         }
+        
+        //popup
+        .mapboxgl-popup {
+            max-width: 400px;
+            font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        }
 
         /* Fix issue on mobile browser where scroll breaks  */
         .mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan, 
@@ -1813,6 +1819,36 @@ map.on("load", function() {
         if (chapter.onChapterExit.length > 0) {
             chapter.onChapterExit.forEach(setLayerOpacity);
         }
+    });
+    
+    // Create a popup, but don't add it to the map yet.
+    var popup = new mapboxgl.Popup({
+        closeButton: false,
+        closeOnClick: false
+        });
+        
+    map.on('mouseenter', 'missions', function (e) {
+        // Change the cursor style as a UI indicator.
+        map.getCanvas().style.cursor = 'pointer';
+         
+        var coordinates = e.features[0].geometry.coordinates.slice();
+        var name = e.features[0].properties.name;
+         
+        // Ensure that if the map is zoomed out such that multiple
+        // copies of the feature are visible, the popup appears
+        // over the copy being pointed to.
+        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        }
+         
+        // Populate the popup and set its coordinates
+        // based on the feature found.
+        popup.setLngLat(coordinates).setHTML(name).addTo(map);
+        });
+         
+        map.on('mouseleave', 'missions', function () {
+        map.getCanvas().style.cursor = '';
+        popup.remove();
     });
 });
 
