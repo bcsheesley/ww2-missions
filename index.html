@@ -1844,9 +1844,9 @@ map.on("load", function() {
         // Populate the popup and set its coordinates
         // based on the feature found.
         popup.setLngLat(coordinates).setHTML(name).addTo(map);
-        });
+    });
          
-        map.on('mouseleave', 'missions', function () {
+    map.on('mouseleave', 'missions', function () {
         map.getCanvas().style.cursor = '';
         popup.remove();
     });
