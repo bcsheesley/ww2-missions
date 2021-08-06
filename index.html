@@ -142,7 +142,7 @@
             margin: auto;
             display: block;
             width: 80%;
-            max-width: 700px;
+            //max-width: 700px;
         }
     
         /* Caption of Modal Image */
@@ -1871,6 +1871,8 @@ var modal = document.getElementById("myModal");
 // Get the image and insert it inside the modal - use its "alt" text as a caption
 var img1 = document.getElementById("osmImage");
 var img2 = document.getElementById("tools");
+var dec5a = document.getElementById("dec5a");
+var dec5b = document.getElementById("dec5b");
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
 
@@ -1884,6 +1886,18 @@ img2.onclick = function(){
     modal.style.display = "block";
     modalImg.src = this.src;
     captionText.innerHTML = this.alt;
+}
+
+dec5a.onclick = function(){
+   modal.style.display = "block";
+   modalImg.src = this.src;
+   captionText.innerHTML = this.alt;
+}
+
+dec5b.onclick = function(){
+   modal.style.display = "block";
+   modalImg.src = this.src;
+   captionText.innerHTML = this.alt;
 }
     
 // Get the <span> element that closes the modal
