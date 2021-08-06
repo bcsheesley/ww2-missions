@@ -11,15 +11,15 @@ var config = {
     footer: 'Source: source citations, etc.',
     chapters: [
         {
-            id: 'overview',
+            id: 'overview-1',
             alignment: 'left',
             hidden: false,
             title: ' ',
-            image: './images/osm.png',
-            imageId: 'osmImage',
+            image: './images/id-card-front.jpeg',
+            imageId: 'idCardFront',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             location: {
-                center: [10.05168, 51.11306],
+                center: [1.17528, 52.23786],
                 zoom: 5,
                 pitch: 0,
                 bearing: 0
@@ -34,9 +34,9 @@ var config = {
             id: 'mendlesham',
             alignment: 'left',
             hidden: false,
-            title: 'Mendlesham',
-            image: './images/tools.png',
-            imageId: 'tools',
+            title: 'The Missions',
+            image: './images/missions-card.jpeg',
+            imageId: 'missions',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             location: {
                 center: [1.17528, 52.23786],

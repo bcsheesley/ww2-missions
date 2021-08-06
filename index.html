@@ -1869,23 +1869,23 @@ window.addEventListener('resize', scroller.resize);
 var modal = document.getElementById("myModal");
 
 // Get the image and insert it inside the modal - use its "alt" text as a caption
-var img1 = document.getElementById("osmImage");
-var img2 = document.getElementById("tools");
+var idCardFront = document.getElementById("idCardFront");
+var missions = document.getElementById("missions");
 var dec5a = document.getElementById("dec5a");
 var dec5b = document.getElementById("dec5b");
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
 
-img1.onclick = function(){
+idCardFront.onclick = function(){
     modal.style.display = "block";
     modalImg.src = this.src;
     captionText.innerHTML = this.alt;
 }
 
-img2.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
+missions.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
 }
 
 dec5a.onclick = function(){
