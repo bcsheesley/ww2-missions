@@ -66,9 +66,9 @@ var config = {
             description: 'I was awakened at 0400 expecting to ride as copilot for my 1st mission. At the briefing block I was surprised, alarmed and frightened when I learned that we would go as a crew and I didn\'t know the score at all and had never flown above 20,000 ft. In a daze we went to our ship and somehow got ready and took off. After what seemed ages the formation got together in a pre-dawn assembly and away we went for BERLIN. On the climb we stayed right in. Then we leveled off for the run in and it happened. That which is most disastrous happened—we fell behind. Opening her wide open we oh! so slowly crept back up. Come the IP and it happened again. I took over the ship again—the bombays were open—target just ahead—we had to get back in! If fighters hit we would have been sunk. All our hearts were pounding—nerves at the break point-sweat rolling at 40° below. I quickly turned on the emergency turbo and the engines were giving all they had—they shook and shuddered and whined as if to say "we can\'t take this long." We were pulling 54" and I wondered how long those engines would hold. We just didn\'t seem to gain a bit, but kept falling back & dropping. Finally we were down with the low element when we stopped losing. I uttered a little prayer and as a plant grows...',
             location: {
                 center: [13.39272, 52.51166],
-                zoom: 12,
-                pitch: 80,
-                bearing: 102
+                zoom: 10,
+                pitch: 0,
+                bearing: 0
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
@@ -92,9 +92,9 @@ var config = {
             description: '...the airspeed moved to 140, then 141, then 142; it seemed to stop and my heart seemed to stop then it moved to 145 and we began to move up again. Carefully I lifted her up as we gained on our lead. Just as we dropped the bombs we got back in place, but low. That was it—the quick turn to escape flack and we were homeward bound. The 10 minutes from the IP to the target were the longest and most tense, exhausting ones of my life. At the Rally point I looked down just in time to see a lone B-17 spin down through the clouds below. When we landed the squadron C.O. and all were there to meet us. Then we realized that, as I suspected, we had been sent by mistake—a green crew. They didn\'t think we would make it—we weren\'t even operational yet. "We had it!" Brydge was so frightened he made only 3 entries in his log: "(1) took off (2) Bombs away (3) landed." The hot cocoa sure tasted good. Next day we went on pass and sure needed it!',
             location: {
                 center: [13.39272, 52.51166],
-                zoom: 12,
-                pitch: 80,
-                bearing: 102
+                zoom: 10,
+                pitch: 0,
+                bearing: 0
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
@@ -108,5 +108,40 @@ var config = {
         ],
             onChapterExit: []
         },
+        {
+            id: 'kassel',
+            alignment: 'left',
+            hidden: false,
+            title: 'Kassel, 12/30/1944',
+            image: './images/journal/19441230.jpeg',
+            imageId: 'dec30',
+            description: '#5 Briefing this morning was at 04:00. Our target for today was a marshalling yard at [crossed out] Castle [end crossed out] Kassel, Germany. We took off and hit a low ceiling and climbed in solid overcast up to 11,000 ft. Our position was 4–3 in High squadron. Overcast 10/10 over target—results not observed. Flack was dense and we got our first hits. Our gas tank in right wing had to be replaced upon return. Oxygen system was leaking and was empty as we reached 10,000\' on descending—sweating it out. Visibility very poor upon return—we made 6 passes at field before getting in. Went to bed at 20:00 hours.',
+            location: {
+                center: [9.4797461, 51.3127114],
+                zoom: 10,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [
+            {
+                layer: 'routeBerlinActive',
+                opacity: 0,
+                duration: 300
+            },
+            {
+                layer: 'routeKasselActive',
+                opacity: 0.8,
+                duration: 300
+            }
+        ],
+            onChapterExit: [{
+                layer: 'routeKasselActive',
+                opacity: 0,
+                duration: 300
+            }]
+        }
     ]
 };

@@ -1110,7 +1110,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 12,
             'line-opacity': 0,
-            'line-color': '#007cbf'
+            'line-color': '#00ffff'
         }
     });
 });
@@ -1873,6 +1873,7 @@ var idCardFront = document.getElementById("idCardFront");
 var missions = document.getElementById("missions");
 var dec5a = document.getElementById("dec5a");
 var dec5b = document.getElementById("dec5b");
+var dec30 = document.getElementById("dec30");
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
 
@@ -1895,6 +1896,12 @@ dec5a.onclick = function(){
 }
 
 dec5b.onclick = function(){
+   modal.style.display = "block";
+   modalImg.src = this.src;
+   captionText.innerHTML = this.alt;
+}
+
+dec30.onclick = function(){
    modal.style.display = "block";
    modalImg.src = this.src;
    captionText.innerHTML = this.alt;
