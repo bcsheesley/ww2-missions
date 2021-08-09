@@ -45,6 +45,24 @@
             position: relative;
             z-index: 5;
         }
+        #chapterList {
+          width: 300px;
+          min-height: 5vh;
+          padding-top: 2vh;
+          padding-bottom: 2vh;
+          text-align: center;
+          line-height: 25px;
+          font-size: 13px;
+          position: sticky;
+          position: -webkit-sticky;
+          top: 0;
+          float: right;
+        }
+        
+        #chapterList a {
+          display: block;
+        }
+        
         #features {
             padding-top: 10vh;
             padding-bottom: 10vh;
@@ -115,18 +133,18 @@
 
         img {
             border-radius: 5px;
-            cursor: pointer;
             transition: 0.3s;
         }
-        img:hover {
+        #features img:hover {
             opacity: 0.7;
+            cursor: pointer;
         }
     
         /* The Modal (background) */
         .modal {
             display: none; /* Hidden by default */
             position: fixed; /* Stay in place */
-            z-index: 1; /* Sit on top */
+            z-index: 9999; /* Sit on top */
             padding-top: 100px; /* Location of the box */
             left: 0;
             top: 0;
@@ -205,8 +223,17 @@
 
 <div id="map"></div>
 <div id="story"></div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
 <script src="./config.js"></script>
 <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+
 <script>
 var layerTypes = {
     'fill': ['fill-opacity'],
@@ -249,6 +276,11 @@ features.setAttribute('id', 'features');
 
 var header = document.createElement('div');
 
+var chapterList = document.createElement('div');
+chapterList.setAttribute('id', 'chapterList');
+chapterList.classList.add('light');
+features.appendChild(chapterList);
+
 if (config.title) {
     var titleText = document.createElement('h1');
     titleText.innerText = config.title;
@@ -276,6 +308,13 @@ if (header.innerText.length > 0) {
 config.chapters.forEach((record, idx) => {
     var container = document.createElement('div');
     var chapter = document.createElement('div');
+
+    if (record.title) {
+      var listItem = document.createElement('a');
+      listItem.innerText = record.title;
+      chapterList.appendChild(listItem);
+      listItem.href = '#' + record.id;
+    }
 
     if (record.title) {
         var title = document.createElement('h3');
@@ -352,14 +391,14 @@ var map = new mapboxgl.Map({
 });
 
 // Add zoom and rotation controls to the map.
-map.addControl(new mapboxgl.NavigationControl());
+//map.addControl(new mapboxgl.NavigationControl());
 
 // Enable interaction handlers
 map.dragPan.enable();
 map.doubleClickZoom.enable();
-map.dragRotate.enable();
-map.touchPitch.enable();
-map.touchZoomRotate.enable();
+//map.dragRotate.enable();
+//map.touchPitch.enable();
+//map.touchZoomRotate.enable();
 
 // Mendlesham
 var origin = [1.079760, 52.249163];
@@ -1856,13 +1895,6 @@ map.on("load", function() {
 window.addEventListener('resize', scroller.resize);
 
 </script>
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
 
 <script>
 // Get the modal
