@@ -45,10 +45,9 @@
             position: relative;
             z-index: 5;
         }
-        #chapterList {
-          height: 100vh;
-          min-height: 5vh;
-          padding: 2vh;
+        #chapterListContainer {
+          //min-height: 5vh;
+          //padding: 2vh;
           text-align: right;
           line-height: 25px;
           font-size: 13px;
@@ -56,11 +55,46 @@
           position: -webkit-sticky;
           top: 0;
           float: right;
+          overflow: hidden;
+        }
+        
+        .chapterListMenu {
+          position: relative;
+          right: 0px;
+          background-color: rgba(68,68,68,0.9);
+          transition: right linear .2s;
+        }
+        
+        .open {
+          right: -200px;
+          transition: right linear .2s;
+        }
+        
+        .menuButton {
+          transition: transform 0.1s;
+          margin: 0;
+          display: inline-block;
+        }
+        
+        .menuButton.activeState {
+          transform: rotate(45deg);
+        }
+        
+        .chapterListMenu a {
+          display: block;
+        }
+        
+        .toggleMenu {
+          color: #fff;
+          z-index: 9999;
+          font-size: 53px;
+          text-align: right;
+          line-height: 55px;
           background-color: rgba(68,68,68,0.9);
         }
         
-        #chapterList a {
-          display: block;
+        #chapterListContainer {
+          float: right;
         }
         
         #features {
@@ -204,8 +238,8 @@
             transition: 0.3s;
         }
         
-        .close:hover,
-        .close:focus {
+        .close:hover, .menuButton:hover,
+        .close:focus, .menuButton:focus {
             color: #bbb;
             text-decoration: none;
             cursor: pointer;
@@ -217,7 +251,7 @@
                 width: 100%;
             }
            /* Hide chapter nav for mobile */
-            #chapterList {
+            .chapterListMenu, .toggleMenu {
               display: none;
             }
         }
@@ -275,18 +309,29 @@ function setLayerOpacity(layer) {
 }
 
 var story = document.getElementById('story');
+
 var features = document.createElement('div');
-features.setAttribute('id', 'features');
-
 var header = document.createElement('div');
-
-var chapterList = document.createElement('div');
+var chapterListContainer = document.createElement('div');
+var chapterListMenu = document.createElement('div');
 var close = document.createElement('span');
-chapterList.setAttribute('id', 'chapterList');
+var toggleMenu = document.createElement('div');
+var menuButton = document.createElement('p');
+
+features.setAttribute('id', 'features');
+chapterListContainer.setAttribute('id', 'chapterListContainer');
+chapterListMenu.setAttribute('class', 'chapterListMenu');
 close.setAttribute('class', 'close');
+toggleMenu.setAttribute('class', 'toggleMenu');
+menuButton.setAttribute('class', 'menuButton');
+
 close.innerHTML = '&times;';
-features.appendChild(chapterList);
-chapterList.appendChild(close);
+menuButton.innerHTML = '&times;';
+
+features.appendChild(chapterListContainer);
+chapterListContainer.appendChild(toggleMenu);
+toggleMenu.appendChild(menuButton);
+chapterListContainer.appendChild(chapterListMenu);
 
 if (config.title) {
     var titleText = document.createElement('h1');
@@ -319,7 +364,7 @@ config.chapters.forEach((record, idx) => {
     if (record.title) {
       var listItem = document.createElement('a');
       listItem.innerText = record.title;
-      chapterList.appendChild(listItem);
+      chapterListMenu.appendChild(listItem);
       listItem.href = '#' + record.id;
     }
 
@@ -385,6 +430,22 @@ const transformRequest = (url) => {
       url: url + suffix
     }
 }
+
+//var test = document.getElementsByClassName("menuButton")[0];
+
+// When the user clicks on the menu button, close the menu
+//test.onclick = function() { 
+    //chapterListMenu.style.display = "none";
+//}
+
+
+var menuButton = document.getElementsByClassName("menuButton")[0];
+
+menuButton.onclick = function(){
+  chapterListMenu.classList.toggle("open");
+  menuButton.classList.toggle("activeState");
+};
+
 
 var map = new mapboxgl.Map({
     container: 'map',
@@ -1949,15 +2010,15 @@ dec30.onclick = function(){
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 var modal = document.getElementsByClassName("modal")[0];
-    
+
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() { 
     modal.style.display = "none";
-    chapterList.style.display = "none";
 }
 modal.onclick = function() { 
     modal.style.display = "none";
 }
+
 </script>
 
 </body>
