@@ -3,7 +3,7 @@ var config = {
     accessToken: 'pk.eyJ1IjoiYmNzaGVlc2xleSIsImEiOiJja3JiNXY5ZDIwMTI0MnFwZnNvYTVuZHN5In0.X4Nj3sDbgu-1yAM_T8ymUg',
     showMarkers: false,
     markerColor: '#3FB1CE',
-    theme: 'light',
+    theme: 'dark',
     use3dTerrain: false,
     title: 'The Mendlesham Journal',
     subtitle: 'December 1944 - March  1945',

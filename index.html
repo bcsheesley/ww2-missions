@@ -15,7 +15,7 @@
             font-family: sans-serif;
         }
         a, a:hover, a:visited {
-            color: #0071bc;
+            color: #fff;
         }
         #map {
             top:0;
@@ -46,17 +46,17 @@
             z-index: 5;
         }
         #chapterList {
-          width: 300px;
+          height: 100vh;
           min-height: 5vh;
-          padding-top: 2vh;
-          padding-bottom: 2vh;
-          text-align: center;
+          padding: 2vh;
+          text-align: right;
           line-height: 25px;
           font-size: 13px;
           position: sticky;
           position: -webkit-sticky;
           top: 0;
           float: right;
+          background-color: rgba(68,68,68,0.9);
         }
         
         #chapterList a {
@@ -212,9 +212,13 @@
         }
         
         /* 100% Image Width on Smaller Screens */
-        @media only screen and (max-width: 700px){
+        @media only screen and (max-width: 750px){
             .modal-content {
                 width: 100%;
+            }
+           /* Hide chapter nav for mobile */
+            #chapterList {
+              display: none;
             }
         }
     </style>
@@ -277,9 +281,12 @@ features.setAttribute('id', 'features');
 var header = document.createElement('div');
 
 var chapterList = document.createElement('div');
+var close = document.createElement('span');
 chapterList.setAttribute('id', 'chapterList');
-chapterList.classList.add('light');
+close.setAttribute('class', 'close');
+close.innerHTML = '&times;';
 features.appendChild(chapterList);
+chapterList.appendChild(close);
 
 if (config.title) {
     var titleText = document.createElement('h1');
@@ -1946,6 +1953,7 @@ var modal = document.getElementsByClassName("modal")[0];
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() { 
     modal.style.display = "none";
+    chapterList.style.display = "none";
 }
 modal.onclick = function() { 
     modal.style.display = "none";
