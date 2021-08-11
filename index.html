@@ -9,6 +9,9 @@
     <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
     <script src="https://unpkg.com/scrollama"></script>
     <style>
+        html {
+          scroll-behavior: smooth;
+        }
         body {
             margin:0;
             padding:0;
@@ -50,9 +53,7 @@
             z-index: 5;
         }
         #chapterListContainer {
-          //min-height: 5vh;
-          //padding: 2vh;
-          text-align: right;
+          //text-align: right;
           line-height: 25px;
           font-size: 13px;
           position: sticky;
@@ -67,6 +68,7 @@
           right: 0px;
           background-color: rgba(68,68,68,0.9);
           transition: right linear .2s;
+          padding: 20px;
         }
         
         .open {
@@ -81,24 +83,22 @@
         }
         
         .menuButton.activeState {
-          transform: rotate(45deg);
+          transform: rotate(180deg);
         }
         
         .chapterListMenu a {
           display: block;
         }
         
-        .toggleMenu {
+        .toggleMenuHeader {
           color: #fff;
           z-index: 9999;
-          font-size: 53px;
-          text-align: right;
-          line-height: 55px;
           background-color: rgba(68,68,68,0.9);
-        }
-        
-        #chapterListContainer {
-          float: right;
+          padding: 0px 20px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
         }
         
         #features {
@@ -134,7 +134,6 @@
         }
         .step {
             padding-bottom: 50vh;
-            /* margin-bottom: 10vh; */
             opacity: 0.25;
         }
         .step.active {
@@ -242,8 +241,12 @@
             transition: 0.3s;
         }
         
-        .close:hover, .menuButton:hover,
-        .close:focus, .menuButton:focus {
+        .menuButton {
+          font-size: 20px;
+        }
+        
+        .close:hover, .toggleMenuHeader:hover,
+        .close:focus, .toggleMenuHeader:focus {
             color: #bbb;
             text-decoration: none;
             cursor: pointer;
@@ -319,22 +322,26 @@ var header = document.createElement('div');
 var chapterListContainer = document.createElement('div');
 var chapterListMenu = document.createElement('div');
 var close = document.createElement('span');
-var toggleMenu = document.createElement('div');
-var menuButton = document.createElement('p');
+var toggleMenuHeader = document.createElement('div');
+var menuTitle = document.createElement('h3');
+var menuButton = document.createElement('span');
 
 features.setAttribute('id', 'features');
 chapterListContainer.setAttribute('id', 'chapterListContainer');
 chapterListMenu.setAttribute('class', 'chapterListMenu');
 close.setAttribute('class', 'close');
-toggleMenu.setAttribute('class', 'toggleMenu');
+toggleMenuHeader.setAttribute('class', 'toggleMenuHeader');
+menuTitle.setAttribute('class', 'menuTitle');
 menuButton.setAttribute('class', 'menuButton');
 
 close.innerHTML = '&times;';
-menuButton.innerHTML = '&times;';
+menuTitle.innerText = "Chapters";
+menuButton.innerHTML = '&#10095;';
 
 features.appendChild(chapterListContainer);
-chapterListContainer.appendChild(toggleMenu);
-toggleMenu.appendChild(menuButton);
+chapterListContainer.appendChild(toggleMenuHeader);
+toggleMenuHeader.appendChild(menuTitle);
+toggleMenuHeader.appendChild(menuButton);
 chapterListContainer.appendChild(chapterListMenu);
 
 if (config.title) {
@@ -456,17 +463,7 @@ const transformRequest = (url) => {
     }
 }
 
-//var test = document.getElementsByClassName("menuButton")[0];
-
-// When the user clicks on the menu button, close the menu
-//test.onclick = function() { 
-    //chapterListMenu.style.display = "none";
-//}
-
-
-var menuButton = document.getElementsByClassName("menuButton")[0];
-
-menuButton.onclick = function(){
+toggleMenuHeader.onclick = function(){
   chapterListMenu.classList.toggle("open");
   menuButton.classList.toggle("activeState");
 };
