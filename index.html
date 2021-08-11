@@ -8,6 +8,9 @@
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' />
     <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
     <script src="https://unpkg.com/scrollama"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Saira+Semi+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         html {
           scroll-behavior: smooth;
@@ -15,7 +18,8 @@
         body {
             margin:0;
             padding:0;
-            font-family: sans-serif;
+            //font-family: 'Old Standard TT', serif;
+            font-family: 'Saira Semi Condensed', sans-serif;
         }
         a, a:hover, a:visited {
             color: #fff;
@@ -23,6 +27,7 @@
         
         h3 {
           display: inline-block;
+          //font-family: 'Saira Semi Condensed', sans-serif;
         }
         #map {
             top:0;
@@ -38,7 +43,7 @@
         }
         #header h1, #header h2, #header p {
             margin: 0;
-            padding: 2vh 2vw;
+            //padding: 2vh 2vw;
             text-align: center;
         }
         #footer {
