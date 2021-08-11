@@ -17,6 +17,10 @@
         a, a:hover, a:visited {
             color: #fff;
         }
+        
+        h3 {
+          display: inline-block;
+        }
         #map {
             top:0;
             height: 100vh;
@@ -360,19 +364,40 @@ if (header.innerText.length > 0) {
 config.chapters.forEach((record, idx) => {
     var container = document.createElement('div');
     var chapter = document.createElement('div');
+    var listItemContainer = document.createElement('a');
+    chapterListMenu.appendChild(listItemContainer);
+    listItemContainer.href = '#' + record.id;
 
     if (record.title) {
-      var listItem = document.createElement('a');
+      var listItem = document.createElement('span');
       listItem.innerText = record.title;
-      chapterListMenu.appendChild(listItem);
-      listItem.href = '#' + record.id;
+      listItemContainer.appendChild(listItem);
+      //listItem.href = '#' + record.id;
     }
 
-    if (record.title) {
-        var title = document.createElement('h3');
-        title.innerText = record.title;
-        chapter.appendChild(title);
+    if (record.daterank) {
+        var daterank = document.createElement('h3');
+        daterank.innerText = record.daterank;
+        chapter.appendChild(daterank);
+        daterank.setAttribute("class", "daterank");
     }
+    
+    if (record.title) {
+      var title = document.createElement('h3');
+      title.innerText = record.title;
+      chapter.appendChild(title);
+      title.setAttribute("class", "title");
+  }
+  
+    if (record.date) {
+      var date = document.createElement('h3');
+      var listItemDate = document.createElement('span');
+      date.innerText = record.date;
+      listItemDate.innerText = record.date;
+      listItemContainer.appendChild(listItemDate);
+      chapter.appendChild(date);
+      date.setAttribute("class", "date");
+  }
 
     if (record.image) {
         var image = new Image();
