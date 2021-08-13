@@ -57,15 +57,23 @@
             position: fixed;
         }
         #header {
-            margin: auto;
-            width: 100%;
             position: relative;
             z-index: 5;
             padding: 15px 0px 20px;
+            background-image: radial-gradient(rgba(35,76,72,0) 50%, rgba(35,76,72,1) 100%), url(./images/b17-lew-funk.jpeg);
+            background-position: 0% 40%;
+            background-size: cover;
+            height: 40vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: top;
+            align-items: center;
+            //margin: 5vw;
+            border-radius: 0px 0px 10px 10px;
+            //opacity: 0.9;
         }
         #header h1, #header h2, #header p {
             margin: 0;
-            text-align: center;
         }
         .step p {
           line-height: 25px;
@@ -167,8 +175,14 @@
             background-color: #fafafa;
         }
         .dark {
-            color: #fafafa;
-            background-color: #444;
+            color: #fff;
+            background-image: radial-gradient(rgba(35,76,72,0) 75%, rgba(35,76,72,0.8) 100%);
+            background-color: #529f9e;
+        }
+        #footer {
+          background-color: #444;
+          background-image: none;
+          opacity: 0.9;
         }
         .step {
             padding-bottom: 50vh;
@@ -184,6 +198,11 @@
         }
         .step img {
             width: 100%;
+        }
+        
+        .title {
+          background-color: #bb4c39;
+          padding: 10px;
         }
 
         @media (max-width: 750px) {
