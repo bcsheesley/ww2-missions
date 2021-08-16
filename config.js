@@ -15,7 +15,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             daterank: '',
-            title: 'About the author',
+            title: 'Lt. B.E. Sheesley',
             date: '',
             image: './images/id-card-front.jpeg',
             imageId: 'idCardFront',

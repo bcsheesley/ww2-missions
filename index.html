@@ -71,6 +71,7 @@
             //margin: 5vw;
             text-align: center;
             border-radius: 0px 0px 10px 10px;
+            background-color: #999;
             //opacity: 0.9;
         }
         #header h1, #header h2, #header p {
@@ -108,19 +109,22 @@
         #chapterListContainer {
           position: sticky;
           position: -webkit-sticky;
-          top: 0;
+          top: 60px;
           float: right;
           overflow: hidden;
           opacity: 0.9;
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
         }
         
         .chapterListMenu {
           position: relative;
           right: 0px;
           //font-size: 14px;
-          background-color: #444;
+          background-color: #647D79;
           transition: right linear .2s;
           padding: 0px 20px 20px;
+          //border-bottom-left-radius: 10px;
         }
         
         .open {
@@ -145,12 +149,14 @@
         .toggleMenuHeader {
           color: #fff;
           z-index: 9999;
-          background-color: #444;
+          background-color: #647D79;
           padding: 0px 20px;
           display: flex;
           flex-direction: row;
           justify-content: space-between;
           align-items: center;
+          //border-top-left-radius: 10px;
+          //border-bottom-left-radius: 10px;
         }
         
         #features {
@@ -182,8 +188,8 @@
         }
         .dark {
             color: #fff;
-            background-image: radial-gradient(rgba(35,76,72,0) 75%, rgba(35,76,72,0.8) 100%);
-            background-color: #529f9e;
+            //background-image: radial-gradient(rgba(35,76,72,0) 75%, rgba(35,76,72,0.8) 100%);
+            background-color: #647D79;
         }
         #footer {
           background-color: #444;
@@ -207,8 +213,8 @@
         }
         
         .title {
-          background-color: #bb4c39;
-          padding: 10px;
+          //background-color: #FFFF85;
+          //padding: 10px;
         }
 
         @media (max-width: 750px) {
@@ -269,7 +275,7 @@
             width: 80%;
             max-width: 700px;
             text-align: center;
-            color: #ccc;
+            color: #CDA076;
             padding: 10px 0;
             height: 150px;
         }
@@ -1179,7 +1185,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 2,
             'line-opacity': 1,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
     map.addLayer({
@@ -1189,7 +1195,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 12,
             'line-opacity': 0,
-            'line-color': '#00ffff'
+            'line-color': '#E85F5F'
         }
     });
 });
@@ -1207,7 +1213,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 2,
             'line-opacity': 1,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
     map.addLayer({
@@ -1217,7 +1223,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 12,
             'line-opacity': 0,
-            'line-color': '#007cbf'
+            'line-color': '#FFFF85'
         }
     });
 });
@@ -1235,7 +1241,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 2,
             'line-opacity': 1,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
     map.addLayer({
@@ -1245,7 +1251,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 12,
             'line-opacity': 0,
-            'line-color': '#007cbf'
+            'line-color': '#FFFF85'
         }
     });
 });
@@ -1263,7 +1269,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 2,
             'line-opacity': 1,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
     map.addLayer({
@@ -1273,7 +1279,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 12,
             'line-opacity': 0,
-            'line-color': '#007cbf'
+            'line-color': '#FFFF85'
         }
     });
 });
@@ -1291,7 +1297,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 2,
             'line-opacity': 1,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
     map.addLayer({
@@ -1301,7 +1307,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 12,
             'line-opacity': 0,
-            'line-color': '#00ffff'
+            'line-color': '#FFFF85'
         }
     });
 });
@@ -1319,7 +1325,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 2,
             'line-opacity': 1,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
     map.addLayer({
@@ -1329,7 +1335,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 12,
             'line-opacity': 0,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
 });
@@ -1347,7 +1353,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 2,
             'line-opacity': 1,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
     map.addLayer({
@@ -1357,7 +1363,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 12,
             'line-opacity': 0,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
 });
@@ -1375,7 +1381,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 2,
             'line-opacity': 1,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
     map.addLayer({
@@ -1385,7 +1391,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 12,
             'line-opacity': 0,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
 });
@@ -1403,7 +1409,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 2,
             'line-opacity': 1,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
     map.addLayer({
@@ -1413,7 +1419,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 12,
             'line-opacity': 0,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
 });
@@ -1431,7 +1437,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 2,
             'line-opacity': 1,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
     map.addLayer({
@@ -1441,7 +1447,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 12,
             'line-opacity': 0,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
 });
@@ -1459,7 +1465,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 2,
             'line-opacity': 1,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
     map.addLayer({
@@ -1469,7 +1475,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 12,
             'line-opacity': 0,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
 });
@@ -1487,7 +1493,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 2,
             'line-opacity': 1,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
     map.addLayer({
@@ -1497,7 +1503,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 12,
             'line-opacity': 0,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
 });
@@ -1515,7 +1521,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 2,
             'line-opacity': 1,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
     map.addLayer({
@@ -1525,7 +1531,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 12,
             'line-opacity': 0,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
 });
@@ -1543,7 +1549,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 2,
             'line-opacity': 1,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
     map.addLayer({
@@ -1553,7 +1559,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 12,
             'line-opacity': 0,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
 });
@@ -1571,7 +1577,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 2,
             'line-opacity': 1,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
     map.addLayer({
@@ -1581,7 +1587,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 12,
             'line-opacity': 0,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
 });
@@ -1599,7 +1605,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 2,
             'line-opacity': 1,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
     map.addLayer({
@@ -1609,7 +1615,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 12,
             'line-opacity': 0,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
 });
@@ -1627,7 +1633,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 2,
             'line-opacity': 1,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
     map.addLayer({
@@ -1637,7 +1643,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 12,
             'line-opacity': 0,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
 });
@@ -1655,7 +1661,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 2,
             'line-opacity': 1,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
     map.addLayer({
@@ -1665,7 +1671,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 12,
             'line-opacity': 0,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
 });
@@ -1683,7 +1689,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 2,
             'line-opacity': 1,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
     map.addLayer({
@@ -1693,7 +1699,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 12,
             'line-opacity': 0,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
 });
@@ -1711,7 +1717,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 2,
             'line-opacity': 1,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
     map.addLayer({
@@ -1721,7 +1727,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 12,
             'line-opacity': 0,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
 });
@@ -1739,7 +1745,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 2,
             'line-opacity': 1,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
     map.addLayer({
@@ -1749,7 +1755,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 12,
             'line-opacity': 0,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
 });
@@ -1767,7 +1773,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 2,
             'line-opacity': 1,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
     map.addLayer({
@@ -1777,7 +1783,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 12,
             'line-opacity': 0,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
 });
@@ -1795,7 +1801,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 2,
             'line-opacity': 1,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
     map.addLayer({
@@ -1805,7 +1811,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 12,
             'line-opacity': 0,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
 });
@@ -1823,7 +1829,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 2,
             'line-opacity': 1,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
     map.addLayer({
@@ -1833,7 +1839,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 12,
             'line-opacity': 0,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
 });
@@ -1851,7 +1857,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 2,
             'line-opacity': 1,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
     map.addLayer({
@@ -1861,7 +1867,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 12,
             'line-opacity': 0,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
 });
@@ -1879,7 +1885,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 2,
             'line-opacity': 1,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
     map.addLayer({
@@ -1889,7 +1895,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 12,
             'line-opacity': 0,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
 });
@@ -1907,7 +1913,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 2,
             'line-opacity': 1,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
     map.addLayer({
@@ -1917,7 +1923,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 12,
             'line-opacity': 0,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
 });
@@ -1935,7 +1941,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 2,
             'line-opacity': 1,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
     map.addLayer({
@@ -1945,7 +1951,7 @@ map.on('load', function() {
         'paint': {
             'line-width': 12,
             'line-opacity': 0,
-            'line-color': '#007cbf'
+            'line-color': '#CDA076'
         }
     });
 });
