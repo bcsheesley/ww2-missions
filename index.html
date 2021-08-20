@@ -12,7 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
     <style>
         html {
           scroll-behavior: smooth;
@@ -20,7 +22,7 @@
         body {
             margin:0;
             padding:0;
-            font-family: 'Barlow', sans-serif;
+            font-family: 'Quattrocento Sans', sans-serif;
             font-weight: 400;
             //font-size: 1em;
         }
@@ -59,7 +61,8 @@
             position: relative;
             z-index: 5;
             padding: 100px 0px 0px;
-            background-image: radial-gradient(rgba(35,76,72,0) 50%, rgba(35,76,72,1) 100%), url(./images/006-bombs.jpg);
+            //background-image: radial-gradient(rgba(35,76,72,0) 50%, rgba(35,76,72,1) 100%), url(./images/006-bombs.jpg);
+            background-image: radial-gradient(rgba(232,242,248,0) 0%, rgba(232,242,248,1) 100%), url(./images/006-bombs.jpg);
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -68,11 +71,10 @@
             flex-direction: column;
             justify-content: top;
             align-items: center;
-            //margin: 5vw;
             text-align: center;
-            border-radius: 0px 0px 10px 10px;
             background-color: #999;
-            //opacity: 0.9;
+            color: #fff;
+            box-shadow: 0px 20px 100px 100px rgba(0,0,0,0.1); 
         }
         #header h1, #header h2, #header p {
             margin: 0;
@@ -120,8 +122,7 @@
         .chapterListMenu {
           position: relative;
           right: 0px;
-          //font-size: 14px;
-          background-color: #647D79;
+          background-color: #666;
           transition: right linear .2s;
           padding: 0px 20px 20px;
           //border-bottom-left-radius: 10px;
@@ -149,7 +150,7 @@
         .toggleMenuHeader {
           color: #fff;
           z-index: 9999;
-          background-color: #647D79;
+          background-color: #666;
           padding: 0px 20px;
           display: flex;
           flex-direction: row;
@@ -244,6 +245,9 @@
             opacity: 0.7;
             cursor: pointer;
         }
+        #features p {
+          font-family: 'Quattrocento', serif;
+      }
     
         /* The Modal (background) */
         .modal {
