@@ -11,6 +11,56 @@ var config = {
     footer: 'Source: source citations, etc.',
     chapters: [
         {
+            id: 'overview',
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Lt. B.E. Sheesley',
+            date: '',
+            image: './images/id-card-front@0.5x.png',
+            imageId: 'idCardFront',
+            description: 'Struthers, OH. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            location: {
+                center: [-39.43332, 44.67845],
+                zoom: 2,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'mendlesham',
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Mendlesham Airfield',
+            date: '',
+            image: './images/Mendelshamairfield-18jan47.png',
+            imageId: 'missions',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            location: {
+                center: [1.1210006854646852, 52.23269925011281],
+                zoom: 14,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [
+                {
+                    layer: 'routeBerlinActive',
+                    opacity: 0,
+                    duration: 300
+                }
+            ],
+            onChapterExit: []
+        },
+        {
             id: 'overview-1',
             alignment: 'left',
             hidden: false,
@@ -30,34 +80,6 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [],
-            onChapterExit: []
-        },
-        {
-            id: 'mendlesham',
-            alignment: 'left',
-            hidden: false,
-            daterank: '',
-            title: 'Missions',
-            date: '',
-            image: './images/missions-card.jpeg',
-            imageId: 'missions',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-            location: {
-                center: [1.17528, 52.23786],
-                zoom: 12,
-                pitch: 68,
-                bearing: 102
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [
-                {
-                    layer: 'routeBerlinActive',
-                    opacity: 0,
-                    duration: 300
-                }
-            ],
             onChapterExit: []
         },
         {

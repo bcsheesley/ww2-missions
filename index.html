@@ -10,10 +10,6 @@
     <script src="https://unpkg.com/scrollama"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <style>
         html {
@@ -552,8 +548,11 @@ map.doubleClickZoom.enable();
 //map.touchPitch.enable();
 //map.touchZoomRotate.enable();
 
+// Struthers, OH
+var home = [-80.60282, 41.05850];
+
 // Mendlesham
-var origin = [1.079760, 52.249163];
+var origin = [1.1210006854646852, 52.23269925011281];
  
 // Destinations
 var berlin = [13.404954, 52.520006];
@@ -586,6 +585,19 @@ var geisecke = [7.6194012, 51.4584411];
 var badZwischenahn = [8.0098765, 53.1814401];
  
 // Simple lines from the origin to each destination.
+var routeMendlesham = {
+  'type': 'FeatureCollection',
+  'features': [
+      {
+          'type': 'Feature',
+          'geometry': {
+              'type': 'LineString',
+              'coordinates': [home, origin]
+          }
+      }
+  ]
+};
+
 var routeBerlin = {
     'type': 'FeatureCollection',
     'features': [
@@ -924,6 +936,7 @@ var routeBadZwischenahn = {
 };
 
 // Calculate the distance in kilometers between route start/end points.
+var lineDistanceMendlesham = turf.length(routeMendlesham.features[0]);
 var lineDistanceBerlin = turf.length(routeBerlin.features[0]);
 var lineDistanceDarmstadt = turf.length(routeDarmstadt.features[0]);
 var lineDistanceHanover = turf.length(routeHanover.features[0]);
@@ -953,6 +966,7 @@ var lineDistanceRatingen = turf.length(routeRatingen.features[0]);
 var lineDistanceGeisecke = turf.length(routeGeisecke.features[0]);
 var lineDistanceBadZwischenahn = turf.length(routeBadZwischenahn.features[0]);
  
+var arcMendlesham = []; 
 var arcBerlin = [];
 var arcDarmstadt = [];
 var arcHanover = [];
@@ -985,6 +999,7 @@ var arcBadZwischenahn = [];
 // Number of steps to use in the arc and animation, more steps means
 // a smoother arc and animation, but too many steps will result in a
 // low frame rate
+var stepsMendlesham = 500;
 var stepsBerlin = 500;
 var stepsDarmstadt = 500;
 var stepsHanover = 500;
@@ -1015,6 +1030,10 @@ var stepsGeisecke = 500;
 var stepsBadZwischenahn = 500;
  
 // Draw an arc between the `origin` & `destination` of the two points
+for (var i = 0; i < lineDistanceMendlesham; i += lineDistanceMendlesham / stepsMendlesham) {
+  var segmentMendlesham = turf.along(routeMendlesham.features[0], i);
+  arcMendlesham.push(segmentMendlesham.geometry.coordinates);
+}
 for (var i = 0; i < lineDistanceBerlin; i += lineDistanceBerlin / stepsBerlin) {
     var segmentBerlin = turf.along(routeBerlin.features[0], i);
     arcBerlin.push(segmentBerlin.geometry.coordinates);
@@ -1129,6 +1148,7 @@ for (var i = 0; i < lineDistanceBadZwischenahn; i += lineDistanceBadZwischenahn 
 }
  
 // Update the route with calculated arc coordinates
+routeMendlesham.features[0].geometry.coordinates = arcMendlesham;
 routeBerlin.features[0].geometry.coordinates = arcBerlin;
 routeDarmstadt.features[0].geometry.coordinates = arcDarmstadt;
 routeHanover.features[0].geometry.coordinates = arcHanover;
@@ -1165,6 +1185,34 @@ if (config.showMarkers) {
 
 // instantiate the scrollama
 var scroller = scrollama();
+
+map.on('load', function() {
+  // Add a source and layer displaying a line
+  map.addSource('routeMendlesham', {
+      'type': 'geojson',
+      'data': routeMendlesham
+  });
+  map.addLayer({
+      'id': 'routeMendlesham',
+      'source': 'routeMendlesham',
+      'type': 'line',
+      'paint': {
+          'line-width': 2,
+          'line-opacity': 1,
+          'line-color': '#CDA076'
+      }
+  });
+  map.addLayer({
+      'id': 'routeMendleshamActive',
+      'source': 'routeMendlesham',
+      'type': 'line',
+      'paint': {
+          'line-width': 12,
+          'line-opacity': 0,
+          'line-color': '#E85F5F'
+      }
+  });
+});
 
 map.on('load', function() {
     // Add a source and layer displaying a line
