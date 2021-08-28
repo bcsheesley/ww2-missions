@@ -11,15 +11,37 @@ var config = {
     footer: 'Source: source citations, etc.',
     chapters: [
         {
-            id: 'overview',
+            id: 'grandpa',
             alignment: 'left',
             hidden: false,
             daterank: '',
             title: 'Lt. B.E. Sheesley',
             date: '',
-            image: './images/id-card-front@0.5x.png',
+            image: './images/id-card-front.png',
             imageId: 'idCardFront',
-            description: 'Struthers, OH. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            description: 'Family from Struthers, OH, near Youngstown. Trains to become a pilot at several bases in US: Walnut Springs, Ardmore Airforce, and others. 2nd Lt. Later becomes 1st Lt.',
+            location: {
+                center: [-80.60696, 41.08665],
+                zoom: 7,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'monarch',
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Dominion Monarch',
+            date: '',
+            image: './images/he_Dominion_Monarch_at_a_wharf_in_Wellington,_1940s_(3377606529).jpg',
+            imageId: 'idCardFront',
+            description: 'Departs from NYC Harbor aboard ship. Writes in another journal. Arrives in [port city], England after a week at sea. Travels by train to Mendlesham.',
             location: {
                 center: [-39.43332, 44.67845],
                 zoom: 2,
@@ -41,7 +63,7 @@ var config = {
             date: '',
             image: './images/Mendelshamairfield-18jan47.png',
             imageId: 'missions',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            description: '8th Airforce, 34th bomb group, 7th squadron. Other groups were also present before and during. Spends about four months total here. Attends church, goes to London, and flys missions.',
             location: {
                 center: [1.1210006854646852, 52.23269925011281],
                 zoom: 14,
@@ -61,13 +83,35 @@ var config = {
             onChapterExit: []
         },
         {
-            id: 'overview-1',
+            id: 'missions',
             alignment: 'left',
             hidden: false,
             daterank: '',
-            title: 'Lt. B.E. Sheesley',
+            title: 'Missions',
             date: '',
-            image: './images/id-card-front@0.5x.png',
+            image: './images/missions-card.jpeg',
+            imageId: 'idCardFront',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            location: {
+                center: [1.17528, 52.23786],
+                zoom: 5,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'journal',
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Journal',
+            date: '',
+            image: './images/journal/front-cover-1.png',
             imageId: 'idCardFront',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
             location: {
