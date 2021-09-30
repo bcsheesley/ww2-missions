@@ -305,4 +305,8 @@ img {
 	.chapterListMenu, .toggleMenuHeader {
 	  display: none;
 	}
+	
+	.mapboxgl-ctrl-top-right {
+		display: none;
+	}
 }
