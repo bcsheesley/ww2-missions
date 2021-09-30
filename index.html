@@ -120,15 +120,14 @@ if (header.innerText.length > 0) {
 config.chapters.forEach((record, idx) => {
     var container = document.createElement('div');
     var chapter = document.createElement('div');
-    var listItemContainer = document.createElement('a');
-    chapterListContent.appendChild(listItemContainer);
-    listItemContainer.href = '#' + record.id;
+    var itemLink = document.createElement('a');
+    chapterListContent.appendChild(itemLink);
+    itemLink.href = '#' + record.id;
 
     if (record.title) {
-      var listItem = document.createElement('span');
-      listItem.innerText = record.title;
-      listItemContainer.appendChild(listItem);
-      //listItem.href = '#' + record.id;
+      var itemName = document.createElement('span');
+      itemName.innerText = record.title;
+      itemLink.appendChild(itemName);
     }
 
     if (record.daterank) {
@@ -147,10 +146,10 @@ config.chapters.forEach((record, idx) => {
   
     if (record.date) {
       var date = document.createElement('h3');
-      var listItemDate = document.createElement('span');
+      var itemDate = document.createElement('span');
       date.innerText = record.date;
-      listItemDate.innerText = record.date;
-      listItemContainer.appendChild(listItemDate);
+      itemDate.innerText = record.date;
+      itemLink.appendChild(itemDate);
       chapter.appendChild(date);
       date.setAttribute("class", "date");
   }
