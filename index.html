@@ -69,29 +69,29 @@ var story = document.getElementById('story');
 var features = document.createElement('div');
 var header = document.createElement('div');
 var chapterListContainer = document.createElement('div');
-var chapterListMenu = document.createElement('div');
+var chapterListContent = document.createElement('div');
 var close = document.createElement('span');
-var toggleMenuHeader = document.createElement('div');
-var menuTitle = document.createElement('h4');
-var menuButton = document.createElement('span');
+var chapterListHeader = document.createElement('div');
+var listTitle = document.createElement('h4');
+var listIcon = document.createElement('span');
 
 features.setAttribute('id', 'features');
 chapterListContainer.setAttribute('id', 'chapterListContainer');
-chapterListMenu.setAttribute('class', 'chapterListMenu');
+chapterListContent.setAttribute('class', 'chapterListContent');
 close.setAttribute('class', 'close');
-toggleMenuHeader.setAttribute('class', 'toggleMenuHeader');
-menuTitle.setAttribute('class', 'menuTitle');
-menuButton.setAttribute('class', 'menuButton');
+chapterListHeader.setAttribute('class', 'chapterListHeader');
+listTitle.setAttribute('class', 'listTitle');
+listIcon.setAttribute('class', 'listIcon');
 
 close.innerHTML = '&times;';
-menuTitle.innerText = "Chapters";
-menuButton.innerHTML = '&#10095;';
+listTitle.innerText = "Chapters";
+listIcon.innerHTML = '&#10095;';
 
 features.appendChild(chapterListContainer);
-chapterListContainer.appendChild(toggleMenuHeader);
-toggleMenuHeader.appendChild(menuTitle);
-toggleMenuHeader.appendChild(menuButton);
-chapterListContainer.appendChild(chapterListMenu);
+chapterListContainer.appendChild(chapterListHeader);
+chapterListHeader.appendChild(listTitle);
+chapterListHeader.appendChild(listIcon);
+chapterListContainer.appendChild(chapterListContent);
 
 if (config.title) {
     var titleText = document.createElement('h1');
@@ -121,7 +121,7 @@ config.chapters.forEach((record, idx) => {
     var container = document.createElement('div');
     var chapter = document.createElement('div');
     var listItemContainer = document.createElement('a');
-    chapterListMenu.appendChild(listItemContainer);
+    chapterListContent.appendChild(listItemContainer);
     listItemContainer.href = '#' + record.id;
 
     if (record.title) {
@@ -212,9 +212,9 @@ const transformRequest = (url) => {
     }
 }
 
-toggleMenuHeader.onclick = function(){
-  chapterListMenu.classList.toggle("open");
-  menuButton.classList.toggle("activeState");
+chapterListHeader.onclick = function(){
+  chapterListContent.classList.toggle("open");
+  listIcon.classList.toggle("activeState");
 };
 
 
