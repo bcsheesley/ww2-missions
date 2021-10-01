@@ -10,6 +10,7 @@ map.on('mouseenter', 'missions', function (e) {
 	 
 	var coordinates = e.features[0].geometry.coordinates.slice();
 	var name = e.features[0].properties.name;
+	var date = e.features[0].properties.date;
 	 
 	// Ensure that if the map is zoomed out such that multiple
 	// copies of the feature are visible, the popup appears
@@ -20,7 +21,7 @@ map.on('mouseenter', 'missions', function (e) {
 	 
 	// Populate the popup and set its coordinates
 	// based on the feature found.
-	popup.setLngLat(coordinates).setHTML(name).addTo(map);
+	popup.setLngLat(coordinates).setHTML(`<h3>${name}</h3><p>${date}</p>`).addTo(map);
 });
 	 
 map.on('mouseleave', 'missions', function () {

@@ -236,15 +236,55 @@ map.on('load', function() {
     });
 });
 
+
 // add markers to map
 for (const { geometry, properties } of markers.features) {
   // create a HTML element for each feature
-  const el = document.createElement('div');
+  const el = document.createElement('a');
+  el.href = '#' + properties.name;
   el.className = 'marker';
+  
+// create the popup
+var myPopup = new mapboxgl.Popup(
+  { offset: 125 }
+).setHTML(`<h3>${properties.name}</h3><p>${properties.date}</p>`);
+  
+// make a marker for each feature  
+let myMarker = new mapboxgl.Marker(el).setLngLat(geometry.coordinates);
 
-  // make a marker for each feature and add to the map
-  new mapboxgl.Marker(el).setLngLat(geometry.coordinates).addTo(map);
+// get the marker element
+const element = myMarker.getElement();
+element.id = 'marker'
+
+// hover event listener
+element.addEventListener('mouseenter', () => myPopup.addTo(map));
+element.addEventListener('mouseleave', () => myPopup.remove());
+
+// add popup to marker
+myMarker.setPopup(myPopup);
+
+// add marker to map
+myMarker.addTo(map);
 }
+
+/*
+// add markers to map
+for (const { geometry, properties } of markers.features) {
+  // create a HTML element for each feature
+  const el = document.createElement('a');
+  el.href = '#' + properties.name;
+  el.className = 'marker';
+  
+// make a marker for each feature and add to the map  
+new mapboxgl.Marker(el)
+  .setLngLat(geometry.coordinates)
+  .setPopup(
+    new mapboxgl.Popup({ offset: 125 }) // add popups
+      .setHTML(`<h3>${properties.name}</h3><p>${properties.date}</p>`)
+  )
+  .addTo(map);
+}
+*/
 
 // Add zoom and rotation controls to the map.
 map.addControl(new mapboxgl.NavigationControl({
