@@ -83,7 +83,7 @@ var config = {
             onChapterExit: []
         },
         {
-            id: 'missions',
+            id: '35missions',
             alignment: 'left',
             hidden: false,
             daterank: '',
