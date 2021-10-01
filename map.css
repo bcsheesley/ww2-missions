@@ -118,25 +118,35 @@ img {
 	float: right;
 	overflow: hidden;
 	opacity: 0.9;
-	border-top-left-radius: 10px;
-	border-bottom-left-radius: 10px;
 }
 .chapterListHeader {
 	color: #fff;
 	z-index: 9999;
 	background-color: #666;
 	padding: 0px 20px;
+	border-top-left-radius: 10px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	position: relative;
+	transition: transform linear .2s;
+}
+.chapterListHeader.activeState {
+	flex-direction: row-reverse;
+	transform: translate(140px);
+	border-bottom-left-radius: 10px;
 }
 .chapterListContent {
-	position: relative;
 	right: 0px;
 	background-color: #666;
-	transition: right linear .2s;
 	padding: 0px 20px 20px;
+	border-bottom-left-radius: 10px;
+	position: relative;
+	transition: transform linear .2s;
+}
+.chapterListContent.activeState {
+	transform: translate(200px);
 }
 .listIcon {
 	font-size: 20px;
@@ -150,10 +160,6 @@ img {
 #features {
 	padding-top: 10vh;
 	padding-bottom: 10vh;
-}
-.open {
-	right: -200px;
-	transition: right linear .2s;
 }
 .hidden {
 	visibility: hidden;

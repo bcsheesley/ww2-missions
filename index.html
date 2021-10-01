@@ -213,8 +213,9 @@ const transformRequest = (url) => {
 }
 
 chapterListHeader.onclick = function(){
-  chapterListContent.classList.toggle("open");
+  chapterListContent.classList.toggle("activeState");
   listIcon.classList.toggle("activeState");
+  chapterListHeader.classList.toggle("activeState");
 };
 
 var map = new mapboxgl.Map({
