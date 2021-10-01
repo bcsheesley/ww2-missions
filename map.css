@@ -189,6 +189,16 @@ img {
  font: 12px/20px 'Helvetica Neue', 'Arial', 'Helvetica', 'sans-serif';
 }
 
+
+.marker {
+	  background-image: url('images/bomb.png');
+	  background-size: cover;
+	  width: 20px;
+	  height: 20px;
+	  border-radius: 50%;
+	  cursor: pointer;
+	}
+
 /* Fix issue on mobile browser where scroll breaks */
 .mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan,
 .mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan .mapboxgl-canvas {

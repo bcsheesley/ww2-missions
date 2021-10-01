@@ -11,6 +11,7 @@
     <script src="./config.js"></script>
     <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
     <script src="routes.js"></script>
+    <script src="markers.js"></script>
     <script src="https://unpkg.com/scrollama"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -227,6 +228,23 @@ var map = new mapboxgl.Map({
     interactive: false,
     transformRequest: transformRequest
 });
+
+map.on('load', function() {
+    var mySource = map.addSource('markers', {
+        type: 'geojson',
+        data: markers
+    });
+});
+
+// add markers to map
+for (const { geometry, properties } of markers.features) {
+  // create a HTML element for each feature
+  const el = document.createElement('div');
+  el.className = 'marker';
+
+  // make a marker for each feature and add to the map
+  new mapboxgl.Marker(el).setLngLat(geometry.coordinates).addTo(map);
+}
 
 // Add zoom and rotation controls to the map.
 map.addControl(new mapboxgl.NavigationControl({
