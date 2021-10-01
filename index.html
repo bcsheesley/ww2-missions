@@ -217,7 +217,6 @@ chapterListHeader.onclick = function(){
   listIcon.classList.toggle("activeState");
 };
 
-
 var map = new mapboxgl.Map({
     container: 'map',
     style: config.style,
@@ -236,55 +235,31 @@ map.on('load', function() {
     });
 });
 
-
 // add markers to map
 for (const { geometry, properties } of markers.features) {
   // create a HTML element for each feature
   const el = document.createElement('a');
   el.href = '#' + properties.name;
   el.className = 'marker';
-  
+
 // create the popup
-var myPopup = new mapboxgl.Popup(
-  { offset: 125 }
-).setHTML(`<h3>${properties.name}</h3><p>${properties.date}</p>`);
-  
-// make a marker for each feature  
-let myMarker = new mapboxgl.Marker(el).setLngLat(geometry.coordinates);
-
-// get the marker element
-const element = myMarker.getElement();
-element.id = 'marker'
-
-// hover event listener
-element.addEventListener('mouseenter', () => myPopup.addTo(map));
-element.addEventListener('mouseleave', () => myPopup.remove());
-
-// add popup to marker
-myMarker.setPopup(myPopup);
-
-// add marker to map
-myMarker.addTo(map);
-}
-
-/*
-// add markers to map
-for (const { geometry, properties } of markers.features) {
-  // create a HTML element for each feature
-  const el = document.createElement('a');
-  el.href = '#' + properties.name;
-  el.className = 'marker';
-  
-// make a marker for each feature and add to the map  
+const myPopup = new mapboxgl.Popup({
+    offset: 125,
+    closeButton: false,
+    closeOnClick: false
+})
+    .setHTML(`<h3>${properties.name}</h3><p>${properties.date}</p>`);
+ 
+// make a marker for each feature
 new mapboxgl.Marker(el)
-  .setLngLat(geometry.coordinates)
-  .setPopup(
-    new mapboxgl.Popup({ offset: 125 }) // add popups
-      .setHTML(`<h3>${properties.name}</h3><p>${properties.date}</p>`)
-  )
-  .addTo(map);
+    .setLngLat(geometry.coordinates)
+    .setPopup(myPopup)
+    .addTo(map);
+    
+// hover event listener
+el.addEventListener('mouseenter', () => myPopup.addTo(map));
+el.addEventListener('mouseleave', () => myPopup.remove());
 }
-*/
 
 // Add zoom and rotation controls to the map.
 map.addControl(new mapboxgl.NavigationControl({
@@ -294,11 +269,6 @@ map.addControl(new mapboxgl.NavigationControl({
 // Enable interaction handlers
 map.dragPan.enable();
 map.doubleClickZoom.enable();
-//map.dragRotate.enable();
-//map.touchPitch.enable();
-//map.touchZoomRotate.enable();
-
-
 
 if (config.showMarkers) {
     var marker = new mapboxgl.Marker({ color: config.markerColor });
@@ -307,8 +277,6 @@ if (config.showMarkers) {
 
 // instantiate the scrollama
 var scroller = scrollama();
-
-
 
 map.on("load", function() {
     if (config.use3dTerrain) {
