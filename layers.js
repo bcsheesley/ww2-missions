@@ -1,5 +1,9 @@
 map.on('load', function() {
 	// Add sources
+	map.addSource('serviceSchools',{
+		'type': 'geojson',
+		'data': 'https://bcsheesley.github.io/ww2-missions/data/serviceSchools.geojson'
+	});
 	map.addSource('routeMendlesham', {
 		'type': 'geojson',
 		'data': routeMendlesham
@@ -116,6 +120,20 @@ map.on('load', function() {
 		'type': 'geojson',
 		'data': routeBadZwischenahn
 	});
+
+	// Add layer displaying service schools
+	map.addLayer({
+		'id': 'serviceSchools',
+		'source': 'serviceSchools',
+		'type': 'circle',
+		'paint': {
+			'circle-radius': 12,
+			'circle-color': '#ff0000'
+		}
+	},
+	'missions'
+);
+
 
 	// Add layers displaying lines
 	map.addLayer({

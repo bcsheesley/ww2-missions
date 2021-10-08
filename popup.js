@@ -3,7 +3,9 @@ var popup = new mapboxgl.Popup({
 	closeButton: false,
 	closeOnClick: false
 	});
-	
+
+
+// Missions popup
 map.on('mouseenter', 'missions', function (e) {
 	// Change the cursor style as a UI indicator.
 	map.getCanvas().style.cursor = 'pointer';
@@ -25,6 +27,34 @@ map.on('mouseenter', 'missions', function (e) {
 });
 	 
 map.on('mouseleave', 'missions', function () {
+	map.getCanvas().style.cursor = '';
+	popup.remove();
+});
+
+// Service schools popup
+map.on('mouseenter', 'serviceSchools', function (e) {
+	// Change the cursor style as a UI indicator.
+	map.getCanvas().style.cursor = 'pointer';
+	 
+	var coordinates = e.features[0].geometry.coordinates.slice();
+	var name = e.features[0].properties.name;
+	var place = e.features[0].properties.place;
+	var course = e.features[0].properties.course;
+	var duration = e.features[0].properties.duration;
+	 
+	// Ensure that if the map is zoomed out such that multiple
+	// copies of the feature are visible, the popup appears
+	// over the copy being pointed to.
+	while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+	coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+	}
+	 
+	// Populate the popup and set its coordinates
+	// based on the feature found.
+	popup.setLngLat(coordinates).setHTML(`<h3>${name}</h3><p>${place}</p><p>${course}</p><p>${duration}</p>`).addTo(map);
+});
+	 
+map.on('mouseleave', 'serviceSchools', function () {
 	map.getCanvas().style.cursor = '';
 	popup.remove();
 });
