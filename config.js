@@ -5,9 +5,9 @@ var config = {
     markerColor: '#3FB1CE',
     theme: 'light',
     use3dTerrain: false,
-    title: 'Mendlesham Journal',
-    subtitle: 'December 1944 - March  1945',
-    byline: 'Lt. B.E. Sheesley',
+    title: 'A Line a Day',
+    subtitle: 'The World War Ⅱ Journal of Lt. Byron E. Sheesley',
+    byline: 'December 1944 - March  1945',
     footer: 'Source: source citations, etc.',
     chapters: [
         {
@@ -15,14 +15,14 @@ var config = {
             alignment: 'left',
             hidden: false,
             daterank: '',
-            title: 'Preparing for War',
+            title: 'Lt. Byron E. Sheesley',
             date: '',
             image: './images/id-card-front-small.png',
             imageId: 'idCardFront',
-            description: 'Family from Struthers, OH, near Youngstown. Trains to become a pilot at several bases in US: Walnut Springs, Ardmore Airforce, and others. 2nd Lt. Later becomes 1st Lt. Starts preparing in the fields of Arkansas',
+            description: 'Family from <span class= "test">Struthers, OH, near Youngstown</span>. Trains to become a pilot at several bases in US: Walnut Springs, Ardmore Airforce, and others. 2nd Lt. Later becomes 1st Lt. Starts preparing in the fields of Arkansas',
             location: {
                 center: [-90.95484, 36.06806],
-                zoom: 10,
+                zoom: 4,
                 pitch: 0,
                 bearing: 0
             },
