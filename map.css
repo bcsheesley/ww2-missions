@@ -8,19 +8,20 @@ body {
 	font-weight: 400;
 }
 a {
-	color: #fff;
-	text-decoration: none;
-	padding-top: 5px;
+	color: #000;
 }
-a:hover {
+.chapterListContent a:hover {
 	color: #bbb;
 }
-a span {
+.chapterListContent a span {
 	display: block;
 }
 .chapterListContent a {
 	padding-bottom: 10px;
 	display: block;
+	color: #fff;
+	text-decoration: none;
+	padding-top: 5px;
 }
 a span:nth-child(2) {
 	opacity: 0.6;

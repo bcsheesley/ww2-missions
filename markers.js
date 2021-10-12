@@ -13,10 +13,7 @@ const markers = {
 		},
 		"properties": {
 			"name": "Mendlesham",
-			"date": "",
-			"mission": "",
-			"daterank": "",
-			"trips": ""
+			"ref": "mendlesham",
 		}
 	},
 	{
@@ -31,10 +28,7 @@ const markers = {
 		},
 		"properties": {
 			"name": "Recall",
-			"date": "3/4/1945",
-			"mission": "136",
-			"daterank": "22",
-			"trips": "1"
+			'ref': '<a href="#journal">test link to journal chapter</a>'
 		}
 	},
 	{

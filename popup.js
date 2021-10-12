@@ -4,8 +4,26 @@ var popup = new mapboxgl.Popup({
 	closeOnClick: false
 	});
 
+// Missions route popup
+map.on('click', 'routeBerlinActive', (e) => {
+	const name = e.features[0].properties.name;
+	
+	// Populate the popup and set its coordinates
+	// based on the feature found.
+	popup.setLngLat(e.lngLat).setHTML(`<h3>${name}</h3>`).addTo(map);
+});
 
-// Missions popup
+map.on('mouseenter', 'routeBerlinActive', () => {
+	// Change the cursor style as a UI indicator.
+	map.getCanvas().style.cursor = 'pointer';
+});
+
+map.on('mouseleave', 'routeBerlinActive', () => {
+	// Change the cursor style as a UI indicator.
+	map.getCanvas().style.cursor = '';
+});
+
+// Missions point popup
 map.on('mouseenter', 'missions', function (e) {
 	// Change the cursor style as a UI indicator.
 	map.getCanvas().style.cursor = 'pointer';

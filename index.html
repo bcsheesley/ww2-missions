@@ -239,17 +239,17 @@ map.on('load', function() {
 // add markers to map
 for (const { geometry, properties } of markers.features) {
   // create a HTML element for each feature
-  const el = document.createElement('a');
-  el.href = '#' + properties.name;
+  const el = document.createElement('div');
+  //el.href = '#' + properties.ref;
   el.className = 'marker';
 
 // create the popup
 const myPopup = new mapboxgl.Popup({
     offset: 125,
-    closeButton: false,
-    closeOnClick: false
+    //closeButton: false,
+    //closeOnClick: false
 })
-    .setHTML(`<h3>${properties.name}</h3><p>${properties.date}</p>`);
+    .setHTML(`<h3>${properties.name}</h3><p>${properties.ref}</p>`);
  
 // make a marker for each feature
 new mapboxgl.Marker(el)
@@ -258,8 +258,8 @@ new mapboxgl.Marker(el)
     .addTo(map);
     
 // hover event listener
-el.addEventListener('mouseenter', () => myPopup.addTo(map));
-el.addEventListener('mouseleave', () => myPopup.remove());
+//el.addEventListener('mouseenter', () => myPopup.addTo(map));
+//el.addEventListener('mouseleave', () => myPopup.remove());
 }
 
 // Add zoom and rotation controls to the map.
