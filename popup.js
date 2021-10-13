@@ -1,10 +1,19 @@
 // Create a popup, but don't add it to the map yet.
 var popup = new mapboxgl.Popup({
-	closeButton: false,
-	closeOnClick: false
+	//closeButton: false,
+	//closeOnClick: false
 	});
 
 // Missions route popup
+map.on('click', 'routeDarmstadt', (e) => {
+	const name = e.features[0].properties.name;
+	
+	// Populate the popup and set its coordinates
+	// based on the feature found.
+	popup.setLngLat(e.lngLat).setHTML(`<h3>${name}</h3>`).addTo(map);
+});
+
+
 map.on('click', 'routeBerlinActive', (e) => {
 	const name = e.features[0].properties.name;
 	

@@ -58,7 +58,7 @@ var routeBerlin = {
 				'coordinates': [origin, berlin]
 			},
 			'properties': {
-				'name': 'Berlin'
+				'name': 'Berlin is the name'
 			}
 		}
 	]
@@ -71,6 +71,9 @@ var routeDarmstadt = {
 			'geometry': {
 				'type': 'LineString',
 				'coordinates': [origin, darmstadt]
+			},
+			'properties': {
+				'name': 'Darm is the name'
 			}
 		}
 	]
