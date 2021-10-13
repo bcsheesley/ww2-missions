@@ -1,6 +1,15 @@
 map.on('load', function() {
 	// Add sources
-	map.addSource('serviceSchools',{
+	map.addSource('routeAll', {
+		'type': 'geojson',
+		'data': {
+			'type': 'FeatureCollection',
+			'features': [
+				routeMendlesham
+			] 
+		}
+	});
+	map.addSource('serviceSchools', {
 		'type': 'geojson',
 		'data': 'https://bcsheesley.github.io/ww2-missions/data/serviceSchools.geojson'
 	});
@@ -136,6 +145,18 @@ map.on('load', function() {
 
 
 	// Add layers displaying lines
+	map.addLayer({
+		'id': 'routeAll',
+		'source': 'routeAll',
+		'type': 'line',
+		'paint': {
+			'line-width': 22,
+			'line-opacity': 0.5,
+			'line-color': '#00ff00'
+		}
+	},
+	'missions'
+);
 	map.addLayer({
 			'id': 'routeMendlesham',
 			'source': 'routeMendlesham',

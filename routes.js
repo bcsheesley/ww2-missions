@@ -36,16 +36,11 @@ var badZwischenahn = [8.0098765, 53.1814401];
  
 // Simple lines from the home/origin to each destination.
 var routeMendlesham = {
-  'type': 'FeatureCollection',
-  'features': [
-	  {
-		  'type': 'Feature',
-		  'geometry': {
-			  'type': 'LineString',
-			  'coordinates': [home, origin]
-		  }
-	  }
-  ]
+	  'type': 'Feature',
+	  'geometry': {
+		    'type': 'LineString',
+		    'coordinates': [home, origin]
+	}
 };
 
 var routeBerlin = {
@@ -392,7 +387,7 @@ var routeBadZwischenahn = {
 };
 
 // Calculate the distance in kilometers between route start/end points.
-var lineDistanceMendlesham = turf.length(routeMendlesham.features[0]);
+var lineDistanceMendlesham = turf.length(routeMendlesham);
 var lineDistanceBerlin = turf.length(routeBerlin.features[0]);
 var lineDistanceDarmstadt = turf.length(routeDarmstadt.features[0]);
 var lineDistanceHanover = turf.length(routeHanover.features[0]);
@@ -487,7 +482,7 @@ var stepsBadZwischenahn = 500;
  
 // Draw an arc between the `origin` & `destination` of the two points
 for (var i = 0; i < lineDistanceMendlesham; i += lineDistanceMendlesham / stepsMendlesham) {
-  var segmentMendlesham = turf.along(routeMendlesham.features[0], i);
+  var segmentMendlesham = turf.along(routeMendlesham, i);
   arcMendlesham.push(segmentMendlesham.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceBerlin; i += lineDistanceBerlin / stepsBerlin) {
@@ -604,7 +599,7 @@ for (var i = 0; i < lineDistanceBadZwischenahn; i += lineDistanceBadZwischenahn 
 }
  
 // Update the route with calculated arc coordinates
-routeMendlesham.features[0].geometry.coordinates = arcMendlesham;
+routeMendlesham.geometry.coordinates = arcMendlesham;
 routeBerlin.features[0].geometry.coordinates = arcBerlin;
 routeDarmstadt.features[0].geometry.coordinates = arcDarmstadt;
 routeHanover.features[0].geometry.coordinates = arcHanover;
