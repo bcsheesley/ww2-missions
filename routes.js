@@ -1,423 +1,502 @@
 // Struthers, OH
-var home = [-80.60282, 41.05850];
+var struthers = [-80.60282, 41.05850];
 
 // Mendlesham
-var origin = [1.1210006854646852, 52.23269925011281];
+var mendlesham = [1.121001, 52.232699];
+
+// New York Harbor
+var newyork = [-74.045556, 40.668333]
+
+// Plymouth Harbor
+var plymouth = [ -4.146618, 50.352681]
  
 // Destinations
 var berlin = [13.404954, 52.520006];
-var darmstadt = [8.6511929, 49.8728253];
-var hanover = [9.7320104, 52.3758916];
-var andernach = [7.4086636, 50.426057];
-var kassel = [9.4797461, 51.3127114];
+var darmstadt = [8.651193, 49.872825];
+var hanover = [9.732010, 52.375892];
+var andernach = [7.408664, 50.42606];
+var kassel = [9.479746, 51.312711];
 var misburg = [9.851202, 52.390962];
-var pforzheim = [8.6946286, 48.8921862];
-var bielefeld = [8.5324708, 52.0302285];
-var cologne = [6.9609652, 50.937531];
-var derben = [11.9977096, 52.4165503];
-var augsburg = [10.89779, 48.3705449];
-var bitterfeld = [12.3133061, 51.6265334];
-var duisburg = [6.7623293, 51.4344079];
-var dulmen = [7.2834926, 51.8316451];
-var cottbus = [14.3328679, 51.7563108];
-var bremen = [8.8016937, 53.0792962];
-var ludwigsfelde = [13.261627, 52.3011439];
-var dresden = [13.7372621, 51.0504088];
-var dedenhausen = [10.2291851, 52.432764];
-var datteln = [7.3348301, 51.6461362];
-var soest = [8.105754, 51.5711476];
-var hamburg = [9.9936818, 53.5510846];
-var swinoujscie = [14.2475775, 53.9100327];
-var jena = [11.5892372, 50.927054];
-var marxen = [10.0010767, 53.3105751];
-var ratingen = [6.8401844, 51.2964148];
-var geisecke = [7.6194012, 51.4584411];
-var badZwischenahn = [8.0098765, 53.1814401];
+var pforzheim = [8.694629, 48.892186];
+var bielefeld = [8.532471, 52.030229];
+var cologne = [6.960965, 50.93753];
+var derben = [11.997710, 52.416550];
+var augsburg = [10.89779, 48.370545];
+var bitterfeld = [12.313306, 51.626533];
+var duisburg = [6.762329, 51.434408];
+var dulmen = [7.283493, 51.831645];
+var cottbus = [14.332868, 51.756311];
+var bremen = [8.801694, 53.079296];
+var ludwigsfelde = [13.26163, 52.301144];
+var dresden = [13.737262, 51.050409];
+var dedenhausen = [10.229185, 52.43276];
+var datteln = [7.334830, 51.646136];
+var soest = [8.10575, 51.571148];
+var hamburg = [9.993682, 53.551085];
+var swinoujscie = [14.247578, 53.910033];
+var jena = [11.589237, 50.92705];
+var marxen = [10.001077, 53.310575];
+var ratingen = [6.840184, 51.296415];
+var geisecke = [7.619401, 51.458441];
+var badZwischenahn = [8.009877, 53.181440];
  
-// Simple lines from the home/origin to each destination.
-var routeMendlesham = {
-	  'type': 'Feature',
-	  'geometry': {
-		    'type': 'LineString',
-		    'coordinates': [home, origin]
+// Line from New York to Plymouth
+var routePlymouth = {
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [newyork, plymouth]
+	},
+	'properties': {
+		'name': 'Journey to England',
+		'date': '10/22/1944 – 11/1/1944'
 	}
 };
 
+// Lines for each mission
 var routeBerlin = {
-	'type': 'FeatureCollection',
-	'features': [
-		{
-			'type': 'Feature',
-			'geometry': {
-				'type': 'LineString',
-				'coordinates': [origin, berlin]
-			},
-			'properties': {
-				'name': 'Berlin is the name'
-			}
-		}
-	]
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [mendlesham, berlin]
+	},
+	'properties': {
+		'name': 'Berlin',
+		'trips': 4,
+		'daterank1': 1,
+		'daterank2': 14,
+		'daterank3': 19,
+		'daterank4': 28,
+		'date1': '12/5/1944',
+		'date2': '2/3/1945',
+		'date3': '2/26/1945',
+		'date4': '3/18/1945',
+		'mission1': 97,
+		'mission2': 119,
+		'mission3': 131,
+		'mission4': 145
+	}
 };
 var routeDarmstadt = {
-	'type': 'FeatureCollection',
-	'features': [
-		{
-			'type': 'Feature',
-			'geometry': {
-				'type': 'LineString',
-				'coordinates': [origin, darmstadt]
-			},
-			'properties': {
-				'name': 'Darm is the name'
-			}
-		}
-	]
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [mendlesham, darmstadt]
+	},
+	'properties': {
+		'name': 'Darmstadt',
+		'trips': 1,
+		'daterank1': 2,
+		'date1': '12/12/1944',
+		'mission1': 100
+	}
 };
 var routeHanover = {
-	'type': 'FeatureCollection',
-	'features': [
-		{
-			'type': 'Feature',
-			'geometry': {
-				'type': 'LineString',
-				'coordinates': [origin, hanover]
-			}
-		}
-	]
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [mendlesham, hanover]
+	},
+	'properties': {
+		'name': 'Hanover',
+		'trips': 2,
+		'daterank1': 3,
+		'daterank2': 35,
+		'date1': '12/15/1944',
+		'date2': '3/28/1945',
+		'mission1': 101,
+		'mission2': 153,
+	}
 };
 var routeAndernach = {
-	'type': 'FeatureCollection',
-	'features': [
-		{
-			'type': 'Feature',
-			'geometry': {
-				'type': 'LineString',
-				'coordinates': [origin, andernach]
-			}
-		}
-	]
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [mendlesham, andernach]
+	},
+	'properties': {
+		'name': 'Andernach',
+		'trips': 1,
+		'daterank1': 4,
+		'date1': '12/27/1944',
+		'mission1': 103
+	}
 };
 var routeKassel = {
-	'type': 'FeatureCollection',
-	'features': [
-		{
-			'type': 'Feature',
-			'geometry': {
-				'type': 'LineString',
-				'coordinates': [origin, kassel]
-			}
-		}
-	]
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [mendlesham, kassel]
+	},
+	'properties': {
+		'name': 'Kassel',
+		'trips': 1,
+		'daterank1': 5,
+		'date1': '12/30/1944',
+		'mission1': 105
+	}
 };
 var routeMisburg = {
-	'type': 'FeatureCollection',
-	'features': [
-		{
-			'type': 'Feature',
-			'geometry': {
-				'type': 'LineString',
-				'coordinates': [origin, misburg]
-			}
-		}
-	]
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [mendlesham, misburg]
+	},
+	'properties': {
+		'name': 'Misburg',
+		'trips': 1,
+		'daterank1': 6,
+		'date1': '12/31/1944',
+		'mission1': 106
+	}
 };
 var routePforzheim = {
-	'type': 'FeatureCollection',
-	'features': [
-		{
-			'type': 'Feature',
-			'geometry': {
-				'type': 'LineString',
-				'coordinates': [origin, pforzheim]
-			}
-		}
-	]
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [mendlesham, pforzheim]
+	},
+	'properties': {
+		'name': 'Pforzheim',
+		'trips': 1,
+		'daterank1': 7,
+		'date1': '1/3/1945',
+		'mission1': 108
+	}
 };
 var routeBielefeld = {
-	'type': 'FeatureCollection',
-	'features': [
-		{
-			'type': 'Feature',
-			'geometry': {
-				'type': 'LineString',
-				'coordinates': [origin, bielefeld]
-			}
-		}
-	]
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [mendlesham, bielefeld]
+	},
+	'properties': {
+		'name': 'Bielefeld',
+		'trips': 1,
+		'daterank1': 8,
+		'date1': '1/7/1945',
+		'mission1': 109
+	}
 };
 var routeCologne = {
-	'type': 'FeatureCollection',
-	'features': [
-		{
-			'type': 'Feature',
-			'geometry': {
-				'type': 'LineString',
-				'coordinates': [origin, cologne]
-			}
-		}
-	]
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [mendlesham, cologne]
+	},
+	'properties': {
+		'name': 'Cologne',
+		'trips': 1,
+		'daterank1': 9,
+		'date1': '1/10/1945',
+		'mission1': 110
+	}
 };
 var routeDerben = {
-	'type': 'FeatureCollection',
-	'features': [
-		{
-			'type': 'Feature',
-			'geometry': {
-				'type': 'LineString',
-				'coordinates': [origin, derben]
-			}
-		}
-	]
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [mendlesham, derben]
+	},
+	'properties': {
+		'name': 'Derben',
+		'trips': 1,
+		'daterank1': 10,
+		'date1': '1/14/1945',
+		'mission1': 112
+	}
 };
 var routeAugsburg = {
-	'type': 'FeatureCollection',
-	'features': [
-		{
-			'type': 'Feature',
-			'geometry': {
-				'type': 'LineString',
-				'coordinates': [origin, augsburg]
-			}
-		}
-	]
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [mendlesham, augsburg]
+	},
+	'properties': {
+		'name': 'Augsburg',
+		'trips': 1,
+		'daterank1': 11,
+		'date1': '1/15/1945',
+		'mission1': 113
+	}
 };
 var routeBitterfeld = {
-	'type': 'FeatureCollection',
-	'features': [
-		{
-			'type': 'Feature',
-			'geometry': {
-				'type': 'LineString',
-				'coordinates': [origin, bitterfeld]
-			}
-		}
-	]
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [mendlesham, bitterfeld]
+	},
+	'properties': {
+		'name': 'Bitterfeld',
+		'trips': 2,
+		'daterank1': 12,
+		'daterank2': 27,
+		'date1': '1/16/1945',
+		'date1': '3/17/1945',
+		'mission1': 114,
+		'mission1': 144
+	}
 };
 var routeDuisburg = {
-	'type': 'FeatureCollection',
-	'features': [
-		{
-			'type': 'Feature',
-			'geometry': {
-				'type': 'LineString',
-				'coordinates': [origin, duisburg]
-			}
-		}
-	]
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [mendlesham, duisburg]
+	},
+	'properties': {
+		'name': 'Duisburg',
+		'trips': 1,
+		'daterank1': 13,
+		'date1': '1/28/1945',
+		'mission1': 117
+	}
 };
 var routeDulmen = {
-	'type': 'FeatureCollection',
-	'features': [
-		{
-			'type': 'Feature',
-			'geometry': {
-				'type': 'LineString',
-				'coordinates': [origin, dulmen]
-			}
-		}
-	]
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [mendlesham, dulmen]
+	},
+	'properties': {
+		'name': 'Dülmen',
+		'trips': 1,
+		'daterank1': 15,
+		'date1': '2/9/1945',
+		'mission1': 121
+	}
 };
 var routeCottbus = {
-	'type': 'FeatureCollection',
-	'features': [
-		{
-			'type': 'Feature',
-			'geometry': {
-				'type': 'LineString',
-				'coordinates': [origin, cottbus]
-			}
-		}
-	]
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [mendlesham, cottbus]
+	},
+	'properties': {
+		'name': 'Cottbus',
+		'trips': 1,
+		'daterank1': 16,
+		'date1': '2/15/1945',
+		'mission1': 123
+	}
 };
 var routeBremen = {
-	'type': 'FeatureCollection',
-	'features': [
-		{
-			'type': 'Feature',
-			'geometry': {
-				'type': 'LineString',
-				'coordinates': [origin, bremen]
-			}
-		}
-	]
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [mendlesham, bremen]
+	},
+	'properties': {
+		'name': 'Bremen',
+		'trips': 1,
+		'daterank1': 17,
+		'date1': '2/24/1945',
+		'mission1': 129
+	}
 };
 var routeLudwigsfelde = {
-	'type': 'FeatureCollection',
-	'features': [
-		{
-			'type': 'Feature',
-			'geometry': {
-				'type': 'LineString',
-				'coordinates': [origin, ludwigsfelde]
-			}
-		}
-	]
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [mendlesham, ludwigsfelde]
+	},
+	'properties': {
+		'name': 'Ludwigsfelde',
+		'trips': 1,
+		'daterank1': 18,
+		'date1': '2/25/1945',
+		'mission1': 130
+	}
 };
 var routeDresden = {
-	'type': 'FeatureCollection',
-	'features': [
-		{
-			'type': 'Feature',
-			'geometry': {
-				'type': 'LineString',
-				'coordinates': [origin, dresden]
-			}
-		}
-	]
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [mendlesham, dresden]
+	},
+	'properties': {
+		'name': 'Dresden',
+		'trips': 1,
+		'daterank1': 20,
+		'date1': '3/2/1945',
+		'mission1': 134
+	}
 };
 var routeDedenhausen = {
-	'type': 'FeatureCollection',
-	'features': [
-		{
-			'type': 'Feature',
-			'geometry': {
-				'type': 'LineString',
-				'coordinates': [origin, dedenhausen]
-			}
-		}
-	]
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [mendlesham, dedenhausen]
+	},
+	'properties': {
+		'name': 'Dedenhausen',
+		'trips': 1,
+		'daterank1': 21,
+		'date1': '3/3/1945',
+		'mission1': 135
+	}
 };
 var routeDatteln = {
-	'type': 'FeatureCollection',
-	'features': [
-		{
-			'type': 'Feature',
-			'geometry': {
-				'type': 'LineString',
-				'coordinates': [origin, datteln]
-			}
-		}
-	]
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [mendlesham, datteln]
+	},
+	'properties': {
+		'name': 'Datteln',
+		'trips': 1,
+		'daterank1': 23,
+		'date1': '3/7/1945',
+		'mission1': 137
+	}
 };
 var routeSoest = {
-	'type': 'FeatureCollection',
-	'features': [
-		{
-			'type': 'Feature',
-			'geometry': {
-				'type': 'LineString',
-				'coordinates': [origin, soest]
-			}
-		}
-	]
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [mendlesham, soest]
+	},
+	'properties': {
+		'name': 'Soest',
+		'trips': 1,
+		'daterank1': 24,
+		'date1': '3/10/1945',
+		'mission1': 139
+	}
 };
 var routeHamburg = {
-	'type': 'FeatureCollection',
-	'features': [
-		{
-			'type': 'Feature',
-			'geometry': {
-				'type': 'LineString',
-				'coordinates': [origin, hamburg]
-			}
-		}
-	]
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [mendlesham, hamburg]
+	},
+	'properties': {
+		'name': 'Hamburg',
+		'trips': 2,
+		'daterank1': 25,
+		'daterank2': 30,
+		'date1': '3/11/1945',
+		'date2': '3/20/1945',
+		'mission1': 140,
+		'mission2': 147
+	}
 };
 var routeSwinoujscie = {
-	'type': 'FeatureCollection',
-	'features': [
-		{
-			'type': 'Feature',
-			'geometry': {
-				'type': 'LineString',
-				'coordinates': [origin, swinoujscie]
-			}
-		}
-	]
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [mendlesham, swinoujscie]
+	},
+	'properties': {
+		'name': 'Świnoujście',
+		'trips': 1,
+		'daterank1': 26,
+		'date1': '3/12/1945',
+		'mission1': 141
+	}
 };
 var routeJena = {
-	'type': 'FeatureCollection',
-	'features': [
-		{
-			'type': 'Feature',
-			'geometry': {
-				'type': 'LineString',
-				'coordinates': [origin, jena]
-			}
-		}
-	]
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [mendlesham, jena]
+	},
+	'properties': {
+		'name': 'Jena',
+		'trips': 1,
+		'daterank1': 29,
+		'date1': '3/19/1945',
+		'mission1': 146
+	}
 };
 var routeMarxen = {
-	'type': 'FeatureCollection',
-	'features': [
-		{
-			'type': 'Feature',
-			'geometry': {
-				'type': 'LineString',
-				'coordinates': [origin, marxen]
-			}
-		}
-	]
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [mendlesham, marxen]
+	},
+	'properties': {
+		'name': 'Marxen',
+		'trips': 1,
+		'daterank1': 31,
+		'date1': '3/21/1945',
+		'mission1': 148
+	}
 };
 var routeRatingen = {
-	'type': 'FeatureCollection',
-	'features': [
-		{
-			'type': 'Feature',
-			'geometry': {
-				'type': 'LineString',
-				'coordinates': [origin, ratingen]
-			}
-		}
-	]
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [mendlesham, ratingen]
+	},
+	'properties': {
+		'name': 'Ratingen',
+		'trips': 1,
+		'daterank1': 32,
+		'date1': '3/22/1945',
+		'mission1': 149
+	}
 };
 var routeGeisecke = {
-	'type': 'FeatureCollection',
-	'features': [
-		{
-			'type': 'Feature',
-			'geometry': {
-				'type': 'LineString',
-				'coordinates': [origin, geisecke]
-			}
-		}
-	]
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [mendlesham, geisecke]
+	},
+	'properties': {
+		'name': 'Geisecke',
+		'trips': 1,
+		'daterank1': 33,
+		'date1': '3/23/1945',
+		'mission1': 150
+	}
 };
 var routeBadZwischenahn = {
-	'type': 'FeatureCollection',
-	'features': [
-		{
-			'type': 'Feature',
-			'geometry': {
-				'type': 'LineString',
-				'coordinates': [origin, badZwischenahn]
-			}
-		}
-	]
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [mendlesham, badZwischenahn]
+	},
+	'properties': {
+		'name': 'Bad Zwischenahn',
+		'trips': 1,
+		'daterank1': 34,
+		'date1': '3/24/1945',
+		'mission1': 151
+	}
 };
 
 // Calculate the distance in kilometers between route start/end points.
-var lineDistanceMendlesham = turf.length(routeMendlesham);
-var lineDistanceBerlin = turf.length(routeBerlin.features[0]);
-var lineDistanceDarmstadt = turf.length(routeDarmstadt.features[0]);
-var lineDistanceHanover = turf.length(routeHanover.features[0]);
-var lineDistanceAndernach = turf.length(routeAndernach.features[0]);
-var lineDistanceKassel = turf.length(routeKassel.features[0]);
-var lineDistanceMisburg = turf.length(routeMisburg.features[0]);
-var lineDistancePforzheim = turf.length(routePforzheim.features[0]);
-var lineDistanceBielefeld = turf.length(routeBielefeld.features[0]);
-var lineDistanceCologne = turf.length(routeCologne.features[0]);
-var lineDistanceDerben = turf.length(routeDerben.features[0]);
-var lineDistanceAugsburg = turf.length(routeAugsburg.features[0]);
-var lineDistanceBitterfeld = turf.length(routeBitterfeld.features[0]);
-var lineDistanceDuisburg = turf.length(routeDuisburg.features[0]);
-var lineDistanceDulmen = turf.length(routeDulmen.features[0]);
-var lineDistanceCottbus = turf.length(routeCottbus.features[0]);
-var lineDistanceBremen = turf.length(routeBremen.features[0]);
-var lineDistanceLudwigsfelde = turf.length(routeLudwigsfelde.features[0]);
-var lineDistanceDresden = turf.length(routeDresden.features[0]);
-var lineDistanceDedenhausen = turf.length(routeDedenhausen.features[0]);
-var lineDistanceDatteln = turf.length(routeDatteln.features[0]);
-var lineDistanceSoest = turf.length(routeSoest.features[0]);
-var lineDistanceHamburg = turf.length(routeHamburg.features[0]);
-var lineDistanceSwinoujscie = turf.length(routeSwinoujscie.features[0]);
-var lineDistanceJena = turf.length(routeJena.features[0]);
-var lineDistanceMarxen = turf.length(routeMarxen.features[0]);
-var lineDistanceRatingen = turf.length(routeRatingen.features[0]);
-var lineDistanceGeisecke = turf.length(routeGeisecke.features[0]);
-var lineDistanceBadZwischenahn = turf.length(routeBadZwischenahn.features[0]);
+var lineDistancePlymouth = turf.length(routePlymouth);
+var lineDistanceBerlin = turf.length(routeBerlin);
+var lineDistanceDarmstadt = turf.length(routeDarmstadt);
+var lineDistanceHanover = turf.length(routeHanover);
+var lineDistanceAndernach = turf.length(routeAndernach);
+var lineDistanceKassel = turf.length(routeKassel);
+var lineDistanceMisburg = turf.length(routeMisburg);
+var lineDistancePforzheim = turf.length(routePforzheim);
+var lineDistanceBielefeld = turf.length(routeBielefeld);
+var lineDistanceCologne = turf.length(routeCologne);
+var lineDistanceDerben = turf.length(routeDerben);
+var lineDistanceAugsburg = turf.length(routeAugsburg);
+var lineDistanceBitterfeld = turf.length(routeBitterfeld);
+var lineDistanceDuisburg = turf.length(routeDuisburg);
+var lineDistanceDulmen = turf.length(routeDulmen);
+var lineDistanceCottbus = turf.length(routeCottbus);
+var lineDistanceBremen = turf.length(routeBremen);
+var lineDistanceLudwigsfelde = turf.length(routeLudwigsfelde);
+var lineDistanceDresden = turf.length(routeDresden);
+var lineDistanceDedenhausen = turf.length(routeDedenhausen);
+var lineDistanceDatteln = turf.length(routeDatteln);
+var lineDistanceSoest = turf.length(routeSoest);
+var lineDistanceHamburg = turf.length(routeHamburg);
+var lineDistanceSwinoujscie = turf.length(routeSwinoujscie);
+var lineDistanceJena = turf.length(routeJena);
+var lineDistanceMarxen = turf.length(routeMarxen);
+var lineDistanceRatingen = turf.length(routeRatingen);
+var lineDistanceGeisecke = turf.length(routeGeisecke);
+var lineDistanceBadZwischenahn = turf.length(routeBadZwischenahn);
  
-var arcMendlesham = []; 
+var arcPlymouth = []; 
 var arcBerlin = [];
 var arcDarmstadt = [];
 var arcHanover = [];
@@ -450,7 +529,7 @@ var arcBadZwischenahn = [];
 // Number of steps to use in the arc and animation, more steps means
 // a smoother arc and animation, but too many steps will result in a
 // low frame rate
-var stepsMendlesham = 500;
+var stepsPlymouth = 500;
 var stepsBerlin = 500;
 var stepsDarmstadt = 500;
 var stepsHanover = 500;
@@ -480,151 +559,151 @@ var stepsRatingen = 500;
 var stepsGeisecke = 500;
 var stepsBadZwischenahn = 500;
  
-// Draw an arc between the `origin` & `destination` of the two points
-for (var i = 0; i < lineDistanceMendlesham; i += lineDistanceMendlesham / stepsMendlesham) {
-  var segmentMendlesham = turf.along(routeMendlesham, i);
-  arcMendlesham.push(segmentMendlesham.geometry.coordinates);
+// Draw an arc between the origin & destination points
+for (var i = 0; i < lineDistancePlymouth; i += lineDistancePlymouth / stepsPlymouth) {
+  var segmentPlymouth = turf.along(routePlymouth, i);
+  arcPlymouth.push(segmentPlymouth.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceBerlin; i += lineDistanceBerlin / stepsBerlin) {
-	var segmentBerlin = turf.along(routeBerlin.features[0], i);
+	var segmentBerlin = turf.along(routeBerlin, i);
 	arcBerlin.push(segmentBerlin.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceDarmstadt; i += lineDistanceDarmstadt / stepsDarmstadt) {
-	var segmentDarmstadt = turf.along(routeDarmstadt.features[0], i);
+	var segmentDarmstadt = turf.along(routeDarmstadt, i);
 	arcDarmstadt.push(segmentDarmstadt.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceHanover; i += lineDistanceHanover / stepsHanover) {
-	var segmentHanover = turf.along(routeHanover.features[0], i);
+	var segmentHanover = turf.along(routeHanover, i);
 	arcHanover.push(segmentHanover.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceAndernach; i += lineDistanceAndernach / stepsAndernach) {
-	var segmentAndernach = turf.along(routeAndernach.features[0], i);
+	var segmentAndernach = turf.along(routeAndernach, i);
 	arcAndernach.push(segmentAndernach.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceKassel; i += lineDistanceKassel / stepsKassel) {
-	var segmentKassel = turf.along(routeKassel.features[0], i);
+	var segmentKassel = turf.along(routeKassel, i);
 	arcKassel.push(segmentKassel.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceMisburg; i += lineDistanceMisburg / stepsMisburg) {
-	var segmentMisburg = turf.along(routeMisburg.features[0], i);
+	var segmentMisburg = turf.along(routeMisburg, i);
 	arcMisburg.push(segmentMisburg.geometry.coordinates);
 }
 for (var i = 0; i < lineDistancePforzheim; i += lineDistancePforzheim / stepsPforzheim) {
-	var segmentPforzheim = turf.along(routePforzheim.features[0], i);
+	var segmentPforzheim = turf.along(routePforzheim, i);
 	arcPforzheim.push(segmentPforzheim.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceBielefeld; i += lineDistanceBielefeld / stepsBielefeld) {
-	var segmentBielefeld = turf.along(routeBielefeld.features[0], i);
+	var segmentBielefeld = turf.along(routeBielefeld, i);
 	arcBielefeld.push(segmentBielefeld.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceCologne; i += lineDistanceCologne / stepsCologne) {
-	var segmentCologne = turf.along(routeCologne.features[0], i);
+	var segmentCologne = turf.along(routeCologne, i);
 	arcCologne.push(segmentCologne.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceDerben; i += lineDistanceDerben / stepsDerben) {
-	var segmentDerben = turf.along(routeDerben.features[0], i);
+	var segmentDerben = turf.along(routeDerben, i);
 	arcDerben.push(segmentDerben.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceAugsburg; i += lineDistanceAugsburg / stepsAugsburg) {
-	var segmentAugsburg = turf.along(routeAugsburg.features[0], i);
+	var segmentAugsburg = turf.along(routeAugsburg, i);
 	arcAugsburg.push(segmentAugsburg.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceBitterfeld; i += lineDistanceBitterfeld / stepsBitterfeld) {
-	var segmentBitterfeld = turf.along(routeBitterfeld.features[0], i);
+	var segmentBitterfeld = turf.along(routeBitterfeld, i);
 	arcBitterfeld.push(segmentBitterfeld.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceDuisburg; i += lineDistanceDuisburg / stepsDuisburg) {
-	var segmentDuisburg = turf.along(routeDuisburg.features[0], i);
+	var segmentDuisburg = turf.along(routeDuisburg, i);
 	arcDuisburg.push(segmentDuisburg.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceDulmen; i += lineDistanceDulmen / stepsDulmen) {
-	var segmentDulmen = turf.along(routeDulmen.features[0], i);
+	var segmentDulmen = turf.along(routeDulmen, i);
 	arcDulmen.push(segmentDulmen.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceCottbus; i += lineDistanceCottbus / stepsCottbus) {
-	var segmentCottbus = turf.along(routeCottbus.features[0], i);
+	var segmentCottbus = turf.along(routeCottbus, i);
 	arcCottbus.push(segmentCottbus.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceBremen; i += lineDistanceBremen / stepsBremen) {
-	var segmentBremen = turf.along(routeBremen.features[0], i);
+	var segmentBremen = turf.along(routeBremen, i);
 	arcBremen.push(segmentBremen.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceLudwigsfelde; i += lineDistanceLudwigsfelde / stepsLudwigsfelde) {
-	var segmentLudwigsfelde = turf.along(routeLudwigsfelde.features[0], i);
+	var segmentLudwigsfelde = turf.along(routeLudwigsfelde, i);
 	arcLudwigsfelde.push(segmentLudwigsfelde.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceDresden; i += lineDistanceDresden / stepsDresden) {
-	var segmentDresden = turf.along(routeDresden.features[0], i);
+	var segmentDresden = turf.along(routeDresden, i);
 	arcDresden.push(segmentDresden.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceDedenhausen; i += lineDistanceDedenhausen / stepsDedenhausen) {
-	var segmentDedenhausen = turf.along(routeDedenhausen.features[0], i);
+	var segmentDedenhausen = turf.along(routeDedenhausen, i);
 	arcDedenhausen.push(segmentDedenhausen.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceDatteln; i += lineDistanceDatteln / stepsDatteln) {
-	var segmentDatteln = turf.along(routeDatteln.features[0], i);
+	var segmentDatteln = turf.along(routeDatteln, i);
 	arcDatteln.push(segmentDatteln.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceSoest; i += lineDistanceSoest / stepsSoest) {
-	var segmentSoest = turf.along(routeSoest.features[0], i);
+	var segmentSoest = turf.along(routeSoest, i);
 	arcSoest.push(segmentSoest.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceHamburg; i += lineDistanceHamburg / stepsHamburg) {
-	var segmentHamburg = turf.along(routeHamburg.features[0], i);
+	var segmentHamburg = turf.along(routeHamburg, i);
 	arcHamburg.push(segmentHamburg.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceSwinoujscie; i += lineDistanceSwinoujscie / stepsSwinoujscie) {
-	var segmentSwinoujscie = turf.along(routeSwinoujscie.features[0], i);
+	var segmentSwinoujscie = turf.along(routeSwinoujscie, i);
 	arcSwinoujscie.push(segmentSwinoujscie.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceJena; i += lineDistanceJena / stepsJena) {
-	var segmentJena = turf.along(routeJena.features[0], i);
+	var segmentJena = turf.along(routeJena, i);
 	arcJena.push(segmentJena.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceMarxen; i += lineDistanceMarxen / stepsMarxen) {
-	var segmentMarxen = turf.along(routeMarxen.features[0], i);
+	var segmentMarxen = turf.along(routeMarxen, i);
 	arcMarxen.push(segmentMarxen.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceRatingen; i += lineDistanceRatingen / stepsRatingen) {
-	var segmentRatingen = turf.along(routeRatingen.features[0], i);
+	var segmentRatingen = turf.along(routeRatingen, i);
 	arcRatingen.push(segmentRatingen.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceGeisecke; i += lineDistanceGeisecke / stepsGeisecke) {
-	var segmentGeisecke = turf.along(routeGeisecke.features[0], i);
+	var segmentGeisecke = turf.along(routeGeisecke, i);
 	arcGeisecke.push(segmentGeisecke.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceBadZwischenahn; i += lineDistanceBadZwischenahn / stepsBadZwischenahn) {
-	var segmentBadZwischenahn = turf.along(routeBadZwischenahn.features[0], i);
+	var segmentBadZwischenahn = turf.along(routeBadZwischenahn, i);
 	arcBadZwischenahn.push(segmentBadZwischenahn.geometry.coordinates);
 }
  
 // Update the route with calculated arc coordinates
-routeMendlesham.geometry.coordinates = arcMendlesham;
-routeBerlin.features[0].geometry.coordinates = arcBerlin;
-routeDarmstadt.features[0].geometry.coordinates = arcDarmstadt;
-routeHanover.features[0].geometry.coordinates = arcHanover;
-routeAndernach.features[0].geometry.coordinates = arcAndernach;
-routeKassel.features[0].geometry.coordinates = arcKassel;
-routeMisburg.features[0].geometry.coordinates = arcMisburg;
-routePforzheim.features[0].geometry.coordinates = arcPforzheim;
-routeBielefeld.features[0].geometry.coordinates = arcBielefeld;
-routeCologne.features[0].geometry.coordinates = arcCologne;
-routeDerben.features[0].geometry.coordinates = arcDerben;
-routeAugsburg.features[0].geometry.coordinates = arcAugsburg;
-routeBitterfeld.features[0].geometry.coordinates = arcBitterfeld;
-routeDuisburg.features[0].geometry.coordinates = arcDuisburg;
-routeDulmen.features[0].geometry.coordinates = arcDulmen;
-routeCottbus.features[0].geometry.coordinates = arcCottbus;
-routeBremen.features[0].geometry.coordinates = arcBremen;
-routeLudwigsfelde.features[0].geometry.coordinates = arcLudwigsfelde;
-routeDresden.features[0].geometry.coordinates = arcDresden;
-routeDedenhausen.features[0].geometry.coordinates = arcDedenhausen;
-routeDatteln.features[0].geometry.coordinates = arcDatteln;
-routeSoest.features[0].geometry.coordinates = arcSoest;
-routeHamburg.features[0].geometry.coordinates = arcHamburg;
-routeSwinoujscie.features[0].geometry.coordinates = arcSwinoujscie;
-routeJena.features[0].geometry.coordinates = arcJena;
-routeMarxen.features[0].geometry.coordinates = arcMarxen;
-routeRatingen.features[0].geometry.coordinates = arcRatingen;
-routeGeisecke.features[0].geometry.coordinates = arcGeisecke;
-routeBadZwischenahn.features[0].geometry.coordinates = arcBadZwischenahn;
+routePlymouth.geometry.coordinates = arcPlymouth;
+routeBerlin.geometry.coordinates = arcBerlin;
+routeDarmstadt.geometry.coordinates = arcDarmstadt;
+routeHanover.geometry.coordinates = arcHanover;
+routeAndernach.geometry.coordinates = arcAndernach;
+routeKassel.geometry.coordinates = arcKassel;
+routeMisburg.geometry.coordinates = arcMisburg;
+routePforzheim.geometry.coordinates = arcPforzheim;
+routeBielefeld.geometry.coordinates = arcBielefeld;
+routeCologne.geometry.coordinates = arcCologne;
+routeDerben.geometry.coordinates = arcDerben;
+routeAugsburg.geometry.coordinates = arcAugsburg;
+routeBitterfeld.geometry.coordinates = arcBitterfeld;
+routeDuisburg.geometry.coordinates = arcDuisburg;
+routeDulmen.geometry.coordinates = arcDulmen;
+routeCottbus.geometry.coordinates = arcCottbus;
+routeBremen.geometry.coordinates = arcBremen;
+routeLudwigsfelde.geometry.coordinates = arcLudwigsfelde;
+routeDresden.geometry.coordinates = arcDresden;
+routeDedenhausen.geometry.coordinates = arcDedenhausen;
+routeDatteln.geometry.coordinates = arcDatteln;
+routeSoest.geometry.coordinates = arcSoest;
+routeHamburg.geometry.coordinates = arcHamburg;
+routeSwinoujscie.geometry.coordinates = arcSwinoujscie;
+routeJena.geometry.coordinates = arcJena;
+routeMarxen.geometry.coordinates = arcMarxen;
+routeRatingen.geometry.coordinates = arcRatingen;
+routeGeisecke.geometry.coordinates = arcGeisecke;
+routeBadZwischenahn.geometry.coordinates = arcBadZwischenahn;

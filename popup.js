@@ -10,7 +10,7 @@ var popupClick = new mapboxgl.Popup({
 	});
 
 // Missions route popup
-map.on('mouseenter', 'routeDarmstadtActive', (e) => {
+map.on('mouseenter', 'routesPopup', (e) => {
 	const name = e.features[0].properties.name;
 	
 	// Populate the popup and set its coordinates
@@ -22,7 +22,7 @@ map.on('mouseenter', 'routeDarmstadtActive', (e) => {
 		.trackPointer();
 });
 
-map.on('click', 'routeBerlinActive', (e) => {
+map.on('click', 'routesPopup', (e) => {
 	const name = e.features[0].properties.name;
 	
 	// Populate the popup and set its coordinates
@@ -30,7 +30,7 @@ map.on('click', 'routeBerlinActive', (e) => {
 	popupClick.setLngLat(e.lngLat).setHTML(`click probe`).addTo(map);
 });
 
-map.on('mouseenter', 'routeBerlinActive', (e) => {
+map.on('mouseenter', 'routesPopup', (e) => {
 	const name = e.features[0].properties.name;
 	
 	// Populate the popup and set its coordinates
@@ -42,12 +42,12 @@ map.on('mouseenter', 'routeBerlinActive', (e) => {
 		.trackPointer();
 });
 
-map.on('mouseenter', 'routeBerlinActive', () => {
+map.on('mouseenter', 'routesPopup', () => {
 	// Change the cursor style as a UI indicator.
 	map.getCanvas().style.cursor = 'pointer';
 });
 
-map.on('mouseleave', 'routeBerlinActive', () => {
+map.on('mouseleave', 'routesPopup', () => {
 	// Change the cursor style as a UI indicator.
 	map.getCanvas().style.cursor = '';
 	popupHover.remove();
