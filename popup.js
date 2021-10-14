@@ -12,11 +12,12 @@ var popupClick = new mapboxgl.Popup({
 // Missions route popup
 map.on('mouseenter', 'routesPopup', (e) => {
 	const name = e.features[0].properties.name;
+	const trips = e.features[0].properties.trips;
 	
 	// Populate the popup and set its coordinates
 	// based on the feature found.
 	popupHover
-		.setHTML(`testing`)
+		.setHTML(`<h3>${name}</h3><p>${trips}</p>`)
 		.addTo(map)
 		.setLngLat(e.lngLat)
 		.trackPointer();
@@ -28,18 +29,6 @@ map.on('click', 'routesPopup', (e) => {
 	// Populate the popup and set its coordinates
 	// based on the feature found.
 	popupClick.setLngLat(e.lngLat).setHTML(`click probe`).addTo(map);
-});
-
-map.on('mouseenter', 'routesPopup', (e) => {
-	const name = e.features[0].properties.name;
-	
-	// Populate the popup and set its coordinates
-	// based on the feature found.
-	popupHover
-		.setHTML(`<h3>${name}</h3>`)
-		.addTo(map)
-		.setLngLat(e.lngLat)
-		.trackPointer();
 });
 
 map.on('mouseenter', 'routesPopup', () => {
