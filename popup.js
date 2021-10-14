@@ -1,25 +1,45 @@
 // Create a popup, but don't add it to the map yet.
-var popup = new mapboxgl.Popup({
-	//closeButton: false,
-	//closeOnClick: false
+var popupHover = new mapboxgl.Popup({
+	closeButton: false,
+	closeOnClick: true
+	});
+	
+var popupClick = new mapboxgl.Popup({
+	closeButton: true,
+	closeOnClick: true
 	});
 
 // Missions route popup
-map.on('click', 'routeDarmstadt', (e) => {
+map.on('mouseenter', 'routeDarmstadtActive', (e) => {
 	const name = e.features[0].properties.name;
 	
 	// Populate the popup and set its coordinates
 	// based on the feature found.
-	popup.setLngLat(e.lngLat).setHTML(`<h3>${name}</h3>`).addTo(map);
+	popupHover
+		.setHTML(`testing`)
+		.addTo(map)
+		.setLngLat(e.lngLat)
+		.trackPointer();
 });
-
 
 map.on('click', 'routeBerlinActive', (e) => {
 	const name = e.features[0].properties.name;
 	
 	// Populate the popup and set its coordinates
 	// based on the feature found.
-	popup.setLngLat(e.lngLat).setHTML(`<h3>${name}</h3>`).addTo(map);
+	popupClick.setLngLat(e.lngLat).setHTML(`click probe`).addTo(map);
+});
+
+map.on('mouseenter', 'routeBerlinActive', (e) => {
+	const name = e.features[0].properties.name;
+	
+	// Populate the popup and set its coordinates
+	// based on the feature found.
+	popupHover
+		.setHTML(`<h3>${name}</h3>`)
+		.addTo(map)
+		.setLngLat(e.lngLat)
+		.trackPointer();
 });
 
 map.on('mouseenter', 'routeBerlinActive', () => {
@@ -30,6 +50,7 @@ map.on('mouseenter', 'routeBerlinActive', () => {
 map.on('mouseleave', 'routeBerlinActive', () => {
 	// Change the cursor style as a UI indicator.
 	map.getCanvas().style.cursor = '';
+	popupHover.remove();
 });
 
 // Missions point popup
@@ -50,12 +71,12 @@ map.on('mouseenter', 'missions', function (e) {
 	 
 	// Populate the popup and set its coordinates
 	// based on the feature found.
-	popup.setLngLat(coordinates).setHTML(`<h3>${name}</h3><p>${date}</p>`).addTo(map);
+	popupHover.setLngLat(coordinates).setHTML(`<h3>${name}</h3><p>${date}</p>`).addTo(map);
 });
 	 
 map.on('mouseleave', 'missions', function () {
 	map.getCanvas().style.cursor = '';
-	popup.remove();
+	popupHover.remove();
 });
 
 // Service schools popup
@@ -78,10 +99,10 @@ map.on('mouseenter', 'serviceSchools', function (e) {
 	 
 	// Populate the popup and set its coordinates
 	// based on the feature found.
-	popup.setLngLat(coordinates).setHTML(`<h3>${name}</h3><p>${place}</p><p>${course}</p><p>${duration}</p>`).addTo(map);
+	popupHover.setLngLat(coordinates).setHTML(`<h3>${name}</h3><p>${place}</p><p>${course}</p><p>${duration}</p>`).addTo(map);
 });
 	 
 map.on('mouseleave', 'serviceSchools', function () {
 	map.getCanvas().style.cursor = '';
-	popup.remove();
+	popupHover.remove();
 });
