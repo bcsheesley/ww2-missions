@@ -39,6 +39,7 @@ var marxen = [10.001077, 53.310575];
 var ratingen = [6.840184, 51.296415];
 var geisecke = [7.619401, 51.458441];
 var badZwischenahn = [8.009877, 53.181440];
+var recall = [6.605980, 49.311541];
  
 // Line from New York to Plymouth
 var routePlymouth = {
@@ -464,6 +465,20 @@ var routeBadZwischenahn = {
 		'mission1': 151
 	}
 };
+var routeRecall = {
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [mendlesham, recall]
+	},
+	'properties': {
+		'name': 'Recall',
+		'trips': 1,
+		'daterank1': 22,
+		'date1': '3/4/1945',
+		'mission1': 136
+	}
+};
 
 // Calculate the distance in kilometers between route start/end points.
 var lineDistancePlymouth = turf.length(routePlymouth);
@@ -495,6 +510,7 @@ var lineDistanceMarxen = turf.length(routeMarxen);
 var lineDistanceRatingen = turf.length(routeRatingen);
 var lineDistanceGeisecke = turf.length(routeGeisecke);
 var lineDistanceBadZwischenahn = turf.length(routeBadZwischenahn);
+var lineDistanceRecall = turf.length(routeRecall);
  
 var arcPlymouth = []; 
 var arcBerlin = [];
@@ -525,6 +541,7 @@ var arcMarxen = [];
 var arcRatingen = [];
 var arcGeisecke = [];
 var arcBadZwischenahn = [];
+var arcRecall = [];
  
 // Number of steps to use in the arc and animation, more steps means
 // a smoother arc and animation, but too many steps will result in a
@@ -558,6 +575,7 @@ var stepsMarxen = 500;
 var stepsRatingen = 500;
 var stepsGeisecke = 500;
 var stepsBadZwischenahn = 500;
+var stepsRecall = 500;
  
 // Draw an arc between the origin & destination points
 for (var i = 0; i < lineDistancePlymouth; i += lineDistancePlymouth / stepsPlymouth) {
@@ -676,6 +694,10 @@ for (var i = 0; i < lineDistanceBadZwischenahn; i += lineDistanceBadZwischenahn 
 	var segmentBadZwischenahn = turf.along(routeBadZwischenahn, i);
 	arcBadZwischenahn.push(segmentBadZwischenahn.geometry.coordinates);
 }
+for (var i = 0; i < lineDistanceRecall; i += lineDistanceRecall / stepsRecall) {
+	var segmentRecall = turf.along(routeRecall, i);
+	arcRecall.push(segmentRecall.geometry.coordinates);
+}
  
 // Update the route with calculated arc coordinates
 routePlymouth.geometry.coordinates = arcPlymouth;
@@ -707,3 +729,4 @@ routeMarxen.geometry.coordinates = arcMarxen;
 routeRatingen.geometry.coordinates = arcRatingen;
 routeGeisecke.geometry.coordinates = arcGeisecke;
 routeBadZwischenahn.geometry.coordinates = arcBadZwischenahn;
+routeRecall.geometry.coordinates = arcRecall;
