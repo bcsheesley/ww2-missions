@@ -229,39 +229,6 @@ var map = new mapboxgl.Map({
     transformRequest: transformRequest
 });
 
-map.on('load', function() {
-    var mySource = map.addSource('markers', {
-        type: 'geojson',
-        data: markers
-    });
-});
-
-// add markers to map
-for (const { geometry, properties } of markers.features) {
-  // create a HTML element for each feature
-  const el = document.createElement('div');
-  //el.href = '#' + properties.ref;
-  el.className = 'marker';
-
-// create the popup
-const myPopup = new mapboxgl.Popup({
-    offset: 125,
-    //closeButton: false,
-    //closeOnClick: false
-})
-    .setHTML(`<h3>${properties.name}</h3><p>${properties.ref}</p>`);
- 
-// make a marker for each feature
-new mapboxgl.Marker(el)
-    .setLngLat(geometry.coordinates)
-    .setPopup(myPopup)
-    .addTo(map);
-    
-// hover event listener
-//el.addEventListener('mouseenter', () => myPopup.addTo(map));
-//el.addEventListener('mouseleave', () => myPopup.remove());
-}
-
 // Add zoom and rotation controls to the map.
 map.addControl(new mapboxgl.NavigationControl({
   showCompass: false
