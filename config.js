@@ -73,13 +73,7 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [
-                {
-                    layer: 'routeBerlinActive',
-                    opacity: 0,
-                    duration: 300
-                }
-            ],
+            onChapterEnter: [],
             onChapterExit: []
         },
         {
@@ -147,7 +141,7 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {
-                    layer: 'routeBerlinActive',
+                    layer: 'routeBerlin',
                     opacity: 0.8,
                     duration: 300
                 }
@@ -175,7 +169,7 @@ var config = {
             callback: '',
             onChapterEnter: [
             {
-                layer: 'routeBerlinActive',
+                layer: 'routeBerlin',
                 opacity: 0.8,
                 duration: 300
             }
@@ -203,18 +197,18 @@ var config = {
             callback: '',
             onChapterEnter: [
             {
-                layer: 'routeBerlinActive',
+                layer: 'routeBerlin',
                 opacity: 0,
                 duration: 300
             },
             {
-                layer: 'routeKasselActive',
+                layer: 'routeKassel',
                 opacity: 0.8,
                 duration: 300
             }
         ],
             onChapterExit: [{
-                layer: 'routeKasselActive',
+                layer: 'routeKassel',
                 opacity: 0,
                 duration: 300
             }]

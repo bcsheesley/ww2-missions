@@ -101,8 +101,8 @@ map.on('load', function() {
 		'source': 'routes',
 		'type': 'line',
 		'paint': {
-			'line-width': 4,
-			'line-opacity': 0,
+			'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+			'line-opacity': 0.0,
 			'line-color': '#fff'
 		}
 	},
@@ -114,8 +114,12 @@ map.on('load', function() {
 			'id': 'routeBerlin',
 			'source': 'routes',
 			'type': 'line',
+			'filter': ['==',['get','name'],'Berlin'],
+			'layout': {
+				'line-cap': 'round'
+			},
 			'paint': {
-				'line-width': 12,
+				'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#FFFF85'
 			}
@@ -126,6 +130,7 @@ map.on('load', function() {
 			'id': 'routeDarmstadt',
 			'source': 'routes',
 			'type': 'line',
+			'filter': ['==',['get','name'],'Darmstadt'],
 			'paint': {
 				'line-width': 12,
 				'line-opacity': 0,
@@ -138,6 +143,7 @@ map.on('load', function() {
 			'id': 'routeHanover',
 			'source': 'routes',
 			'type': 'line',
+			'filter': ['==',['get','name'],'Hanover'],
 			'paint': {
 				'line-width': 12,
 				'line-opacity': 0,
@@ -150,6 +156,7 @@ map.on('load', function() {
 			'id': 'routeAndernach',
 			'source': 'routes',
 			'type': 'line',
+			'filter': ['==',['get','name'],'Andernach'],
 			'paint': {
 				'line-width': 12,
 				'line-opacity': 0,
@@ -162,6 +169,7 @@ map.on('load', function() {
 			'id': 'routeKassel',
 			'source': 'routes',
 			'type': 'line',
+			'filter': ['==',['get','name'],'Kassel'],
 			'paint': {
 				'line-width': 12,
 				'line-opacity': 0,
@@ -174,6 +182,7 @@ map.on('load', function() {
 			'id': 'routeMisburg',
 			'source': 'routes',
 			'type': 'line',
+			'filter': ['==',['get','name'],'Misburg'],
 			'paint': {
 				'line-width': 12,
 				'line-opacity': 0,
@@ -186,6 +195,7 @@ map.on('load', function() {
 			'id': 'routePforzheim',
 			'source': 'routes',
 			'type': 'line',
+			'filter': ['==',['get','name'],'Pforzheim'],
 			'paint': {
 				'line-width': 12,
 				'line-opacity': 0,
@@ -198,6 +208,7 @@ map.on('load', function() {
 			'id': 'routeBielefeld',
 			'source': 'routes',
 			'type': 'line',
+			'filter': ['==',['get','name'],'Bielefeld'],
 			'paint': {
 				'line-width': 12,
 				'line-opacity': 0,
@@ -210,6 +221,7 @@ map.on('load', function() {
 			'id': 'routeCologne',
 			'source': 'routes',
 			'type': 'line',
+			'filter': ['==',['get','name'],'Cologne'],
 			'paint': {
 				'line-width': 12,
 				'line-opacity': 0,
@@ -222,6 +234,7 @@ map.on('load', function() {
 			'id': 'routeDerben',
 			'source': 'routes',
 			'type': 'line',
+			'filter': ['==',['get','name'],'Derben'],
 			'paint': {
 				'line-width': 12,
 				'line-opacity': 0,
@@ -234,6 +247,7 @@ map.on('load', function() {
 			'id': 'routeAugsburg',
 			'source': 'routes',
 			'type': 'line',
+			'filter': ['==',['get','name'],'Augsburg'],
 			'paint': {
 				'line-width': 12,
 				'line-opacity': 0,
@@ -246,6 +260,7 @@ map.on('load', function() {
 			'id': 'routeBitterfeld',
 			'source': 'routes',
 			'type': 'line',
+			'filter': ['==',['get','name'],'Bitterfeld'],
 			'paint': {
 				'line-width': 12,
 				'line-opacity': 0,
@@ -258,6 +273,7 @@ map.on('load', function() {
 			'id': 'routeDuisburg',
 			'source': 'routes',
 			'type': 'line',
+			'filter': ['==',['get','name'],'Duisburg'],
 			'paint': {
 				'line-width': 12,
 				'line-opacity': 0,
@@ -270,6 +286,7 @@ map.on('load', function() {
 			'id': 'routeDulmen',
 			'source': 'routes',
 			'type': 'line',
+			'filter': ['==',['get','name'],'Dülmen'],
 			'paint': {
 				'line-width': 12,
 				'line-opacity': 0,
@@ -282,6 +299,7 @@ map.on('load', function() {
 			'id': 'routeCottbus',
 			'source': 'routes',
 			'type': 'line',
+			'filter': ['==',['get','name'],'Cottbus'],
 			'paint': {
 				'line-width': 12,
 				'line-opacity': 0,
@@ -294,6 +312,7 @@ map.on('load', function() {
 			'id': 'routeBremen',
 			'source': 'routes',
 			'type': 'line',
+			'filter': ['==',['get','name'],'Bremen'],
 			'paint': {
 				'line-width': 12,
 				'line-opacity': 0,
@@ -306,6 +325,7 @@ map.on('load', function() {
 			'id': 'routeLudwigsfelde',
 			'source': 'routes',
 			'type': 'line',
+			'filter': ['==',['get','name'],'Ludwigsfelde'],
 			'paint': {
 				'line-width': 12,
 				'line-opacity': 0,
@@ -318,6 +338,7 @@ map.on('load', function() {
 			'id': 'routeDresden',
 			'source': 'routes',
 			'type': 'line',
+			'filter': ['==',['get','name'],'Dresden'],
 			'paint': {
 				'line-width': 12,
 				'line-opacity': 0,
@@ -330,6 +351,7 @@ map.on('load', function() {
 			'id': 'routeDedenhausen',
 			'source': 'routes',
 			'type': 'line',
+			'filter': ['==',['get','name'],'Dedenhausen'],
 			'paint': {
 				'line-width': 12,
 				'line-opacity': 0,
@@ -342,6 +364,7 @@ map.on('load', function() {
 			'id': 'routeDatteln',
 			'source': 'routes',
 			'type': 'line',
+			'filter': ['==',['get','name'],'Datteln'],
 			'paint': {
 				'line-width': 12,
 				'line-opacity': 0,
@@ -354,6 +377,7 @@ map.on('load', function() {
 			'id': 'routeSoest',
 			'source': 'routes',
 			'type': 'line',
+			'filter': ['==',['get','name'],'Soest'],
 			'paint': {
 				'line-width': 12,
 				'line-opacity': 0,
@@ -366,6 +390,7 @@ map.on('load', function() {
 			'id': 'routeHamburg',
 			'source': 'routes',
 			'type': 'line',
+			'filter': ['==',['get','name'],'Hamburg'],
 			'paint': {
 				'line-width': 12,
 				'line-opacity': 0,
@@ -378,6 +403,7 @@ map.on('load', function() {
 			'id': 'routeSwinoujscie',
 			'source': 'routes',
 			'type': 'line',
+			'filter': ['==',['get','name'],'Świnoujście'],
 			'paint': {
 				'line-width': 12,
 				'line-opacity': 0,
@@ -390,6 +416,7 @@ map.on('load', function() {
 			'id': 'routeJena',
 			'source': 'routes',
 			'type': 'line',
+			'filter': ['==',['get','name'],'Jena'],
 			'paint': {
 				'line-width': 12,
 				'line-opacity': 0,
@@ -402,6 +429,7 @@ map.on('load', function() {
 			'id': 'routeMarxen',
 			'source': 'routes',
 			'type': 'line',
+			'filter': ['==',['get','name'],'Marxen'],
 			'paint': {
 				'line-width': 12,
 				'line-opacity': 0,
@@ -414,6 +442,7 @@ map.on('load', function() {
 			'id': 'routeRatingen',
 			'source': 'routes',
 			'type': 'line',
+			'filter': ['==',['get','name'],'Ratingen'],
 			'paint': {
 				'line-width': 12,
 				'line-opacity': 0,
@@ -426,6 +455,7 @@ map.on('load', function() {
 			'id': 'routeGeisecke',
 			'source': 'routes',
 			'type': 'line',
+			'filter': ['==',['get','name'],'Geisecke'],
 			'paint': {
 				'line-width': 12,
 				'line-opacity': 0,
@@ -438,6 +468,7 @@ map.on('load', function() {
 			'id': 'routeBadZwischenahn',
 			'source': 'routes',
 			'type': 'line',
+			'filter': ['==',['get','name'],'Bad Zwischenahn'],
 			'paint': {
 				'line-width': 12,
 				'line-opacity': 0,

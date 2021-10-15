@@ -29,6 +29,25 @@ a span:nth-child(2) {
 h3 {
 	display: inline-block;
 }
+.mapboxgl-popup-content h3, .mapboxgl-popup-content p {
+	margin: 0px;
+}
+
+.mapboxgl-popup-content th {
+	text-align: left;
+	padding-right: 10px;
+}
+
+table {
+	border-spacing: 0px;
+}
+	
+.mapboxgl-popup-content {
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 1.1em;
+	padding: 8px 10px;
+}
+
 .step p {
 	line-height: 25px;
 }

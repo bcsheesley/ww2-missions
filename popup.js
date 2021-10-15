@@ -12,12 +12,11 @@ var popupClick = new mapboxgl.Popup({
 // Missions route popup
 map.on('mouseenter', 'routesPopup', (e) => {
 	const name = e.features[0].properties.name;
-	const trips = e.features[0].properties.trips;
 	
 	// Populate the popup and set its coordinates
 	// based on the feature found.
 	popupHover
-		.setHTML(`<h3>${name}</h3><p>${trips}</p>`)
+		.setHTML(`<h3>${name}</h3><p><i>Click for more details...</i></p>`)
 		.addTo(map)
 		.setLngLat(e.lngLat)
 		.trackPointer();
@@ -25,10 +24,45 @@ map.on('mouseenter', 'routesPopup', (e) => {
 
 map.on('click', 'routesPopup', (e) => {
 	const name = e.features[0].properties.name;
+	const daterank1 = e.features[0].properties.daterank1||'';
+	const date1 = e.features[0].properties.date1||'';
+	const daterank2 = e.features[0].properties.daterank2||'';
+	const date2 = e.features[0].properties.date2||'';
+	const daterank3 = e.features[0].properties.daterank3||'';
+	const date3 = e.features[0].properties.date3||'';
+	const daterank4 = e.features[0].properties.daterank4||'';
+	const date4 = e.features[0].properties.date4||'';
 	
 	// Populate the popup and set its coordinates
 	// based on the feature found.
-	popupClick.setLngLat(e.lngLat).setHTML(`click probe`).addTo(map);
+	popupClick
+		.setLngLat(e.lngLat)
+		.setHTML(
+			`<h3>${name}</h3>
+			<table>
+				<tr>
+					<th>Mission</th>
+					<th>Date</th>
+				</tr>
+				<tr>
+					<td>${daterank1}</td>
+					<td><a href=#journal>${date1}</a></td>
+				</tr>
+				<tr>
+					<td>${daterank2}</td>
+					<td><a href=#journal>${date2}</a></td>
+				</tr>
+				<tr>
+					<td>${daterank3}</td>
+					<td><a href=#journal>${date3}</a></td>
+				</tr>
+				<tr>
+					<td>${daterank4}</td>
+					<td><a href=#journal>${date4}</a></td>
+				</tr>
+			</table>`
+		)
+		.addTo(map);
 });
 
 map.on('mouseenter', 'routesPopup', () => {
