@@ -31,15 +31,37 @@ h3 {
 }
 .mapboxgl-popup-content h3, .mapboxgl-popup-content p {
 	margin: 0px;
+	line-height: 16px;
 }
 
-.mapboxgl-popup-content th {
-	text-align: left;
-	padding-right: 10px;
+.mapboxgl-popup-content i {
+	color: #999;
+}
+
+.mapboxgl-popup-content a {
+	color: #2772D9;
+}
+
+.mapboxgl-popup-content a:hover {
+	color: #000;
 }
 
 table {
 	border-spacing: 0px;
+	margin-bottom: 8px;
+	padding-bottom: 6px;
+	border-bottom: 1px solid #eee;
+	width: 100%;
+}
+
+th {
+	text-align: left;
+	padding-top: 2px;
+	padding-right: 10px;
+	color: #999;
+	text-transform: uppercase;
+	font-size: 1em;
+	font-weight: 400;
 }
 	
 .mapboxgl-popup-content {

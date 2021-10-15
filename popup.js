@@ -6,7 +6,8 @@ var popupHover = new mapboxgl.Popup({
 	
 var popupClick = new mapboxgl.Popup({
 	closeButton: true,
-	closeOnClick: true
+	closeOnClick: true,
+	maxWidth: '180px'
 	});
 
 // Missions route popup
@@ -60,7 +61,10 @@ map.on('click', 'routesPopup', (e) => {
 					<td>${daterank4}</td>
 					<td><a href=#journal>${date4}</a></td>
 				</tr>
-			</table>`
+			</table>
+			<p>
+				<i>Lt. Sheesley flew 35 combat missions in total.</i>
+			</p>`
 		)
 		.addTo(map);
 });
@@ -77,33 +81,29 @@ map.on('mouseleave', 'routesPopup', () => {
 });
 
 // Missions point popup
-map.on('mouseenter', 'missions', function (e) {
-	// Change the cursor style as a UI indicator.
-	map.getCanvas().style.cursor = 'pointer';
-	 
-	var coordinates = e.features[0].geometry.coordinates.slice();
-	var name = e.features[0].properties.name;
-	var date = e.features[0].properties.date;
-	 
-	// Ensure that if the map is zoomed out such that multiple
-	// copies of the feature are visible, the popup appears
-	// over the copy being pointed to.
-	while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-	coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-	}
-	 
+map.on('mouseenter', 'newMissions', (e) => {
+	const name = e.features[0].properties.name;
+	
 	// Populate the popup and set its coordinates
 	// based on the feature found.
-	popupHover.setLngLat(coordinates).setHTML(`<h3>${name}</h3><p>${date}</p>`).addTo(map);
+	popupHover
+		.setHTML(`<h3>${name}</h3><p><i>Click for more details...</i></p>`)
+		.addTo(map)
+		.setLngLat(e.lngLat)
 });
-	 
-map.on('mouseleave', 'missions', function () {
+
+map.on('mouseenter', 'newMissions', () => {
+	// Change the cursor style as a UI indicator.
+	map.getCanvas().style.cursor = 'pointer';
+});
+
+map.on('mouseleave', 'newMissions', () => {
 	map.getCanvas().style.cursor = '';
 	popupHover.remove();
 });
 
 // Service schools popup
-map.on('mouseenter', 'serviceSchools', function (e) {
+map.on('mouseenter', 'serviceSchools', (e) => {
 	// Change the cursor style as a UI indicator.
 	map.getCanvas().style.cursor = 'pointer';
 	 
@@ -125,7 +125,7 @@ map.on('mouseenter', 'serviceSchools', function (e) {
 	popupHover.setLngLat(coordinates).setHTML(`<h3>${name}</h3><p>${place}</p><p>${course}</p><p>${duration}</p>`).addTo(map);
 });
 	 
-map.on('mouseleave', 'serviceSchools', function () {
+map.on('mouseleave', 'serviceSchools', () => {
 	map.getCanvas().style.cursor = '';
 	popupHover.remove();
 });

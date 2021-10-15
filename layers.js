@@ -1,11 +1,11 @@
 map.on('load', function() {
-	// Add service schools points
+	// Add service school points
 	map.addSource('serviceSchools', {
 		'type': 'geojson',
 		'data': 'https://bcsheesley.github.io/ww2-missions/data/serviceSchools.geojson'
 	});
 	
-	// Add plymouth source
+	// Add plymouth route source
 	map.addSource('routePlymouth', {
 		'type': 'geojson',
 		'data': {
@@ -16,7 +16,25 @@ map.on('load', function() {
 		}
 	});
 	
-	// Add missions source
+	//Add mission points source
+	map.addSource('missions', {
+		'type': 'geojson',
+		'data': {
+			'type': 'FeatureCollection',
+			'features': [
+				{
+					'type': 'Feature',
+					'geometry': {
+						'type': 'Point',
+						'coordinates': berlin
+					},
+					'properties': routeBerlin.properties
+				}
+			]
+		}
+	});
+	
+	// Add mission routes source
 	map.addSource('routes', {
 		'type': 'geojson',
 		'data': {
@@ -64,10 +82,10 @@ map.on('load', function() {
 			'circle-color': '#ff0000'
 		}
 	},
-	'missions'
+	'waterway-label'
 );
 
-	// Add a layer for the route to Plymouth
+	// Add a layer displaying the route to Plymouth
 	map.addLayer({
 		'id': 'routePlymouth',
 		'source': 'routePlymouth',
@@ -78,8 +96,22 @@ map.on('load', function() {
 			'line-color': '#E85F5F'
 		}
 	},
-	'missions'
+	'waterway-label'
 );
+
+	// Add a layer displaying ALL mission points
+	map.addLayer({
+		'id': 'missions',
+		'source': 'missions',
+		'type': 'circle',
+		'paint': {
+			'circle-radius': 50,
+			'circle-opacity': 1,
+			'circle-color': '#E85F5F'
+		}
+	},
+	'waterway-label'
+	);
 
 	// Add layer displaying ALL mission routes
 	map.addLayer({
@@ -92,7 +124,7 @@ map.on('load', function() {
 			'line-color': '#CDA076'
 		}
 	},
-	'missions'
+	'waterway-label'
 );
 
 	// Add an invisible layer displaying ALL mission routes for mouse interactions
@@ -106,7 +138,7 @@ map.on('load', function() {
 			'line-color': '#fff'
 		}
 	},
-	'missions'
+	'waterway-label'
 );
 	
 	// Add a layer for each individual route to use as a highlight in the story
@@ -124,7 +156,7 @@ map.on('load', function() {
 				'line-color': '#FFFF85'
 			}
 		},
-		'missions'
+		'waterway-label'
 	)
 	map.addLayer({
 			'id': 'routeDarmstadt',
@@ -137,7 +169,7 @@ map.on('load', function() {
 				'line-color': '#FFFF85'
 			}
 		},
-		'missions'
+		'waterway-label'
 	);
 	map.addLayer({
 			'id': 'routeHanover',
@@ -150,7 +182,7 @@ map.on('load', function() {
 				'line-color': '#FFFF85'
 			}
 		},
-		'missions'
+		'waterway-label'
 	);
 	map.addLayer({
 			'id': 'routeAndernach',
@@ -163,7 +195,7 @@ map.on('load', function() {
 				'line-color': '#FFFF85'
 			}
 		},
-		'missions'
+		'waterway-label'
 	);
 	map.addLayer({
 			'id': 'routeKassel',
@@ -176,7 +208,7 @@ map.on('load', function() {
 				'line-color': '#FFFF85'
 			}
 		},
-		'missions'
+		'waterway-label'
 	);
 	map.addLayer({
 			'id': 'routeMisburg',
@@ -189,7 +221,7 @@ map.on('load', function() {
 				'line-color': '#CDA076'
 			}
 		},
-		'missions'
+		'waterway-label'
 	);
 	map.addLayer({
 			'id': 'routePforzheim',
@@ -202,7 +234,7 @@ map.on('load', function() {
 				'line-color': '#CDA076'
 			}
 		},
-		'missions'
+		'waterway-label'
 	);
 	map.addLayer({
 			'id': 'routeBielefeld',
@@ -215,7 +247,7 @@ map.on('load', function() {
 				'line-color': '#CDA076'
 			}
 		},
-		'missions'
+		'waterway-label'
 	);
 	map.addLayer({
 			'id': 'routeCologne',
@@ -228,7 +260,7 @@ map.on('load', function() {
 				'line-color': '#CDA076'
 			}
 		},
-		'missions'
+		'waterway-label'
 	);
 	map.addLayer({
 			'id': 'routeDerben',
@@ -241,7 +273,7 @@ map.on('load', function() {
 				'line-color': '#CDA076'
 			}
 		},
-		'missions'
+		'waterway-label'
 	);
 	map.addLayer({
 			'id': 'routeAugsburg',
@@ -254,7 +286,7 @@ map.on('load', function() {
 				'line-color': '#CDA076'
 			}
 		},
-		'missions'
+		'waterway-label'
 	);
 	map.addLayer({
 			'id': 'routeBitterfeld',
@@ -267,7 +299,7 @@ map.on('load', function() {
 				'line-color': '#CDA076'
 			}
 		},
-		'missions'
+		'waterway-label'
 	);
 	map.addLayer({
 			'id': 'routeDuisburg',
@@ -280,7 +312,7 @@ map.on('load', function() {
 				'line-color': '#CDA076'
 			}
 		},
-		'missions'
+		'waterway-label'
 	);
 	map.addLayer({
 			'id': 'routeDulmen',
@@ -293,7 +325,7 @@ map.on('load', function() {
 				'line-color': '#CDA076'
 			}
 		},
-		'missions'
+		'waterway-label'
 	);
 	map.addLayer({
 			'id': 'routeCottbus',
@@ -306,7 +338,7 @@ map.on('load', function() {
 				'line-color': '#CDA076'
 			}
 		},
-		'missions'
+		'waterway-label'
 	);
 	map.addLayer({
 			'id': 'routeBremen',
@@ -319,7 +351,7 @@ map.on('load', function() {
 				'line-color': '#CDA076'
 			}
 		},
-		'missions'
+		'waterway-label'
 	);
 	map.addLayer({
 			'id': 'routeLudwigsfelde',
@@ -332,7 +364,7 @@ map.on('load', function() {
 				'line-color': '#CDA076'
 			}
 		},
-		'missions'
+		'waterway-label'
 	);
 	map.addLayer({
 			'id': 'routeDresden',
@@ -345,7 +377,7 @@ map.on('load', function() {
 				'line-color': '#CDA076'
 			}
 		},
-		'missions'
+		'waterway-label'
 	);
 	map.addLayer({
 			'id': 'routeDedenhausen',
@@ -358,7 +390,7 @@ map.on('load', function() {
 				'line-color': '#CDA076'
 			}
 		},
-		'missions'
+		'waterway-label'
 	);
 	map.addLayer({
 			'id': 'routeDatteln',
@@ -371,7 +403,7 @@ map.on('load', function() {
 				'line-color': '#CDA076'
 			}
 		},
-		'missions'
+		'waterway-label'
 	);
 	map.addLayer({
 			'id': 'routeSoest',
@@ -384,7 +416,7 @@ map.on('load', function() {
 				'line-color': '#CDA076'
 			}
 		},
-		'missions'
+		'waterway-label'
 	);
 	map.addLayer({
 			'id': 'routeHamburg',
@@ -397,7 +429,7 @@ map.on('load', function() {
 				'line-color': '#CDA076'
 			}
 		},
-		'missions'
+		'waterway-label'
 	);
 	map.addLayer({
 			'id': 'routeSwinoujscie',
@@ -410,7 +442,7 @@ map.on('load', function() {
 				'line-color': '#CDA076'
 			}
 		},
-		'missions'
+		'waterway-label'
 	);
 	map.addLayer({
 			'id': 'routeJena',
@@ -423,7 +455,7 @@ map.on('load', function() {
 				'line-color': '#CDA076'
 			}
 		},
-		'missions'
+		'waterway-label'
 	);
 	map.addLayer({
 			'id': 'routeMarxen',
@@ -436,7 +468,7 @@ map.on('load', function() {
 				'line-color': '#CDA076'
 			}
 		},
-		'missions'
+		'waterway-label'
 	);
 	map.addLayer({
 			'id': 'routeRatingen',
@@ -449,7 +481,7 @@ map.on('load', function() {
 				'line-color': '#CDA076'
 			}
 		},
-		'missions'
+		'waterway-label'
 	);
 	map.addLayer({
 			'id': 'routeGeisecke',
@@ -462,7 +494,7 @@ map.on('load', function() {
 				'line-color': '#CDA076'
 			}
 		},
-		'missions'
+		'waterway-label'
 	);
 	map.addLayer({
 			'id': 'routeBadZwischenahn',
@@ -475,6 +507,6 @@ map.on('load', function() {
 				'line-color': '#CDA076'
 			}
 		},
-		'missions'
+		'waterway-label'
 	);
 });
