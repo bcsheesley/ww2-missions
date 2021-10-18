@@ -324,20 +324,6 @@ map.on('load', function() {
 	'waterway-label'
 	);
 
-	// Add a layer displaying ALL mission points
-	map.addLayer({
-		'id': 'missions',
-		'source': 'missions',
-		'type': 'circle',
-		'paint': {
-			'circle-radius': 50,
-			'circle-opacity': 1,
-			'circle-color': '#E85F5F'
-		}
-	},
-	'waterway-label'
-	);
-
 	// Add layer displaying ALL mission routes except Recall
 	map.addLayer({
 		'id': 'routes',
@@ -345,8 +331,8 @@ map.on('load', function() {
 		'type': 'line',
 		'filter': ['!=',['get','name'],'Recall'],
 		'paint': {
-			'line-width': 2,
-			'line-opacity': 1,
+			'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
 			'line-color': '#CDA076'
 		}
 	},
@@ -760,7 +746,7 @@ map.on('load', function() {
 			'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
 			'line-opacity': 0,
 			'line-color': '#CDA076',
-			'line-dasharray': [4,4]
+			'line-dasharray': [2,2]
 		}
 	},
 	'waterway-label'
