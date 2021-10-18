@@ -356,20 +356,6 @@ map.on('load', function() {
 	},
 	'waterway-label'
 	);
-
-	// Add an invisible layer displaying ALL mission routes for mouse interactions
-	map.addLayer({
-		'id': 'routesPopup',
-		'source': 'routes',
-		'type': 'line',
-		'paint': {
-			'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
-			'line-opacity': 0.0,
-			'line-color': '#fff'
-		}
-	},
-	'waterway-label'
-	);
 	
 	// Add a layer for each individual route to use as a highlight in the story
 	map.addLayer({
@@ -763,7 +749,10 @@ map.on('load', function() {
 		'layout': {
 			'icon-image': 'pulsing-dot',
 			'icon-allow-overlap': true,
-			'icon-allow-overlap': true
+			'icon-size': ['interpolate',['exponential',1.3],['zoom'],5,1,10,3]
+		},
+		'paint': {
+			'icon-opacity': 0
 		}
 	},
 	'waterway-label'
@@ -776,6 +765,9 @@ map.on('load', function() {
 		'layout': {
 			'icon-image': 'pulsing-dot',
 			'icon-allow-overlap': true
+		},
+		'paint': {
+			'icon-opacity': 0
 		}
 	},
 	'waterway-label'
@@ -788,6 +780,9 @@ map.on('load', function() {
 		'layout': {
 			'icon-image': 'pulsing-dot',
 			'icon-allow-overlap': true
+		},
+		'paint': {
+			'icon-opacity': 0
 		}
 	},
 	'waterway-label'
@@ -800,6 +795,9 @@ map.on('load', function() {
 		'layout': {
 			'icon-image': 'pulsing-dot',
 			'icon-allow-overlap': true
+		},
+		'paint': {
+			'icon-opacity': 0
 		}
 	},
 	'waterway-label'
@@ -812,6 +810,9 @@ map.on('load', function() {
 		'layout': {
 			'icon-image': 'pulsing-dot',
 			'icon-allow-overlap': true
+		},
+		'paint': {
+			'icon-opacity': 0
 		}
 	},
 	'waterway-label'
@@ -824,6 +825,9 @@ map.on('load', function() {
 		'layout': {
 			'icon-image': 'pulsing-dot',
 			'icon-allow-overlap': true
+		},
+		'paint': {
+			'icon-opacity': 0
 		}
 	},
 	'waterway-label'
@@ -836,6 +840,9 @@ map.on('load', function() {
 		'layout': {
 			'icon-image': 'pulsing-dot',
 			'icon-allow-overlap': true
+		},
+		'paint': {
+			'icon-opacity': 0
 		}
 	},
 	'waterway-label'
@@ -848,6 +855,9 @@ map.on('load', function() {
 		'layout': {
 			'icon-image': 'pulsing-dot',
 			'icon-allow-overlap': true
+		},
+		'paint': {
+			'icon-opacity': 0
 		}
 	},
 	'waterway-label'
@@ -860,6 +870,9 @@ map.on('load', function() {
 		'layout': {
 			'icon-image': 'pulsing-dot',
 			'icon-allow-overlap': true
+		},
+		'paint': {
+			'icon-opacity': 0
 		}
 	},
 	'waterway-label'
@@ -872,6 +885,9 @@ map.on('load', function() {
 		'layout': {
 			'icon-image': 'pulsing-dot',
 			'icon-allow-overlap': true
+		},
+		'paint': {
+			'icon-opacity': 0
 		}
 	},
 	'waterway-label'
@@ -884,6 +900,9 @@ map.on('load', function() {
 		'layout': {
 			'icon-image': 'pulsing-dot',
 			'icon-allow-overlap': true
+		},
+		'paint': {
+			'icon-opacity': 0
 		}
 	},
 	'waterway-label'
@@ -896,6 +915,9 @@ map.on('load', function() {
 		'layout': {
 			'icon-image': 'pulsing-dot',
 			'icon-allow-overlap': true
+		},
+		'paint': {
+			'icon-opacity': 0
 		}
 	},
 	'waterway-label'
@@ -908,6 +930,9 @@ map.on('load', function() {
 		'layout': {
 			'icon-image': 'pulsing-dot',
 			'icon-allow-overlap': true
+		},
+		'paint': {
+			'icon-opacity': 0
 		}
 	},
 	'waterway-label'
@@ -920,6 +945,9 @@ map.on('load', function() {
 		'layout': {
 			'icon-image': 'pulsing-dot',
 			'icon-allow-overlap': true
+		},
+		'paint': {
+			'icon-opacity': 0
 		}
 	},
 	'waterway-label'
@@ -932,6 +960,9 @@ map.on('load', function() {
 		'layout': {
 			'icon-image': 'pulsing-dot',
 			'icon-allow-overlap': true
+		},
+		'paint': {
+			'icon-opacity': 0
 		}
 	},
 	'waterway-label'
@@ -944,6 +975,9 @@ map.on('load', function() {
 		'layout': {
 			'icon-image': 'pulsing-dot',
 			'icon-allow-overlap': true
+		},
+		'paint': {
+			'icon-opacity': 0
 		}
 	},
 	'waterway-label'
@@ -956,6 +990,9 @@ map.on('load', function() {
 		'layout': {
 			'icon-image': 'pulsing-dot',
 			'icon-allow-overlap': true
+		},
+		'paint': {
+			'icon-opacity': 0
 		}
 	},
 	'waterway-label'
@@ -968,6 +1005,9 @@ map.on('load', function() {
 		'layout': {
 			'icon-image': 'pulsing-dot',
 			'icon-allow-overlap': true
+		},
+		'paint': {
+			'icon-opacity': 0
 		}
 	},
 	'waterway-label'
@@ -980,6 +1020,9 @@ map.on('load', function() {
 		'layout': {
 			'icon-image': 'pulsing-dot',
 			'icon-allow-overlap': true
+		},
+		'paint': {
+			'icon-opacity': 0
 		}
 	},
 	'waterway-label'
@@ -992,6 +1035,9 @@ map.on('load', function() {
 		'layout': {
 			'icon-image': 'pulsing-dot',
 			'icon-allow-overlap': true
+		},
+		'paint': {
+			'icon-opacity': 0
 		}
 	},
 	'waterway-label'
@@ -1004,6 +1050,9 @@ map.on('load', function() {
 		'layout': {
 			'icon-image': 'pulsing-dot',
 			'icon-allow-overlap': true
+		},
+		'paint': {
+			'icon-opacity': 0
 		}
 	},
 	'waterway-label'
@@ -1016,6 +1065,9 @@ map.on('load', function() {
 		'layout': {
 			'icon-image': 'pulsing-dot',
 			'icon-allow-overlap': true
+		},
+		'paint': {
+			'icon-opacity': 0
 		}
 	},
 	'waterway-label'
@@ -1028,6 +1080,9 @@ map.on('load', function() {
 		'layout': {
 			'icon-image': 'pulsing-dot',
 			'icon-allow-overlap': true
+		},
+		'paint': {
+			'icon-opacity': 0
 		}
 	},
 	'waterway-label'
@@ -1040,6 +1095,9 @@ map.on('load', function() {
 		'layout': {
 			'icon-image': 'pulsing-dot',
 			'icon-allow-overlap': true
+		},
+		'paint': {
+			'icon-opacity': 0
 		}
 	},
 	'waterway-label'
@@ -1052,6 +1110,9 @@ map.on('load', function() {
 		'layout': {
 			'icon-image': 'pulsing-dot',
 			'icon-allow-overlap': true
+		},
+		'paint': {
+			'icon-opacity': 0
 		}
 	},
 	'waterway-label'
@@ -1064,6 +1125,9 @@ map.on('load', function() {
 		'layout': {
 			'icon-image': 'pulsing-dot',
 			'icon-allow-overlap': true
+		},
+		'paint': {
+			'icon-opacity': 0
 		}
 	},
 	'waterway-label'
@@ -1076,6 +1140,9 @@ map.on('load', function() {
 		'layout': {
 			'icon-image': 'pulsing-dot',
 			'icon-allow-overlap': true
+		},
+		'paint': {
+			'icon-opacity': 0
 		}
 	},
 	'waterway-label'
@@ -1088,6 +1155,9 @@ map.on('load', function() {
 		'layout': {
 			'icon-image': 'pulsing-dot',
 			'icon-allow-overlap': true
+		},
+		'paint': {
+			'icon-opacity': 0
 		}
 	},
 	'waterway-label'

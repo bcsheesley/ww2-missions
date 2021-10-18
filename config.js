@@ -144,6 +144,11 @@ var config = {
                     layer: 'routeBerlin',
                     opacity: 0.8,
                     duration: 300
+                },
+                {
+                    layer: 'pulseBerlin',
+                    opacity: 1,
+                    duration: 300
                 }
             ],
             onChapterExit: []

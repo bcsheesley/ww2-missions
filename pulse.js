@@ -36,7 +36,10 @@ render: function () {
 		Math.PI * 2
 	);
 	context.fillStyle = `rgba(255, 200, 200, ${1 - t})`;
+	context.strokeStyle = `rgba(255, 255, 255, ${1 - t})`;
+	context.lineWidth = 2 + 4 * (1 - t);
 	context.fill();
+	context.stroke();
  
 	// Draw the inner circle.
 	context.beginPath();
@@ -47,11 +50,8 @@ render: function () {
 		0,
 		Math.PI * 2
 	);
-	context.fillStyle = 'rgba(255, 100, 100, 1)';
-	context.strokeStyle = 'white';
-	context.lineWidth = 2 + 4 * (1 - t);
+	context.fillStyle = 'rgba(255, 100, 100, 0)';
 	context.fill();
-	context.stroke();
  
 	// Update this image's data with data from the canvas.
 	this.data = context.getImageData(
