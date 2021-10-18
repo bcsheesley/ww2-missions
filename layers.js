@@ -371,345 +371,6 @@ map.on('load', function() {
 	'waterway-label'
 	);
 	
-	// Add layer for each individual mission point displaying the pulsing-dot
-	map.addLayer({
-		'id': 'pulseBerlin',
-		'source': 'dot-point',
-		'type': 'symbol',
-		'filter': ['==',['get','name'],'Berlin'],
-		'layout': {
-			'icon-image': 'pulsing-dot',
-			'icon-allow-overlap': true,
-			'icon-allow-overlap': true
-		}
-	},
-	'waterway-label'
-	);
-	map.addLayer({
-		'id': 'pulseDarmstadt',
-		'source': 'dot-point',
-		'type': 'symbol',
-		'filter': ['==',['get','name'],'Darmstadt'],
-		'layout': {
-			'icon-image': 'pulsing-dot',
-			'icon-allow-overlap': true
-		}
-	},
-	'waterway-label'
-	);
-	map.addLayer({
-		'id': 'pulseHanover',
-		'source': 'dot-point',
-		'type': 'symbol',
-		'filter': ['==',['get','name'],'Hanover'],
-		'layout': {
-			'icon-image': 'pulsing-dot',
-			'icon-allow-overlap': true
-		}
-	},
-	'waterway-label'
-	);
-	map.addLayer({
-		'id': 'pulseAndernach',
-		'source': 'dot-point',
-		'type': 'symbol',
-		'filter': ['==',['get','name'],'Andernach'],
-		'layout': {
-			'icon-image': 'pulsing-dot',
-			'icon-allow-overlap': true
-		}
-	},
-	'waterway-label'
-	);
-	map.addLayer({
-		'id': 'pulseKassel',
-		'source': 'dot-point',
-		'type': 'symbol',
-		'filter': ['==',['get','name'],'Kassel'],
-		'layout': {
-			'icon-image': 'pulsing-dot',
-			'icon-allow-overlap': true
-		}
-	},
-	'waterway-label'
-	);
-	map.addLayer({
-		'id': 'pulseMisburg',
-		'source': 'dot-point',
-		'type': 'symbol',
-		'filter': ['==',['get','name'],'Misburg'],
-		'layout': {
-			'icon-image': 'pulsing-dot',
-			'icon-allow-overlap': true
-		}
-	},
-	'waterway-label'
-	);
-	map.addLayer({
-		'id': 'pulsPforzheim',
-		'source': 'dot-point',
-		'type': 'symbol',
-		'filter': ['==',['get','name'],'Pforzheim'],
-		'layout': {
-			'icon-image': 'pulsing-dot',
-			'icon-allow-overlap': true
-		}
-	},
-	'waterway-label'
-	);
-	map.addLayer({
-		'id': 'pulseBielefeld',
-		'source': 'dot-point',
-		'type': 'symbol',
-		'filter': ['==',['get','name'],'Bielefeld'],
-		'layout': {
-			'icon-image': 'pulsing-dot',
-			'icon-allow-overlap': true
-		}
-	},
-	'waterway-label'
-	);
-	map.addLayer({
-		'id': 'pulseCologne',
-		'source': 'dot-point',
-		'type': 'symbol',
-		'filter': ['==',['get','name'],'Cologne'],
-		'layout': {
-			'icon-image': 'pulsing-dot',
-			'icon-allow-overlap': true
-		}
-	},
-	'waterway-label'
-	);
-	map.addLayer({
-		'id': 'pulseDerben',
-		'source': 'dot-point',
-		'type': 'symbol',
-		'filter': ['==',['get','name'],'Derben'],
-		'layout': {
-			'icon-image': 'pulsing-dot',
-			'icon-allow-overlap': true
-		}
-	},
-	'waterway-label'
-	);
-	map.addLayer({
-		'id': 'pulseAugsburg',
-		'source': 'dot-point',
-		'type': 'symbol',
-		'filter': ['==',['get','name'],'Augsburg'],
-		'layout': {
-			'icon-image': 'pulsing-dot',
-			'icon-allow-overlap': true
-		}
-	},
-	'waterway-label'
-	);
-	map.addLayer({
-		'id': 'pulseBitterfeld',
-		'source': 'dot-point',
-		'type': 'symbol',
-		'filter': ['==',['get','name'],'Bitterfeld'],
-		'layout': {
-			'icon-image': 'pulsing-dot',
-			'icon-allow-overlap': true
-		}
-	},
-	'waterway-label'
-	);
-	map.addLayer({
-		'id': 'pulseDuisburg',
-		'source': 'dot-point',
-		'type': 'symbol',
-		'filter': ['==',['get','name'],'Duisburg'],
-		'layout': {
-			'icon-image': 'pulsing-dot',
-			'icon-allow-overlap': true
-		}
-	},
-	'waterway-label'
-	);
-	map.addLayer({
-		'id': 'pulseDülmen',
-		'source': 'dot-point',
-		'type': 'symbol',
-		'filter': ['==',['get','name'],'Dülmen'],
-		'layout': {
-			'icon-image': 'pulsing-dot',
-			'icon-allow-overlap': true
-		}
-	},
-	'waterway-label'
-	);
-	map.addLayer({
-		'id': 'pulseCottbus',
-		'source': 'dot-point',
-		'type': 'symbol',
-		'filter': ['==',['get','name'],'Cottbus'],
-		'layout': {
-			'icon-image': 'pulsing-dot',
-			'icon-allow-overlap': true
-		}
-	},
-	'waterway-label'
-	);
-	map.addLayer({
-		'id': 'pulseBremen',
-		'source': 'dot-point',
-		'type': 'symbol',
-		'filter': ['==',['get','name'],'Bremen'],
-		'layout': {
-			'icon-image': 'pulsing-dot',
-			'icon-allow-overlap': true
-		}
-	},
-	'waterway-label'
-	);
-	map.addLayer({
-		'id': 'pulseLudwigsfelde',
-		'source': 'dot-point',
-		'type': 'symbol',
-		'filter': ['==',['get','name'],'Ludwigsfelde'],
-		'layout': {
-			'icon-image': 'pulsing-dot',
-			'icon-allow-overlap': true
-		}
-	},
-	'waterway-label'
-	);
-	map.addLayer({
-		'id': 'pulseDresden',
-		'source': 'dot-point',
-		'type': 'symbol',
-		'filter': ['==',['get','name'],'Dresden'],
-		'layout': {
-			'icon-image': 'pulsing-dot',
-			'icon-allow-overlap': true
-		}
-	},
-	'waterway-label'
-	);
-	map.addLayer({
-		'id': 'pulseDedenhausen',
-		'source': 'dot-point',
-		'type': 'symbol',
-		'filter': ['==',['get','name'],'Dedenhausen'],
-		'layout': {
-			'icon-image': 'pulsing-dot',
-			'icon-allow-overlap': true
-		}
-	},
-	'waterway-label'
-	);
-	map.addLayer({
-		'id': 'pulseDatteln',
-		'source': 'dot-point',
-		'type': 'symbol',
-		'filter': ['==',['get','name'],'Datteln'],
-		'layout': {
-			'icon-image': 'pulsing-dot',
-			'icon-allow-overlap': true
-		}
-	},
-	'waterway-label'
-	);
-	map.addLayer({
-		'id': 'pulseSoest',
-		'source': 'dot-point',
-		'type': 'symbol',
-		'filter': ['==',['get','name'],'Soest'],
-		'layout': {
-			'icon-image': 'pulsing-dot',
-			'icon-allow-overlap': true
-		}
-	},
-	'waterway-label'
-	);
-	map.addLayer({
-		'id': 'pulseHamburg',
-		'source': 'dot-point',
-		'type': 'symbol',
-		'filter': ['==',['get','name'],'Hamburg'],
-		'layout': {
-			'icon-image': 'pulsing-dot',
-			'icon-allow-overlap': true
-		}
-	},
-	'waterway-label'
-	);
-	map.addLayer({
-		'id': 'pulseŚwinoujście',
-		'source': 'dot-point',
-		'type': 'symbol',
-		'filter': ['==',['get','name'],'Świnoujście'],
-		'layout': {
-			'icon-image': 'pulsing-dot',
-			'icon-allow-overlap': true
-		}
-	},
-	'waterway-label'
-	);
-	map.addLayer({
-		'id': 'pulseJena',
-		'source': 'dot-point',
-		'type': 'symbol',
-		'filter': ['==',['get','name'],'Jena'],
-		'layout': {
-			'icon-image': 'pulsing-dot',
-			'icon-allow-overlap': true
-		}
-	},
-	'waterway-label'
-	);
-	map.addLayer({
-		'id': 'pulseMarxen',
-		'source': 'dot-point',
-		'type': 'symbol',
-		'filter': ['==',['get','name'],'Marxen'],
-		'layout': {
-			'icon-image': 'pulsing-dot',
-			'icon-allow-overlap': true
-		}
-	},
-	'waterway-label'
-	);
-	map.addLayer({
-		'id': 'pulseRatingen',
-		'source': 'dot-point',
-		'type': 'symbol',
-		'filter': ['==',['get','name'],'Ratingen'],
-		'layout': {
-			'icon-image': 'pulsing-dot',
-			'icon-allow-overlap': true
-		}
-	},
-	'waterway-label'
-	);
-	map.addLayer({
-		'id': 'pulseGeisecke',
-		'source': 'dot-point',
-		'type': 'symbol',
-		'filter': ['==',['get','name'],'Geisecke'],
-		'layout': {
-			'icon-image': 'pulsing-dot',
-			'icon-allow-overlap': true
-		}
-	},
-	'waterway-label'
-	);
-	map.addLayer({
-		'id': 'pulseBadZwischenahn',
-		'source': 'dot-point',
-		'type': 'symbol',
-		'filter': ['==',['get','name'],'Bad Zwischenahn'],
-		'layout': {
-			'icon-image': 'pulsing-dot',
-			'icon-allow-overlap': true
-		}
-	},
-	'waterway-label'
-	);
-	
 	// Add a layer for each individual route to use as a highlight in the story
 	map.addLayer({
 			'id': 'routeBerlin',
@@ -1088,6 +749,345 @@ map.on('load', function() {
 			'line-opacity': 0,
 			'line-color': '#CDA076',
 			'line-dasharray': [2,2]
+		}
+	},
+	'waterway-label'
+	);
+	
+	// Add layer for each individual mission point displaying the pulsing-dot
+	map.addLayer({
+		'id': 'pulseBerlin',
+		'source': 'dot-point',
+		'type': 'symbol',
+		'filter': ['==',['get','name'],'Berlin'],
+		'layout': {
+			'icon-image': 'pulsing-dot',
+			'icon-allow-overlap': true,
+			'icon-allow-overlap': true
+		}
+	},
+	'waterway-label'
+	);
+	map.addLayer({
+		'id': 'pulseDarmstadt',
+		'source': 'dot-point',
+		'type': 'symbol',
+		'filter': ['==',['get','name'],'Darmstadt'],
+		'layout': {
+			'icon-image': 'pulsing-dot',
+			'icon-allow-overlap': true
+		}
+	},
+	'waterway-label'
+	);
+	map.addLayer({
+		'id': 'pulseHanover',
+		'source': 'dot-point',
+		'type': 'symbol',
+		'filter': ['==',['get','name'],'Hanover'],
+		'layout': {
+			'icon-image': 'pulsing-dot',
+			'icon-allow-overlap': true
+		}
+	},
+	'waterway-label'
+	);
+	map.addLayer({
+		'id': 'pulseAndernach',
+		'source': 'dot-point',
+		'type': 'symbol',
+		'filter': ['==',['get','name'],'Andernach'],
+		'layout': {
+			'icon-image': 'pulsing-dot',
+			'icon-allow-overlap': true
+		}
+	},
+	'waterway-label'
+	);
+	map.addLayer({
+		'id': 'pulseKassel',
+		'source': 'dot-point',
+		'type': 'symbol',
+		'filter': ['==',['get','name'],'Kassel'],
+		'layout': {
+			'icon-image': 'pulsing-dot',
+			'icon-allow-overlap': true
+		}
+	},
+	'waterway-label'
+	);
+	map.addLayer({
+		'id': 'pulseMisburg',
+		'source': 'dot-point',
+		'type': 'symbol',
+		'filter': ['==',['get','name'],'Misburg'],
+		'layout': {
+			'icon-image': 'pulsing-dot',
+			'icon-allow-overlap': true
+		}
+	},
+	'waterway-label'
+	);
+	map.addLayer({
+		'id': 'pulsePforzheim',
+		'source': 'dot-point',
+		'type': 'symbol',
+		'filter': ['==',['get','name'],'Pforzheim'],
+		'layout': {
+			'icon-image': 'pulsing-dot',
+			'icon-allow-overlap': true
+		}
+	},
+	'waterway-label'
+	);
+	map.addLayer({
+		'id': 'pulseBielefeld',
+		'source': 'dot-point',
+		'type': 'symbol',
+		'filter': ['==',['get','name'],'Bielefeld'],
+		'layout': {
+			'icon-image': 'pulsing-dot',
+			'icon-allow-overlap': true
+		}
+	},
+	'waterway-label'
+	);
+	map.addLayer({
+		'id': 'pulseCologne',
+		'source': 'dot-point',
+		'type': 'symbol',
+		'filter': ['==',['get','name'],'Cologne'],
+		'layout': {
+			'icon-image': 'pulsing-dot',
+			'icon-allow-overlap': true
+		}
+	},
+	'waterway-label'
+	);
+	map.addLayer({
+		'id': 'pulseDerben',
+		'source': 'dot-point',
+		'type': 'symbol',
+		'filter': ['==',['get','name'],'Derben'],
+		'layout': {
+			'icon-image': 'pulsing-dot',
+			'icon-allow-overlap': true
+		}
+	},
+	'waterway-label'
+	);
+	map.addLayer({
+		'id': 'pulseAugsburg',
+		'source': 'dot-point',
+		'type': 'symbol',
+		'filter': ['==',['get','name'],'Augsburg'],
+		'layout': {
+			'icon-image': 'pulsing-dot',
+			'icon-allow-overlap': true
+		}
+	},
+	'waterway-label'
+	);
+	map.addLayer({
+		'id': 'pulseBitterfeld',
+		'source': 'dot-point',
+		'type': 'symbol',
+		'filter': ['==',['get','name'],'Bitterfeld'],
+		'layout': {
+			'icon-image': 'pulsing-dot',
+			'icon-allow-overlap': true
+		}
+	},
+	'waterway-label'
+	);
+	map.addLayer({
+		'id': 'pulseDuisburg',
+		'source': 'dot-point',
+		'type': 'symbol',
+		'filter': ['==',['get','name'],'Duisburg'],
+		'layout': {
+			'icon-image': 'pulsing-dot',
+			'icon-allow-overlap': true
+		}
+	},
+	'waterway-label'
+	);
+	map.addLayer({
+		'id': 'pulseDülmen',
+		'source': 'dot-point',
+		'type': 'symbol',
+		'filter': ['==',['get','name'],'Dülmen'],
+		'layout': {
+			'icon-image': 'pulsing-dot',
+			'icon-allow-overlap': true
+		}
+	},
+	'waterway-label'
+	);
+	map.addLayer({
+		'id': 'pulseCottbus',
+		'source': 'dot-point',
+		'type': 'symbol',
+		'filter': ['==',['get','name'],'Cottbus'],
+		'layout': {
+			'icon-image': 'pulsing-dot',
+			'icon-allow-overlap': true
+		}
+	},
+	'waterway-label'
+	);
+	map.addLayer({
+		'id': 'pulseBremen',
+		'source': 'dot-point',
+		'type': 'symbol',
+		'filter': ['==',['get','name'],'Bremen'],
+		'layout': {
+			'icon-image': 'pulsing-dot',
+			'icon-allow-overlap': true
+		}
+	},
+	'waterway-label'
+	);
+	map.addLayer({
+		'id': 'pulseLudwigsfelde',
+		'source': 'dot-point',
+		'type': 'symbol',
+		'filter': ['==',['get','name'],'Ludwigsfelde'],
+		'layout': {
+			'icon-image': 'pulsing-dot',
+			'icon-allow-overlap': true
+		}
+	},
+	'waterway-label'
+	);
+	map.addLayer({
+		'id': 'pulseDresden',
+		'source': 'dot-point',
+		'type': 'symbol',
+		'filter': ['==',['get','name'],'Dresden'],
+		'layout': {
+			'icon-image': 'pulsing-dot',
+			'icon-allow-overlap': true
+		}
+	},
+	'waterway-label'
+	);
+	map.addLayer({
+		'id': 'pulseDedenhausen',
+		'source': 'dot-point',
+		'type': 'symbol',
+		'filter': ['==',['get','name'],'Dedenhausen'],
+		'layout': {
+			'icon-image': 'pulsing-dot',
+			'icon-allow-overlap': true
+		}
+	},
+	'waterway-label'
+	);
+	map.addLayer({
+		'id': 'pulseDatteln',
+		'source': 'dot-point',
+		'type': 'symbol',
+		'filter': ['==',['get','name'],'Datteln'],
+		'layout': {
+			'icon-image': 'pulsing-dot',
+			'icon-allow-overlap': true
+		}
+	},
+	'waterway-label'
+	);
+	map.addLayer({
+		'id': 'pulseSoest',
+		'source': 'dot-point',
+		'type': 'symbol',
+		'filter': ['==',['get','name'],'Soest'],
+		'layout': {
+			'icon-image': 'pulsing-dot',
+			'icon-allow-overlap': true
+		}
+	},
+	'waterway-label'
+	);
+	map.addLayer({
+		'id': 'pulseHamburg',
+		'source': 'dot-point',
+		'type': 'symbol',
+		'filter': ['==',['get','name'],'Hamburg'],
+		'layout': {
+			'icon-image': 'pulsing-dot',
+			'icon-allow-overlap': true
+		}
+	},
+	'waterway-label'
+	);
+	map.addLayer({
+		'id': 'pulseŚwinoujście',
+		'source': 'dot-point',
+		'type': 'symbol',
+		'filter': ['==',['get','name'],'Świnoujście'],
+		'layout': {
+			'icon-image': 'pulsing-dot',
+			'icon-allow-overlap': true
+		}
+	},
+	'waterway-label'
+	);
+	map.addLayer({
+		'id': 'pulseJena',
+		'source': 'dot-point',
+		'type': 'symbol',
+		'filter': ['==',['get','name'],'Jena'],
+		'layout': {
+			'icon-image': 'pulsing-dot',
+			'icon-allow-overlap': true
+		}
+	},
+	'waterway-label'
+	);
+	map.addLayer({
+		'id': 'pulseMarxen',
+		'source': 'dot-point',
+		'type': 'symbol',
+		'filter': ['==',['get','name'],'Marxen'],
+		'layout': {
+			'icon-image': 'pulsing-dot',
+			'icon-allow-overlap': true
+		}
+	},
+	'waterway-label'
+	);
+	map.addLayer({
+		'id': 'pulseRatingen',
+		'source': 'dot-point',
+		'type': 'symbol',
+		'filter': ['==',['get','name'],'Ratingen'],
+		'layout': {
+			'icon-image': 'pulsing-dot',
+			'icon-allow-overlap': true
+		}
+	},
+	'waterway-label'
+	);
+	map.addLayer({
+		'id': 'pulseGeisecke',
+		'source': 'dot-point',
+		'type': 'symbol',
+		'filter': ['==',['get','name'],'Geisecke'],
+		'layout': {
+			'icon-image': 'pulsing-dot',
+			'icon-allow-overlap': true
+		}
+	},
+	'waterway-label'
+	);
+	map.addLayer({
+		'id': 'pulseBadZwischenahn',
+		'source': 'dot-point',
+		'type': 'symbol',
+		'filter': ['==',['get','name'],'Bad Zwischenahn'],
+		'layout': {
+			'icon-image': 'pulsing-dot',
+			'icon-allow-overlap': true
 		}
 	},
 	'waterway-label'
