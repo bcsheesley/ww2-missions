@@ -1,3 +1,4 @@
+/*
 const size = 200;
  
 // This implements `StyleImageInterface`
@@ -69,3 +70,4 @@ render: function () {
 	return true;
 	}
 };
+*/

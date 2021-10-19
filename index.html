@@ -11,6 +11,7 @@
     <script src="./config.js"></script>
     <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
     <script src="routes.js"></script>
+    <script src="serviceSchools.js"></script>
     <script src="https://unpkg.com/scrollama"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -307,6 +308,45 @@ map.on("load", function() {
         }
     });
 });
+
+const el = document.createElement('div');
+el.id = 'marker';
+var marker = new mapboxgl.Marker(el);
+
+
+
+function addSchools(){
+    for (const schoolsMarker of serviceSchools.features){
+        const el = document.createElement('div');
+        el.id = 'schoolsMarker';
+        new mapboxgl.Marker(el)
+        .setLngLat(schoolsMarker.geometry.coordinates).addTo(map);
+    }
+}
+
+function removeSchools() {
+    console.log('remove schools');
+    var test = document.querySelectorAll('#schoolsMarker');
+    console.log(test.length);
+    for (var i = 0, len = test.length; i < len; i++){
+        test[i].remove();
+    }
+};
+
+function berlinTest() {
+    console.log("hello");
+    marker.setLngLat(berlin).addTo(map);
+};
+
+function kasselTest() {
+    console.log("goodbye");
+    marker.setLngLat(kassel).addTo(map);
+};
+
+function removeMarker() {
+    console.log("goodbye");
+    marker.remove();
+};
 
 // setup resize event
 window.addEventListener('resize', scroller.resize);

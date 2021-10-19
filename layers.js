@@ -16,6 +16,7 @@ map.on('load', function() {
 		}
 	});
 	
+	/*
 	// Add mission animated pulsing-dot image and source
 	map.addImage('pulsing-dot', pulsingDot, { pixelRatio: 1 });
 	
@@ -259,6 +260,7 @@ map.on('load', function() {
 			]
 		}
 	});
+	*/
 	
 	// Add mission routes source
 	map.addSource('routes', {
@@ -740,6 +742,7 @@ map.on('load', function() {
 	'waterway-label'
 	);
 	
+	/*
 	// Add layer for each individual mission point displaying the pulsing-dot
 	map.addLayer({
 		'id': 'pulseBerlin',
@@ -1162,4 +1165,5 @@ map.on('load', function() {
 	},
 	'waterway-label'
 	);
+	*/
 });

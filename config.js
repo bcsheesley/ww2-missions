@@ -28,7 +28,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: '',
+            callback: 'addSchools',
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -50,7 +50,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: '',
+            callback: 'removeSchools',
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -116,7 +116,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: '',
+            callback: 'removeMarker',
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -138,16 +138,11 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: '',
+            callback: 'berlinTest',
             onChapterEnter: [
                 {
                     layer: 'routeBerlin',
                     opacity: 0.8,
-                    duration: 300
-                },
-                {
-                    layer: 'pulseBerlin',
-                    opacity: 1,
                     duration: 300
                 }
             ],
@@ -171,7 +166,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: '',
+            callback: 'berlinTest',
             onChapterEnter: [
             {
                 layer: 'routeBerlin',
@@ -199,7 +194,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: '',
+            callback: 'kasselTest',
             onChapterEnter: [
             {
                 layer: 'routeBerlin',

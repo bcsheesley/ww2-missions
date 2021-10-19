@@ -242,12 +242,16 @@ img {
  max-width: 400px;
  font: 12px/20px 'Helvetica Neue', 'Arial', 'Helvetica', 'sans-serif';
 }
+.mapboxgl-canvas-container #schoolsMarker {
+	background-color: #fff;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	cursor: pointer;
+}
 
-
-
-.marker {
-	background-image: url('images/bomb.png');
-	background-size: cover;
+#marker {
+	background-color: #000;
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
