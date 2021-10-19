@@ -17,7 +17,7 @@ map.on('load', function() {
 	});
 	
 	// Add mission animated pulsing-dot image and source
-	map.addImage('pulsing-dot', pulsingDot, { pixelRatio: 2 });
+	map.addImage('pulsing-dot', pulsingDot, { pixelRatio: 1 });
 	
 	map.addSource('dot-point', {
 		'type': 'geojson',
@@ -749,7 +749,7 @@ map.on('load', function() {
 		'layout': {
 			'icon-image': 'pulsing-dot',
 			'icon-allow-overlap': true,
-			'icon-size': ['interpolate',['exponential',1.3],['zoom'],5,1,10,3]
+			'icon-size': ['interpolate',['exponential',1.3],['zoom'],5,1,10,2]
 		},
 		'paint': {
 			'icon-opacity': 0

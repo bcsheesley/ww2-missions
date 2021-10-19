@@ -18,7 +18,7 @@ const pulsingDot = {
  
 // Call once before every frame where the icon will be used.
 render: function () {
-	const duration = 1000;
+	const duration = 2000;
 	const t = (performance.now() % duration) / duration;
  
 	const radius = (size / 2) * 0.3;
@@ -35,9 +35,9 @@ render: function () {
 		0,
 		Math.PI * 2
 	);
-	context.fillStyle = `rgba(255, 200, 200, ${1 - t})`;
+	context.fillStyle = `rgba(255, 255, 113, ${1 - t})`;
 	context.strokeStyle = `rgba(255, 255, 255, ${1 - t})`;
-	context.lineWidth = 2 + 4 * (1 - t);
+	context.lineWidth = 2 + 2 * (1 - t);
 	context.fill();
 	context.stroke();
  
