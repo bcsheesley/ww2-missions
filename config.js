@@ -50,7 +50,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: 'removeSchools',
+            callback: '',
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -116,7 +116,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: 'removeMarker',
+            callback: '',
             onChapterEnter: [],
             onChapterExit: []
         },

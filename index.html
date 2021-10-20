@@ -303,8 +303,19 @@ map.on("load", function() {
     .onStepExit(response => {
         var chapter = config.chapters.find(chap => chap.id === response.element.id);
         response.element.classList.remove('active');
+        
         if (chapter.onChapterExit.length > 0) {
             chapter.onChapterExit.forEach(setLayerOpacity);
+            }
+        
+        if (document.querySelector('#schoolsMarker')) {
+            //console.log('remove schools');
+            //console.log(test.length);
+            var test = document.querySelectorAll('#schoolsMarker');
+            
+        for (var i = 0, len = test.length; i < len; i++){
+            test[i].remove();
+            }
         }
     });
 });
@@ -312,8 +323,6 @@ map.on("load", function() {
 const el = document.createElement('div');
 el.id = 'marker';
 var marker = new mapboxgl.Marker(el);
-
-
 
 function addSchools(){
     for (const schoolsMarker of serviceSchools.features){
@@ -323,15 +332,6 @@ function addSchools(){
         .setLngLat(schoolsMarker.geometry.coordinates).addTo(map);
     }
 }
-
-function removeSchools() {
-    console.log('remove schools');
-    var test = document.querySelectorAll('#schoolsMarker');
-    console.log(test.length);
-    for (var i = 0, len = test.length; i < len; i++){
-        test[i].remove();
-    }
-};
 
 function berlinTest() {
     console.log("hello");
@@ -343,10 +343,12 @@ function kasselTest() {
     marker.setLngLat(kassel).addTo(map);
 };
 
+/*
 function removeMarker() {
     console.log("goodbye");
     marker.remove();
 };
+*/
 
 // setup resize event
 window.addEventListener('resize', scroller.resize);
