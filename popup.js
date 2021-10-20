@@ -135,31 +135,3 @@ map.on('click', 'recall', (e) => {
 	)
 	.addTo(map);
 });
-
-// Service schools hover popup
-map.on('mouseenter', 'serviceSchools', (e) => {
-	map.getCanvas().style.cursor = 'pointer';
-	
-	const coordinates = e.features[0].geometry.coordinates.slice();
-	const name = e.features[0].properties.name;
-	const place = e.features[0].properties.place;
-	const course = e.features[0].properties.course;
-	const duration = e.features[0].properties.duration;
-	
-	// Ensure that if the map is zoomed out such that multiple
-	// copies of the feature are visible, the popup appears
-	// over the copy being pointed to.
-	while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-	coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-	}
-	
-	popupHover
-	.setLngLat(coordinates)
-	.setHTML(`<h3>${name}</h3><p>${place}</p><p>${course}</p><p>${duration}</p>`)
-	.addTo(map);
-});
-	 
-map.on('mouseleave', 'serviceSchools', () => {
-	map.getCanvas().style.cursor = '';
-	popupHover.remove();
-});

@@ -326,10 +326,34 @@ var marker = new mapboxgl.Marker(el);
 
 function addSchools(){
     for (const schoolsMarker of serviceSchools.features){
+        const name = schoolsMarker.properties.name;
+        const place = schoolsMarker.properties.place;
+        const course = schoolsMarker.properties.course;
+        const duration = schoolsMarker.properties.duration;
+        
         const el = document.createElement('div');
         el.id = 'schoolsMarker';
+        
+        //Create the popup
+        const schoolsPopup = new mapboxgl.Popup({
+            closeButton: false,
+            closeOnClick: true,
+            offset: 25
+            });
+            
+        //Make a marker for each feature
         new mapboxgl.Marker(el)
-        .setLngLat(schoolsMarker.geometry.coordinates).addTo(map);
+        .setLngLat(schoolsMarker.geometry.coordinates)
+        .setPopup(
+            schoolsPopup
+                .setHTML(
+                    `<h3>${name}</h3><p>${place}</p><p>${course}</p><p>${duration}</p>`
+                )
+        )
+        .addTo(map);
+        
+        el.addEventListener('mouseenter', () => schoolsPopup.addTo(map));
+        el.addEventListener('mouseleave', () => schoolsPopup.remove());
     }
 }
 
