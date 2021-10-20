@@ -333,6 +333,11 @@ function addSchools(){
     }
 }
 
+function mendleshamTest() {
+    console.log("hello");
+    marker.setLngLat(mendlesham).addTo(map);
+};
+
 function berlinTest() {
     console.log("hello");
     marker.setLngLat(berlin).addTo(map);
@@ -343,12 +348,10 @@ function kasselTest() {
     marker.setLngLat(kassel).addTo(map);
 };
 
-/*
 function removeMarker() {
     console.log("goodbye");
     marker.remove();
 };
-*/
 
 // setup resize event
 window.addEventListener('resize', scroller.resize);

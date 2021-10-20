@@ -50,7 +50,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: '',
+            callback: 'removeMarker',
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -72,7 +72,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: '',
+            callback: 'mendleshamTest',
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -94,7 +94,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: '',
+            callback: 'removeMarker',
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -116,7 +116,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: '',
+            callback: 'removeMarker',
             onChapterEnter: [],
             onChapterExit: []
         },

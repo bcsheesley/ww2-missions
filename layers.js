@@ -302,6 +302,7 @@ map.on('load', function() {
 	});
 
 	// Add a layer displaying service schools
+	/*
 	map.addLayer({
 		'id': 'serviceSchools',
 		'source': 'serviceSchools',
@@ -313,6 +314,7 @@ map.on('load', function() {
 	},
 	'waterway-label'
 	);
+	*/
 
 	// Add a layer displaying the route to Plymouth
 	map.addLayer({
