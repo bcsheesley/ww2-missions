@@ -8,7 +8,7 @@
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' />
     <link href='map.css' rel='stylesheet' />
     <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
-    <script src="./config.js"></script>
+    <script src="config.js"></script>
     <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
     <script src="routes.js"></script>
     <script src="serviceSchools.js"></script>
@@ -308,10 +308,10 @@ map.on("load", function() {
             chapter.onChapterExit.forEach(setLayerOpacity);
             }
         
-        if (document.querySelector('#schoolsMarker')) {
+        if (document.querySelector('#schoolMarker')) {
             //console.log('remove schools');
             //console.log(test.length);
-            var test = document.querySelectorAll('#schoolsMarker');
+            var test = document.querySelectorAll('#schoolMarker');
             
         for (var i = 0, len = test.length; i < len; i++){
             test[i].remove();
@@ -321,18 +321,24 @@ map.on("load", function() {
 });
 
 const el = document.createElement('div');
-el.id = 'marker';
-var marker = new mapboxgl.Marker(el);
+el.id = 'missionMarker';
+
+const elChild = document.createElement('div');
+elChild.setAttribute('id', 'missionPulse');
+el.appendChild(elChild);
+
+el.style.cursor = '';
+
+var missionMarker = new mapboxgl.Marker(el);
 
 function addSchools(){
     for (const schoolsMarker of serviceSchools.features){
         const name = schoolsMarker.properties.name;
-        const place = schoolsMarker.properties.place;
         const course = schoolsMarker.properties.course;
         const duration = schoolsMarker.properties.duration;
         
         const el = document.createElement('div');
-        el.id = 'schoolsMarker';
+        el.id = 'schoolMarker';
         
         //Create the popup
         const schoolsPopup = new mapboxgl.Popup({
@@ -347,7 +353,7 @@ function addSchools(){
         .setPopup(
             schoolsPopup
                 .setHTML(
-                    `<h3>${name}</h3><p>${place}</p><p>${course}</p><p>${duration}</p>`
+                    `<h3>${name}</h3><p>${course}</p><p>${duration}</p>`
                 )
         )
         .addTo(map);
@@ -359,22 +365,22 @@ function addSchools(){
 
 function mendleshamTest() {
     console.log("hello");
-    marker.setLngLat(mendlesham).addTo(map);
+    missionMarker.setLngLat(mendlesham).addTo(map);
 };
 
 function berlinTest() {
     console.log("hello");
-    marker.setLngLat(berlin).addTo(map);
+    missionMarker.setLngLat(berlin).addTo(map);
 };
 
 function kasselTest() {
     console.log("goodbye");
-    marker.setLngLat(kassel).addTo(map);
+    missionMarker.setLngLat(kassel).addTo(map);
 };
 
 function removeMarker() {
     console.log("goodbye");
-    marker.remove();
+    missionMarker.remove();
 };
 
 // setup resize event
@@ -382,7 +388,6 @@ window.addEventListener('resize', scroller.resize);
 
 </script>
 <script src="layers.js"></script>
-<script src="pulse.js"></script>
 <script src="popup.js"></script>
 <script src="modal.js"></script>
 

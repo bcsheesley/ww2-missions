@@ -422,6 +422,9 @@ map.on('load', function() {
 			'source': 'routes',
 			'type': 'line',
 			'filter': ['==',['get','name'],'Kassel'],
+			'layout': {
+				'line-cap': 'round'
+			},
 			'paint': {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
 				'line-opacity': 0,
