@@ -51,8 +51,20 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: 'removeMarker',
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [
+                {
+                layer: 'routePlymouth',
+                opacity: 1,
+                duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                layer: 'routePlymouth',
+                opacity: 0,
+                duration: 300
+                }
+            ]
         },
         {
             id: 'mendlesham',

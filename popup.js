@@ -2,30 +2,96 @@
 var popupHover = new mapboxgl.Popup({
 	closeButton: false,
 	closeOnClick: true
-	});
+});
 	
 var popupClick = new mapboxgl.Popup({
 	closeButton: true,
 	closeOnClick: true,
 	maxWidth: '180px'
-	});
+});
 
-// Mission routes hover popup
-map.on('mouseenter', 'routes', (e) => {
-	map.getCanvas().style.cursor = 'pointer';
-	
+// Plymouth route hover popup
+map.on('mouseenter', 'routePlymouth', (e) => {
+	const paintProperty = map.getPaintProperty('routePlymouth', 'line-opacity');
 	const name = e.features[0].properties.name;
 	
+	if (paintProperty > 0) {
+		map.getCanvas().style.cursor = 'pointer';
+		
+		popupHover
+		.setHTML(`<h3>${name}</h3><p><i>Click for more details...</i></p>`)
+		.addTo(map)
+		.setLngLat(e.lngLat)
+		.trackPointer();
+	}
+});
+
+map.on('mouseleave', 'routePlymouth', () => {
+	map.getCanvas().style.cursor = '';
+	popupHover.remove();
+});
+
+// Mission routes hover popup
+let routeID = null;
+
+map.on('mousemove', 'routes', (e) => {
+	map.getCanvas().style.cursor = 'pointer';
+	
+	const isPopupOpen = popupClick.isOpen();
+	const name = e.features[0].properties.name;
+	console.log(isPopupOpen);
+	
+	if (isPopupOpen === false){	
 	popupHover
 	.setHTML(`<h3>${name}</h3><p><i>Click for more details...</i></p>`)
 	.addTo(map)
 	.setLngLat(e.lngLat)
 	.trackPointer();
+	}
+	
+	// Check whether features exist
+	if (e.features.length === 0) return;
+	
+	// If routeID for the hovered feature is not null,
+	// use removeFeatureState to reset to the default behavior
+	if (routeID) {
+		map.removeFeatureState({
+			source: 'routes',
+			id: routeID
+		});
+	}
+	
+	routeID = e.features[0].id;
+	
+	// When the mouse moves over the routes layer, update the
+	// feature state for the feature under the mouse
+	map.setFeatureState(
+		{
+			source: 'routes',
+			id: routeID
+		},
+		{
+			hover: true
+		}
+	);
 });
 
 map.on('mouseleave', 'routes', () => {
 	map.getCanvas().style.cursor = '';
+	
 	popupHover.remove();
+	
+	if (routeID) {
+		map.setFeatureState(
+			{
+				source: 'routes',
+				id: routeID
+		    },
+		    {
+				hover: false
+		    }
+		);
+	  }
 });
 
 // Mission routes click popup
@@ -76,14 +142,17 @@ map.on('click', 'routes', (e) => {
 // Recall route hover popup
 map.on('mouseenter', 'recall', (e) => {
 	map.getCanvas().style.cursor = 'pointer';
-	
+
+	const isPopupOpen = popupClick.isOpen();
 	const name = e.features[0].properties.name;
 	
+	if (isPopupOpen === false){	
 	popupHover
 	.setHTML(`<h3>${name}</h3><p><i>Click for more details...</i></p>`)
 	.addTo(map)
 	.setLngLat(e.lngLat)
 	.trackPointer();
+	}
 });
 
 map.on('mouseleave', 'recall', () => {

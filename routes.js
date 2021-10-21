@@ -50,7 +50,7 @@ var routePlymouth = {
 		'coordinates': [newyork, plymouth]
 	},
 	'properties': {
-		'name': 'Journey to England',
+		'name': 'Voyage',
 		'date': '10/22/1944 – 11/1/1944'
 	}
 };

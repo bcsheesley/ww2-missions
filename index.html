@@ -311,23 +311,24 @@ map.on("load", function() {
         if (document.querySelector('#schoolMarker')) {
             //console.log('remove schools');
             //console.log(test.length);
-            var test = document.querySelectorAll('#schoolMarker');
+            var schoolMarkerList = document.querySelectorAll('#schoolMarker');
             
-        for (var i = 0, len = test.length; i < len; i++){
-            test[i].remove();
+        for (var i = 0, len = schoolMarkerList.length; i < len; i++){
+            schoolMarkerList[i].remove();
             }
         }
+        
+        popupClick.remove();
     });
 });
 
 const el = document.createElement('div');
 el.id = 'missionMarker';
+el.style.cursor = '';
 
 const elChild = document.createElement('div');
 elChild.setAttribute('id', 'missionPulse');
 el.appendChild(elChild);
-
-el.style.cursor = '';
 
 var missionMarker = new mapboxgl.Marker(el);
 

@@ -280,6 +280,18 @@ img {
 	}
 }
 
+#missionPulse:hover {
+	background-color: #fff;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	cursor: auto;
+	
+	transform: scale(1);
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+	animation: pulse 2s infinite;
+}
+
 /* Fix issue on mobile browser where scroll breaks */
 .mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan,
 .mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan .mapboxgl-canvas {
