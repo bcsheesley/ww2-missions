@@ -189,7 +189,7 @@ img {
 .chapterListContent {
 	right: 0px;
 	background-color: #666;
-	padding: 0px 20px 20px;
+	padding: 20px;
 	border-bottom-left-radius: 10px;
 	position: relative;
 	transition: transform linear .2s;
@@ -197,6 +197,12 @@ img {
 .chapterListContent.activeState {
 	transform: translate(200px);
 }
+
+.chapterSection.activeState {
+	height: 0px;
+	overflow: hidden;
+}
+
 .listIcon {
 	font-size: 20px;
 	transition: transform 0.1s;

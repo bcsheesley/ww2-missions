@@ -12,6 +12,7 @@ var config = {
     chapters: [
         {
             id: 'grandpa',
+            section: 1,
             alignment: 'left',
             hidden: false,
             daterank: '',
@@ -34,6 +35,7 @@ var config = {
         },
         {
             id: 'monarch',
+            section: 1,
             alignment: 'left',
             hidden: false,
             daterank: '',
@@ -68,6 +70,7 @@ var config = {
         },
         {
             id: 'mendlesham',
+            section: 1,
             alignment: 'left',
             hidden: false,
             daterank: '',
@@ -90,6 +93,7 @@ var config = {
         },
         {
             id: '35missions',
+            section: 1,
             alignment: 'left',
             hidden: false,
             daterank: '',
@@ -112,6 +116,7 @@ var config = {
         },
         {
             id: 'journal',
+            section: 2,
             alignment: 'left',
             hidden: false,
             daterank: '',
@@ -134,6 +139,7 @@ var config = {
         },
         {
             id: 'berlin1a',
+            section: 2,
             alignment: 'left',
             hidden: false,
             daterank: '1',
@@ -162,6 +168,7 @@ var config = {
         },
         {
             id: 'berlin1b',
+            section: 2,
             alignment: 'left',
             hidden: false,
             daterank: '1',
@@ -190,6 +197,7 @@ var config = {
         },
         {
             id: 'kassel',
+            section: 2,
             alignment: 'left',
             hidden: false,
             daterank: '5',

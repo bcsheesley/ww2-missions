@@ -71,28 +71,54 @@ var features = document.createElement('div');
 var header = document.createElement('div');
 var chapterListContainer = document.createElement('div');
 var chapterListContent = document.createElement('div');
+var chapterSection1 = document.createElement('div');
+var chapterSection2 = document.createElement('div');
 var close = document.createElement('span');
 var chapterListHeader = document.createElement('div');
 var listTitle = document.createElement('h4');
 var listIcon = document.createElement('span');
+var chapterSectionTitle1 = document.createElement('h5');
+var chapterSectionTitle2 = document.createElement('h5');
 
 features.setAttribute('id', 'features');
 chapterListContainer.setAttribute('id', 'chapterListContainer');
 chapterListContent.setAttribute('class', 'chapterListContent');
+chapterSection1.setAttribute('class', 'chapterSection');
+chapterSection2.setAttribute('class', 'chapterSection');
 close.setAttribute('class', 'close');
 chapterListHeader.setAttribute('class', 'chapterListHeader');
 listTitle.setAttribute('class', 'listTitle');
 listIcon.setAttribute('class', 'listIcon');
 
+features.appendChild(chapterListContainer);
+chapterListHeader.appendChild(listTitle);
+chapterListHeader.appendChild(listIcon);
+chapterListContainer.appendChild(chapterListHeader);
+chapterListContainer.appendChild(chapterListContent);
+chapterListContent.appendChild(chapterSectionTitle1);
+chapterListContent.appendChild(chapterSection1);
+chapterListContent.appendChild(chapterSectionTitle2);
+chapterListContent.appendChild(chapterSection2);
+
 close.innerHTML = '&times;';
 listTitle.innerText = "Chapters";
 listIcon.innerHTML = '&#10095;';
+chapterSectionTitle1.innerText = "Section 1";
+chapterSectionTitle2.innerText = "Section 2";
 
-features.appendChild(chapterListContainer);
-chapterListContainer.appendChild(chapterListHeader);
-chapterListHeader.appendChild(listTitle);
-chapterListHeader.appendChild(listIcon);
-chapterListContainer.appendChild(chapterListContent);
+chapterListHeader.onclick = function() {
+  chapterListContent.classList.toggle("activeState");
+  listIcon.classList.toggle("activeState");
+  chapterListHeader.classList.toggle("activeState");
+}
+
+chapterSectionTitle1.onclick = function() {
+  chapterSection1.classList.toggle("activeState");
+}
+
+chapterSectionTitle2.onclick = function() {
+  chapterSection2.classList.toggle("activeState");
+}
 
 if (config.title) {
     var titleText = document.createElement('h1');
@@ -122,7 +148,14 @@ config.chapters.forEach((record, idx) => {
     var container = document.createElement('div');
     var chapter = document.createElement('div');
     var itemLink = document.createElement('a');
-    chapterListContent.appendChild(itemLink);
+    
+    if (record.section === 1){
+      chapterSection1.appendChild(itemLink);
+    } else {
+      chapterSection2.appendChild(itemLink);
+    }
+    
+    //chapterListContent.appendChild(itemLink);
     itemLink.href = '#' + record.id;
 
     if (record.title) {
@@ -211,12 +244,6 @@ const transformRequest = (url) => {
       url: url + suffix
     }
 }
-
-chapterListHeader.onclick = function(){
-  chapterListContent.classList.toggle("activeState");
-  listIcon.classList.toggle("activeState");
-  chapterListHeader.classList.toggle("activeState");
-};
 
 var map = new mapboxgl.Map({
     container: 'map',
