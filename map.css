@@ -1,5 +1,6 @@
 html {
 	scroll-behavior: smooth;
+	scroll-padding-top: 100px;
 }
 body {
 	margin: 0;
@@ -70,6 +71,10 @@ th {
 	padding: 8px 10px;
 }
 
+.step {
+	pointer-events: none;
+}
+
 .step p {
 	line-height: 25px;
 }
@@ -80,17 +85,13 @@ th {
 }
 .step img {
 	width: 100%;
+	pointer-events: auto;
 }
 img {
 	border-radius: 5px;
 	transition: 0.3s;
 }
-.step {
-	pointer-events: none;
-}
-.step img {
-	pointer-events: auto;
-}
+
 #features img:hover {
 	opacity: 0.7;
 	cursor: pointer;
