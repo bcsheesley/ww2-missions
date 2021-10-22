@@ -77,14 +77,16 @@ var close = document.createElement('span');
 var chapterListHeader = document.createElement('div');
 var listTitle = document.createElement('h4');
 var listIcon = document.createElement('span');
-var chapterSectionTitle1 = document.createElement('h5');
-var chapterSectionTitle2 = document.createElement('h5');
+var chapterSectionTitle1 = document.createElement('button');
+var chapterSectionTitle2 = document.createElement('button');
 
 features.setAttribute('id', 'features');
 chapterListContainer.setAttribute('id', 'chapterListContainer');
 chapterListContent.setAttribute('class', 'chapterListContent');
 chapterSection1.setAttribute('class', 'chapterSection');
 chapterSection2.setAttribute('class', 'chapterSection');
+chapterSectionTitle1.setAttribute('class', 'accordion');
+chapterSectionTitle2.setAttribute('class', 'accordion');
 close.setAttribute('class', 'close');
 chapterListHeader.setAttribute('class', 'chapterListHeader');
 listTitle.setAttribute('class', 'listTitle');
@@ -112,6 +114,7 @@ chapterListHeader.onclick = function() {
   chapterListHeader.classList.toggle("activeState");
 }
 
+/*
 chapterSectionTitle1.onclick = function() {
   chapterSection1.classList.toggle("activeState");
 }
@@ -119,6 +122,7 @@ chapterSectionTitle1.onclick = function() {
 chapterSectionTitle2.onclick = function() {
   chapterSection2.classList.toggle("activeState");
 }
+*/
 
 if (config.title) {
     var titleText = document.createElement('h1');
@@ -234,6 +238,23 @@ if (footer.innerText.length > 0) {
     footer.setAttribute('id', 'footer');
     story.appendChild(footer);
 }
+
+var acc = document.getElementsByClassName("accordion");
+console.log(acc);
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("myActive");
+    var chapterSection = this.nextElementSibling;
+    if (chapterSection.style.display === "block") {
+      chapterSection.style.display = "none";
+    } else {
+      chapterSection.style.display = "block";
+    }
+  });
+}
+
 
 mapboxgl.accessToken = config.accessToken;
 

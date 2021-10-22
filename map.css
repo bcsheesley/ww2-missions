@@ -198,8 +198,17 @@ img {
 	transform: translate(200px);
 }
 
-.chapterSection.activeState {
-	height: 0px;
+.accordion {
+	transition: 0.2s;
+}
+
+.myActive {
+	background-color: #000;
+}
+
+.chapterSection {
+	display: none;
+	background-color: #999;
 	overflow: hidden;
 }
 
