@@ -249,15 +249,15 @@ if (footer.innerText.length > 0) {
     story.appendChild(footer);
 }
 
-var acc = document.getElementsByClassName("chapterAccordion");
+var acc = document.getElementsByClassName("chapterSectionHeader");
 console.log(acc);
 var i;
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
     this.classList.toggle("activeState");
-    var parent = this.parentElement;
-    var chapterSection = parent.nextElementSibling;
+    //var parent = this.parentElement;
+    var chapterSection = this.nextElementSibling;
     if (chapterSection.style.display === "none") {
       chapterSection.style.display = "block";
     } else {
