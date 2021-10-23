@@ -167,6 +167,7 @@ img {
 	float: right;
 	overflow: hidden;
 	opacity: 0.9;
+	width: 200px;
 }
 .chapterListHeader {
 	color: #fff;
@@ -189,7 +190,7 @@ img {
 .chapterListContent {
 	right: 0px;
 	background-color: #666;
-	padding: 20px;
+	padding: 0 20px 20px;
 	border-bottom-left-radius: 10px;
 	position: relative;
 	transition: transform linear .2s;
@@ -198,18 +199,38 @@ img {
 	transform: translate(200px);
 }
 
-.accordion {
+.chapterSectionHeader {
+	color: #fff;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
 	transition: 0.2s;
 }
 
-.myActive {
-	background-color: #000;
+.chapterAccordion {
+	color: #fff;
+	background-color: #666;
+	font-family: 'IBM Plex Sans', sans-serif;
+	cursor: pointer;
+	font-size: 1em;
+	font-weight: 600;
+	width: 100%;
+	text-align: left;
+	padding: 10px 0;
+	outline: none;
+	border: none;
+}
+
+.chapterAccordion.activeState {
+	background-color: #666;
 }
 
 .chapterSection {
-	display: none;
-	background-color: #999;
+	//display: none;
 	overflow: hidden;
+	padding: 10px 0;
 }
 
 .listIcon {
@@ -218,9 +239,19 @@ img {
 	margin: 0;
 	display: inline-block;
 }
+
 .listIcon.activeState {
 	transform: rotate(180deg);
 }
+
+.chapterSectionHeader .listIcon {
+	transform: rotate(-90deg);
+}
+
+.chapterAccordion.activeState + .listIcon {
+	transform: rotate(90deg);
+}
+
 #features {
 	padding-top: 10vh;
 	padding-bottom: 10vh;
@@ -394,6 +425,7 @@ img {
 }
 .close:hover,
 .chapterListHeader:hover,
+.chapterSectionHeader:hover,
 .close:focus,
 .chapterListHeader:focus {
 	color: #bbb;

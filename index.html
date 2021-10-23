@@ -77,52 +77,62 @@ var close = document.createElement('span');
 var chapterListHeader = document.createElement('div');
 var listTitle = document.createElement('h4');
 var listIcon = document.createElement('span');
-var chapterSectionTitle1 = document.createElement('button');
-var chapterSectionTitle2 = document.createElement('button');
+var chapterSectionHeader1 = document.createElement('div');
+var chapterSectionHeader2 = document.createElement('div');
+var chapterSectionTitle1 = document.createElement('div');
+var chapterSectionTitle2 = document.createElement('div');
+var sectionIcon1 = document.createElement('span');
+var sectionIcon2 = document.createElement('span');
 
 features.setAttribute('id', 'features');
 chapterListContainer.setAttribute('id', 'chapterListContainer');
 chapterListContent.setAttribute('class', 'chapterListContent');
 chapterSection1.setAttribute('class', 'chapterSection');
 chapterSection2.setAttribute('class', 'chapterSection');
-chapterSectionTitle1.setAttribute('class', 'accordion');
-chapterSectionTitle2.setAttribute('class', 'accordion');
+chapterSectionHeader1.setAttribute('class', 'chapterSectionHeader');
+chapterSectionHeader2.setAttribute('class', 'chapterSectionHeader');
+chapterSectionTitle1.setAttribute('class', 'chapterAccordion');
+chapterSectionTitle2.setAttribute('class', 'chapterAccordion');
 close.setAttribute('class', 'close');
 chapterListHeader.setAttribute('class', 'chapterListHeader');
 listTitle.setAttribute('class', 'listTitle');
 listIcon.setAttribute('class', 'listIcon');
+sectionIcon1.setAttribute('class', 'listIcon');
+sectionIcon2.setAttribute('class', 'listIcon');
 
 features.appendChild(chapterListContainer);
 chapterListHeader.appendChild(listTitle);
 chapterListHeader.appendChild(listIcon);
+
 chapterListContainer.appendChild(chapterListHeader);
 chapterListContainer.appendChild(chapterListContent);
-chapterListContent.appendChild(chapterSectionTitle1);
+
+chapterListContent.appendChild(chapterSectionHeader1);
+chapterSectionHeader1.appendChild(chapterSectionTitle1);
+chapterSectionHeader1.appendChild(sectionIcon1);
 chapterListContent.appendChild(chapterSection1);
-chapterListContent.appendChild(chapterSectionTitle2);
+
+chapterListContent.appendChild(chapterSectionHeader2);
+chapterSectionHeader2.appendChild(chapterSectionTitle2);
+chapterSectionHeader2.appendChild(sectionIcon2);
 chapterListContent.appendChild(chapterSection2);
+
 
 close.innerHTML = '&times;';
 listTitle.innerText = "Chapters";
 listIcon.innerHTML = '&#10095;';
+sectionIcon1.innerHTML = '&#10095;';
+sectionIcon2.innerHTML = '&#10095;';
 chapterSectionTitle1.innerText = "Section 1";
 chapterSectionTitle2.innerText = "Section 2";
 
 chapterListHeader.onclick = function() {
   chapterListContent.classList.toggle("activeState");
   listIcon.classList.toggle("activeState");
+  sectionIcon1.classList.toggle("activeState");
+  sectionIcon2.classList.toggle("activeState");
   chapterListHeader.classList.toggle("activeState");
 }
-
-/*
-chapterSectionTitle1.onclick = function() {
-  chapterSection1.classList.toggle("activeState");
-}
-
-chapterSectionTitle2.onclick = function() {
-  chapterSection2.classList.toggle("activeState");
-}
-*/
 
 if (config.title) {
     var titleText = document.createElement('h1');
@@ -239,22 +249,22 @@ if (footer.innerText.length > 0) {
     story.appendChild(footer);
 }
 
-var acc = document.getElementsByClassName("accordion");
+var acc = document.getElementsByClassName("chapterAccordion");
 console.log(acc);
 var i;
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
-    this.classList.toggle("myActive");
-    var chapterSection = this.nextElementSibling;
-    if (chapterSection.style.display === "block") {
-      chapterSection.style.display = "none";
-    } else {
+    this.classList.toggle("activeState");
+    var parent = this.parentElement;
+    var chapterSection = parent.nextElementSibling;
+    if (chapterSection.style.display === "none") {
       chapterSection.style.display = "block";
+    } else {
+      chapterSection.style.display = "none";
     }
   });
 }
-
 
 mapboxgl.accessToken = config.accessToken;
 
