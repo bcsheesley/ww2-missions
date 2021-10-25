@@ -12,7 +12,7 @@ var config = {
     chapters: [
         {
             id: 'grandpa',
-            section: 1,
+            section: '',
             alignment: 'left',
             hidden: false,
             daterank: '',
@@ -70,7 +70,7 @@ var config = {
         },
         {
             id: 'mendlesham',
-            section: 1,
+            section: 2,
             alignment: 'left',
             hidden: false,
             daterank: '',
@@ -93,7 +93,7 @@ var config = {
         },
         {
             id: '35missions',
-            section: 1,
+            section: 2,
             alignment: 'left',
             hidden: false,
             daterank: '',

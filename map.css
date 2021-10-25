@@ -190,7 +190,7 @@ img {
 .chapterListContent {
 	right: 0px;
 	background-color: #666;
-	padding: 0 20px 20px;
+	padding: 0 20px;
 	border-bottom-left-radius: 10px;
 	position: relative;
 	transition: transform linear .2s;
@@ -207,16 +207,25 @@ img {
 	justify-content: space-between;
 	align-items: center;
 	position: relative;
+	border-top: 1px solid #999;
+	margin-top: 0px;
+}
+
+.chapterSectionHeader:first-of-type {
+	margin-top: 1em;
 }
 
 .chapterAccordion {
-	padding: 10px 0;
+	padding: 1.33em 0;
+	font-weight: 400;
+	font-size: 1em;
+	text-transform: uppercase;
 }
 
 .chapterSection {
 	//display: none;
 	overflow: hidden;
-	padding: 10px 0;
+	padding: 0 0 20px 0;
 }
 
 .listIcon {

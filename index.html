@@ -119,12 +119,12 @@ chapterListContent.appendChild(chapterSection2);
 
 
 close.innerHTML = '&times;';
-listTitle.innerText = "Chapters";
+listTitle.innerText = "Contents";
 listIcon.innerHTML = '&#10095;';
 sectionIcon1.innerHTML = '&#10095;';
 sectionIcon2.innerHTML = '&#10095;';
-chapterSectionTitle1.innerText = "Section 1";
-chapterSectionTitle2.innerText = "Section 2";
+chapterSectionTitle1.innerText = "The Voyage";
+chapterSectionTitle2.innerText = "The Missions";
 
 chapterListHeader.onclick = function() {
   chapterListContent.classList.toggle("activeState");
@@ -163,10 +163,12 @@ config.chapters.forEach((record, idx) => {
     var chapter = document.createElement('div');
     var itemLink = document.createElement('a');
     
-    if (record.section === 1){
+    if (record.section === 1) {
       chapterSection1.appendChild(itemLink);
-    } else {
+    } else if (record.section === 2) {
       chapterSection2.appendChild(itemLink);
+    } else {
+      chapterSectionHeader1.before(itemLink);
     }
     
     //chapterListContent.appendChild(itemLink);
