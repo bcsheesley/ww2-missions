@@ -167,7 +167,7 @@ img {
 	float: right;
 	overflow: hidden;
 	opacity: 0.9;
-	width: 200px;
+	width: 220px;
 }
 .chapterListHeader {
 	color: #fff;
@@ -184,7 +184,7 @@ img {
 }
 .chapterListHeader.activeState {
 	flex-direction: row-reverse;
-	transform: translate(140px);
+	transform: translate(170px);
 	border-bottom-left-radius: 10px;
 }
 .chapterListContent {
@@ -196,7 +196,7 @@ img {
 	transition: transform linear .2s;
 }
 .chapterListContent.activeState {
-	transform: translate(200px);
+	transform: translate(220px);
 }
 
 .chapterSectionHeader {
@@ -217,7 +217,7 @@ img {
 
 .chapterAccordion {
 	padding: 1.33em 0;
-	font-weight: 400;
+	font-weight: 600;
 	font-size: 1em;
 	text-transform: uppercase;
 }
@@ -231,20 +231,20 @@ img {
 .listIcon {
 	font-size: 20px;
 	transition: transform 0.1s;
-	margin: 0;
-	display: inline-block;
+	transform: rotate(90deg);
 }
 
 .listIcon.activeState {
-	transform: rotate(180deg);
-}
-
-.chapterSectionHeader .listIcon {
 	transform: rotate(-90deg);
 }
 
+.chapterSectionHeader .listIcon {
+	transform: rotate(0deg);
+	padding-bottom: 8px;
+}
+
 .chapterSectionHeader.activeState .listIcon {
-	transform: rotate(90deg);
+	transform: rotate(-90deg);
 }
 
 #features {
