@@ -23,15 +23,21 @@ a {
 	text-decoration: none;
 }
 
+.chapterListContent > a {
+	border-top: 1px solid #999;
+	padding-top: 1.33em;
+}
+
 .itemRank {
 	display: inline-block;
-	background-color: #fff;
-	color: #333;
-	margin-bottom: 3px;
-	margin-right: 5px;
+	background-color: #444;
+	color: #fff;
+	margin-right: 10px;
 	padding: 0px 5px;
-	font-size: 1em;
-	border-radius: 5px;
+	font-size: 0.8em;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	line-height: 3.5;
 }
 
 .itemDate {
@@ -179,19 +185,27 @@ img {
 	overflow: hidden;
 	opacity: 0.9;
 	width: 220px;
+	max-height: 80vh;
+	overflow: auto;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	transition: transform linear .2s;
 }
+
 .chapterListHeader {
 	color: #fff;
-	z-index: 9999;
 	background-color: #666;
-	padding: 0px 20px;
 	border-top-left-radius: 10px;
+	padding: 0px 20px;
+	z-index: 9999;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
 	position: relative;
 	transition: transform linear .2s;
+	position: sticky;
+	top: 0;
 }
 .chapterListHeader.activeState {
 	flex-direction: row-reverse;
@@ -202,9 +216,9 @@ img {
 	right: 0px;
 	background-color: #666;
 	padding: 0 20px;
-	border-bottom-left-radius: 10px;
 	position: relative;
 	transition: transform linear .2s;
+	border-bottom-left-radius: 10px;
 }
 .chapterListContent.activeState {
 	transform: translate(220px);
@@ -223,20 +237,27 @@ img {
 }
 
 .chapterSectionHeader:first-of-type {
-	margin-top: 1em;
+	margin-top: 0.8em;
 }
 
 .chapterAccordion {
 	padding: 1.33em 0;
 	font-weight: 600;
 	font-size: 1em;
-	text-transform: uppercase;
+	//text-transform: uppercase;
 }
 
 .chapterSection {
-	//display: none;
+	display: none;
 	overflow: hidden;
 	padding: 0 0 20px 0;
+}
+
+.chapterSection a {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: left;
+	align-items: center;
 }
 
 .listIcon {
@@ -250,12 +271,12 @@ img {
 }
 
 .chapterSectionHeader .listIcon {
-	transform: rotate(0deg);
+	transform: rotate(-90deg);
 	padding-bottom: 8px;
 }
 
 .chapterSectionHeader.activeState .listIcon {
-	transform: rotate(-90deg);
+	transform: rotate(0deg);
 }
 
 #features {
