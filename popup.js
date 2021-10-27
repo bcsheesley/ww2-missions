@@ -112,8 +112,8 @@ map.on('click', 'routes', (e) => {
 		`<h3>${name}</h3>
 		<table>
 			<tr>
-				<th>Mission</th>
-				<th>Date</th>
+				<th>MISSION #</th>
+				<th>DATE</th>
 			</tr>
 			<tr>
 				<td>${daterank1}</td>
@@ -133,7 +133,7 @@ map.on('click', 'routes', (e) => {
 			</tr>
 		</table>
 		<p>
-			<i>Lt. Sheesley flew 35 combat missions in total.</i>
+			<i>&#x2a;Sheesley flew a total of 35 combat missions.</i>
 		</p>`
 	)
 	.addTo(map);

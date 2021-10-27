@@ -8,11 +8,18 @@ body {
 	font-family: 'IBM Plex Sans', sans-serif;
 	font-weight: 400;
 }
+
 a {
 	color: #000;
 }
+
+figcaption {
+ color: #999;
+ font-size: 0.9em;
+ text-align: right;
+}
+
 .chapterListContent a:hover {
-	//color: #bbb;
 	opacity: 0.5;
 }
 
@@ -24,21 +31,29 @@ a {
 }
 
 .chapterListContent > a {
-	border-top: 1px solid #999;
-	padding-top: 1.33em;
+	border-top: 1px solid #555;
+	padding: 20px;
+}
+
+.chapterSection > a:first-child{
+	//padding-top: 20px;
+}
+
+.chapterSection > a:last-child{
+	padding-bottom: 20px;
 }
 
 .itemRank {
 	display: inline-block;
-	background-color: #333;
+	//background-color: #333;
 	color: #fff;
-	margin-right: 10px;
-	padding: 0px 5px;
-	font-size: 0.8em;
-	border-radius: 5px;
+	margin-right: 6px;
+	//padding: 0px 5px;
+	//font-size: 0.8em;
+	//border-radius: 5px;
 	//border-top-left-radius: 5px;
 	//border-bottom-left-radius: 5px;
-	line-height: 3.5;
+	//line-height: 3.5;
 }
 
 .itemDate {
@@ -78,7 +93,7 @@ th {
 	padding-top: 2px;
 	padding-right: 10px;
 	color: #999;
-	text-transform: uppercase;
+	//text-transform: uppercase;
 	font-size: 1em;
 	font-weight: 400;
 }
@@ -120,7 +135,7 @@ th {
 /* For &ldquo; quote */
 
 .step .dropQuote {
-	color: #000;
+	color: #d0c6ad;
 	font-size: 8.9em;
 	float: left;
 	line-height: 1;
@@ -149,7 +164,8 @@ img {
 	font-family: 'IBM Plex Serif', serif;
 }
 #header h1 {
-	font-family: 'Cedarville Cursive', cursive;
+	font-family: 'IBM Plex Sans Condensed', sans-serif;
+	font-weight: 600;
 	padding: 60px 0px 30px;
 	font-size: 3em;
 	padding-bottom: 30px;
@@ -211,7 +227,6 @@ img {
 }
 #chapterListContainer {
 	position: sticky;
-	position: -webkit-sticky;
 	top: 100px;
 	float: right;
 	overflow: hidden;
@@ -226,7 +241,7 @@ img {
 
 .chapterListHeader {
 	color: #fff;
-	background-color: #666;
+	background-color: #333;
 	border-top-left-radius: 10px;
 	padding: 0px 20px;
 	z-index: 9999;
@@ -246,8 +261,7 @@ img {
 }
 .chapterListContent {
 	right: 0px;
-	background-color: #666;
-	padding: 0 20px;
+	background-color: #333;
 	position: relative;
 	transition: transform linear .2s;
 	border-bottom-left-radius: 10px;
@@ -264,32 +278,36 @@ img {
 	justify-content: space-between;
 	align-items: center;
 	position: relative;
-	border-top: 1px solid #999;
-	margin-top: 0px;
+	border-top: 1px solid #555;
+	padding: 15px 20px;
 }
-
+/*
 .chapterSectionHeader:first-of-type {
-	margin-top: 0.8em;
+	margin-top: 10px;
+}
+*/
+.chapterSectionHeader.activeState {
+	background-color: #555;
+	border-top: 1px solid #777;
 }
 
 .chapterAccordion {
-	padding: 1.33em 0;
 	font-weight: 700;
 	font-size: 1em;
-	//text-transform: uppercase;
 }
 
 .chapterSection {
 	display: none;
 	overflow: hidden;
-	padding: 0 0 20px 0;
+	padding: 0px 20px;
+	background-color: #555;
 }
 
 .chapterSection a {
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: left;
-	align-items: center;
+	align-items: flex-start;
 }
 
 .listIcon {
