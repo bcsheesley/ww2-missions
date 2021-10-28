@@ -180,7 +180,7 @@ config.chapters.forEach((record, idx) => {
       var itemRank = document.createElement('div');
       itemRank.innerText = '#' + record.daterank;
       daterank.innerText = record.daterank;
-      itemLink.appendChild(itemRank);
+      itemContainer.appendChild(itemRank);
       chapter.appendChild(daterank);
       daterank.setAttribute("class", "daterank");
       itemRank.setAttribute("class", "itemRank");
@@ -205,7 +205,7 @@ config.chapters.forEach((record, idx) => {
       var itemDate = document.createElement('div');
       date.innerText = record.date;
       itemDate.innerText = record.date;
-      itemContainer.appendChild(itemDate);
+      itemLink.appendChild(itemDate);
       chapter.appendChild(date);
       date.setAttribute("class", "date");
       itemDate.setAttribute("class", "itemDate");

@@ -31,12 +31,14 @@ figcaption {
 }
 
 .chapterListContent > a {
-	border-top: 1px solid #555;
 	padding: 20px;
 }
 
-.chapterSection > a:first-child{
-	//padding-top: 20px;
+.chapterListContent > a .itemName::before{
+	content: "\2302";
+	margin-right: 10px;
+	font-size: 1.3em;
+	opacity: 0.5;
 }
 
 .chapterSection > a:last-child{
@@ -56,8 +58,12 @@ figcaption {
 	//line-height: 3.5;
 }
 
+.itemName {
+	display: inline-block;
+}
+
 .itemDate {
-	opacity: 0.6;
+	opacity: 0.5;
 }
 
 h3 {
@@ -265,6 +271,7 @@ img {
 	position: relative;
 	transition: transform linear .2s;
 	border-bottom-left-radius: 10px;
+	border-top: 1px solid #555;
 }
 .chapterListContent.activeState {
 	transform: translate(220px);
@@ -281,14 +288,9 @@ img {
 	border-top: 1px solid #555;
 	padding: 15px 20px;
 }
-/*
-.chapterSectionHeader:first-of-type {
-	margin-top: 10px;
-}
-*/
+
 .chapterSectionHeader.activeState {
-	background-color: #555;
-	border-top: 1px solid #777;
+	background-color: #111;
 }
 
 .chapterAccordion {
@@ -300,14 +302,14 @@ img {
 	display: none;
 	overflow: hidden;
 	padding: 0px 20px;
-	background-color: #555;
+	background-color: #111;
 }
 
 .chapterSection a {
-	display: flex;
-	flex-direction: row-reverse;
-	justify-content: left;
-	align-items: flex-start;
+	//display: flex;
+	//flex-direction: row-reverse;
+	//justify-content: left;
+	//align-items: flex-start;
 }
 
 .listIcon {
