@@ -141,11 +141,12 @@ th {
 /* For &ldquo; quote */
 
 .step .dropQuote {
-	color: #d0c6ad;
-	font-size: 8.9em;
-	float: left;
-	line-height: 1;
-	margin: -10px 6px -85px -10px;
+	display: block;
+	color: #000;
+	font-size: 50px;
+	margin-top: 20px;
+	margin-bottom: -20px;
+	text-align: center;
 }
 
 .step div {
