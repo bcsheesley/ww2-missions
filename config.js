@@ -56,19 +56,81 @@ var config = {
             rotateAnimation: false,
             callback: 'removeMarker',
             onChapterEnter: [
-                {
-                layer: 'routePlymouth',
-                opacity: 1,
-                duration: 300
-                }
             ],
             onChapterExit: [
-                {
-                layer: 'routePlymouth',
-                opacity: 0,
-                duration: 300
-                }
             ]
+        },
+        {
+            id: 'newyork',
+            section: 1,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'New York Port',
+            date: '',
+            image: '',
+            imageId: '',
+            caption: '',
+            description: '<p><span class="dropCap">F</span>amily from <span class= "test">Struthers, OH, near Youngstown</span>. Trains to become a pilot at several bases in US: Walnut Springs, Ardmore Airforce, and others. 2nd Lt. Later becomes 1st Lt. Starts preparing in the fields of Arkansas</p>',
+            location: {
+                center: [-74.045556, 40.668333],
+                zoom: 8,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'newyorkTest',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'sea1',
+            section: 1,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Day 1 at Sea',
+            date: '',
+            image: '',
+            imageId: '',
+            caption: '',
+            description: '<p><span class="dropCap">F</span>amily from <span class= "test">Struthers, OH, near Youngstown</span>. Trains to become a pilot at several bases in US: Walnut Springs, Ardmore Airforce, and others. 2nd Lt. Later becomes 1st Lt. Starts preparing in the fields of Arkansas</p>',
+            location: {
+                center: [-70.6691, 41.10970],
+                zoom: 8,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'sea1Test',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'sea2',
+            section: 1,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Day 2 at Sea',
+            date: '',
+            image: '',
+            imageId: '',
+            caption: '',
+            description: '<p><span class="dropCap">F</span>amily from <span class= "test">Struthers, OH, near Youngstown</span>. Trains to become a pilot at several bases in US: Walnut Springs, Ardmore Airforce, and others. 2nd Lt. Later becomes 1st Lt. Starts preparing in the fields of Arkansas</p>',
+            location: {
+                center: [-66.4689, 43.0820],
+                zoom: 8,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'sea2Test',
+            onChapterEnter: [],
+            onChapterExit: []
         },
         {
             id: 'mendlesham',

@@ -5,7 +5,6 @@ map.on('load', function() {
 		'data': {
 			'type': 'FeatureCollection',
 			'features': [
-				routePlymouth,
 				routeBerlin,
 				routeDarmstadt,
 				routeHanover,
@@ -40,27 +39,68 @@ map.on('load', function() {
 		generateId: true // This ensures that all features have unique IDs
 	});
 
-	// Add Plymouth route layer
+	// Add troopship line source
+	map.addSource('troopship', {
+		'type': 'geojson',
+		'data': troopship 
+	});
+	
+	// Add troopship line layer
 	map.addLayer({
-		'id': 'routePlymouth',
-		'source': 'routes',
+		'id': 'troopship',
+		'source': 'troopship',
 		'type': 'line',
-		'filter': ['==',['get','name'],'Voyage'],
 		'paint': {
-			'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
-			'line-opacity': 0,
-			'line-color': '#7DC5E0'
+			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,2,6,24],
+			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
+			'line-color': '#ff00ff',
+			'line-opacity': 0.5,
+			//'line-dasharray': [4,4]
+		},
+		'layout': {
+			//'line-cap': 'round'
+		}
+	},
+	'waterway-label'
+	);
+	
+	
+	// Add sea route line source
+	map.addSource('routeSea', {
+		'type': 'geojson',
+		'data': {
+			'type': 'FeatureCollection',
+			'features': [
+				routeSea
+			] 
+		}
+	});
+	
+	// Add sea route line layer
+	map.addLayer({
+		'id': 'test',
+		'source': 'routeSea',
+		'type': 'line',
+		'paint': {
+			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,2,6,24],
+			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
+			'line-color': '#ff0000',
+			'line-opacity': 0.5,
+			'line-dasharray': [2,2]
+		},
+		'layout': {
+			//'line-cap': 'round'
 		}
 	},
 	'waterway-label'
 	);
 
-	// Add layer displaying ALL routes except Recall and Voyage
+	// Add layer displaying ALL routes except Recall
 	map.addLayer({
 		'id': 'routes',
 		'source': 'routes',
 		'type': 'line',
-		'filter': ['!in','name','Recall','Voyage'],
+		'filter': ['!in','name','Recall'],
 		'paint': {
 			'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
 			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],

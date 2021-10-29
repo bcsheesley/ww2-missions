@@ -10,12 +10,13 @@ var popupClick = new mapboxgl.Popup({
 	maxWidth: '180px'
 });
 
-// Plymouth route hover popup
-map.on('mouseenter', 'routePlymouth', (e) => {
-	const paintProperty = map.getPaintProperty('routePlymouth', 'line-opacity');
+// Journey hover popup
+map.on('mousemove', 'journey', (e) => {
+	const paintProperty = map.getPaintProperty('journey', 'line-opacity');
 	const name = e.features[0].properties.name;
+	console.log(paintProperty);
 	
-	if (paintProperty > 0) {
+	//if (paintProperty > 0) {
 		map.getCanvas().style.cursor = 'pointer';
 		
 		popupHover
@@ -23,10 +24,10 @@ map.on('mouseenter', 'routePlymouth', (e) => {
 		.addTo(map)
 		.setLngLat(e.lngLat)
 		.trackPointer();
-	}
+	//}
 });
 
-map.on('mouseleave', 'routePlymouth', () => {
+map.on('mouseleave', 'journey', () => {
 	map.getCanvas().style.cursor = '';
 	popupHover.remove();
 });

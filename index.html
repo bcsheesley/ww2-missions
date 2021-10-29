@@ -10,7 +10,6 @@
     <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
     <script src="config.js"></script>
     <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
-    <script src="routes.js"></script>
     <script src="serviceSchools.js"></script>
     <script src="https://unpkg.com/scrollama"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -301,6 +300,11 @@ var map = new mapboxgl.Map({
     transformRequest: transformRequest
 });
 
+map.on('click', (e) => {
+  var coords = JSON.stringify(e.lngLat.wrap());
+  console.log(coords);
+});
+
 // Add zoom and rotation controls to the map.
 map.addControl(new mapboxgl.NavigationControl({
   showCompass: false
@@ -389,7 +393,7 @@ map.on("load", function() {
             schoolMarkerList[i].remove();
             }
         }
-        
+        missionMarker.remove();
         popupClick.remove();
     });
 });
@@ -433,8 +437,25 @@ function addSchools(){
         
         el.addEventListener('mouseenter', () => schoolsPopup.addTo(map));
         el.addEventListener('mouseleave', () => schoolsPopup.remove());
+        
+        missionMarker.setLngLat(struthers).addTo(map);
     }
 }
+
+function newyorkTest() {
+  console.log("goodbye");
+  missionMarker.setLngLat(newyork).addTo(map);
+};
+
+function sea1Test() {
+  console.log("goodbye");
+  missionMarker.setLngLat(sea1).addTo(map);
+};
+
+function sea2Test() {
+  console.log("goodbye");
+  missionMarker.setLngLat(sea2).addTo(map);
+};
 
 function mendleshamTest() {
     console.log("hello");
@@ -453,7 +474,7 @@ function kasselTest() {
 
 function removeMarker() {
     console.log("goodbye");
-    missionMarker.remove();
+    //missionMarker.remove();
 };
 
 // setup resize event
@@ -461,6 +482,8 @@ window.addEventListener('resize', scroller.resize);
 
 </script>
 <script src="layers.js"></script>
+<script src="routes.js"></script>
+<script src="troopship.js"></script>
 <script src="popup.js"></script>
 <script src="modal.js"></script>
 

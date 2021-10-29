@@ -5,10 +5,33 @@ var struthers = [-80.60282, 41.05850];
 var mendlesham = [1.121001, 52.232699];
 
 // New York Harbor
-var newyork = [-74.045556, 40.668333]
+var newyork = [-74.045556, 40.668333];
 
-// Plymouth Harbor
-var plymouth = [ -4.146618, 50.352681]
+// At sea start
+var sea1 = [-70.6691, 41.10970];
+
+// At sea middle
+var sea2 = [-66.49730984863106, 43.09594080607482];
+var sea3 = [-60.18472272639963, 45.59582421709126];
+var sea4 = [-53.63687116389963, 47.61823809916669];
+var sea5 = [-46.869293038899514, 49.25081403213443];
+var sea6 = [-40.277496163899514, 50.328843938377474];
+var sea7 = [-33.20230085139934, 51.10787025644228];
+var sea8 = [-25.951324288899173, 51.382960620270325];
+var sea9 = [-18.78823835139906, 51.24562111169806];
+var sea10 = [-11.669097726398945, 50.664298274616186];
+
+// At sea end
+var sea11 = [-5.6964, 49.8167];
+
+// Plymouth Bay
+var plymouthBay = [-4.156, 50.3266];
+
+// Plymouth Docks
+var plymouthDock = [-4.1556, 50.3640];
+
+//Yarnfield Park
+var yarnfield = [-2.1965, 52.8950];
  
 // Destinations
 var berlin = [13.404954, 52.520006];
@@ -41,17 +64,17 @@ var ratingen = [6.840184, 51.296415];
 var geisecke = [7.619401, 51.458441];
 var badZwischenahn = [8.009877, 53.181440];
 var recall = [6.605980, 49.311541];
- 
-// Line from New York to Plymouth
-var routePlymouth = {
+
+// Simple line
+var routeSea = {
 	'type': 'Feature',
 	'geometry': {
 		'type': 'LineString',
-		'coordinates': [newyork, plymouth]
+		'coordinates': [sea1, sea11]
 	},
 	'properties': {
-		'name': 'Voyage',
-		'date': '10/22/1944 – 11/1/1944'
+		'name': 'Test',
+		'date': ''
 	}
 };
 
@@ -482,7 +505,7 @@ var routeRecall = {
 };
 
 // Calculate the distance in kilometers between route start/end points.
-var lineDistancePlymouth = turf.length(routePlymouth);
+var lineDistanceSea = turf.length(routeSea);
 var lineDistanceBerlin = turf.length(routeBerlin);
 var lineDistanceDarmstadt = turf.length(routeDarmstadt);
 var lineDistanceHanover = turf.length(routeHanover);
@@ -513,7 +536,7 @@ var lineDistanceGeisecke = turf.length(routeGeisecke);
 var lineDistanceBadZwischenahn = turf.length(routeBadZwischenahn);
 var lineDistanceRecall = turf.length(routeRecall);
  
-var arcPlymouth = []; 
+var arcSea = [];
 var arcBerlin = [];
 var arcDarmstadt = [];
 var arcHanover = [];
@@ -547,7 +570,7 @@ var arcRecall = [];
 // Number of steps to use in the arc and animation, more steps means
 // a smoother arc and animation, but too many steps will result in a
 // low frame rate
-var stepsPlymouth = 500;
+var stepsSea = 500;
 var stepsBerlin = 500;
 var stepsDarmstadt = 500;
 var stepsHanover = 500;
@@ -579,9 +602,9 @@ var stepsBadZwischenahn = 500;
 var stepsRecall = 500;
  
 // Draw an arc between the origin & destination points
-for (var i = 0; i < lineDistancePlymouth; i += lineDistancePlymouth / stepsPlymouth) {
-  var segmentPlymouth = turf.along(routePlymouth, i);
-  arcPlymouth.push(segmentPlymouth.geometry.coordinates);
+for (var i = 0; i < lineDistanceSea; i += lineDistanceSea / stepsSea) {
+	  var segmentSea = turf.along(routeSea, i);
+	  arcSea.push(segmentSea.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceBerlin; i += lineDistanceBerlin / stepsBerlin) {
 	var segmentBerlin = turf.along(routeBerlin, i);
@@ -701,7 +724,7 @@ for (var i = 0; i < lineDistanceRecall; i += lineDistanceRecall / stepsRecall) {
 }
  
 // Update the route with calculated arc coordinates
-routePlymouth.geometry.coordinates = arcPlymouth;
+routeSea.geometry.coordinates = arcSea;
 routeBerlin.geometry.coordinates = arcBerlin;
 routeDarmstadt.geometry.coordinates = arcDarmstadt;
 routeHanover.geometry.coordinates = arcHanover;

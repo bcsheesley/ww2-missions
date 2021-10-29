@@ -99,7 +99,6 @@ th {
 	padding-top: 2px;
 	padding-right: 10px;
 	color: #999;
-	//text-transform: uppercase;
 	font-size: 1em;
 	font-weight: 400;
 }
@@ -126,19 +125,6 @@ th {
 	line-height: 1;
 	margin: 0 8px 0px 0;
 }
-
-/* For IBM Plex Serif quote */
-/*
-.step .quote {
-	color: #000;
-	font-size: 8em;
-	float: left;
-	line-height: 1;
-	margin: -8px 6px -70px -8px;
-}
-*/
-
-/* For &ldquo; quote */
 
 .step .dropQuote {
 	display: block;
