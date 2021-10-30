@@ -437,9 +437,15 @@ function addSchools(){
         
         el.addEventListener('mouseenter', () => schoolsPopup.addTo(map));
         el.addEventListener('mouseleave', () => schoolsPopup.remove());
-        
-        missionMarker.setLngLat(struthers).addTo(map);
     }
+}
+
+function struthersTest(){
+  missionMarker.setLngLat(struthers).addTo(map);
+}
+
+function kilmerTest(){
+  missionMarker.setLngLat(kilmer).addTo(map);
 }
 
 function newyorkTest() {

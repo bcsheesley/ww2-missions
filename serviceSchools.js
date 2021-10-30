@@ -74,14 +74,14 @@ const serviceSchools = {
 			"geometry": {
 				"type": "Point",
 				"coordinates": [
-					-88.441622,
-					33.638308,
+					-82.946667,
+					39.813611,
 					0
 				]
 			},
 			"properties": {
-				"name": "Columbus Air Force Base",
-				"place": "Columbus, Mississippi",
+				"name": "Lockbourne Army Airfield",
+				"place": "Columbus, Ohio",
 				"course": "Transition 4 Eng.",
 				"duration": "9 weeks"
 			}

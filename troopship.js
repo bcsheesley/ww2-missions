@@ -4,14 +4,38 @@ const troopship = {
         {
             "type": "Feature",
             "properties": {
+                'name': "Camp Kilmer – New York Docks",
+                'date': "10/21/1944"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    /* Camp Kilmer */
+                    [
+                        -74.4458,
+                        40.5167
+                      ],
+                      /* New York */ 
+                      [
+                        -74.0460,
+                        40.6683
+                    ]
+                      
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 'name': "Day 1 at Sea",
                 'date': "10/22/1944"
             },
             "geometry": {
                 "type": "LineString",
                 "coordinates": [
+                    /* New York */ 
                     [
-                        -74.0456,
+                        -74.0460,
                         40.6683
                       ],
                       [
@@ -45,7 +69,7 @@ const troopship = {
                       /* sea1 */
                       [
                         -70.6691,
-                        41.10970
+                        41.1097
                     ]  
                 ]
             }

@@ -4,11 +4,14 @@ var struthers = [-80.60282, 41.05850];
 // Mendlesham
 var mendlesham = [1.121001, 52.232699];
 
+// Kilmer
+var kilmer = [-74.4458, 40.5167];
+
 // New York Harbor
-var newyork = [-74.045556, 40.668333];
+var newyork = [-74.0460, 40.6683];
 
 // At sea start
-var sea1 = [-70.6691, 41.10970];
+var sea1 = [-70.6691, 41.1097];
 
 // At sea middle
 var sea2 = [-66.49730984863106, 43.09594080607482];
