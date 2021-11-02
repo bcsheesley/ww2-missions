@@ -140,6 +140,52 @@ map.on('click', 'routes', (e) => {
 	.addTo(map);
 });
 
+// Mission routes touch popup?
+map.on('touchstart', 'routes', (e) => {
+	const name = e.features[0].properties.name;
+	const daterank1 = e.features[0].properties.daterank1||'';
+	const date1 = e.features[0].properties.date1||'';
+	const daterank2 = e.features[0].properties.daterank2||'';
+	const date2 = e.features[0].properties.date2||'';
+	const daterank3 = e.features[0].properties.daterank3||'';
+	const date3 = e.features[0].properties.date3||'';
+	const daterank4 = e.features[0].properties.daterank4||'';
+	const date4 = e.features[0].properties.date4||'';
+	
+	popupClick
+	.setLngLat(e.lngLat)
+	.setHTML(
+		`<h3>${name}</h3>
+		<table>
+			<tr>
+				<th>MISSION #</th>
+				<th>DATE</th>
+			</tr>
+			<tr>
+				<td>${daterank1}</td>
+				<td><a href=#journal>${date1}</a></td>
+			</tr>
+			<tr>
+				<td>${daterank2}</td>
+				<td><a href=#journal>${date2}</a></td>
+			</tr>
+			<tr>
+				<td>${daterank3}</td>
+				<td><a href=#journal>${date3}</a></td>
+			</tr>
+			<tr>
+				<td>${daterank4}</td>
+				<td><a href=#journal>${date4}</a></td>
+			</tr>
+		</table>
+		<p>
+			<i>&#x2a;Sheesley flew a total of 35 combat missions.</i>
+		</p>`
+	)
+	.addTo(map);
+});
+
+
 // Recall route hover popup
 map.on('mouseenter', 'recall', (e) => {
 	map.getCanvas().style.cursor = 'pointer';
