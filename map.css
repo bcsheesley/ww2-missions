@@ -109,9 +109,15 @@ th {
 	padding: 8px 10px;
 }
 
+
 .step {
-	//pointer-events: auto;
+	pointer-events: none;
 }
+
+.light, .dark {
+	pointer-events: auto;
+}
+
 
 .step p {
 	line-height: 25px;
@@ -158,12 +164,10 @@ th {
 }
 .step img {
 	width: 100%;
-	//pointer-events: auto;
 }
 
 .step a {
 	width: 100%;
-	//pointer-events: auto;
 }
 
 
@@ -253,7 +257,7 @@ img {
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 	transition: transform linear .2s;
-	//pointer-events: none;
+	pointer-events: none;
 }
 
 .chapterListHeader {
@@ -270,7 +274,7 @@ img {
 	transition: transform linear .2s;
 	position: sticky;
 	top: 0;
-	//pointer-events: auto;
+	pointer-events: auto;
 }
 .chapterListHeader.activeState {
 	flex-direction: row-reverse;
@@ -284,7 +288,7 @@ img {
 	transition: transform linear .2s;
 	border-bottom-left-radius: 10px;
 	border-top: 1px solid #555;
-	//pointer-events: auto;
+	pointer-events: auto;
 }
 .chapterListContent.activeState {
 	transform: translate(220px);
@@ -316,13 +320,6 @@ img {
 	overflow: hidden;
 	padding: 0px 20px;
 	background-color: #111;
-}
-
-.chapterSection a {
-	//display: flex;
-	//flex-direction: row-reverse;
-	//justify-content: left;
-	//align-items: flex-start;
 }
 
 .listIcon {
@@ -545,9 +542,6 @@ img {
 	.fully {
 		width: 90vw;
 		margin: 0 auto;
-	}
-	.light{
-		//pointer-events: auto;
 	}
 }
 
