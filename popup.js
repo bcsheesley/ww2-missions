@@ -5,7 +5,7 @@ var popupHover = new mapboxgl.Popup({
 });
 	
 var popupClick = new mapboxgl.Popup({
-	closeButton: true,
+	closeButton: false,
 	closeOnClick: true,
 	focusAfterOpen: false,
 	maxWidth: '180px'
@@ -184,6 +184,11 @@ map.on('touchstart', 'routes', (e) => {
 		</p>`
 	)
 	.addTo(map);
+});
+
+// Don't allow popup click on touch move
+map.on('touchmove', 'routes', (e) => {
+	popupClick.remove();
 });
 
 // Recall route hover popup
