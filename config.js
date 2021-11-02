@@ -45,7 +45,7 @@ var config = {
             image: './images/id-card-front-small.png',
             imageId: 'idCardFront',
             caption: '',
-            description: '<p><span class="dropCap">F</span>amily from <span class= "test">Struthers, OH, near Youngstown</span>. Trains to become a pilot at several bases in US: Walnut Springs, Ardmore Airforce, and others. 2nd Lt. Later becomes 1st Lt. Starts preparing in the fields of Arkansas</p>',
+            description: '<p><span class="dropCap">F</span>amily from <span class= "test">Struthers, OH, near Youngstown</span>. <a href="http://www.axismaps.com">Trains</a> to become a pilot at several bases in US: Walnut Springs, Ardmore Airforce, and others. 2nd Lt. Later becomes 1st Lt. Starts preparing in the fields of Arkansas</p>',
             location: {
                 center: [-90.95484, 36.06806],
                 zoom: 4,

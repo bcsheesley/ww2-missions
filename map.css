@@ -110,7 +110,7 @@ th {
 }
 
 .step {
-	pointer-events: none;
+	//pointer-events: auto;
 }
 
 .step p {
@@ -158,8 +158,15 @@ th {
 }
 .step img {
 	width: 100%;
-	pointer-events: auto;
+	//pointer-events: auto;
 }
+
+.step a {
+	width: 100%;
+	//pointer-events: auto;
+}
+
+
 img {
 	border-radius: 5px;
 	transition: 0.3s;
@@ -246,6 +253,7 @@ img {
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 	transition: transform linear .2s;
+	//pointer-events: none;
 }
 
 .chapterListHeader {
@@ -262,6 +270,7 @@ img {
 	transition: transform linear .2s;
 	position: sticky;
 	top: 0;
+	//pointer-events: auto;
 }
 .chapterListHeader.activeState {
 	flex-direction: row-reverse;
@@ -275,6 +284,7 @@ img {
 	transition: transform linear .2s;
 	border-bottom-left-radius: 10px;
 	border-top: 1px solid #555;
+	//pointer-events: auto;
 }
 .chapterListContent.activeState {
 	transform: translate(220px);
@@ -535,6 +545,9 @@ img {
 	.fully {
 		width: 90vw;
 		margin: 0 auto;
+	}
+	.light{
+		//pointer-events: auto;
 	}
 }
 
