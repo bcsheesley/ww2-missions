@@ -19,7 +19,7 @@ figcaption {
  text-align: right;
 }
 
-#story {
+#story, #map {
 	-webkit-user-select: none; /* Safari */
 	-ms-user-select: none; /* IE 10 and IE 11 */
 	user-select: none; /* Standard syntax */
@@ -90,6 +90,12 @@ h3 {
 
 .mapboxgl-popup-content a:hover {
 	color: #000;
+}
+
+.mapboxgl-popup-content {
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
 }
 
 table {
@@ -383,6 +389,9 @@ img {
 .mapboxgl-popup {
  max-width: 400px;
  font: 12px/20px 'Helvetica Neue', 'Arial', 'Helvetica', 'sans-serif';
+ -webkit-user-select: none; /* Safari */
+ -ms-user-select: none; /* IE 10 and IE 11 */
+ user-select: none; /* Standard syntax */
 }
 
 #schoolMarker {
