@@ -137,7 +137,7 @@ map.on('click', 'routes', (e) => {
 			</tr>
 		</table>
 		<p>
-			<i>Click a date to view the journal entry.</i>
+			<i>Click a date to view the journal entry...</i>
 		</p>`
 	)
 	.addTo(map);
@@ -182,7 +182,7 @@ map.on('touchstart', 'routes', (e) => {
 			</tr>
 		</table>
 		<p>
-			<i>Click a date to view the journal entry.</i>
+			<i>Click a date to view the journal entry...</i>
 		</p>`
 	)
 	.addTo(map);
