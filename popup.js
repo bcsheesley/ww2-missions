@@ -108,6 +108,8 @@ map.on('click', 'routes', (e) => {
 	const daterank4 = e.features[0].properties.daterank4||'';
 	const date4 = e.features[0].properties.date4||'';
 	
+	//&#x2a;Sheesley flew a total of 35 combat missions.
+	
 	popupClick
 	.setLngLat(e.lngLat)
 	.setHTML(
@@ -135,7 +137,7 @@ map.on('click', 'routes', (e) => {
 			</tr>
 		</table>
 		<p>
-			<i>&#x2a;Sheesley flew a total of 35 combat missions.</i>
+			<i>Click a date to view the journal entry.</i>
 		</p>`
 	)
 	.addTo(map);
@@ -180,7 +182,7 @@ map.on('touchstart', 'routes', (e) => {
 			</tr>
 		</table>
 		<p>
-			<i>&#x2a;Sheesley flew a total of 35 combat missions.</i>
+			<i>Click a date to view the journal entry.</i>
 		</p>`
 	)
 	.addTo(map);
