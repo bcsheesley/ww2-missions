@@ -43,7 +43,7 @@ map.on('mousemove', 'routes', (e) => {
 	const isPopupOpen = popupClick.isOpen();
 	const name = e.features[0].properties.name;
 	console.log(isPopupOpen);
-	/*
+	
 	if (isPopupOpen === false){	
 	popupHover
 	.setHTML(`<h3>${name}</h3><p><i>Click for more details...</i></p>`)
@@ -51,7 +51,7 @@ map.on('mousemove', 'routes', (e) => {
 	.setLngLat(e.lngLat)
 	.trackPointer();
 	}
-	*/
+	
 	// Check whether features exist
 	if (e.features.length === 0) return;
 	
@@ -82,7 +82,7 @@ map.on('mousemove', 'routes', (e) => {
 map.on('mouseleave', 'routes', () => {
 	map.getCanvas().style.cursor = '';
 	
-	//popupHover.remove();
+	popupHover.remove();
 	
 	if (routeID) {
 		map.setFeatureState(

@@ -547,6 +547,14 @@ img {
 		width: 90vw;
 		margin: 0 auto;
 	}
+	
+	.step {
+		pointer-events: auto;
+	}
+	
+	#map {
+		pointer-events: none;
+	}
 }
 
 /* Simple chapter text legends */

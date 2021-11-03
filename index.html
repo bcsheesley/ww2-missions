@@ -437,9 +437,9 @@ function addSchools(){
         )
         .addTo(map);
         
-        //el.addEventListener('onmouseenter', () => schoolsPopup.addTo(map));
-        //el.addEventListener('mouseleave', () => schoolsPopup.remove());
-        el.addEventListener('onclick', () => schoolsPopup.addTo(map));
+        el.addEventListener('mouseenter', () => schoolsPopup.addTo(map));
+        el.addEventListener('mouseleave', () => schoolsPopup.remove());
+        //el.addEventListener('onclick', () => schoolsPopup.addTo(map));
         //el.addEventListener('touchend', () => schoolsPopup.remove());
     }
 }
