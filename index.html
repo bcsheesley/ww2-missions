@@ -313,6 +313,8 @@ map.addControl(new mapboxgl.NavigationControl({
 // Enable interaction handlers
 map.dragPan.enable();
 map.doubleClickZoom.enable();
+map.touchZoomRotate.enable();
+map.keyboard.enable();
 
 if (config.showMarkers) {
     var marker = new mapboxgl.Marker({ color: config.markerColor });

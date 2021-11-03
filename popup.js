@@ -5,7 +5,7 @@ var popupHover = new mapboxgl.Popup({
 });
 	
 var popupClick = new mapboxgl.Popup({
-	closeButton: true,
+	closeButton: false,
 	closeOnClick: true,
 	focusAfterOpen: false,
 	maxWidth: '180px'
