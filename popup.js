@@ -144,6 +144,7 @@ map.on('click', 'routes', (e) => {
 });
 
 // Mission routes touch popup
+/*
 map.on('touchstart', 'routes', (e) => {
 	const name = e.features[0].properties.name;
 	const daterank1 = e.features[0].properties.daterank1||'';
@@ -187,6 +188,7 @@ map.on('touchstart', 'routes', (e) => {
 	)
 	.addTo(map);
 });
+*/
 
 // Recall route hover popup
 map.on('mouseenter', 'recall', (e) => {
