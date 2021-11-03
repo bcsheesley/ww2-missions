@@ -12,7 +12,7 @@ var popupClick = new mapboxgl.Popup({
 });
 
 // Journey hover popup
-map.on('mousemove', 'journey', (e) => {
+map.on('mouseenter', 'journey', (e) => {
 	const paintProperty = map.getPaintProperty('journey', 'line-opacity');
 	const name = e.features[0].properties.name;
 	console.log(paintProperty);
