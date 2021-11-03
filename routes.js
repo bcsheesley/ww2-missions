@@ -260,9 +260,9 @@ var routeBitterfeld = {
 		'daterank1': 12,
 		'daterank2': 27,
 		'date1': '1/16/1945',
-		'date1': '3/17/1945',
+		'date2': '3/17/1945',
 		'mission1': 114,
-		'mission1': 144
+		'mission2': 144
 	}
 };
 var routeDuisburg = {
