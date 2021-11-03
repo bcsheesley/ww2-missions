@@ -1,5 +1,5 @@
 map.on('load', function() {
-	// Add routes source
+	// Add mission routes source
 	map.addSource('routes', {
 		'type': 'geojson',
 		'data': {
@@ -38,48 +38,193 @@ map.on('load', function() {
 		},
 		generateId: true // This ensures that all features have unique IDs
 	});
-
-	// Add troopship line source
-	map.addSource('troopship', {
-		'type': 'geojson',
-		'data': troopship 
-	});
 	
-	// Add troopship line layer
-	map.addLayer({
-		'id': 'troopship',
-		'source': 'troopship',
-		'type': 'line',
-		'paint': {
-			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,2,6,24],
-			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
-			'line-color': '#ff00ff',
-			'line-opacity': 0.5,
-			//'line-dasharray': [4,4]
-		},
-		'layout': {
-			//'line-cap': 'round'
-		}
-	},
-	'waterway-label'
-	);
-	
-	
-	// Add sea route line source
-	map.addSource('routeSea', {
+	// Add journey to England source
+	map.addSource('journey', {
 		'type': 'geojson',
 		'data': {
 			'type': 'FeatureCollection',
 			'features': [
-				routeSea
+				{
+					"type": "Feature",
+					"properties": {
+						'name': 'Journey to England',
+						'date': '10/21/1944 – 11/4/1944'
+					},
+					"geometry": {
+						"type": "LineString",
+						"coordinates": [
+							/* Camp Kilmer */
+							[
+								-74.4458,
+								40.5167
+							  ],
+							  /* New York */ 
+							  [
+								-74.0460,
+								40.6683
+							]
+							  
+						]
+					}
+				},
+				routeSea,
+				{
+					"type": "Feature",
+					"properties": {
+						'name': 'Journey to England',
+						'date': '10/21/1944 – 11/4/1944'
+					},
+					"geometry": {
+						"type": "LineString",
+						"coordinates": [
+							/* New York */ 
+							[
+								-74.0460,
+								40.6683
+							  ],
+							  [
+								-74.054,
+								40.6244
+							  ],
+							  [
+								-74.0087,
+								40.53
+							  ],
+							  [
+								-73.8906,
+								40.4872
+							  ],
+							  [
+								-73.743,
+								40.4783
+							  ],
+							  [
+								-72.9932,
+								40.566
+							  ],
+							  [
+								-72.2186,
+								40.7056
+							  ],
+							  [
+								-71.4276,
+								40.8948
+							  ],
+							  /* sea1 */
+							  [
+								-70.6691,
+								41.1097
+							]  
+						]
+					}
+				},
+				{
+					"type": "Feature",
+					"properties": {
+						'name': 'Journey to England',
+						'date': '10/21/1944 – 11/4/1944'
+					},
+					"geometry": {
+						"type": "LineString",
+						"coordinates": [
+							/* sea11 */
+							[
+								-5.6964,
+								49.8167
+							  ],
+							  [
+								-5.3696,
+								49.8398
+							  ],
+							  [
+								-5.0565,
+								49.907
+							  ],
+							  /* plymouthBay */
+							  [
+								-4.156,
+								50.3266
+							]
+						]
+					}
+				},
+				{
+					"type": "Feature",
+					"properties": {
+						'name': 'Journey to England',
+						'date': '10/21/1944 – 11/4/1944'
+					},
+					"geometry": {
+						"type": "LineString",
+						"coordinates": [
+							/* plymouthBay */
+							[
+								-4.156,
+								50.3266
+							  ],
+							  [
+								-4.1467,
+								50.3452
+							  ],
+							  /* plymouthDock */
+							  [
+								-4.1556,
+								50.3640
+							  ]
+						]
+					}
+				},
+				{
+					"type": "Feature",
+					"properties": {
+						'name': 'Journey to England',
+						'date': '10/21/1944 – 11/4/1944'
+					},
+					"geometry": {
+						"type": "LineString",
+						"coordinates": [
+							/* plymouthBay */
+							[
+								-4.1556,
+								50.3640
+							  ],
+							  [
+								-3.5266,
+								50.7225
+							  ],
+							  [
+								-3.0295,
+								51.0518
+							  ],
+							  [
+								-2.5873,
+								51.4437
+							  ],
+							  [
+								-2.2536,
+								51.8578
+							  ],
+							  [
+								-2.0050,
+								52.4861
+							  ],
+							  /* yarnfield */
+							  [
+								-2.1965,
+								52.8950
+							]
+						]
+					}
+				}
 			] 
 		}
 	});
 	
-	// Add sea route line layer
+	// Add journey to England line layer
 	map.addLayer({
-		'id': 'test',
-		'source': 'routeSea',
+		'id': 'journey',
+		'source': 'journey',
 		'type': 'line',
 		'paint': {
 			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,2,6,24],
@@ -95,7 +240,7 @@ map.on('load', function() {
 	'waterway-label'
 	);
 
-	// Add layer displaying ALL routes except Recall
+	// Add layer displaying ALL mission routes except Recall
 	map.addLayer({
 		'id': 'routes',
 		'source': 'routes',
@@ -132,7 +277,7 @@ map.on('load', function() {
 	'waterway-label'
 	);
 	
-	// Add a layer for each individual route to use as a highlight in the story
+	// Add a layer for each individual mission route to use as a highlight in the story
 	map.addLayer({
 			'id': 'routeBerlin',
 			'source': 'routes',

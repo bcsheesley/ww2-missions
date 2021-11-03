@@ -14,7 +14,7 @@ const serviceSchools = {
 			"properties": {
 				"name": "Maxwell Field",
 				"place": "Montgomery, Alabama",
-				"course": "Pre-flt Pilot Training",
+				"course": "Pre-flight Training",
 				"duration": "9 weeks"
 			}
 		},
@@ -31,7 +31,7 @@ const serviceSchools = {
 			"properties": {
 				"name": "Lafayette Regional Airport",
 				"place": "Lafayette, Louisianna",
-				"course": "Primary Pilot Training",
+				"course": "Primary Training",
 				"duration": "9 weeks"
 			}
 		},
@@ -46,9 +46,9 @@ const serviceSchools = {
 				]
 			},
 			"properties": {
-				"name": "Walnut Ridge Flying School",
+				"name": "Walnut Ridge Army Airfield",
 				"place": "Walnut Ridge, Arkansas",
-				"course": "Basic Pilot Training",
+				"course": "Basic Training",
 				"duration": "9 weeks"
 			}
 		},
@@ -63,9 +63,9 @@ const serviceSchools = {
 				]
 			},
 			"properties": {
-				"name": "Blytheville Air Force Base",
+				"name": "Blytheville Army Airfield",
 				"place": "Blytheville, Arkansas",
-				"course": "Advanced Pilot Twin Engine Training",
+				"course": "Advanced Training (Twin Engine)",
 				"duration": "9 weeks"
 			}
 		},
@@ -82,7 +82,7 @@ const serviceSchools = {
 			"properties": {
 				"name": "Lockbourne Army Airfield",
 				"place": "Columbus, Ohio",
-				"course": "Transition 4 Eng.",
+				"course": "Transition Training (4-Engine)",
 				"duration": "9 weeks"
 			}
 		},
@@ -99,7 +99,7 @@ const serviceSchools = {
 			"properties": {
 				"name": "Duquense University",
 				"place": "Pittsburg, Pennsylvania",
-				"course": "College Training AF",
+				"course": "College Training",
 				"duration": "6 weeks"
 			}
 		}

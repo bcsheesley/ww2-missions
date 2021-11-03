@@ -11,14 +11,38 @@ var config = {
     footer: 'Source: source citations, etc.',
     chapters: [
         {
-            id: 'struthers',
-            section: '',
+            id: 'about',
+            section: 1,
             alignment: 'left',
             hidden: false,
             daterank: '',
-            title: 'Struthers, Ohio',
+            title: 'About this map',
             date: '',
             image: '',
+            imageId: '',
+            caption: '',
+            description: '<p><span class="dropCap">L</span>t. Byron E. Sheesley kept two short journals while serving in the United States Army Air Forces during World War Ⅱ.</p><p>One journal documents his nearly two-week-long journey from Camp Kilmer, NJ to a USAAF transit station in England via train and troopship in late October and early November, 1944.</p><p>The other contains brief summaries of most of the 35 combat missions he flew over enemy targets in Germany as pilot of a B-17 heavy bomber between December 1944 and March 1945. Sheesley was stationed at Mendlesham Airfield, Suffolk, England with the 34th Bomb Group (7th Bomb Squadron) of the "Mighty" Eighth Air Force.</p><p>This map connects entries in the two journals with the places they describe. <b>Scroll down to read more.</b></p>',
+            location: {
+                center: [-80.60282, 41.05850],
+                zoom: 5,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'struthersTest',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'struthers',
+            section: 1,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Lt. Byron E. Sheesley',
+            date: '',
+            image: './images/id-card-front-small.png',
             imageId: '',
             caption: '',
             description: '<p><span class="dropCap">F</span>amily from Struthers, Ohio near Youngstown. Attending Houghton college when began training</p>',
@@ -36,16 +60,16 @@ var config = {
         },
         {
             id: 'grandpa',
-            section: '',
+            section: 1,
             alignment: 'left',
             hidden: false,
             daterank: '',
             title: 'Pilot Training',
             date: '',
-            image: './images/id-card-front-small.png',
+            image: './images/training_tree_orig.jpeg',
             imageId: 'idCardFront',
-            caption: '',
-            description: '<p><span class="dropCap">F</span>amily from <span class= "test">Struthers, OH, near Youngstown</span>. <a href="http://www.axismaps.com">Trains</a> to become a pilot at several bases in US: Walnut Springs, Ardmore Airforce, and others. 2nd Lt. Later becomes 1st Lt. Starts preparing in the fields of Arkansas</p>',
+            caption: 'Douglas 63rd Preservation Society',
+            description: '<p><span class="dropCap">F</span>amily from <span class= "test">Struthers, OH, near Youngstown</span>. <a href="http://www.axismaps.com">Trains</a> to become a pilot at several bases in US: Walnut Springs, Ardmore Airforce, and others. 2nd Lt. Later becomes 1st Lt. Class of 44-C.</p><p>University</p><p>Pre-Flight</p><p>Primary</p><p>Basic</p><p>Advanced</p><p>Transition</p>',
             location: {
                 center: [-90.95484, 36.06806],
                 zoom: 4,
@@ -60,7 +84,7 @@ var config = {
         },
         {
             id: 'monarch',
-            section: 1,
+            section: 2,
             alignment: 'left',
             hidden: false,
             daterank: '',
@@ -86,7 +110,7 @@ var config = {
         },
         {
             id: 'monarch-journal',
-            section: 1,
+            section: 2,
             alignment: 'left',
             hidden: false,
             daterank: '',
@@ -110,7 +134,7 @@ var config = {
         },
         {
             id: 'kilmer',
-            section: 1,
+            section: 2,
             alignment: 'left',
             hidden: false,
             daterank: '',
@@ -134,7 +158,7 @@ var config = {
         },
         {
             id: 'newyork',
-            section: 1,
+            section: 2,
             alignment: 'left',
             hidden: false,
             daterank: '',
@@ -158,7 +182,7 @@ var config = {
         },
         {
             id: 'sea1',
-            section: 1,
+            section: 2,
             alignment: 'left',
             hidden: false,
             daterank: '',
@@ -182,7 +206,7 @@ var config = {
         },
         {
             id: 'sea2',
-            section: 1,
+            section: 2,
             alignment: 'left',
             hidden: false,
             daterank: '',
@@ -206,7 +230,7 @@ var config = {
         },
         {
             id: 'mendlesham',
-            section: 2,
+            section: 3,
             alignment: 'left',
             hidden: false,
             daterank: '',
@@ -230,7 +254,7 @@ var config = {
         },
         {
             id: '35missions',
-            section: 2,
+            section: 3,
             alignment: 'left',
             hidden: false,
             daterank: '',
@@ -254,7 +278,7 @@ var config = {
         },
         {
             id: 'journal',
-            section: 2,
+            section: 3,
             alignment: 'left',
             hidden: false,
             daterank: '',
@@ -278,7 +302,7 @@ var config = {
         },
         {
             id: 'berlin1a',
-            section: 2,
+            section: 3,
             alignment: 'left',
             hidden: false,
             daterank: '1',
@@ -308,7 +332,7 @@ var config = {
         },
         {
             id: 'berlin1b',
-            section: 2,
+            section: 3,
             alignment: 'left',
             hidden: false,
             daterank: '1',
@@ -338,7 +362,7 @@ var config = {
         },
         {
             id: 'kassel',
-            section: 2,
+            section: 3,
             alignment: 'left',
             hidden: false,
             daterank: '5',

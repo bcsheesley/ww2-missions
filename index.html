@@ -72,32 +72,40 @@ var chapterListContainer = document.createElement('div');
 var chapterListContent = document.createElement('div');
 var chapterSection1 = document.createElement('div');
 var chapterSection2 = document.createElement('div');
+var chapterSection3 = document.createElement('div');
 var close = document.createElement('span');
 var chapterListHeader = document.createElement('div');
 var listTitle = document.createElement('h4');
 var listIcon = document.createElement('span');
 var chapterSectionHeader1 = document.createElement('div');
 var chapterSectionHeader2 = document.createElement('div');
+var chapterSectionHeader3 = document.createElement('div');
 var chapterSectionTitle1 = document.createElement('div');
 var chapterSectionTitle2 = document.createElement('div');
+var chapterSectionTitle3 = document.createElement('div');
 var sectionIcon1 = document.createElement('span');
 var sectionIcon2 = document.createElement('span');
+var sectionIcon3 = document.createElement('span');
 
 features.setAttribute('id', 'features');
 chapterListContainer.setAttribute('id', 'chapterListContainer');
 chapterListContent.setAttribute('class', 'chapterListContent');
 chapterSection1.setAttribute('class', 'chapterSection');
 chapterSection2.setAttribute('class', 'chapterSection');
+chapterSection3.setAttribute('class', 'chapterSection');
 chapterSectionHeader1.setAttribute('class', 'chapterSectionHeader');
 chapterSectionHeader2.setAttribute('class', 'chapterSectionHeader');
+chapterSectionHeader3.setAttribute('class', 'chapterSectionHeader');
 chapterSectionTitle1.setAttribute('class', 'chapterAccordion');
 chapterSectionTitle2.setAttribute('class', 'chapterAccordion');
+chapterSectionTitle3.setAttribute('class', 'chapterAccordion');
 close.setAttribute('class', 'close');
 chapterListHeader.setAttribute('class', 'chapterListHeader');
 listTitle.setAttribute('class', 'listTitle');
 listIcon.setAttribute('class', 'listIcon');
 sectionIcon1.setAttribute('class', 'listIcon');
 sectionIcon2.setAttribute('class', 'listIcon');
+sectionIcon3.setAttribute('class', 'listIcon');
 
 features.appendChild(chapterListContainer);
 chapterListHeader.appendChild(listTitle);
@@ -116,20 +124,29 @@ chapterSectionHeader2.appendChild(chapterSectionTitle2);
 chapterSectionHeader2.appendChild(sectionIcon2);
 chapterListContent.appendChild(chapterSection2);
 
+chapterListContent.appendChild(chapterSectionHeader3);
+chapterSectionHeader3.appendChild(chapterSectionTitle3);
+chapterSectionHeader3.appendChild(sectionIcon3);
+chapterListContent.appendChild(chapterSection3);
+
 
 close.innerHTML = '&times;';
 listTitle.innerText = "Contents";
 listIcon.innerHTML = '&#8965;';
 sectionIcon1.innerHTML = '&#9013;';
 sectionIcon2.innerHTML = '&#9013;';
-chapterSectionTitle1.innerText = "Troop Ship";
-chapterSectionTitle2.innerText = "Combat Missions";
+sectionIcon3.innerHTML = '&#9013;';
+chapterSectionTitle1.innerText = "About";
+chapterSectionTitle2.innerText = "Troopship";
+chapterSectionTitle3.innerText = "Missions";
 
 chapterListHeader.onclick = function() {
+  chapterListContainer.classList.toggle("activeState");
   chapterListContent.classList.toggle("activeState");
   listIcon.classList.toggle("activeState");
   sectionIcon1.classList.toggle("activeState");
   sectionIcon2.classList.toggle("activeState");
+  sectionIcon3.classList.toggle("activeState");
   chapterListHeader.classList.toggle("activeState");
 }
 
@@ -168,6 +185,8 @@ config.chapters.forEach((record, idx) => {
       chapterSection1.appendChild(itemLink);
     } else if (record.section === 2) {
       chapterSection2.appendChild(itemLink);
+    } else if (record.section === 3) {
+      chapterSection3.appendChild(itemLink);
     } else {
       chapterSectionHeader1.before(itemLink);
     }
@@ -493,7 +512,6 @@ window.addEventListener('resize', scroller.resize);
 </script>
 <script src="layers.js"></script>
 <script src="routes.js"></script>
-<script src="troopship.js"></script>
 <script src="popup.js"></script>
 <script src="modal.js"></script>
 
