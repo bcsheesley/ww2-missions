@@ -537,6 +537,11 @@ img {
 }
 
 @media only screen and (max-width: 750px) {
+	html {
+		scroll-behavior: auto;
+		//scroll-padding-top: 100px;
+	}
+	
 	.modal-content {
 		width: 100%;
 	}
