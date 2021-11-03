@@ -95,6 +95,7 @@ table {
 	padding-bottom: 6px;
 	border-bottom: 1px solid #eee;
 	width: 100%;
+	white-space: nowrap;
 }
 
 th {
