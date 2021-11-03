@@ -267,6 +267,7 @@ img {
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 	transition: transform linear .2s;
+	z-index: 9999;
 }
 
 #chapterListContainer.activeState {
