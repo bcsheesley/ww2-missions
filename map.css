@@ -265,40 +265,43 @@ img {
 	position: sticky;
 	top: 100px;
 	float: right;
-	opacity: 0.9;
+	opacity: 1;
 	width: 220px;
 	max-height: 80vh;
 	overflow: auto;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 	z-index: 9999;
+	pointer-events: none;
 }
 
 #chapterListContainer.activeState {
-	pointer-events: none;
-	opacity: 1;
+	pointer-events: auto;
+	opacity: 0.9;
 }
 
 .chapterListHeader {
 	color: #fff;
 	background-color: #333;
 	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
 	padding: 0px 20px;
 	z-index: 9999;
 	display: flex;
-	flex-direction: row;
+	flex-direction: row-reverse;
 	justify-content: space-between;
 	align-items: center;
-	position: relative;
 	transition: transform linear .2s;
 	position: sticky;
 	top: 0;
 	pointer-events: auto;
-}
-.chapterListHeader.activeState {
-	flex-direction: row-reverse;
 	transform: translate(170px);
-	border-bottom-left-radius: 10px;
+}
+
+.chapterListHeader.activeState {
+	flex-direction: row;
+	transform: translate(0px);
+	border-bottom-left-radius: 0px;
 }
 .chapterListContent {
 	right: 0px;
@@ -308,9 +311,10 @@ img {
 	border-bottom-left-radius: 10px;
 	border-top: 1px solid #555;
 	pointer-events: auto;
+	transform: translate(220px);
 }
 .chapterListContent.activeState {
-	transform: translate(220px);
+	transform: translate(0px);
 }
 
 .chapterSectionHeader {
@@ -345,7 +349,7 @@ img {
 	margin-top: 2px;
 	font-size: 20px;
 	transition: transform 0.1s;
-	transform: rotate(90deg);
+	transform: rotate(-90deg);
 }
 
 .chapterListHeader .listIcon::before {
@@ -353,7 +357,7 @@ img {
 }
 
 .chapterListHeader .listIcon.activeState {
-	transform: rotate(-90deg);
+	transform: rotate(90deg);
 	margin-top: 0px;
 }
 
@@ -563,13 +567,18 @@ img {
 		content: "Mobile";
 	}
 	
+	.chapterListHeader .listIcon::before {
+		content: '';
+	}
+	
 	#chapterListContainer {
 		position: fixed;
 		top: 0px;
-		float: none;
+		right: 0px;
+		//float: none;
 		overflow: hidden;
-		opacity: 0.2;
-		width: 100%;
+		opacity: 0.9;
+		width: 220px;
 		max-height: 100vh;
 		overflow-y: auto;
 		border-top-left-radius: 0px;
