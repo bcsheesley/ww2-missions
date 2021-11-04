@@ -257,8 +257,9 @@ img {
 	opacity: 0.9;
 }
 #chapterListContainer {
-	position: sticky;
-	top: 100px;
+	//position: sticky;
+	position: fixed;
+	top: 200px;
 	float: right;
 	opacity: 0.9;
 	width: 220px;
