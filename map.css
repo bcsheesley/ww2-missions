@@ -257,8 +257,7 @@ img {
 	opacity: 0.9;
 }
 #chapterListContainer {
-	//position: sticky;
-	position: fixed;
+	position: sticky;
 	top: 200px;
 	float: right;
 	opacity: 0.9;
@@ -267,7 +266,6 @@ img {
 	overflow: auto;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
-	//transition: transform linear .2s;
 	z-index: 9999;
 }
 
@@ -549,7 +547,7 @@ img {
 	}
 	
 	#chapterListContainer {
-		//position: sticky;
+		position: fixed;
 		top: 0px;
 		float: none;
 		overflow: hidden;
