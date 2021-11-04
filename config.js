@@ -12,7 +12,7 @@ var config = {
     chapters: [
         {
             id: 'about',
-            section: 1,
+            section: '',
             alignment: 'left',
             hidden: false,
             daterank: '',

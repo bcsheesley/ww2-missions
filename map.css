@@ -256,9 +256,14 @@ img {
 	background-image: none;
 	opacity: 0.9;
 }
+
+.listTitle::before {
+	content: "Chapters";
+}
+
 #chapterListContainer {
 	position: sticky;
-	top: 200px;
+	top: 100px;
 	float: right;
 	opacity: 0.9;
 	width: 220px;
@@ -271,6 +276,7 @@ img {
 
 #chapterListContainer.activeState {
 	pointer-events: none;
+	opacity: 1;
 }
 
 .chapterListHeader {
@@ -300,7 +306,7 @@ img {
 	position: relative;
 	transition: transform linear .2s;
 	border-bottom-left-radius: 10px;
-	//border-top: 1px solid #555;
+	border-top: 1px solid #555;
 	pointer-events: auto;
 }
 .chapterListContent.activeState {
@@ -335,17 +341,24 @@ img {
 	background-color: #111;
 }
 
-.listIcon {
+.chapterListHeader .listIcon {
+	margin-top: 2px;
 	font-size: 20px;
 	transition: transform 0.1s;
 	transform: rotate(90deg);
 }
 
-.listIcon.activeState {
+.chapterListHeader .listIcon::before {
+	content: '\2305';
+}
+
+.chapterListHeader .listIcon.activeState {
 	transform: rotate(-90deg);
+	margin-top: 0px;
 }
 
 .chapterSectionHeader .listIcon {
+	font-size: 20px;
 	transform: rotate(-90deg);
 	padding-bottom: 8px;
 }
@@ -546,12 +559,16 @@ img {
 		width: 100%;
 	}
 	
+	.listTitle::before {
+		content: "Mobile";
+	}
+	
 	#chapterListContainer {
 		position: fixed;
 		top: 0px;
 		float: none;
 		overflow: hidden;
-		opacity: 1;
+		opacity: 0.2;
 		width: 100%;
 		max-height: 100vh;
 		overflow-y: auto;
