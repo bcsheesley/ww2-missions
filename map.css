@@ -266,7 +266,7 @@ img {
 	overflow: auto;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
-	transition: transform linear .2s;
+	//transition: transform linear .2s;
 	z-index: 9999;
 }
 
@@ -558,7 +558,7 @@ img {
 		overflow-y: auto;
 		border-top-left-radius: 0px;
 		border-bottom-left-radius: 0px;
-		transition: transform linear .2s;
+		//transition: transform linear .2s;
 		z-index: 9999;
 	}
 	
