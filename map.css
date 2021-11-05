@@ -575,9 +575,9 @@ img {
 		position: fixed;
 		top: 0px;
 		right: 0px;
-		overflow: hidden;
+		//overflow: hidden;
 		max-height: 100vh;
-		overflow-y: auto;
+		//overflow-y: auto;
 		border-top-left-radius: 0px;
 		border-bottom-left-radius: 0px;
 	}
