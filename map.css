@@ -23,10 +23,6 @@ figcaption {
  text-align: right;
 }
 
-.chapterListContent a:hover {
-	opacity: 0.5;
-}
-
 .chapterListContent a {
 	padding: 10px 0;
 	display: block;
@@ -320,6 +316,7 @@ img {
 	position: relative;
 	border-top: 1px solid #555;
 	padding: 15px 20px;
+	background-color: #333;
 }
 
 .chapterSectionHeader.activeState {
@@ -535,18 +532,40 @@ img {
 	font-weight: bold;
 	transition: 0.3s;
 }
-.close:hover,
-.chapterListHeader:hover,
-.chapterSectionHeader:hover,
-.close:focus,
-.chapterListHeader:focus,
-.chapterSectionHeader:hover {
-	color: #bbb;
-	text-decoration: none;
-	cursor: pointer;
+
+@media(hover:hover) {
+	.close:hover,
+	.chapterListHeader:hover,
+	.chapterSectionHeader:hover,
+	.close:focus,
+	.chapterListHeader:focus,
+	.chapterSectionHeader:hover {
+		color: #bbb;
+		text-decoration: none;
+		cursor: pointer;
+	}
+	
+	.chapterListContent a:hover {
+		opacity: 0.5;
+	}
 }
 
-@media only screen and (max-width: 750px) {
+@media (hover:none) {
+	.close:hover,
+	.chapterListHeader:hover,
+	.chapterSectionHeader:hover,
+	.close:focus,
+	.chapterListHeader:focus,
+	.chapterSectionHeader:hover {
+		color: #fff;
+	}
+	
+	.chapterListContent a:hover {
+		opacity: 1;
+	}
+}
+
+@media only screen and (max-width: 750px) {	
 	html {
 		scroll-behavior: auto;
 	}
