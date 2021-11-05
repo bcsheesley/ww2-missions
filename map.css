@@ -2,6 +2,7 @@ html {
 	scroll-behavior: smooth;
 	scroll-padding-top: 100px;
 }
+
 body {
 	margin: 0;
 	padding: 0;
@@ -563,45 +564,72 @@ img {
 		width: 100%;
 	}
 	
-	.listTitle::before {
-		content: "Mobile";
+	.chapterListHeader .listTitle::before {
+		content: 'Chapters';
 	}
 	
 	.chapterListHeader .listIcon::before {
-		content: '';
+		content: '\2630';
 	}
 	
 	#chapterListContainer {
 		position: fixed;
 		top: 0px;
 		right: 0px;
-		//float: none;
 		overflow: hidden;
-		opacity: 0.9;
-		width: 220px;
 		max-height: 100vh;
 		overflow-y: auto;
 		border-top-left-radius: 0px;
 		border-bottom-left-radius: 0px;
-		//transition: transform linear .2s;
-		z-index: 9999;
+	}
+	
+	#chapterListContainer.activeState {
+		width: 80%;
 	}
 	
 	.chapterListHeader {
 		border-top-left-radius: 0px;
+		flex-direction: row-reverse;
+		background-color: rgba(51,51,51,0);
+		padding: 0 12px;
 	}
 	
 	.chapterListHeader.activeState {
 		border-bottom-left-radius: 0px;
 		transform: translate(0px);
+		background-color: rgba(51,51,51,1);
+		padding: 0 10px 0 20px;
+	}
+	
+	.chapterListHeader .listIcon {
+		transform: rotate(0deg);
+		background-color: rgba(255,255,255,0.9);
+		padding: 0 5px 2px 5px;
+		border-radius: 5px;
+		color: #000;
+	}
+	
+	.chapterListHeader .listIcon.activeState {
+		transform: rotate(0deg);
+		background-color: rgba(255,255,255,0);
+		color: #fff;
+	}
+	
+	.chapterListContent a {
+		padding: 15px 0;
+	}
+	
+	.chapterListContent > a {
+		padding: 20px;
 	}
 	
 	.chapterListContent {
 		border-bottom-left-radius: 0px;
+		height: 100vh;
 	}
 	
 	.chapterListContent.activeState {
-		transform: translateY(-100%);
+		//transform: translateY(-100%);
 	}
 	
 	/* Hide map nav for mobile */
