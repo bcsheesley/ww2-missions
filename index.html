@@ -192,6 +192,20 @@ config.chapters.forEach((record, idx) => {
     }
     
     itemLink.href = '#' + record.id;
+    
+    itemLink.onclick = function() {
+      var x = window.matchMedia("(max-width: 750px)");
+      
+      if(x.matches) {
+      chapterListContainer.classList.toggle("activeState");
+      chapterListContent.classList.toggle("activeState");
+      listIcon.classList.toggle("activeState");
+      sectionIcon1.classList.toggle("activeState");
+      sectionIcon2.classList.toggle("activeState");
+      sectionIcon3.classList.toggle("activeState");
+      chapterListHeader.classList.toggle("activeState");
+      }
+    }
 
     if (record.daterank) {
       var daterank = document.createElement('h3');
