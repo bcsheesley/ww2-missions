@@ -123,6 +123,7 @@ th {
 
 .step p {
 	line-height: 25px;
+	font-size: 1em;
 }
 
 .step .dropCap {
@@ -582,7 +583,8 @@ img {
 	}
 	
 	#chapterListContainer.activeState {
-		width: 80%;
+		width: 80vw;
+		height: 100vh;
 	}
 	
 	.chapterListHeader {
@@ -629,7 +631,7 @@ img {
 	
 	.chapterListContent {
 		border-bottom-left-radius: 0px;
-		height: 100vh;
+		height: 100%;
 	}
 	
 	.chapterListContent.activeState {
