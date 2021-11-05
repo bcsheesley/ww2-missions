@@ -38,17 +38,8 @@ figcaption {
 	padding: 20px;
 }
 
-/*
-.chapterListContent > a .itemName::before{
-	content: "\2302";
-	margin-right: 10px;
-	font-size: 1.3em;
-	opacity: 0.5;
-}
-*/
-
 .chapterSection > a:last-child{
-	padding-bottom: 20px;
+	padding-bottom: 40px;
 }
 
 .itemRank {
@@ -557,7 +548,14 @@ img {
 @media only screen and (max-width: 750px) {
 	html {
 		scroll-behavior: auto;
-		//scroll-padding-top: 100px;
+	}
+	
+	body {
+		font-size: 1.2em;
+	}
+	
+	.step .dropCap {
+		font-size: 2.6em;
 	}
 	
 	.modal-content {
@@ -565,7 +563,7 @@ img {
 	}
 	
 	.chapterListHeader .listTitle::before {
-		content: 'Chapters';
+		content: 'Close';
 	}
 	
 	.chapterListHeader .listIcon::before {
@@ -591,7 +589,7 @@ img {
 		border-top-left-radius: 0px;
 		flex-direction: row-reverse;
 		background-color: rgba(51,51,51,0);
-		padding: 0 12px;
+		transform: translate(135px);
 	}
 	
 	.chapterListHeader.activeState {
@@ -601,12 +599,18 @@ img {
 		padding: 0 10px 0 20px;
 	}
 	
+	.chapterListHeader.activeState .listIcon::before {
+		content: '\00d7';
+	}
+	
 	.chapterListHeader .listIcon {
+		font-size: 3em;
 		transform: rotate(0deg);
-		background-color: rgba(255,255,255,0.9);
+		//background-color: rgba(255,255,255,0.9);
 		padding: 0 5px 2px 5px;
 		border-radius: 5px;
-		color: #000;
+		text-shadow: 1px 1px 1px #666;
+		//color: #000;
 	}
 	
 	.chapterListHeader .listIcon.activeState {
