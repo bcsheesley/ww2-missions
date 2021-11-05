@@ -295,7 +295,7 @@ img {
 .chapterListContent {
 	right: 0px;
 	background-color: #333;
-	position: relative;
+	//position: relative;
 	transition: transform linear .2s;
 	border-bottom-left-radius: 10px;
 	border-top: 1px solid #555;
@@ -586,17 +586,11 @@ img {
 		content: 'Close';
 	}
 	
-	.chapterListHeader .listIcon::before {
-		content: '\2630';
-	}
-	
 	#chapterListContainer {
 		position: fixed;
 		top: 0px;
 		right: 0px;
-		//overflow: hidden;
 		max-height: 100vh;
-		//overflow-y: auto;
 		border-top-left-radius: 0px;
 		border-bottom-left-radius: 0px;
 	}
@@ -620,24 +614,27 @@ img {
 		padding: 0 10px 0 20px;
 	}
 	
-	.chapterListHeader.activeState .listIcon::before {
-		content: '\00d7';
-	}
-	
 	.chapterListHeader .listIcon {
 		font-size: 3em;
 		transform: rotate(0deg);
-		//background-color: rgba(255,255,255,0.9);
 		padding: 0 5px 2px 5px;
 		border-radius: 5px;
 		text-shadow: 1px 1px 1px #666;
-		//color: #000;
+	}
+	
+	.chapterListHeader .listIcon::before {
+		content: '\2630';
+	}
+	
+	.chapterListHeader .listIcon.activeState::before {
+		content: '\00d7';
 	}
 	
 	.chapterListHeader .listIcon.activeState {
 		transform: rotate(0deg);
 		background-color: rgba(255,255,255,0);
 		color: #fff;
+		margin-top: -5px;
 	}
 	
 	.chapterListContent a {
@@ -646,6 +643,18 @@ img {
 	
 	.chapterListContent > a {
 		padding: 20px;
+	}
+
+	.chapterListContent.activeState .chapterSectionHeader:nth-of-type(5) {
+		padding-bottom: 100px;
+	}
+	
+	.chapterListContent.activeState .chapterSectionHeader.activeState:nth-of-type(5) {
+		padding-bottom: 15px;
+	}
+	
+	.chapterSection:last-child {
+		padding-bottom: 60px;
 	}
 	
 	.chapterListContent {
