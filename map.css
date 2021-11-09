@@ -599,7 +599,7 @@ img {
 @media only screen and (max-width: 768px) {	
 	html {
 		scroll-behavior: auto;
-		scroll-padding: 40px 0 0 0;
+		scroll-padding: 20px 0 0 0;
 	}
 	
 	body {

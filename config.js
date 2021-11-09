@@ -30,7 +30,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: 'struthersTest',
+            callback: '',
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -272,7 +272,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: 'removeMarker',
+            callback: '',
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -296,7 +296,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: 'removeMarker',
+            callback: '',
             onChapterEnter: [],
             onChapterExit: []
         },
