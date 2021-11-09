@@ -11,6 +11,7 @@ body {
 	-webkit-user-select: none; /* Safari */
 	-ms-user-select: none; /* IE 10 and IE 11 */
 	user-select: none; /* Standard syntax */
+	-webkit-text-size-adjust: none;
 }
 
 a {
@@ -252,6 +253,10 @@ img {
 
 #chapterListContainer {
 	position: sticky;
+	position: -webkit-sticky;
+	position: -moz-sticky;
+	position: -o-sticky;
+	position: -ms-sticky;
 	top: 100px;
 	float: right;
 	opacity: 1;
@@ -282,6 +287,10 @@ img {
 	align-items: center;
 	transition: transform linear .2s;
 	position: sticky;
+	position: -webkit-sticky;
+	position: -moz-sticky;
+	position: -o-sticky;
+	position: -ms-sticky;
 	top: 0;
 	pointer-events: auto;
 	transform: translate(170px);
@@ -565,7 +574,7 @@ img {
 	}
 }
 
-@media only screen and (max-width: 750px) {	
+@media only screen and (max-width: 768px) {	
 	html {
 		scroll-behavior: auto;
 	}
@@ -590,7 +599,8 @@ img {
 		position: fixed;
 		top: 0px;
 		right: 0px;
-		max-height: 100vh;
+		height: 100vh;
+		max-height: none;
 		border-top-left-radius: 0px;
 		border-bottom-left-radius: 0px;
 	}
