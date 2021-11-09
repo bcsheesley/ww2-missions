@@ -177,13 +177,10 @@ img {
 	transition: 0.3s;
 }
 
-#features img:hover {
-	opacity: 0.7;
-	cursor: pointer;
-}
 #features p {
 	font-family: 'IBM Plex Serif', serif;
 }
+
 #header h1 {
 	font-family: 'IBM Plex Sans Condensed', sans-serif;
 	font-weight: 600;
@@ -192,11 +189,13 @@ img {
 	padding-bottom: 30px;
 	margin: 0;
 }
+
 #header h2 {
 	padding-bottom: 15px;
 	opacity: 0.6;
 	margin: 0;
 }
+
 #header p {
 	opacity: 0.6;
 	font-size: 1.25em;
@@ -232,6 +231,7 @@ img {
 	text-align: center;
 	color: #fff;
 }
+
 #footer {
 	width: 100%;
 	min-height: 5vh;
@@ -413,7 +413,15 @@ img {
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
-	cursor: pointer;
+	//cursor: pointer;
+}
+
+#schoolMarker:after {
+	content: "";
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	//cursor: pointer;
 }
 
 #missionPulse {
@@ -557,6 +565,11 @@ img {
 	.chapterListContent a:hover {
 		opacity: 0.5;
 	}
+	
+	#features img:hover {
+		opacity: 0.7;
+		cursor: pointer;
+	}
 }
 
 @media (hover:none) {
@@ -571,6 +584,14 @@ img {
 	
 	.chapterListContent a:hover {
 		opacity: 1;
+	}
+	
+	#features img:hover {
+		opacity: 1;
+	}
+	
+	.step {
+		pointer-events: auto;
 	}
 }
 
