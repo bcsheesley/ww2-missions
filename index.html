@@ -194,7 +194,7 @@ config.chapters.forEach((record, idx) => {
     itemLink.href = '#' + record.id;
     
     itemLink.onclick = function() {
-      var x = window.matchMedia("(max-width: 750px)");
+      var x = window.matchMedia("(max-width: 768px)");
       
       if(x.matches) {
       chapterListContainer.classList.toggle("activeState");
