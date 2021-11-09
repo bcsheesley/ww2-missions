@@ -33,7 +33,7 @@ figcaption {
 }
 
 .chapterListContent > a {
-	padding: 20px;
+	padding: 20px 0;
 }
 
 .chapterSection > a:last-child{
@@ -305,11 +305,11 @@ img {
 .chapterListContent {
 	right: 0px;
 	background-color: #333;
-	//position: relative;
 	transition: transform linear .2s;
 	border-bottom-left-radius: 10px;
 	border-top: 1px solid #555;
 	pointer-events: auto;
+	padding: 0 20px;
 	transform: translate(220px);
 }
 .chapterListContent.activeState {
@@ -325,12 +325,8 @@ img {
 	align-items: center;
 	position: relative;
 	border-top: 1px solid #555;
-	padding: 15px 20px;
+	padding: 15px 0;
 	background-color: #333;
-}
-
-.chapterSectionHeader.activeState {
-	background-color: #111;
 }
 
 .chapterAccordion {
@@ -341,8 +337,8 @@ img {
 .chapterSection {
 	display: none;
 	overflow: hidden;
-	padding: 0px 20px;
-	background-color: #111;
+	padding-left: 10px;
+	//background-color: #111;
 }
 
 .chapterListHeader .listIcon {
@@ -675,11 +671,11 @@ img {
 	}
 	
 	.chapterListContent > a {
-		padding: 20px;
+		padding: 20px 0;
 	}
 
 	.chapterListContent.activeState .chapterSectionHeader:nth-of-type(5) {
-		padding-bottom: 100px;
+		padding-bottom: 200px;
 	}
 	
 	.chapterListContent.activeState .chapterSectionHeader.activeState:nth-of-type(5) {
@@ -687,16 +683,12 @@ img {
 	}
 	
 	.chapterSection:last-child {
-		padding-bottom: 60px;
+		padding-bottom: 200px;
 	}
 	
 	.chapterListContent {
 		border-bottom-left-radius: 0px;
-		height: 100%;
-	}
-	
-	.chapterListContent.activeState {
-		//transform: translateY(-100%);
+		min-height: 100%;
 	}
 	
 	/* Hide map nav for mobile */
