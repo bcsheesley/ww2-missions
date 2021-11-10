@@ -26,7 +26,7 @@ figcaption {
 }
 
 .chapterListContent a {
-	padding: 10px 0;
+	padding: 10px 0 10px 10px;
 	display: block;
 	color: #fff;
 	text-decoration: none;
@@ -329,10 +329,6 @@ img {
 	background-color: #333;
 }
 
-.chapterSectionHeader.activeState {
-	background-color: #111;
-}
-
 .chapterAccordion {
 	font-weight: 700;
 	font-size: 1em;
@@ -342,7 +338,7 @@ img {
 	display: none;
 	overflow: hidden;
 	padding: 0px 20px;
-	background-color: #111;
+	background-color: #333;
 }
 
 .chapterListHeader .listIcon {
@@ -671,7 +667,7 @@ img {
 	}
 	
 	.chapterListContent a {
-		padding: 15px 0;
+		padding: 15px 0 15px 10px;
 	}
 	
 	.chapterListContent > a {
@@ -679,7 +675,7 @@ img {
 	}
 
 	.chapterListContent.activeState .chapterSectionHeader:nth-of-type(5) {
-		padding-bottom: 100px;
+		padding-bottom: 200px;
 	}
 	
 	.chapterListContent.activeState .chapterSectionHeader.activeState:nth-of-type(5) {
@@ -687,7 +683,7 @@ img {
 	}
 	
 	.chapterSection:last-child {
-		padding-bottom: 60px;
+		padding-bottom: 200px;
 	}
 	
 	.chapterListContent {
