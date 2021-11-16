@@ -268,6 +268,7 @@ img {
 	border-bottom-left-radius: 10px;
 	z-index: 9999;
 	pointer-events: none;
+	overflow-x: hidden;
 }
 
 #chapterListContainer.activeState {
@@ -405,28 +406,13 @@ img {
  font: 12px/20px 'Helvetica Neue', 'Arial', 'Helvetica', 'sans-serif';
 }
 
-#schoolMarker {
-	background-color: #fff;
-	width: 20px;
-	height: 20px;
-	border-radius: 50%;
-	//cursor: pointer;
-}
-
-#schoolMarker:after {
-	content: "";
-	width: 60px;
-	height: 60px;
-	border-radius: 50%;
-	//cursor: pointer;
-}
-
 #missionPulse {
 	background-color: #000;
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
 	cursor: auto;
+	opacity: 0.5;
 	
 	transform: scale(1);
 	box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
@@ -452,14 +438,6 @@ img {
 
 #missionPulse:hover {
 	background-color: #fff;
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	cursor: auto;
-	
-	transform: scale(1);
-	box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
-	animation: pulse 2s infinite;
 }
 
 /* Fix issue on mobile browser where scroll breaks */
