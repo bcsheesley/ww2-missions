@@ -412,6 +412,7 @@ map.on("load", function() {
         }
     })
     .onStepExit(response => {
+        var shake = document.getElementById('map');
         var chapter = config.chapters.find(chap => chap.id === response.element.id);
         response.element.classList.remove('active');
         
@@ -430,6 +431,7 @@ map.on("load", function() {
         }
         missionMarker.remove();
         popupClick.remove();
+        shake.classList.remove('shake');
     });
 });
 
@@ -517,6 +519,11 @@ function berlinTest() {
 function kasselTest() {
     console.log("goodbye");
     missionMarker.setLngLat(kassel).addTo(map);
+    var shake = document.getElementById('map');
+    
+    map.once('moveend',() => {
+    shake.classList.toggle('shake');
+  });
 };
 
 function removeMarker() {

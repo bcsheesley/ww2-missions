@@ -230,7 +230,7 @@ map.on('load', function() {
 			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,2,6,24],
 			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
 			'line-color': '#ff0000',
-			'line-opacity': 0.5,
+			'line-opacity': 0,
 			'line-dasharray': [2,2]
 		},
 		'layout': {
@@ -248,20 +248,24 @@ map.on('load', function() {
 		'filter': ['!in','name','Recall'],
 		'paint': {
 			'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
-			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
+			//'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
+			'line-opacity': 0,
 			//'line-color': '#CDA076'
 			'line-color': [
 				'case',
 				['boolean', ['feature-state', 'hover'], false],
 				'#ff0000',
-				'#CDA076'
+				'#ff0000'
 			]
+		},
+		'layout': {
+			'line-cap': 'round'
 		}
 	},
 	'waterway-label'
 	);
 	
-	// Add recall route layer
+	// Add Recall route layer
 	map.addLayer({
 		'id': 'recall',
 		'source': 'routes',
@@ -269,7 +273,7 @@ map.on('load', function() {
 		'filter': ['==',['get','name'],'Recall'],
 		'paint': {
 			'line-width': 2,
-			'line-opacity': 1,
+			'line-opacity': 0,
 			'line-color': '#CDA076',
 			'line-dasharray': [4,4]
 		}

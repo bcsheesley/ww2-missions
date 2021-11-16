@@ -23,8 +23,8 @@ var config = {
             caption: '',
             description: '<p><span class="dropCap">L</span>t. Byron E. Sheesley kept two short journals while serving in the United States Army Air Forces during World War Ⅱ.</p><p>One journal documents his nearly two-week-long journey from Camp Kilmer, NJ to a USAAF transit station in England via train and troopship in late October and early November, 1944.</p><p>The other contains brief summaries of most of the 35 combat missions he flew over enemy targets in Germany as pilot of a B-17 heavy bomber between December 1944 and March 1945. Sheesley was stationed at Mendlesham Airfield, Suffolk, England with the 34th Bomb Group (7th Bomb Squadron) of the "Mighty" Eighth Air Force.</p><p>This map connects entries in the two journals with the places they describe. <b>Scroll down to read more.</b></p>',
             location: {
-                center: [-80.60282, 41.05850],
-                zoom: 5,
+                center: [-95.96827, 39.03594],
+                zoom: 2,
                 pitch: 0,
                 bearing: 0
             },
@@ -71,7 +71,7 @@ var config = {
             caption: 'Douglas 63rd Preservation Society',
             description: '<p><span class="dropCap">F</span>amily from <span class= "test">Struthers, OH, near Youngstown</span>. <a href="http://www.axismaps.com">Trains</a> to become a pilot at several bases in US: Walnut Springs, Ardmore Airforce, and others. 2nd Lt. Later becomes 1st Lt. Class of 44-C.</p><p>University</p><p>Pre-Flight</p><p>Primary</p><p>Basic</p><p>Advanced</p><p>Transition</p>',
             location: {
-                center: [-90.95484, 36.06806],
+                center: [-86.18510, 35.05642],
                 zoom: 4,
                 pitch: 0,
                 bearing: 0
@@ -96,7 +96,7 @@ var config = {
             description: '<p><span class="dropCap">D</span>eparts from NYC Harbor aboard ship. Writes in another journal. Arrives in [port city], England after a week at sea. Travels by train to fields of Mendlesham, England.</p>',
             location: {
                 center: [-39.43332, 44.67845],
-                zoom: 2,
+                zoom: 1,
                 pitch: 0,
                 bearing: 0
             },
@@ -104,8 +104,18 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
+                {
+                    layer: 'journey',
+                    opacity: 0.5,
+                    duration: 300
+                }
             ],
             onChapterExit: [
+                {
+                    layer: 'journey',
+                    opacity: 0,
+                    duration: 300
+                }
             ]
         },
         {
@@ -122,39 +132,27 @@ var config = {
             description: '<p><span class="dropCap">F</span>amily from Struthers, Ohio near Youngstown. Attending Houghton college when began training</p>',
             location: {
                 center: [-39.43332, 44.67845],
-                zoom: 2,
+                zoom: 1,
                 pitch: 0,
                 bearing: 0
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-        {
-            id: 'kilmer',
-            section: 2,
-            alignment: 'left',
-            hidden: false,
-            daterank: '',
-            title: 'Camp Kilmer',
-            date: '10/21/1944',
-            image: '',
-            imageId: '',
-            caption: '',
-            description: '<p><span class="dropCap">F</span>amily from Struthers, Ohio near Youngstown. Attending Houghton college when began training amily from Struthers, Ohio near Youngstown. Attending Houghton college when began training amily from Struthers, Ohio near Youngstown. Attending Houghton college when began training amily from Struthers, Ohio near Youngstown. Attending Houghton college when began training</p>',
-            location: {
-                center: [-74.4458, 40.5167],
-                zoom: 8,
-                pitch: 0,
-                bearing: 0
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: 'kilmerTest',
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [
+                {
+                    layer: 'journey',
+                    opacity: 0.5,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'journey',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
         },
         {
             id: 'newyork',
@@ -177,8 +175,20 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: 'newyorkTest',
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [
+                {
+                    layer: 'journey',
+                    opacity: 0.5,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'journey',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
         },
         {
             id: 'sea1',
@@ -201,8 +211,20 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: 'sea1Test',
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [
+                {
+                    layer: 'journey',
+                    opacity: 0.5,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'journey',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
         },
         {
             id: 'sea2',
@@ -225,8 +247,20 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: 'sea2Test',
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [
+                {
+                    layer: 'journey',
+                    opacity: 0.5,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'journey',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
         },
         {
             id: 'mendlesham',
@@ -242,7 +276,7 @@ var config = {
             description: '<p><span class="dropCap">8</span>th Airforce, 34th bomb group, 7th squadron. Other groups were also present before and during. Spends about four months total here. Plays basketball, goes to London, sees a play, attends church, receives and sends letters (?), ride a bike, and flies missions</p>',
             location: {
                 center: [1.1210006854646852, 52.23269925011281],
-                zoom: 14,
+                zoom: 13,
                 pitch: 0,
                 bearing: 16
             },
@@ -265,16 +299,28 @@ var config = {
             caption: '',
             description: '<p><span class="dropCap">F</span>lies 35 missions over Germany. Some short, some long trips. Some repeated targets. Some taregets not hit. An accident. A recall.</p>',
             location: {
-                center: [1.17528, 52.23786],
-                zoom: 5,
+                center: [3.11114, 51.00934],
+                zoom: 3,
                 pitch: 0,
                 bearing: 0
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 0.5,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
         },
         {
             id: 'journal',
@@ -289,16 +335,28 @@ var config = {
             caption: '',
             description: '<p><span class="dropCap">B</span>egins with a surprise mission, battles weather, cold, exhaustion, equipment, oxygen, nerves, flack, uncertainty, longing for Mary. Experiences scary moments and moments of comfort in the sky. Receives honors (but never recorded in these pages).</p>',
             location: {
-                center: [1.17528, 52.23786],
-                zoom: 5,
+                center: [3.11114, 51.00934],
+                zoom: 3,
                 pitch: 0,
                 bearing: 0
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 0.5,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
         },
         {
             id: 'berlin1a',
@@ -313,8 +371,8 @@ var config = {
             caption: '',
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">I</span> was awakened at 0400 expecting to ride as copilot for my 1st mission. At the briefing block I was surprised, alarmed and frightened when I learned that we would go as a crew and I didn\'t know the score at all and had never flown above 20,000 ft. In a daze we went to our ship and somehow got ready and took off. After what seemed ages the formation got together in a pre-dawn assembly and away we went for BERLIN.</p><p>On the climb we stayed right in. Then we leveled off for the run in and it happened. That which is most disastrous happened—we fell behind. Opening her wide open we oh! so slowly crept back up. Come the IP and it happened again. I took over the ship again—the bombays were open—target just ahead—we had to get back in! If fighters hit we would have been sunk.</p><p>All our hearts were pounding—nerves at the break point-sweat rolling at 40° below. I quickly turned on the emergency turbo and the engines were giving all they had—they shook and shuddered and whined as if to say "we can\'t take this long." We were pulling 54" and I wondered how long those engines would hold. We just didn\'t seem to gain a bit, but kept falling back & dropping.</p><p>Finally we were down with the low element when we stopped losing. I uttered a little prayer and as a plant grows [...]</p>',
             location: {
-                center: [13.39272, 52.51166],
-                zoom: 10,
+                center: [13.404954, 52.520006],
+                zoom: 12,
                 pitch: 0,
                 bearing: 0
             },
@@ -323,12 +381,28 @@ var config = {
             callback: 'berlinTest',
             onChapterEnter: [
                 {
+                    layer: 'routes',
+                    opacity: 0.5,
+                    duration: 300
+                },
+                {
                     layer: 'routeBerlin',
                     opacity: 0.8,
                     duration: 300
                 }
             ],
-            onChapterExit: []
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeBerlin',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
         },
         {
             id: 'berlin1b',
@@ -343,8 +417,8 @@ var config = {
             caption: '',
             description: '<span class="dropQuote">&ldquo;</span><p>[...] the airspeed moved to 140, then 141, then 142; it seemed to stop and my heart seemed to stop then it moved to 145 and we began to move up again. Carefully I lifted her up as we gained on our lead. Just as we dropped the bombs we got back in place, but low.</p><p>That was it—the quick turn to escape flack and we were homeward bound. The 10 minutes from the IP to the target were the longest and most tense, exhausting ones of my life. At the Rally point I looked down just in time to see a lone B-17 spin down through the clouds below.</p><p>When we landed the squadron C.O. and all were there to meet us. Then we realized that, as I suspected, we had been sent by mistake—a green crew. They didn\'t think we would make it—we weren\'t even operational yet. "We had it!" Brydge was so frightened he made only 3 entries in his log: "(1) took off (2) Bombs away (3) landed." The hot cocoa sure tasted good. Next day we went on pass and sure needed it!</p>',
             location: {
-                center: [13.39272, 52.51166],
-                zoom: 10,
+                center: [13.404954, 52.520006],
+                zoom: 12,
                 pitch: 0,
                 bearing: 0
             },
@@ -353,12 +427,28 @@ var config = {
             callback: 'berlinTest',
             onChapterEnter: [
             {
+                layer: 'routes',
+                opacity: 0.5,
+                duration: 300
+            },
+            {
                 layer: 'routeBerlin',
                 opacity: 0.8,
                 duration: 300
             }
         ],
-            onChapterExit: []
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeBerlin',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
         },
         {
             id: 'kassel',
@@ -373,8 +463,8 @@ var config = {
             caption: '',
             description: '<span class="dropQuote">&ldquo;</span><p><span class="dropCap">B</span> riefing this morning was at 04:00. Our target for today was a marshalling yard at <s>Castle</s> Kassel, Germany. We took off and hit a low ceiling and climbed in solid overcast up to 11,000 ft. Our position was 4–3 in High squadron. Overcast 10/10 over target—results not observed. Flack was dense and we got our first hits. Our gas tank in right wing had to be replaced upon return. Oxygen system was leaking and was empty as we reached 10,000\' on descending—sweating it out. Visibility very poor upon return—we made 6 passes at field before getting in. Went to bed at 20:00 hours.</p>',
             location: {
-                center: [9.4797461, 51.3127114],
-                zoom: 10,
+                center: [9.480, 51.312],
+                zoom: 12,
                 pitch: 0,
                 bearing: 0
             },
@@ -383,8 +473,8 @@ var config = {
             callback: 'kasselTest',
             onChapterEnter: [
             {
-                layer: 'routeBerlin',
-                opacity: 0,
+                layer: 'routes',
+                opacity: 0.5,
                 duration: 300
             },
             {
@@ -393,11 +483,18 @@ var config = {
                 duration: 300
             }
         ],
-            onChapterExit: [{
-                layer: 'routeKassel',
-                opacity: 0,
-                duration: 300
-            }]
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeKassel',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
         }
     ]
 };
