@@ -214,7 +214,23 @@ img {
 #map.shake {
 	transform: translate(0,0);
 	animation-name: shake;
-	//animation-delay: 0.5s;
+	animation-duration: 0.5s;
+	animation-iteration-count: 5;
+}
+
+#map.shake::after {
+	content: '';
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
+	//background-color: #fff;
+	//background-image: radial-gradient(rgba(255,255,255,0), rgba(255,255,255,0.75));
+	background-image: radial-gradient(circle, rgba(0,0,0,1), rgba(0,0,0,0));
+	opacity: 0;
+	z-index: 9999;
+	animation-name: flash;
 	animation-duration: 0.5s;
 	animation-iteration-count: 5;
 }
@@ -231,6 +247,15 @@ img {
 	  80% { transform: translate(-1px, -1px) rotate(1deg); }
 	  90% { transform: translate(1px, 2px) rotate(0deg); }
 	  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes flash {
+	0%, 50%, 100% {
+	   opacity: 0;
+	}
+	25%, 75% {
+	   opacity: 1;
+	}
 }
 
 .step {
