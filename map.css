@@ -211,51 +211,43 @@ img {
 	position: fixed;
 }
 
-#map.shake {
-	transform: translate(0,0);
-	animation-name: shake;
-	animation-duration: 0.5s;
-	animation-iteration-count: 5;
-}
 
-#map.shake::after {
-	content: '';
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	width: 100vw;
-	height: 100vh;
-	//background-color: #fff;
-	//background-image: radial-gradient(rgba(255,255,255,0), rgba(255,255,255,0.75));
-	background-image: radial-gradient(circle, rgba(0,0,0,1), rgba(0,0,0,0));
-	opacity: 0;
-	z-index: 9999;
-	animation-name: flash;
-	animation-duration: 0.5s;
-	animation-iteration-count: 5;
+#map.shake {
+	animation: shake 0.5s linear 0s 5 normal;
+	-webkit-animation: shake 0.5s linear 0s 5 normal;
 }
 
 @keyframes shake {
 	0% { transform: translate(1px, 1px) rotate(0deg); }
-	  10% { transform: translate(-1px, -2px) rotate(-1deg); }
-	  20% { transform: translate(-3px, 0px) rotate(1deg); }
-	  30% { transform: translate(3px, 2px) rotate(0deg); }
-	  40% { transform: translate(1px, -1px) rotate(1deg); }
-	  50% { transform: translate(-1px, 2px) rotate(-1deg); }
-	  60% { transform: translate(-3px, 1px) rotate(0deg); }
-	  70% { transform: translate(3px, 1px) rotate(-1deg); }
-	  80% { transform: translate(-1px, -1px) rotate(1deg); }
-	  90% { transform: translate(1px, 2px) rotate(0deg); }
-	  100% { transform: translate(1px, -2px) rotate(-1deg); }
+	10% { transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { transform: translate(-3px, 0px) rotate(1deg); }
+	30% { transform: translate(3px, 2px) rotate(0deg); }
+	40% { transform: translate(1px, -1px) rotate(1deg); }
+	50% { transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { transform: translate(-3px, 1px) rotate(0deg); }
+	70% { transform: translate(3px, 1px) rotate(-1deg); }
+	80% { transform: translate(-1px, -1px) rotate(1deg); }
+	90% { transform: translate(1px, 2px) rotate(0deg); }
+	100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+#map #flash.active {
+	background-image: radial-gradient(circle, rgba(0,0,0,1), rgba(0,0,0,0));
+	opacity: 0;
+	z-index: 9999;
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	animation: flash 0.5s linear 0s 5 normal;
+	-webkit-animation: flash 0.5s linear 0s 5 normal;
 }
 
 @keyframes flash {
-	0%, 50%, 100% {
-	   opacity: 0;
-	}
-	25%, 75% {
-	   opacity: 1;
-	}
+	5% { opacity: 0; }
+	25% { opacity: 1; }
+	50% { opacity: 0; }
+	75% { opacity: 1; }
+	95% { opacity: 0; }
 }
 
 .step {

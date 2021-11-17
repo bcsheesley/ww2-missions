@@ -18,7 +18,9 @@
 </head>
 <body>
 
-<div id="map"></div>
+<div id="map">
+  <div id="flash"></div>
+</div>
 <div id="story"></div>
 
 <!-- The Modal -->
@@ -413,6 +415,7 @@ map.on("load", function() {
     })
     .onStepExit(response => {
         var shake = document.getElementById('map');
+        var flash = document.getElementById('flash');
         var chapter = config.chapters.find(chap => chap.id === response.element.id);
         response.element.classList.remove('active');
         
@@ -432,6 +435,7 @@ map.on("load", function() {
         missionMarker.remove();
         popupClick.remove();
         shake.classList.remove('shake');
+        flash.classList.remove('active');
     });
 });
 
@@ -520,9 +524,11 @@ function kasselTest() {
     console.log("goodbye");
     missionMarker.setLngLat(kassel).addTo(map);
     var shake = document.getElementById('map');
+    var flash = document.getElementById('flash');
     
     map.once('moveend',() => {
     shake.classList.add('shake');
+    flash.classList.add('active');
   });
 };
 
