@@ -21,7 +21,7 @@ var config = {
             image: '',
             imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">L</span>t. Byron E. Sheesley kept two short journals while serving in the United States Army Air Forces (USAFF) during World War Ⅱ.</p><p>One journal documents his nearly two-week-long journey from Camp Kilmer, New Jersey to a USAAF transit station in Staffordshire, England via troopship and train in late October and early November, 1944.</p><p>The other summarizes most of the 35 combat missions he flew over enemy targets in Germany as pilot of a B-17 heavy bomber between December 1944 and March 1945. It also contains entries that describe aspects of his daily life on base and on pass. Lt. Sheesley was stationed at Mendlesham Airfield, Suffolk, England with the 7th Squadron of the 34th Bomb Group in the "Mighty" 8th Air Force.</p><p> Lt. Sheesley generally portrayed events in a concise and matter-of-fact manner. However, the emotional recounting of a tense inaugeral mission over Berlin characterizes the extreme physical, mental, and occupational stresses he must have faced on a routine basis. His handwriting was small, neat, and in a cursive style that slanted slightly to the left, as seen in images of the journal entries below, which are also transcribed.</p><p>This map connects entries in the two journals with the places they describe. <b>Scroll down to read more.</b></p>',
+            description: '<p><span class="dropCap">L</span>t. Byron E. Sheesley kept two short journals while serving in the United States Army Air Forces (USAFF) during World War Ⅱ.</p><p>One journal documents his nearly two-week-long journey from Camp Kilmer, New Jersey to a USAAF transit station in Staffordshire, England via troopship and train in late October and early November, 1944.</p><p>The other summarizes most of the 35 combat missions he flew over enemy targets in Germany as pilot of a B-17 heavy bomber between December 1944 and March 1945. It also describes aspects of his daily life on base and on pass. Sheesley was stationed at Mendlesham Airfield, Suffolk, England with the 7th Squadron in the 34th Bomb Group of the "Mighty" 8th Air Force.</p><p>In both journals, the 22-year-old pilot presents the events and experiences of war in a concise and matter-of-fact manner. They are noticeably short on commentary. However, the emotional recounting of a tense inaugeral mission over Berlin, at least, characterizes the extreme physical, mental, and occupational stress he must have faced on a routine basis. As does the joy he expresses after completing his last mission and the prospect of reuniting with his fiance, Miss Mary Clark.</p><p>This map connects entries in the two journals with the places they describe. <b>Scroll down to read more.</b></p>',
             location: {
                 center: [-95.96827, 39.03594],
                 zoom: 2,
@@ -45,7 +45,7 @@ var config = {
             image: './images/id-card-front-small.png',
             imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">F</span>amily from Struthers, Ohio near Youngstown. Attending Houghton college when began training</p>',
+            description: '<p><span class="dropCap">F</span>amily from Struthers, Ohio near Youngstown. Attending Houghton college as a Sophomore majoring in Religious Studies when he began training</p>',
             location: {
                 center: [-80.60282, 41.05850],
                 zoom: 7,
@@ -59,7 +59,7 @@ var config = {
             onChapterExit: []
         },
         {
-            id: 'grandpa',
+            id: 'training',
             section: 1,
             alignment: 'left',
             hidden: false,
@@ -69,7 +69,7 @@ var config = {
             image: './images/training_tree_orig.jpeg',
             imageId: 'idCardFront',
             caption: 'Douglas 63rd Preservation Society',
-            description: '<p><span class="dropCap">F</span>amily from <span class= "test">Struthers, OH, near Youngstown</span>. <a href="http://www.axismaps.com">Trains</a> to become a pilot at several bases in US: Walnut Springs, Ardmore Airforce, and others. 2nd Lt. Later becomes 1st Lt. Class of 44-C.</p><p>University</p><p>Pre-Flight</p><p>Primary</p><p>Basic</p><p>Advanced</p><p>Transition</p>',
+            description: '<p><span class="dropCap">S</span>heesley followed the pathway for "classified pilots" shown in the left-hand column of this cadet training flow chart. He was a member of the Class of 44-C and was commissioned 2nd Lieutenant on XXXX. He trained for 36 weeks at various airfileds in the Southeast Air Corps Training Center (SEACTC) bookended by additional time spent farther northeast in college and specialized training centers.</p><ul><li><b>College Training</b><br>Duquense University, PA</br></li><li><b>Pre-Flight School</b><br>Maxwell Field, AL</br></li><li><b>Primary School</b><br>Lafayette Regional Airport, LA</li><li><b>Basic School</b><br>Walnut Ridge Army Airfield, AR</br></li><li><b>Advanced School</b><br>Blytheville Army Airfield, AR</br></li><li><b>Specialized School</b><br>Lockbourne Army Airfield, OH</br></li></ul>',
             location: {
                 center: [-86.18510, 35.05642],
                 zoom: 4,
@@ -92,7 +92,7 @@ var config = {
             date: '',
             image: './images/dominion-monarch4.jpg',
             imageId: 'dominion-monarch',
-            caption: 'Alexander Turnbull Library via ssMaritime.com',
+            caption: 'Alexander Turnbull Library',
             description: '<p><span class="dropCap">D</span>eparts from NYC Harbor aboard ship. Writes in another journal. Arrives in [port city], England after a week at sea. Travels by train to fields of Mendlesham, England.</p>',
             location: {
                 center: [-39.43332, 44.67845],

@@ -19,10 +19,15 @@ a {
 	color: #000;
 }
 
+ul {
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 0.9em;
+}
+
 figcaption {
  color: #999;
  font-size: 0.9em;
- text-align: right;
+ //text-align: right;
 }
 
 .chapterListContent a {
