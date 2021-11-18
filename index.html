@@ -359,6 +359,9 @@ if (config.showMarkers) {
 // instantiate the scrollama
 var scroller = scrollama();
 
+const shake = document.getElementById('map');
+const flash = document.getElementById('flash');
+
 map.on("load", function() {
     if (config.use3dTerrain) {
         map.addSource('mapbox-dem', {
@@ -414,8 +417,6 @@ map.on("load", function() {
         }
     })
     .onStepExit(response => {
-        var shake = document.getElementById('map');
-        var flash = document.getElementById('flash');
         var chapter = config.chapters.find(chap => chap.id === response.element.id);
         response.element.classList.remove('active');
         
@@ -518,24 +519,28 @@ function mendleshamTest() {
 function berlinTest() {
     console.log("hello");
     missionMarker.setLngLat(berlin).addTo(map);
+    
+    map.once('moveend',() => {
+          shake.classList.add('shake');
+          flash.classList.add('active');
+      });
 };
 
 function kasselTest() {
     console.log("goodbye");
     missionMarker.setLngLat(kassel).addTo(map);
-    var shake = document.getElementById('map');
-    var flash = document.getElementById('flash');
     
     map.once('moveend',() => {
-    shake.classList.add('shake');
-    flash.classList.add('active');
+      shake.classList.add('shake');
+      flash.classList.add('active');
   });
 };
 
+/*
 function removeMarker() {
     console.log("goodbye");
-    //missionMarker.remove();
 };
+*/
 
 // setup resize event
 window.addEventListener('resize', scroller.resize);
