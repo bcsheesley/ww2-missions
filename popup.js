@@ -12,7 +12,7 @@ var popupClick = new mapboxgl.Popup({
 });
 
 // Journey hover popup
-map.on('mouseenter', 'journey', (e) => {
+map.on('mousemove', 'journey', (e) => {
 	const paintProperty = map.getPaintProperty('journey', 'line-opacity');
 	const name = e.features[0].properties.name;
 	const date = e.features[0].properties.date;
@@ -22,7 +22,7 @@ map.on('mouseenter', 'journey', (e) => {
 		map.getCanvas().style.cursor = 'pointer';
 		
 		popupHover
-		.setHTML(`<h3>${name}</h3><p>Oct 21 - Nov 4, 1944</p>`)
+		.setHTML(`<h3>${name}</h3><p>${date}</p>`)
 		.addTo(map)
 		.setLngLat(e.lngLat)
 		.trackPointer();

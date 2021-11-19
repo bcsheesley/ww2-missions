@@ -35,6 +35,14 @@ li:first-of-type {
 	padding-top: 10px;
 }
 
+blockquote {
+	font-style: italic;
+	letter-spacing: 0.5px;
+	border-left: solid 4px #ccc;
+	padding-left: 10px;
+	margin-left: 10px;
+}
+
 figcaption {
  color: #999;
  font-size: 0.9em;

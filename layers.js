@@ -48,8 +48,8 @@ map.on('load', function() {
 				{
 					"type": "Feature",
 					"properties": {
-						'name': 'Journey to England',
-						'date': '10/21/1944 – 11/4/1944'
+						'name': 'Camp Kilmer to New York',
+						'date': 'Oct 21, 1944'
 					},
 					"geometry": {
 						"type": "LineString",
@@ -72,8 +72,8 @@ map.on('load', function() {
 				{
 					"type": "Feature",
 					"properties": {
-						'name': 'Journey to England',
-						'date': '10/21/1944 – 11/4/1944'
+						'name': 'Dominion Monarch',
+						'date': 'Oct 22 – Nov 3, 1944'
 					},
 					"geometry": {
 						"type": "LineString",
@@ -122,8 +122,8 @@ map.on('load', function() {
 				{
 					"type": "Feature",
 					"properties": {
-						'name': 'Journey to England',
-						'date': '10/21/1944 – 11/4/1944'
+						'name': 'Dominion Monarch',
+						'date': 'Oct 22 – Nov 3, 1944'
 					},
 					"geometry": {
 						"type": "LineString",
@@ -152,8 +152,8 @@ map.on('load', function() {
 				{
 					"type": "Feature",
 					"properties": {
-						'name': 'Journey to England',
-						'date': '10/21/1944 – 11/4/1944'
+						'name': 'Dominion Monarch',
+						'date': 'Oct 22 – Nov 3, 1944'
 					},
 					"geometry": {
 						"type": "LineString",
@@ -178,8 +178,8 @@ map.on('load', function() {
 				{
 					"type": "Feature",
 					"properties": {
-						'name': 'Journey to England',
-						'date': '10/21/1944 – 11/4/1944'
+						'name': 'Plymouth to Stone',
+						'date': 'Nov 4, 1944'
 					},
 					"geometry": {
 						"type": "LineString",

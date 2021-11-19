@@ -76,8 +76,8 @@ var routeSea = {
 		'coordinates': [sea1, sea11]
 	},
 	'properties': {
-		'name': 'Journey to England',
-		'date': '10/21/1944 – 11/4/1944'
+		'name': 'Dominion Monarch',
+		'date': 'Oct 22 – Nov 3, 1944'
 	}
 };
 
