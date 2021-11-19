@@ -22,6 +22,17 @@ a {
 ul {
 	font-family: 'IBM Plex Sans', sans-serif;
 	font-size: 0.9em;
+	background-color:#f1edda;
+	padding: 20px 40px;
+	border-radius: 10px;
+}
+
+lh {
+	text-transform: uppercase;
+}
+
+li:first-of-type {
+	padding-top: 10px;
 }
 
 figcaption {
