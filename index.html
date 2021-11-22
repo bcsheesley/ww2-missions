@@ -118,12 +118,13 @@ Object.assign(checkbox, {
   name:'Test',
   id:'myCheck',
   onclick: function () {
-    shake.classList.toggle('shake');
-    flash.classList.toggle('active');
-    //var checkTest = checkbox.checked;
-    //console.log(checkTest)
+    //shake.classList.toggle('shake');
+    //flash.classList.toggle('active');
   }
 });
+
+checkbox.checked = true;
+
 checklabel.setAttribute('for', 'myCheck');
 
 features.appendChild(chapterListContainer);
@@ -152,7 +153,7 @@ chapterListContent.appendChild(settings);
 settings.appendChild(checkbox);
 settings.appendChild(checklabel);
 
-checklabel.innerHTML = 'Effects';
+checklabel.innerHTML = 'Show explosions';
 close.innerHTML = '&times;';
 //listTitle.innerText = "Contents";
 //listIcon.innerHTML = '&#8965;';
