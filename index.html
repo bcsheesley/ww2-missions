@@ -153,7 +153,7 @@ chapterListContent.appendChild(settings);
 settings.appendChild(checkbox);
 settings.appendChild(checklabel);
 
-checklabel.innerHTML = 'Show explosions';
+checklabel.innerHTML = 'Show explosions at mission targets';
 close.innerHTML = '&times;';
 //listTitle.innerText = "Contents";
 //listIcon.innerHTML = '&#8965;';
@@ -321,7 +321,7 @@ if (footer.innerText.length > 0) {
 }
 
 window.addEventListener("scroll", event => {
-  var myElement = document.getElementById('mendlesham');
+  var myElement = document.getElementById('berlin1a');
   var rect = myElement.getBoundingClientRect();
   var distance_from_top = rect.top;
   var h = window.innerHeight;
@@ -329,7 +329,7 @@ window.addEventListener("scroll", event => {
   console.log(h);
   
   if (rect.top <= h/4 * 3){
-    settings.style.display = "block";
+    settings.style.display = "flex";
     console.log("less than 100");
     } else {
       settings.style.display = "none";
