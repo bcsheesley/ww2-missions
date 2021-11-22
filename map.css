@@ -727,13 +727,18 @@ img {
 	.chapterListContent > a {
 		padding: 20px;
 	}
-
+/*
 	.chapterListContent.activeState .chapterSectionHeader:nth-of-type(5) {
 		padding-bottom: 200px;
 	}
 	
 	.chapterListContent.activeState .chapterSectionHeader.activeState:nth-of-type(5) {
 		padding-bottom: 15px;
+	}
+	*/
+	
+	#settings {
+		padding-bottom: 200px;
 	}
 	
 	.chapterSection:last-child {
