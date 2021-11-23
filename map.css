@@ -738,7 +738,8 @@ img {
 	*/
 	
 	#settings {
-		padding-bottom: 200px;
+		padding-bottom: 60px;
+		background-color: #333;
 	}
 	
 	.chapterSection:last-child {
