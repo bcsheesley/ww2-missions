@@ -35,6 +35,24 @@ li:first-of-type {
 	padding-top: 10px;
 }
 
+.daterank {
+	padding-right: 10px;
+}
+
+.daterank::before{
+	content: '#';
+}
+
+.title {
+	padding-right: 10px;
+}
+
+.date {
+	margin-top: 4px;
+	font-weight: 400;
+	color: #666;
+}
+
 blockquote {
 	font-style: italic;
 	letter-spacing: 0.5px;
