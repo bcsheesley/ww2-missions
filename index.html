@@ -89,9 +89,9 @@ var sectionIcon1 = document.createElement('span');
 var sectionIcon2 = document.createElement('span');
 var sectionIcon3 = document.createElement('span');
 
-var settings = document.createElement('div');
-var checkbox = document.createElement('input');
-var checklabel = document.createElement('label');
+//var settings = document.createElement('div');
+//var checkbox = document.createElement('input');
+//var checklabel = document.createElement('label');
 
 features.setAttribute('id', 'features');
 chapterListContainer.setAttribute('id', 'chapterListContainer');
@@ -112,7 +112,8 @@ listIcon.setAttribute('class', 'listIcon');
 sectionIcon1.setAttribute('class', 'listIcon');
 sectionIcon2.setAttribute('class', 'listIcon');
 sectionIcon3.setAttribute('class', 'listIcon');
-settings.setAttribute('id', 'settings');
+//settings.setAttribute('id', 'settings');
+/*
 Object.assign(checkbox, {
   type:'checkbox',
   name:'Test',
@@ -122,10 +123,11 @@ Object.assign(checkbox, {
     //flash.classList.toggle('active');
   }
 });
+*/
 
-checkbox.checked = true;
+//checkbox.checked = true;
 
-checklabel.setAttribute('for', 'myCheck');
+//checklabel.setAttribute('for', 'myCheck');
 
 features.appendChild(chapterListContainer);
 chapterListHeader.appendChild(listTitle);
@@ -149,11 +151,11 @@ chapterSectionHeader3.appendChild(chapterSectionTitle3);
 chapterSectionHeader3.appendChild(sectionIcon3);
 chapterListContent.appendChild(chapterSection3);
 
-chapterListContent.appendChild(settings);
-settings.appendChild(checkbox);
-settings.appendChild(checklabel);
+//chapterListContent.appendChild(settings);
+//settings.appendChild(checkbox);
+//settings.appendChild(checklabel);
 
-checklabel.innerHTML = 'Allow map to shake and flash';
+//checklabel.innerHTML = 'Allow map to shake and flash';
 close.innerHTML = '&times;';
 //listTitle.innerText = "Contents";
 //listIcon.innerHTML = '&#8965;';
@@ -320,7 +322,7 @@ if (footer.innerText.length > 0) {
     story.appendChild(footer);
 }
 
-settings.style.display = "flex";
+//settings.style.display = "flex";
 
 /*
 window.addEventListener("scroll", event => {
@@ -403,8 +405,8 @@ if (config.showMarkers) {
 // instantiate the scrollama
 var scroller = scrollama();
 
-const shake = document.getElementById('map');
-const flash = document.getElementById('flash');
+//const shake = document.getElementById('map');
+//const flash = document.getElementById('flash');
 
 map.on("load", function() {
     if (config.use3dTerrain) {
@@ -479,8 +481,8 @@ map.on("load", function() {
         }
         missionMarker.remove();
         popupClick.remove();
-        shake.classList.remove('shake');
-        flash.classList.remove('active');
+        //shake.classList.remove('shake');
+        //flash.classList.remove('active');
     });
 });
 
@@ -563,25 +565,27 @@ function mendleshamTest() {
 function berlinTest() {
     console.log("hello");
     missionMarker.setLngLat(berlin).addTo(map);
-    
+    /*
     map.once('moveend',() => {
         if (checkbox.checked == true){
           shake.classList.add('shake');
           flash.classList.add('active');
         }
     });
+    */
 };
 
 function kasselTest() {
     console.log("goodbye");
     missionMarker.setLngLat(kassel).addTo(map);
-    
+    /*
     map.once('moveend',() => {
         if (checkbox.checked == true){
           shake.classList.add('shake');
           flash.classList.add('active');
         }
     });
+    */
 };
 
 /*

@@ -765,6 +765,14 @@ img {
 		padding-bottom: 200px;
 	}
 	
+	.chapterSectionHeader:nth-of-type(5) {
+		padding-bottom: 200px;
+	}
+	
+	.chapterSectionHeader.activeState:nth-of-type(5) {
+			padding-bottom: 15px;
+		}
+	
 	.chapterListContent {
 		border-bottom-left-radius: 0px;
 		height: 100%;
