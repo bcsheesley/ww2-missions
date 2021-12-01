@@ -251,10 +251,12 @@ map.on('load', function() {
 			//'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
 			'line-opacity': 0,
 			//'line-color': '#CDA076'
+			// The feature-state dependent line-color expression will render
+			// the color when a feature's hover state is set to true
 			'line-color': [
 				'case',
 				['boolean', ['feature-state', 'hover'], false],
-				'#ff0000',
+				'#000000',
 				'#ff0000'
 			]
 		},

@@ -42,7 +42,7 @@ var config = {
             daterank: '',
             title: 'Lt. Byron E. Sheesley',
             date: '',
-            image: 'images/id-card-front-small.png',
+            image: 'images/id-card-front-trim.png',
             imageId: '',
             caption: '',
             description: '<p><span class="dropCap">F</span>amily from Struthers, Ohio near Youngstown. Attending Houghton college as a Sophomore majoring in Religious Studies when he began training</p>',
@@ -59,7 +59,7 @@ var config = {
             onChapterExit: []
         },
         {
-            id: 'training',
+            id: 'training-schools',
             section: 1,
             alignment: 'left',
             hidden: false,
@@ -83,7 +83,7 @@ var config = {
             onChapterExit: []
         },
         {
-            id: 'monarch',
+            id: 'dominion-monarch',
             section: 2,
             alignment: 'left',
             hidden: false,
@@ -119,7 +119,7 @@ var config = {
             ]
         },
         {
-            id: 'monarch-journal',
+            id: 'green-journal',
             section: 2,
             alignment: 'left',
             hidden: false,

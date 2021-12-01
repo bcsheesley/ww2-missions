@@ -43,7 +43,7 @@ map.on('mousemove', 'routes', (e) => {
 	
 	const isPopupOpen = popupClick.isOpen();
 	const name = e.features[0].properties.name;
-	console.log(isPopupOpen);
+	//console.log(isPopupOpen);
 	
 	if (isPopupOpen === false){	
 	popupHover
@@ -58,7 +58,7 @@ map.on('mousemove', 'routes', (e) => {
 	
 	// If routeID for the hovered feature is not null,
 	// use removeFeatureState to reset to the default behavior
-	if (routeID) {
+	if (routeID !== undefined) {
 		map.removeFeatureState({
 			source: 'routes',
 			id: routeID
@@ -78,6 +78,9 @@ map.on('mousemove', 'routes', (e) => {
 			hover: true
 		}
 	);
+	
+	console.log(routeID);
+	console.log(map.getFeatureState);
 });
 
 map.on('mouseleave', 'routes', () => {
@@ -85,7 +88,7 @@ map.on('mouseleave', 'routes', () => {
 	
 	popupHover.remove();
 	
-	if (routeID) {
+	if (routeID !== undefined) {
 		map.setFeatureState(
 			{
 				source: 'routes',

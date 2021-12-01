@@ -37,20 +37,25 @@ li:first-of-type {
 
 .daterank {
 	padding-right: 10px;
+	font-size: 1.5em;
+	margin-top: 20px;
 }
 
 .daterank::before{
 	content: '#';
+	//color: #666;
 }
 
 .title {
 	padding-right: 10px;
+	font-size: 1.5em;
+	margin-top: 20px;
 }
 
 .date {
-	margin-top: 4px;
+	margin-top: 0;
 	font-weight: 400;
-	color: #666;
+	//color: #666;;
 }
 
 blockquote {
