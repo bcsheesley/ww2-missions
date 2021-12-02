@@ -8,20 +8,20 @@ var config = {
     title: 'World War Ⅱ Journals',
     subtitle: 'Lt. Byron E. Sheesley',
     byline: '',
-    footer: 'Source: source citations, etc.',
+    footer: 'Journal entry dates and targets align with official mission records of the 8th Air Force as well as individual flight records issued by the War Department now preserved in a small document archive saved by family members. Source: source citations, etc.',
     chapters: [
         {
-            id: 'about',
+            id: 'about-this-map',
             section: '',
             alignment: 'left',
             hidden: false,
             daterank: '',
-            title: 'About this map',
+            title: 'About This Map',
             date: '',
             image: '',
             imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">L</span>t. Byron E. Sheesley kept two short journals while serving in the United States Army Air Forces (USAAF) during World War Ⅱ.</p><p>One journal documents his nearly two-week-long journey from Camp Kilmer, New Jersey to a USAAF replacement center in Staffordshire, England via troopship and train in late October and early November, 1944.</p><p>The other summarizes most of the 35 combat missions he flew over enemy targets in Germany as pilot of a B-17 heavy bomber between December 1944 and March 1945. It also describes aspects of his daily life on base and on pass. Sheesley was stationed in Mendlesham, England with the 34th Bomb Group of the "Mighty" 8th Air Force.</p><p>For the most part, entries in both journals are consice and matter-of-fact. They are noticeably short on commentary. That said, Sheesley could be expressive at times. For example, the 22-year-old pilot tells of an intense inaugeral mission over Berlin that portrays the physical, mental, and occupational stress that he must have faced on a regular basis. Three-and-a-half months later, after completing his last mission, he can finally set his sights on reuniting with his fiancé, 19-year-old Mary E. Clark: <blockquote>Happy Day! No more flack, fighters, gas, oxygen or bomb runs to sweat out. Mary, here I come.</blockquote></p><p>This map connects entries in the two journals with the places they describe. <b>Scroll down to read more.</b></p>',
+            description: '<p><span class="dropCap">L</span>t. Byron E. Sheesley kept two short journals while serving in the United States Army Air Forces (USAAF) during World War Ⅱ.</p><p>One journal documents his nearly two-week-long journey from Camp Kilmer, New Jersey to a USAAF replacement center in Staffordshire, England via troopship and train in late October and early November, 1944.</p><p>The other summarizes most of the 35 combat missions he flew over enemy targets in Germany as pilot of a B-17 heavy bomber between December 1944 and March 1945. It also describes aspects of his daily life on base and on pass. Sheesley was stationed in Mendlesham, England with the 7th Squadron of the 34th Bomb Group in the "Mighty" 8th Air Force.</p><p>For the most part, entries in both journals are consice and matter-of-fact. They are noticeably short on commentary. That said, Sheesley could be expressive at times. For example, the 22-year-old pilot tells of an intense <a href="#1-berlin-pt1">inaugeral mission</a> over Berlin that portrays the physical, mental, and occupational stress that he must have faced on a regular basis. Likewise, after completing his <a href="#35-hanover">final mission</a> – a trip to Hanover, three-and-a-half months later – he writes of his great relief and determination to reunite with his fiancé, the 19-year-old Mary E. Clark: <blockquote>Happy Day! No more flack, fighters, gas, oxygen or bomb runs to sweat out. Mary, here I come.</blockquote></p><p>This map connects entries in the two journals with the places they describe. <b>Scroll down to read more.</b></p>',
             location: {
                 center: [-95.96827, 39.03594],
                 zoom: 2,
@@ -35,7 +35,7 @@ var config = {
             onChapterExit: []
         },
         {
-            id: 'struthers',
+            id: 'lt-byron-e-sheesley',
             section: 1,
             alignment: 'left',
             hidden: false,
@@ -45,7 +45,7 @@ var config = {
             image: 'images/id-card-front-trim.png',
             imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">F</span>amily from Struthers, Ohio near Youngstown. Attending Houghton college as a Sophomore majoring in Religious Studies when he began training</p>',
+            description: '<p><span class="dropCap">B</span>yron E. Sheesley was born July 11, 1922 to parents Earl Sylvester and Ethel (Eckelberger) Sheesley. Along with Robert and Richard, he was the middle child of three boys. The Sheesley\'s lived at 324 Lincoln Avenue, Struthers, Ohio near the larger city of Youngstown. In 1942, Byron was employed as a payroll clerk by Youngstown Sheet and Tube Company. He then attended Houghton College, in Houghton, New York, and majored in Religious Education. Midway through Sophomore year, on February 28, 1943, he paused his education, entered active duty, and begin to train as a pilot with the Army Air Force.</p>',
             location: {
                 center: [-80.60282, 41.05850],
                 zoom: 7,
@@ -59,7 +59,7 @@ var config = {
             onChapterExit: []
         },
         {
-            id: 'training-schools',
+            id: 'pilot-training',
             section: 1,
             alignment: 'left',
             hidden: false,
@@ -69,7 +69,7 @@ var config = {
             image: 'images/training_tree_orig.jpeg',
             imageId: 'idCardFront',
             caption: 'Douglas 63rd Preservation Society',
-            description: '<p><span class="dropCap">S</span>heesley followed the pathway for "classified pilots" shown in the left-hand column of this cadet training flow chart. He was a member of the Class of 44-C and was commissioned 2nd Lieutenant on XXXX. He trained for 36 weeks at various airfileds in the Southeast Air Corps Training Center (SEACTC) bookended by additional time to the northeast in college and specialized training centers.</p><ul><lh>Training Schools</lh><li><b>College Training</b><br>Duquense University, PA</br></li><li><b>Pre-Flight School</b><br>Maxwell Field, AL</br></li><li><b>Primary School</b><br>Lafayette Regional Airport, LA</li><li><b>Basic School</b><br>Walnut Ridge Army Airfield, AR</br></li><li><b>Advanced School</b><br>Blytheville Army Airfield, AR</br></li><li><b>Specialized School</b><br>Lockbourne Army Airfield, OH</br></li></ul>',
+            description: '<p><span class="dropCap">S</span>heesley followed the pathway for "Classified Pilots" shown in the left-hand column of the above cadet training flow chart. He was a member of the Class of 44-C and commissioned 2nd Lieutenant on March 12, 1944. (He was later promoted to 1st lieutenant on February 5, 1945).</p><p>Sheesley trained for 9 weeks at each of 4 airfileds in the Southeast Air Corps Training Center (SEACTC), and spent an additional 15 weeks in college (6 wks) and specialized (9 wks) training centers, as shown in the table below. Overall, he spent nearly a full year training for the war.</p><ul><lh>Training Locations</lh><li><b>College Training – 6 wks</b><br>Duquense University, PA</br></li><li><b>Pre-Flight School – 9 wks</b><br>Maxwell Field, AL</br></li><li><b>Primary School – 9 wks</b><br>Lafayette Regional Airport, LA</li><li><b>Basic School – 9 wks</b><br>Walnut Ridge Army Airfield, AR</br></li><li><b>Advanced School – 9 wks</b><br>Blytheville Army Airfield, AR</br></li><li><b>Specialized School – 9 wks</b><br>Lockbourne Army Airfield, OH</br></li></ul>',
             location: {
                 center: [-86.18510, 35.05642],
                 zoom: 4,
@@ -83,7 +83,7 @@ var config = {
             onChapterExit: []
         },
         {
-            id: 'dominion-monarch',
+            id: 'journey-to-england',
             section: 2,
             alignment: 'left',
             hidden: false,
@@ -119,12 +119,12 @@ var config = {
             ]
         },
         {
-            id: 'green-journal',
+            id: 'the-green-journal',
             section: 2,
             alignment: 'left',
             hidden: false,
             daterank: '',
-            title: 'Green Journal',
+            title: 'The Green Journal',
             date: '',
             image: 'images/dominion-monarch/front-cover-outside-trim.png',
             imageId: '',
@@ -155,7 +155,7 @@ var config = {
             ]
         },
         {
-            id: 'newyork',
+            id: 'new-york-docks',
             section: 2,
             alignment: 'left',
             hidden: false,
@@ -191,14 +191,14 @@ var config = {
             ]
         },
         {
-            id: 'sea1',
+            id: 'day-1-at-sea',
             section: 2,
             alignment: 'left',
             hidden: false,
             daterank: '',
             title: 'Day 1 at Sea',
             date: '10/22/1944',
-            image: '',
+            image: 'images/dominion-monarch/19441022-trim-blur.png',
             imageId: '',
             caption: '',
             description: '<p><span class="dropCap">F</span>amily from <span class= "test">Struthers, OH, near Youngstown</span>. Trains to become a pilot at several bases in US: Walnut Springs, Ardmore Airforce, and others. 2nd Lt. Later becomes 1st Lt. Starts preparing in the fields of Arkansas</p>',
@@ -227,14 +227,14 @@ var config = {
             ]
         },
         {
-            id: 'sea2',
+            id: 'day-2-at-sea',
             section: 2,
             alignment: 'left',
             hidden: false,
             daterank: '',
             title: 'Day 2 at Sea',
             date: '10/23/1944',
-            image: '',
+            image: 'images/dominion-monarch/19441023-trim-blur.png',
             imageId: '',
             caption: '',
             description: '<p><span class="dropCap">F</span>amily from <span class= "test">Struthers, OH, near Youngstown</span>. Trains to become a pilot at several bases in US: Walnut Springs, Ardmore Airforce, and others. 2nd Lt. Later becomes 1st Lt. Starts preparing in the fields of Arkansas</p>',
@@ -263,7 +263,7 @@ var config = {
             ]
         },
         {
-            id: 'mendlesham',
+            id: 'mendlesham-airfield',
             section: 3,
             alignment: 'left',
             hidden: false,
@@ -287,7 +287,7 @@ var config = {
             onChapterExit: []
         },
         {
-            id: '35missions',
+            id: '35-missions',
             section: 3,
             alignment: 'left',
             hidden: false,
@@ -333,7 +333,7 @@ var config = {
             ]
         },
         {
-            id: 'journal',
+            id: 'a-line-a-day',
             section: 3,
             alignment: 'left',
             hidden: false,
@@ -379,7 +379,7 @@ var config = {
             ]
         },
         {
-            id: 'berlin1a',
+            id: '1-berlin-pt1',
             section: 3,
             alignment: 'left',
             hidden: false,
@@ -435,7 +435,7 @@ var config = {
             ]
         },
         {
-            id: 'berlin1b',
+            id: '1-berlin-pt2',
             section: 3,
             alignment: 'left',
             hidden: false,
@@ -491,7 +491,7 @@ var config = {
             ]
         },
         {
-            id: 'kassel',
+            id: '5-kassel',
             section: 3,
             alignment: 'left',
             hidden: false,

@@ -16,6 +16,10 @@ body {
 }
 
 a {
+	color: #2772D9;
+}
+
+a:hover {
 	color: #000;
 }
 
@@ -133,14 +137,6 @@ h3 {
 
 .mapboxgl-popup-content i {
 	color: #999;
-}
-
-.mapboxgl-popup-content a {
-	color: #2772D9;
-}
-
-.mapboxgl-popup-content a:hover {
-	color: #000;
 }
 
 table {
@@ -350,7 +346,7 @@ img {
 }
 
 .listTitle::before {
-	content: "Menu";
+	content: "Contents";
 }
 
 #chapterListContainer {
