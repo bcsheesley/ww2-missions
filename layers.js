@@ -303,6 +303,9 @@ map.on('load', function() {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': 'rgba(255,255,133,1)'
+			},
+			'layout': {
+				'line-cap': 'round'
 			}
 		},
 		'waterway-label'
@@ -316,6 +319,9 @@ map.on('load', function() {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#FFFF85'
+			},
+			'layout': {
+				'line-cap': 'round'
 			}
 		},
 		'waterway-label'
@@ -329,6 +335,9 @@ map.on('load', function() {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#FFFF85'
+			},
+			'layout': {
+				'line-cap': 'round'
 			}
 		},
 		'waterway-label'
@@ -342,6 +351,9 @@ map.on('load', function() {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#FFFF85'
+			},
+			'layout': {
+				'line-cap': 'round'
 			}
 		},
 		'waterway-label'
@@ -355,6 +367,9 @@ map.on('load', function() {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#FFFF85'
+			},
+			'layout': {
+				'line-cap': 'round'
 			}
 		},
 		'waterway-label'
@@ -368,6 +383,9 @@ map.on('load', function() {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
+			},
+			'layout': {
+				'line-cap': 'round'
 			}
 		},
 		'waterway-label'
@@ -381,6 +399,9 @@ map.on('load', function() {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
+			},
+			'layout': {
+				'line-cap': 'round'
 			}
 		},
 		'waterway-label'
@@ -394,6 +415,9 @@ map.on('load', function() {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
+			},
+			'layout': {
+				'line-cap': 'round'
 			}
 		},
 		'waterway-label'
@@ -407,6 +431,9 @@ map.on('load', function() {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
+			},
+			'layout': {
+				'line-cap': 'round'
 			}
 		},
 		'waterway-label'
@@ -420,6 +447,9 @@ map.on('load', function() {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
+			},
+			'layout': {
+				'line-cap': 'round'
 			}
 		},
 		'waterway-label'
@@ -433,6 +463,9 @@ map.on('load', function() {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
+			},
+			'layout': {
+				'line-cap': 'round'
 			}
 		},
 		'waterway-label'
@@ -446,6 +479,9 @@ map.on('load', function() {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
+			},
+			'layout': {
+				'line-cap': 'round'
 			}
 		},
 		'waterway-label'
@@ -459,6 +495,9 @@ map.on('load', function() {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
+			},
+			'layout': {
+				'line-cap': 'round'
 			}
 		},
 		'waterway-label'
@@ -472,6 +511,9 @@ map.on('load', function() {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
+			},
+			'layout': {
+				'line-cap': 'round'
 			}
 		},
 		'waterway-label'
@@ -485,6 +527,9 @@ map.on('load', function() {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
+			},
+			'layout': {
+				'line-cap': 'round'
 			}
 		},
 		'waterway-label'
@@ -498,6 +543,9 @@ map.on('load', function() {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
+			},
+			'layout': {
+				'line-cap': 'round'
 			}
 		},
 		'waterway-label'
@@ -511,6 +559,9 @@ map.on('load', function() {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
+			},
+			'layout': {
+				'line-cap': 'round'
 			}
 		},
 		'waterway-label'
@@ -524,6 +575,9 @@ map.on('load', function() {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
+			},
+			'layout': {
+				'line-cap': 'round'
 			}
 		},
 		'waterway-label'
@@ -537,6 +591,9 @@ map.on('load', function() {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
+			},
+			'layout': {
+				'line-cap': 'round'
 			}
 		},
 		'waterway-label'
@@ -550,6 +607,9 @@ map.on('load', function() {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
+			},
+			'layout': {
+				'line-cap': 'round'
 			}
 		},
 		'waterway-label'
@@ -563,6 +623,9 @@ map.on('load', function() {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
+			},
+			'layout': {
+				'line-cap': 'round'
 			}
 		},
 		'waterway-label'
@@ -576,6 +639,9 @@ map.on('load', function() {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
+			},
+			'layout': {
+				'line-cap': 'round'
 			}
 		},
 		'waterway-label'
@@ -589,6 +655,9 @@ map.on('load', function() {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
+			},
+			'layout': {
+				'line-cap': 'round'
 			}
 		},
 		'waterway-label'
@@ -602,6 +671,9 @@ map.on('load', function() {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
+			},
+			'layout': {
+				'line-cap': 'round'
 			}
 		},
 		'waterway-label'
@@ -615,6 +687,9 @@ map.on('load', function() {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
+			},
+			'layout': {
+				'line-cap': 'round'
 			}
 		},
 		'waterway-label'
@@ -628,6 +703,9 @@ map.on('load', function() {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
+			},
+			'layout': {
+				'line-cap': 'round'
 			}
 		},
 		'waterway-label'
@@ -641,6 +719,9 @@ map.on('load', function() {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
+			},
+			'layout': {
+				'line-cap': 'round'
 			}
 		},
 		'waterway-label'
@@ -654,6 +735,9 @@ map.on('load', function() {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
+			},
+			'layout': {
+				'line-cap': 'round'
 			}
 		},
 		'waterway-label'

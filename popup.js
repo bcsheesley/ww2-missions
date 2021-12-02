@@ -16,9 +16,9 @@ map.on('mousemove', 'journey', (e) => {
 	const paintProperty = map.getPaintProperty('journey', 'line-opacity');
 	const name = e.features[0].properties.name;
 	const date = e.features[0].properties.date;
-	console.log(paintProperty);
+	//console.log(paintProperty);
 	
-	//if (paintProperty > 0) {
+	if (paintProperty > 0) {
 		map.getCanvas().style.cursor = 'pointer';
 		
 		popupHover
@@ -26,7 +26,7 @@ map.on('mousemove', 'journey', (e) => {
 		.addTo(map)
 		.setLngLat(e.lngLat)
 		.trackPointer();
-	//}
+	}
 });
 
 map.on('mouseleave', 'journey', () => {
@@ -39,18 +39,20 @@ map.on('mouseleave', 'journey', () => {
 let routeID = null;
 
 map.on('mousemove', 'routes', (e) => {
-	map.getCanvas().style.cursor = 'pointer';
+	const paintProperty = map.getPaintProperty('routes', 'line-opacity');
 	
 	const isPopupOpen = popupClick.isOpen();
 	const name = e.features[0].properties.name;
 	//console.log(isPopupOpen);
 	
-	if (isPopupOpen === false){	
-	popupHover
-	.setHTML(`<h3>${name}</h3><p><i>Click for more details...</i></p>`)
-	.addTo(map)
-	.setLngLat(e.lngLat)
-	.trackPointer();
+	if (isPopupOpen === false && paintProperty > 0) {
+		map.getCanvas().style.cursor = 'pointer';
+		
+		popupHover
+		.setHTML(`<h3>${name}</h3><p><i>Click for more details...</i></p>`)
+		.addTo(map)
+		.setLngLat(e.lngLat)
+		.trackPointer();
 	}
 	
 	// Check whether features exist
@@ -113,55 +115,61 @@ map.on('click', 'routes', (e) => {
 	const daterank4 = e.features[0].properties.daterank4||'';
 	const date4 = e.features[0].properties.date4||'';
 	
+	const paintProperty = map.getPaintProperty('routes', 'line-opacity');
+	
 	//&#x2a;Sheesley flew a total of 35 combat missions.
 	
-	popupClick
-	.setLngLat(e.lngLat)
-	.setHTML(
-		`<h3>${name}</h3>
-		<table>
-			<tr>
-				<th>MISSION #</th>
-				<th>DATE</th>
-			</tr>
-			<tr>
-				<td>${daterank1}</td>
-				<td><a href=#journal>${date1}</a></td>
-			</tr>
-			<tr>
-				<td>${daterank2}</td>
-				<td><a href=#journal>${date2}</a></td>
-			</tr>
-			<tr>
-				<td>${daterank3}</td>
-				<td><a href=#journal>${date3}</a></td>
-			</tr>
-			<tr>
-				<td>${daterank4}</td>
-				<td><a href=#journal>${date4}</a></td>
-			</tr>
-		</table>
-		<p>
-			<i>Click a date to view the journal entry...</i>
-		</p>`
-	)
-	.addTo(map);
+	if (paintProperty > 0) {
+		popupClick
+		.setLngLat(e.lngLat)
+		.setHTML(
+			`<h3>${name}</h3>
+			<table>
+				<tr>
+					<th>MISSION #</th>
+					<th>DATE</th>
+				</tr>
+				<tr>
+					<td>${daterank1}</td>
+					<td><a href=#journal>${date1}</a></td>
+				</tr>
+				<tr>
+					<td>${daterank2}</td>
+					<td><a href=#journal>${date2}</a></td>
+				</tr>
+				<tr>
+					<td>${daterank3}</td>
+					<td><a href=#journal>${date3}</a></td>
+				</tr>
+				<tr>
+					<td>${daterank4}</td>
+					<td><a href=#journal>${date4}</a></td>
+				</tr>
+			</table>
+			<p>
+				<i>Click a date to view the journal entry...</i>
+			</p>`
+		)
+		.addTo(map);
+	}
 });
 
 // Recall route hover popup
 map.on('mouseenter', 'recall', (e) => {
-	map.getCanvas().style.cursor = 'pointer';
+	const paintProperty = map.getPaintProperty('recall', 'line-opacity');
 
 	const isPopupOpen = popupClick.isOpen();
 	const name = e.features[0].properties.name;
 	
-	if (isPopupOpen === false){	
-	popupHover
-	.setHTML(`<h3>${name}</h3><p><i>Click for more details...</i></p>`)
-	.addTo(map)
-	.setLngLat(e.lngLat)
-	.trackPointer();
-	}
+	if (isPopupOpen === false && paintProperty > 0){	
+		map.getCanvas().style.cursor = 'pointer';
+		
+		popupHover
+		.setHTML(`<h3>${name}</h3><p><i>Click for more details...</i></p>`)
+		.addTo(map)
+		.setLngLat(e.lngLat)
+		.trackPointer();
+		}
 	
 	// Check whether features exist
 	if (e.features.length === 0) return;
@@ -219,35 +227,39 @@ map.on('click', 'recall', (e) => {
 	const daterank4 = e.features[0].properties.daterank4||'';
 	const date4 = e.features[0].properties.date4||'';
 	
-	popupClick
-	.setLngLat(e.lngLat)
-	.setHTML(
-		`<h3>${name}</h3>
-		<table>
-			<tr>
-				<th>Mission</th>
-				<th>Date</th>
-			</tr>
-			<tr>
-				<td>${daterank1}</td>
-				<td><a href=#journal>${date1}</a></td>
-			</tr>
-			<tr>
-				<td>${daterank2}</td>
-				<td><a href=#journal>${date2}</a></td>
-			</tr>
-			<tr>
-				<td>${daterank3}</td>
-				<td><a href=#journal>${date3}</a></td>
-			</tr>
-			<tr>
-				<td>${daterank4}</td>
-				<td><a href=#journal>${date4}</a></td>
-			</tr>
-		</table>
-		<p>
-			<i>Click a date to view the journal entry...</i>
-		</p>`
-	)
-	.addTo(map);
+	const paintProperty = map.getPaintProperty('recall', 'line-opacity');
+	
+	if (paintProperty > 0) {
+		popupClick
+		.setLngLat(e.lngLat)
+		.setHTML(
+			`<h3>${name}</h3>
+			<table>
+				<tr>
+					<th>Mission</th>
+					<th>Date</th>
+				</tr>
+				<tr>
+					<td>${daterank1}</td>
+					<td><a href=#journal>${date1}</a></td>
+				</tr>
+				<tr>
+					<td>${daterank2}</td>
+					<td><a href=#journal>${date2}</a></td>
+				</tr>
+				<tr>
+					<td>${daterank3}</td>
+					<td><a href=#journal>${date3}</a></td>
+				</tr>
+				<tr>
+					<td>${daterank4}</td>
+					<td><a href=#journal>${date4}</a></td>
+				</tr>
+			</table>
+			<p>
+				<i>Click a date to view the journal entry...</i>
+			</p>`
+		)
+		.addTo(map);
+	}
 });
