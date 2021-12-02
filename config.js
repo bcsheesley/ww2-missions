@@ -54,7 +54,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: 'struthersTest',
+            callback: 'struthersMarker',
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -174,7 +174,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: 'newyorkTest',
+            callback: 'newyorkMarker',
             onChapterEnter: [
                 {
                     layer: 'journey',
@@ -201,16 +201,16 @@ var config = {
             image: 'images/dominion-monarch/19441022-trim-blur.png',
             imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">F</span>amily from <span class= "test">Struthers, OH, near Youngstown</span>. Trains to become a pilot at several bases in US: Walnut Springs, Ardmore Airforce, and others. 2nd Lt. Later becomes 1st Lt. Starts preparing in the fields of Arkansas</p>',
+            description: '<p><span class="dropCap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in posuere orci. Aliquam dolor urna, efficitur eget sollicitudin et, mattis id enim. Aliquam in vulputate lectus. Aliquam nec varius mi. Nullam mauris lectus, laoreet vitae ante placerat, suscipit rutrum quam. In sollicitudin massa velit, in consectetur tortor molestie vitae. Nulla molestie iaculis tortor. Quisque non tortor orci. Phasellus fringilla nunc a lectus auctor, cursus euismod elit facilisis. Morbi feugiat neque sit amet dignissim sagittis.</p>',
             location: {
                 center: [-70.6691, 41.10970],
-                zoom: 8,
+                zoom: 6,
                 pitch: 0,
                 bearing: 0
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: 'sea1Test',
+            callback: 'sea1Marker',
             onChapterEnter: [
                 {
                     layer: 'journey',
@@ -237,16 +237,484 @@ var config = {
             image: 'images/dominion-monarch/19441023-trim-blur.png',
             imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">F</span>amily from <span class= "test">Struthers, OH, near Youngstown</span>. Trains to become a pilot at several bases in US: Walnut Springs, Ardmore Airforce, and others. 2nd Lt. Later becomes 1st Lt. Starts preparing in the fields of Arkansas</p>',
+            description: '<p><span class="dropCap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in posuere orci. Aliquam dolor urna, efficitur eget sollicitudin et, mattis id enim. Aliquam in vulputate lectus. Aliquam nec varius mi. Nullam mauris lectus, laoreet vitae ante placerat, suscipit rutrum quam. In sollicitudin massa velit, in consectetur tortor molestie vitae. Nulla molestie iaculis tortor. Quisque non tortor orci. Phasellus fringilla nunc a lectus auctor, cursus euismod elit facilisis. Morbi feugiat neque sit amet dignissim sagittis.</p>',
             location: {
-                center: [-66.4689, 43.0820],
+                center: [-66.49730984863106, 43.09594080607482],
+                zoom: 5,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'sea2Marker',
+            onChapterEnter: [
+                {
+                    layer: 'journey',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'journey',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: 'day-3-at-sea',
+            section: 2,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Day 3 at Sea',
+            date: '10/24/1944',
+            image: 'images/dominion-monarch/19441024-trim-blur.png',
+            imageId: '',
+            caption: '',
+            description: '<p><span class="dropCap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in posuere orci. Aliquam dolor urna, efficitur eget sollicitudin et, mattis id enim. Aliquam in vulputate lectus. Aliquam nec varius mi. Nullam mauris lectus, laoreet vitae ante placerat, suscipit rutrum quam. In sollicitudin massa velit, in consectetur tortor molestie vitae. Nulla molestie iaculis tortor. Quisque non tortor orci. Phasellus fringilla nunc a lectus auctor, cursus euismod elit facilisis. Morbi feugiat neque sit amet dignissim sagittis.</p>',
+            location: {
+                center: [-60.18472272639963, 45.59582421709126],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'sea3Marker',
+            onChapterEnter: [
+                {
+                    layer: 'journey',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'journey',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: 'day-4-at-sea',
+            section: 2,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Day 4 at Sea',
+            date: '10/25/1944',
+            image: 'images/dominion-monarch/19441025-trim-blur.png',
+            imageId: '',
+            caption: '',
+            description: '<p><span class="dropCap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in posuere orci. Aliquam dolor urna, efficitur eget sollicitudin et, mattis id enim. Aliquam in vulputate lectus. Aliquam nec varius mi. Nullam mauris lectus, laoreet vitae ante placerat, suscipit rutrum quam. In sollicitudin massa velit, in consectetur tortor molestie vitae. Nulla molestie iaculis tortor. Quisque non tortor orci. Phasellus fringilla nunc a lectus auctor, cursus euismod elit facilisis. Morbi feugiat neque sit amet dignissim sagittis.</p>',
+            location: {
+                center: [-53.63687116389963, 47.61823809916669],
+                zoom: 3,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'sea4Marker',
+            onChapterEnter: [
+                {
+                    layer: 'journey',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'journey',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: 'day-5-at-sea',
+            section: 2,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Day 5 at Sea',
+            date: '10/26/1944',
+            image: 'images/dominion-monarch/19441026-trim-blur.png',
+            imageId: '',
+            caption: '',
+            description: '<p><span class="dropCap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in posuere orci. Aliquam dolor urna, efficitur eget sollicitudin et, mattis id enim. Aliquam in vulputate lectus. Aliquam nec varius mi. Nullam mauris lectus, laoreet vitae ante placerat, suscipit rutrum quam. In sollicitudin massa velit, in consectetur tortor molestie vitae. Nulla molestie iaculis tortor. Quisque non tortor orci. Phasellus fringilla nunc a lectus auctor, cursus euismod elit facilisis. Morbi feugiat neque sit amet dignissim sagittis.</p>',
+            location: {
+                center: [-46.869293038899514, 49.25081403213443],
+                zoom: 2,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'sea5Marker',
+            onChapterEnter: [
+                {
+                    layer: 'journey',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'journey',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: 'day-6-at-sea',
+            section: 2,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Day 6 at Sea',
+            date: '10/27/1944',
+            image: 'images/dominion-monarch/19441027-trim-blur.png',
+            imageId: '',
+            caption: '',
+            description: '<p><span class="dropCap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in posuere orci. Aliquam dolor urna, efficitur eget sollicitudin et, mattis id enim. Aliquam in vulputate lectus. Aliquam nec varius mi. Nullam mauris lectus, laoreet vitae ante placerat, suscipit rutrum quam. In sollicitudin massa velit, in consectetur tortor molestie vitae. Nulla molestie iaculis tortor. Quisque non tortor orci. Phasellus fringilla nunc a lectus auctor, cursus euismod elit facilisis. Morbi feugiat neque sit amet dignissim sagittis.</p>',
+            location: {
+                center: [-40.277496163899514, 50.328843938377474],
+                zoom: 2,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'sea6Marker',
+            onChapterEnter: [
+                {
+                    layer: 'journey',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'journey',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: 'day-7-at-sea',
+            section: 2,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Day 7 at Sea',
+            date: '10/28/1944',
+            image: 'images/dominion-monarch/19441028-trim-blur.png',
+            imageId: '',
+            caption: '',
+            description: '<p><span class="dropCap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in posuere orci. Aliquam dolor urna, efficitur eget sollicitudin et, mattis id enim. Aliquam in vulputate lectus. Aliquam nec varius mi. Nullam mauris lectus, laoreet vitae ante placerat, suscipit rutrum quam. In sollicitudin massa velit, in consectetur tortor molestie vitae. Nulla molestie iaculis tortor. Quisque non tortor orci. Phasellus fringilla nunc a lectus auctor, cursus euismod elit facilisis. Morbi feugiat neque sit amet dignissim sagittis.</p>',
+            location: {
+                center: [-33.20230085139934, 51.10787025644228],
+                zoom: 2,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'sea7Marker',
+            onChapterEnter: [
+                {
+                    layer: 'journey',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'journey',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: 'day-8-at-sea',
+            section: 2,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Day 8 at Sea',
+            date: '10/29/1944',
+            image: 'images/dominion-monarch/19441029-trim-blur.png',
+            imageId: '',
+            caption: '',
+            description: '<p><span class="dropCap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in posuere orci. Aliquam dolor urna, efficitur eget sollicitudin et, mattis id enim. Aliquam in vulputate lectus. Aliquam nec varius mi. Nullam mauris lectus, laoreet vitae ante placerat, suscipit rutrum quam. In sollicitudin massa velit, in consectetur tortor molestie vitae. Nulla molestie iaculis tortor. Quisque non tortor orci. Phasellus fringilla nunc a lectus auctor, cursus euismod elit facilisis. Morbi feugiat neque sit amet dignissim sagittis.</p>',
+            location: {
+                center: [-25.951324288899173, 51.382960620270325],
+                zoom: 2,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'sea8Marker',
+            onChapterEnter: [
+                {
+                    layer: 'journey',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'journey',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: 'day-9-at-sea',
+            section: 2,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Day 9 at Sea',
+            date: '10/30/1944',
+            image: 'images/dominion-monarch/19441030-trim-blur.png',
+            imageId: '',
+            caption: '',
+            description: '<p><span class="dropCap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in posuere orci. Aliquam dolor urna, efficitur eget sollicitudin et, mattis id enim. Aliquam in vulputate lectus. Aliquam nec varius mi. Nullam mauris lectus, laoreet vitae ante placerat, suscipit rutrum quam. In sollicitudin massa velit, in consectetur tortor molestie vitae. Nulla molestie iaculis tortor. Quisque non tortor orci. Phasellus fringilla nunc a lectus auctor, cursus euismod elit facilisis. Morbi feugiat neque sit amet dignissim sagittis.</p>',
+            location: {
+                center: [-18.78823835139906, 51.24562111169806],
+                zoom: 2,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'sea9Marker',
+            onChapterEnter: [
+                {
+                    layer: 'journey',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'journey',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: 'day-10-at-sea',
+            section: 2,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Day 10 at Sea',
+            date: '10/31/1944',
+            image: 'images/dominion-monarch/19441031-trim-blur.png',
+            imageId: '',
+            caption: '',
+            description: '<p><span class="dropCap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in posuere orci. Aliquam dolor urna, efficitur eget sollicitudin et, mattis id enim. Aliquam in vulputate lectus. Aliquam nec varius mi. Nullam mauris lectus, laoreet vitae ante placerat, suscipit rutrum quam. In sollicitudin massa velit, in consectetur tortor molestie vitae. Nulla molestie iaculis tortor. Quisque non tortor orci. Phasellus fringilla nunc a lectus auctor, cursus euismod elit facilisis. Morbi feugiat neque sit amet dignissim sagittis.</p>',
+            location: {
+                center: [-11.669097726398945, 50.664298274616186],
+                zoom: 5,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'sea10Marker',
+            onChapterEnter: [
+                {
+                    layer: 'journey',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'journey',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: 'day-11-at-sea',
+            section: 2,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Day 11 at Sea',
+            date: '11/1/1944',
+            image: 'images/dominion-monarch/19441101-trim-blur.png',
+            imageId: '',
+            caption: '',
+            description: '<p><span class="dropCap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in posuere orci. Aliquam dolor urna, efficitur eget sollicitudin et, mattis id enim. Aliquam in vulputate lectus. Aliquam nec varius mi. Nullam mauris lectus, laoreet vitae ante placerat, suscipit rutrum quam. In sollicitudin massa velit, in consectetur tortor molestie vitae. Nulla molestie iaculis tortor. Quisque non tortor orci. Phasellus fringilla nunc a lectus auctor, cursus euismod elit facilisis. Morbi feugiat neque sit amet dignissim sagittis.</p>',
+            location: {
+                center: [-5.6964, 49.8167],
                 zoom: 8,
                 pitch: 0,
                 bearing: 0
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: 'sea2Test',
+            callback: 'sea11Marker',
+            onChapterEnter: [
+                {
+                    layer: 'journey',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'journey',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: 'plymouth-bay',
+            section: 2,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Plymouth Bay',
+            date: '11/2/1944',
+            image: 'images/dominion-monarch/19441102-trim-blur.png',
+            imageId: '',
+            caption: '',
+            description: '<p><span class="dropCap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in posuere orci. Aliquam dolor urna, efficitur eget sollicitudin et, mattis id enim. Aliquam in vulputate lectus. Aliquam nec varius mi. Nullam mauris lectus, laoreet vitae ante placerat, suscipit rutrum quam. In sollicitudin massa velit, in consectetur tortor molestie vitae. Nulla molestie iaculis tortor. Quisque non tortor orci. Phasellus fringilla nunc a lectus auctor, cursus euismod elit facilisis. Morbi feugiat neque sit amet dignissim sagittis.</p>',
+            location: {
+                center: [-4.156, 50.3266],
+                zoom: 10,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'plymouthBayMarker',
+            onChapterEnter: [
+                {
+                    layer: 'journey',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'journey',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: 'plymouth-docks',
+            section: 2,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Plymouth Docks',
+            date: '11/3/1944',
+            image: 'images/dominion-monarch/19441103-trim-blur.png',
+            imageId: '',
+            caption: '',
+            description: '<p><span class="dropCap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in posuere orci. Aliquam dolor urna, efficitur eget sollicitudin et, mattis id enim. Aliquam in vulputate lectus. Aliquam nec varius mi. Nullam mauris lectus, laoreet vitae ante placerat, suscipit rutrum quam. In sollicitudin massa velit, in consectetur tortor molestie vitae. Nulla molestie iaculis tortor. Quisque non tortor orci. Phasellus fringilla nunc a lectus auctor, cursus euismod elit facilisis. Morbi feugiat neque sit amet dignissim sagittis.</p>',
+            location: {
+                center: [-4.1556, 50.3640],
+                zoom: 13,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'plymouthMarker',
+            onChapterEnter: [
+                {
+                    layer: 'journey',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'journey',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: 'stone-yarnfield-pt1',
+            section: 2,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Stone (Yarnfield)',
+            date: '11/4/1944, pt. 1',
+            image: 'images/dominion-monarch/19441104-1-trim-blur.png',
+            imageId: '',
+            caption: '',
+            description: '<p><span class="dropCap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in posuere orci. Aliquam dolor urna, efficitur eget sollicitudin et, mattis id enim. Aliquam in vulputate lectus. Aliquam nec varius mi. Nullam mauris lectus, laoreet vitae ante placerat, suscipit rutrum quam. In sollicitudin massa velit, in consectetur tortor molestie vitae. Nulla molestie iaculis tortor. Quisque non tortor orci. Phasellus fringilla nunc a lectus auctor, cursus euismod elit facilisis. Morbi feugiat neque sit amet dignissim sagittis.</p>',
+            location: {
+                center: [-2.1965, 52.8950],
+                zoom: 12,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'yarnfieldMarker',
+            onChapterEnter: [
+                {
+                    layer: 'journey',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'journey',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: 'stone-yarnfield-pt2',
+            section: 2,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Stone (Yarnfield)',
+            date: '11/4/1944, pt. 2',
+            image: 'images/dominion-monarch/19441104-2-trim-blur.png',
+            imageId: '',
+            caption: '',
+            description: '<p><span class="dropCap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in posuere orci. Aliquam dolor urna, efficitur eget sollicitudin et, mattis id enim. Aliquam in vulputate lectus. Aliquam nec varius mi. Nullam mauris lectus, laoreet vitae ante placerat, suscipit rutrum quam. In sollicitudin massa velit, in consectetur tortor molestie vitae. Nulla molestie iaculis tortor. Quisque non tortor orci. Phasellus fringilla nunc a lectus auctor, cursus euismod elit facilisis. Morbi feugiat neque sit amet dignissim sagittis.</p>',
+            location: {
+                center: [-2.1965, 52.8950],
+                zoom: 12,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'yarnfieldMarker',
             onChapterEnter: [
                 {
                     layer: 'journey',
@@ -282,7 +750,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: 'mendleshamTest',
+            callback: 'mendleshamMarker',
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -398,7 +866,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: 'berlinTest',
+            callback: 'berlinMarker',
             onChapterEnter: [
                 {
                     layer: 'routes',
@@ -454,7 +922,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: 'berlinTest',
+            callback: 'berlinMarker',
             onChapterEnter: [
             {
                 layer: 'routes',
@@ -510,7 +978,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: 'kasselTest',
+            callback: 'kasselMarker',
             onChapterEnter: [
             {
                 layer: 'routes',
