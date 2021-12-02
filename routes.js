@@ -76,8 +76,8 @@ var routeSea = {
 		'coordinates': [sea1, sea11]
 	},
 	'properties': {
-		'name': 'Dominion Monarch',
-		'date': 'Oct 22 – Nov 3, 1944'
+		'name': 'New York – Plymouth Bay',
+		'date': 'Oct 22 – Nov 2, 1944'
 	}
 };
 

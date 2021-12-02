@@ -106,7 +106,7 @@ var config = {
             onChapterEnter: [
                 {
                     layer: 'journey',
-                    opacity: 0.5,
+                    opacity: 1,
                     duration: 300
                 }
             ],
@@ -142,7 +142,7 @@ var config = {
             onChapterEnter: [
                 {
                     layer: 'journey',
-                    opacity: 0.5,
+                    opacity: 1,
                     duration: 300
                 }
             ],
@@ -178,7 +178,7 @@ var config = {
             onChapterEnter: [
                 {
                     layer: 'journey',
-                    opacity: 0.5,
+                    opacity: 1,
                     duration: 300
                 }
             ],
@@ -214,7 +214,7 @@ var config = {
             onChapterEnter: [
                 {
                     layer: 'journey',
-                    opacity: 0.5,
+                    opacity: 1,
                     duration: 300
                 }
             ],
@@ -250,7 +250,7 @@ var config = {
             onChapterEnter: [
                 {
                     layer: 'journey',
-                    opacity: 0.5,
+                    opacity: 1,
                     duration: 300
                 }
             ],
@@ -310,16 +310,26 @@ var config = {
             onChapterEnter: [
                 {
                     layer: 'routes',
-                    opacity: 0.5,
+                    opacity: 1,
                     duration: 300
-                }
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
             ],
             onChapterExit: [
                 {
                     layer: 'routes',
                     opacity: 0,
                     duration: 300
-                }
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
             ]
         },
         {
@@ -346,16 +356,26 @@ var config = {
             onChapterEnter: [
                 {
                     layer: 'routes',
-                    opacity: 0.5,
+                    opacity: 1,
                     duration: 300
-                }
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
             ],
             onChapterExit: [
                 {
                     layer: 'routes',
                     opacity: 0,
                     duration: 300
-                }
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
             ]
         },
         {
@@ -382,18 +402,28 @@ var config = {
             onChapterEnter: [
                 {
                     layer: 'routes',
-                    opacity: 0.5,
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
                     duration: 300
                 },
                 {
                     layer: 'routeBerlin',
-                    opacity: 0.8,
+                    opacity: 1,
                     duration: 300
                 }
             ],
             onChapterExit: [
                 {
                     layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
                     opacity: 0,
                     duration: 300
                 },
@@ -428,18 +458,28 @@ var config = {
             onChapterEnter: [
             {
                 layer: 'routes',
-                opacity: 0.5,
+                opacity: 1,
+                duration: 300
+            },
+            {
+                layer: 'recall',
+                opacity: 1,
                 duration: 300
             },
             {
                 layer: 'routeBerlin',
-                opacity: 0.8,
+                opacity: 1,
                 duration: 300
             }
         ],
             onChapterExit: [
                 {
                     layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
                     opacity: 0,
                     duration: 300
                 },
@@ -474,18 +514,28 @@ var config = {
             onChapterEnter: [
             {
                 layer: 'routes',
-                opacity: 0.5,
+                opacity: 1,
+                duration: 300
+            },
+            {
+                layer: 'recall',
+                opacity: 1,
                 duration: 300
             },
             {
                 layer: 'routeKassel',
-                opacity: 0.8,
+                opacity: 1,
                 duration: 300
             }
         ],
             onChapterExit: [
                 {
                     layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
                     opacity: 0,
                     duration: 300
                 },

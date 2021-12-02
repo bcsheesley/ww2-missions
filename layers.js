@@ -48,7 +48,7 @@ map.on('load', function() {
 				{
 					"type": "Feature",
 					"properties": {
-						'name': 'Camp Kilmer to New York',
+						'name': 'Camp Kilmer – New York',
 						'date': 'Oct 21, 1944'
 					},
 					"geometry": {
@@ -72,8 +72,8 @@ map.on('load', function() {
 				{
 					"type": "Feature",
 					"properties": {
-						'name': 'Dominion Monarch',
-						'date': 'Oct 22 – Nov 3, 1944'
+						'name': 'New York – Plymouth Bay',
+						'date': 'Oct 22 – Nov 2, 1944'
 					},
 					"geometry": {
 						"type": "LineString",
@@ -122,8 +122,8 @@ map.on('load', function() {
 				{
 					"type": "Feature",
 					"properties": {
-						'name': 'Dominion Monarch',
-						'date': 'Oct 22 – Nov 3, 1944'
+						'name': 'New York – Plymouth Bay',
+						'date': 'Oct 22 – Nov 2, 1944'
 					},
 					"geometry": {
 						"type": "LineString",
@@ -152,8 +152,8 @@ map.on('load', function() {
 				{
 					"type": "Feature",
 					"properties": {
-						'name': 'Dominion Monarch',
-						'date': 'Oct 22 – Nov 3, 1944'
+						'name': 'Plymouth Bay – Plymouth',
+						'date': 'Nov 3, 1944'
 					},
 					"geometry": {
 						"type": "LineString",
@@ -167,7 +167,7 @@ map.on('load', function() {
 								-4.1467,
 								50.3452
 							  ],
-							  /* plymouthDock */
+							  /* plymouthDocks */
 							  [
 								-4.1556,
 								50.3640
@@ -178,13 +178,13 @@ map.on('load', function() {
 				{
 					"type": "Feature",
 					"properties": {
-						'name': 'Plymouth to Stone',
+						'name': 'Plymouth – Stone (Yarnfield)',
 						'date': 'Nov 4, 1944'
 					},
 					"geometry": {
 						"type": "LineString",
 						"coordinates": [
-							/* plymouthBay */
+							/* plymouthDocks */
 							[
 								-4.1556,
 								50.3640
@@ -209,7 +209,7 @@ map.on('load', function() {
 								-2.0050,
 								52.4861
 							  ],
-							  /* yarnfield */
+							  /* yarnfield - stone */
 							  [
 								-2.1965,
 								52.8950
@@ -227,9 +227,9 @@ map.on('load', function() {
 		'source': 'journey',
 		'type': 'line',
 		'paint': {
-			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,2,6,24],
+			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,2,10,24],
 			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
-			'line-color': '#ff0000',
+			'line-color': 'rgba(0,170,255,0.8)',
 			'line-opacity': 0,
 			'line-dasharray': [2,2]
 		},
@@ -247,7 +247,7 @@ map.on('load', function() {
 		'type': 'line',
 		'filter': ['!in','name','Recall'],
 		'paint': {
-			'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+			'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 			//'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
 			'line-opacity': 0,
 			//'line-color': '#CDA076'
@@ -256,8 +256,8 @@ map.on('load', function() {
 			'line-color': [
 				'case',
 				['boolean', ['feature-state', 'hover'], false],
-				'#000000',
-				'#ff0000'
+				'rgba(255,255,133,0.8)',
+				'rgba(0,170,255,0.8)'
 			]
 		},
 		'layout': {
@@ -274,10 +274,17 @@ map.on('load', function() {
 		'type': 'line',
 		'filter': ['==',['get','name'],'Recall'],
 		'paint': {
-			'line-width': 2,
+			'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 			'line-opacity': 0,
-			'line-color': '#CDA076',
-			'line-dasharray': [4,4]
+			'line-dasharray': [2,2],
+			// The feature-state dependent line-color expression will render
+			// the color when a feature's hover state is set to true
+			'line-color': [
+				'case',
+				['boolean', ['feature-state', 'hover'], false],
+				'rgba(255,255,133,0.8)',
+				'rgba(0,170,255,0.8)'
+			]
 		}
 	},
 	'waterway-label'
@@ -293,9 +300,9 @@ map.on('load', function() {
 				'line-cap': 'round'
 			},
 			'paint': {
-				'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
-				'line-color': '#FFFF85'
+				'line-color': 'rgba(255,255,133,1)'
 			}
 		},
 		'waterway-label'
@@ -306,7 +313,7 @@ map.on('load', function() {
 			'type': 'line',
 			'filter': ['==',['get','name'],'Darmstadt'],
 			'paint': {
-				'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#FFFF85'
 			}
@@ -319,7 +326,7 @@ map.on('load', function() {
 			'type': 'line',
 			'filter': ['==',['get','name'],'Hanover'],
 			'paint': {
-				'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#FFFF85'
 			}
@@ -332,7 +339,7 @@ map.on('load', function() {
 			'type': 'line',
 			'filter': ['==',['get','name'],'Andernach'],
 			'paint': {
-				'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#FFFF85'
 			}
@@ -344,11 +351,8 @@ map.on('load', function() {
 			'source': 'routes',
 			'type': 'line',
 			'filter': ['==',['get','name'],'Kassel'],
-			'layout': {
-				'line-cap': 'round'
-			},
 			'paint': {
-				'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#FFFF85'
 			}
@@ -361,7 +365,7 @@ map.on('load', function() {
 			'type': 'line',
 			'filter': ['==',['get','name'],'Misburg'],
 			'paint': {
-				'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
 			}
@@ -374,7 +378,7 @@ map.on('load', function() {
 			'type': 'line',
 			'filter': ['==',['get','name'],'Pforzheim'],
 			'paint': {
-				'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
 			}
@@ -387,7 +391,7 @@ map.on('load', function() {
 			'type': 'line',
 			'filter': ['==',['get','name'],'Bielefeld'],
 			'paint': {
-				'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
 			}
@@ -400,7 +404,7 @@ map.on('load', function() {
 			'type': 'line',
 			'filter': ['==',['get','name'],'Cologne'],
 			'paint': {
-				'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
 			}
@@ -413,7 +417,7 @@ map.on('load', function() {
 			'type': 'line',
 			'filter': ['==',['get','name'],'Derben'],
 			'paint': {
-				'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
 			}
@@ -426,7 +430,7 @@ map.on('load', function() {
 			'type': 'line',
 			'filter': ['==',['get','name'],'Augsburg'],
 			'paint': {
-				'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
 			}
@@ -439,7 +443,7 @@ map.on('load', function() {
 			'type': 'line',
 			'filter': ['==',['get','name'],'Bitterfeld'],
 			'paint': {
-				'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
 			}
@@ -452,7 +456,7 @@ map.on('load', function() {
 			'type': 'line',
 			'filter': ['==',['get','name'],'Duisburg'],
 			'paint': {
-				'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
 			}
@@ -465,7 +469,7 @@ map.on('load', function() {
 			'type': 'line',
 			'filter': ['==',['get','name'],'Dülmen'],
 			'paint': {
-				'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
 			}
@@ -478,7 +482,7 @@ map.on('load', function() {
 			'type': 'line',
 			'filter': ['==',['get','name'],'Cottbus'],
 			'paint': {
-				'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
 			}
@@ -491,7 +495,7 @@ map.on('load', function() {
 			'type': 'line',
 			'filter': ['==',['get','name'],'Bremen'],
 			'paint': {
-				'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
 			}
@@ -504,7 +508,7 @@ map.on('load', function() {
 			'type': 'line',
 			'filter': ['==',['get','name'],'Ludwigsfelde'],
 			'paint': {
-				'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
 			}
@@ -517,7 +521,7 @@ map.on('load', function() {
 			'type': 'line',
 			'filter': ['==',['get','name'],'Dresden'],
 			'paint': {
-				'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
 			}
@@ -530,7 +534,7 @@ map.on('load', function() {
 			'type': 'line',
 			'filter': ['==',['get','name'],'Dedenhausen'],
 			'paint': {
-				'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
 			}
@@ -543,7 +547,7 @@ map.on('load', function() {
 			'type': 'line',
 			'filter': ['==',['get','name'],'Datteln'],
 			'paint': {
-				'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
 			}
@@ -556,7 +560,7 @@ map.on('load', function() {
 			'type': 'line',
 			'filter': ['==',['get','name'],'Soest'],
 			'paint': {
-				'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
 			}
@@ -569,7 +573,7 @@ map.on('load', function() {
 			'type': 'line',
 			'filter': ['==',['get','name'],'Hamburg'],
 			'paint': {
-				'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
 			}
@@ -582,7 +586,7 @@ map.on('load', function() {
 			'type': 'line',
 			'filter': ['==',['get','name'],'Świnoujście'],
 			'paint': {
-				'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
 			}
@@ -595,7 +599,7 @@ map.on('load', function() {
 			'type': 'line',
 			'filter': ['==',['get','name'],'Jena'],
 			'paint': {
-				'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
 			}
@@ -608,7 +612,7 @@ map.on('load', function() {
 			'type': 'line',
 			'filter': ['==',['get','name'],'Marxen'],
 			'paint': {
-				'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
 			}
@@ -621,7 +625,7 @@ map.on('load', function() {
 			'type': 'line',
 			'filter': ['==',['get','name'],'Ratingen'],
 			'paint': {
-				'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
 			}
@@ -634,7 +638,7 @@ map.on('load', function() {
 			'type': 'line',
 			'filter': ['==',['get','name'],'Geisecke'],
 			'paint': {
-				'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
 			}
@@ -647,7 +651,7 @@ map.on('load', function() {
 			'type': 'line',
 			'filter': ['==',['get','name'],'Bad Zwischenahn'],
 			'paint': {
-				'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
 				'line-color': '#CDA076'
 			}
@@ -660,7 +664,7 @@ map.on('load', function() {
 		'type': 'line',
 		'filter': ['==',['get','name'],'Recall'],
 		'paint': {
-			'line-width': ['interpolate',['exponential',1.6],['zoom'],7,2,10,24],
+			'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 			'line-opacity': 0,
 			'line-color': '#CDA076',
 			'line-dasharray': [2,2]

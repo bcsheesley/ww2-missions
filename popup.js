@@ -79,8 +79,8 @@ map.on('mousemove', 'routes', (e) => {
 		}
 	);
 	
-	console.log(routeID);
-	console.log(map.getFeatureState);
+	//console.log(routeID);
+	//console.log(map.getFeatureState);
 });
 
 map.on('mouseleave', 'routes', () => {
@@ -162,11 +162,49 @@ map.on('mouseenter', 'recall', (e) => {
 	.setLngLat(e.lngLat)
 	.trackPointer();
 	}
+	
+	// Check whether features exist
+	if (e.features.length === 0) return;
+	
+	// If routeID for the hovered feature is not null,
+	// use removeFeatureState to reset to the default behavior
+	if (routeID !== undefined) {
+		map.removeFeatureState({
+			source: 'routes',
+			id: routeID
+		});
+	}
+	
+	routeID = e.features[0].id;
+	
+	// When the mouse moves over the routes layer, update the
+	// feature state for the feature under the mouse
+	map.setFeatureState(
+		{
+			source: 'routes',
+			id: routeID
+		},
+		{
+			hover: true
+		}
+	);
 });
 
 map.on('mouseleave', 'recall', () => {
 	map.getCanvas().style.cursor = '';
 	popupHover.remove();
+	
+	if (routeID !== undefined) {
+			map.setFeatureState(
+				{
+					source: 'routes',
+					id: routeID
+				},
+				{
+					hover: false
+				}
+			);
+		  }
 });
 
 // Recall route click popup
@@ -208,7 +246,7 @@ map.on('click', 'recall', (e) => {
 			</tr>
 		</table>
 		<p>
-			<i>Lt. Sheesley flew 35 combat missions in total.</i>
+			<i>Click a date to view the journal entry...</i>
 		</p>`
 	)
 	.addTo(map);
