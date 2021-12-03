@@ -13,7 +13,7 @@ var config = {
         {
             id: 'about-this-map',
             section: '',
-            alignment: 'left',
+            alignment: 'centered',
             hidden: false,
             daterank: '',
             title: 'About This Map',
@@ -22,6 +22,30 @@ var config = {
             imageId: '',
             caption: '',
             description: '<p><span class="dropCap">L</span>t. Byron E. Sheesley kept two short journals while serving in the United States Army Air Forces (USAAF) during World War Ⅱ.</p><p>One journal documents his nearly two-week-long journey from Camp Kilmer, New Jersey to a USAAF replacement center in Staffordshire, England via troopship and train in late October and early November, 1944.</p><p>The other summarizes many of the 35 combat missions he flew over enemy targets in Germany as pilot of a B-17 heavy bomber between December 1944 and March 1945. It also describes aspects of his daily life on base and on pass. Sheesley was stationed in Mendlesham, England with the 7th Squadron of the 34th Bomb Group in the "Mighty" 8th Air Force.</p><p>Overall, both journals are written in a consice and matter-of-fact style. They are short on commentary. Given the pressures he faced, it\'s perhaps not surprising that only the most salient details made it onto the page.</p><p>That said, some entries are quite powerful and moving. For example, the 22-year-old pilot writes about an intense <a href="#1-berlin-pt1">first mission</a> to Berlin, where he had been sent by mistake as a "green crew" without the proper training. Similarly, after completing his <a href="#35-hanover">last mission</a> – a trip to Hanover, three-and-a-half months later – he expresses a mix of joy, relief, and determination to reunite with his fiancé, the 19-year-old Mary E. Clark: <blockquote>... Happy Day! No more flack, fighters, gas, oxygen or bomb runs to sweat out. Mary, here I come.</blockquote></p><p>This map connects entries in the two journals with the places they describe. <b>Scroll down to read more.</b></p>',
+            location: {
+                center: [-95.96827, 39.03594],
+                zoom: 2,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+    {
+            id: 'break-1',
+            section: '',
+            alignment: 'full',
+            hidden: false,
+            daterank: '',
+            title: 'Background',
+            date: '',
+            image: '',
+            imageId: '',
+            caption: '',
+            description: '',
             location: {
                 center: [-95.96827, 39.03594],
                 zoom: 2,
@@ -189,7 +213,7 @@ var config = {
             ]
         },
         {
-            id: 'break-1',
+            id: 'break-2',
             section: '',
             alignment: 'full',
             hidden: false,
@@ -897,7 +921,7 @@ var config = {
             ]
         },
         {
-            id: 'break-2',
+            id: 'break-3',
             section: '',
             alignment: 'full',
             hidden: false,

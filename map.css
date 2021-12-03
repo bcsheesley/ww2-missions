@@ -550,16 +550,21 @@ a[href*="break"] {
 }
 
 #break-1 .light{
-	background-color: #7D7E69;
+		background-color: #98683F;
+		color: #fff;
+	}
+
+#break-2 .light{
+	background-color: #60694F;
 	color: #fff;
 }
 
-#break-2 .light{
-	background-color: #846966;
+#break-3 .light{
+	background-color: #77514C;
 	color: #fff;
 }
 	
-#break-1 h3, #break-2 h3 {
+#break-1 h3, #break-2 h3, #break-3 h3 {
 	font-size: 3em;
 }
 
