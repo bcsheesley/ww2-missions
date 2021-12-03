@@ -5,9 +5,9 @@ var config = {
     markerColor: '#3FB1CE',
     theme: 'light',
     use3dTerrain: false,
-    title: 'World War Ⅱ Journals',
-    subtitle: 'Lt. Byron E. Sheesley',
-    byline: '',
+    title: 'The World War Ⅱ Journals',
+    subtitle: 'of',
+    byline: 'Lt. Byron E. Sheesley',
     footer: 'Journal entry dates and targets align with official mission records of the 8th Air Force as well as individual flight records issued by the War Department now preserved in a small document archive saved by family members. Source: source citations, etc.',
     chapters: [
         {
@@ -21,7 +21,7 @@ var config = {
             image: '',
             imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">L</span>t. Byron E. Sheesley kept two short journals while serving in the United States Army Air Forces (USAAF) during World War Ⅱ.</p><p>One journal documents his nearly two-week-long journey from Camp Kilmer, New Jersey to a USAAF replacement center in Staffordshire, England via troopship and train in late October and early November, 1944.</p><p>The other summarizes many of the 35 combat missions he flew over enemy targets in Germany as pilot of a B-17 heavy bomber between December 1944 and March 1945. It also describes aspects of his daily life on base and on pass. Sheesley was stationed in Mendlesham, England with the 7th Squadron of the 34th Bomb Group in the "Mighty" 8th Air Force.</p><p>Overall, both journals are written in a consice and matter-of-fact style. They are short on commentary. Given the pressures he faced, it\'s perhaps not surprising that only the most salient details made it onto the page.</p><p>That said, some entries are quite powerful and moving. For example, the 22-year-old pilot writes about an intense <a href="#1-berlin-pt1">first mission</a> to Berlin, where he had been sent by mistake as a "green crew" without the proper training. Similarly, after completing his <a href="#35-hanover">last mission</a> – a trip to Hanover, three-and-a-half months later – he expresses a mix of joy, relief, and determination to reunite with his fiancé, the 19-year-old Mary E. Clark: <blockquote>Happy Day! No more flack, fighters, gas, oxygen or bomb runs to sweat out. Mary, here I come.</blockquote></p><p>This map connects entries in the two journals with the places they describe. <b>Scroll down to read more.</b></p>',
+            description: '<p><span class="dropCap">L</span>t. Byron E. Sheesley kept two short journals while serving in the United States Army Air Forces (USAAF) during World War Ⅱ.</p><p>One journal documents his nearly two-week-long journey from Camp Kilmer, New Jersey to a USAAF replacement center in Staffordshire, England via troopship and train in late October and early November, 1944.</p><p>The other summarizes many of the 35 combat missions he flew over enemy targets in Germany as pilot of a B-17 heavy bomber between December 1944 and March 1945. It also describes aspects of his daily life on base and on pass. Sheesley was stationed in Mendlesham, England with the 7th Squadron of the 34th Bomb Group in the "Mighty" 8th Air Force.</p><p>Overall, both journals are written in a consice and matter-of-fact style. They are short on commentary. Given the pressures he faced, it\'s perhaps not surprising that only the most salient details made it onto the page.</p><p>That said, some entries are quite powerful and moving. For example, the 22-year-old pilot writes about an intense <a href="#1-berlin-pt1">first mission</a> to Berlin, where he had been sent by mistake as a "green crew" without the proper training. Similarly, after completing his <a href="#35-hanover">last mission</a> – a trip to Hanover, three-and-a-half months later – he expresses a mix of joy, relief, and determination to reunite with his fiancé, the 19-year-old Mary E. Clark: <blockquote>... Happy Day! No more flack, fighters, gas, oxygen or bomb runs to sweat out. Mary, here I come.</blockquote></p><p>This map connects entries in the two journals with the places they describe. <b>Scroll down to read more.</b></p>',
             location: {
                 center: [-95.96827, 39.03594],
                 zoom: 2,
@@ -82,33 +82,9 @@ var config = {
             onChapterEnter: [],
             onChapterExit: []
         },
-    {
-            id: 'break',
-            section: 2,
-            alignment: 'full',
-            hidden: false,
-            daterank: '',
-            title: 'test',
-            date: '',
-            image: '',
-            imageId: '',
-            caption: '',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mollis auctor purus nec condimentum. Donec ac tincidunt sapien. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer dignissim augue ut ipsum commodo mattis. Aenean in nulla quam. Nunc ipsum urna, finibus sed aliquet sit amet, porta quis neque. Integer blandit velit ac magna malesuada, at viverra lacus interdum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque eget sapien eget ipsum laoreet porta ac vel tortor. Etiam mi dui, commodo quis vulputate ac, finibus vitae turpis. Aenean porta mollis mi sed hendrerit.',
-            location: {
-                center: [-86.18510, 35.05642],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
         {
             id: 'journey-to-england',
-            section: 2,
+            section: 1,
             alignment: 'left',
             hidden: false,
             daterank: '',
@@ -143,20 +119,44 @@ var config = {
             ]
         },
         {
-            id: 'the-green-journal',
-            section: 2,
+            id: 'mendlesham-airfield',
+            section: 1,
             alignment: 'left',
             hidden: false,
             daterank: '',
-            title: 'The Green Journal',
+            title: 'Mendlesham Airfield',
             date: '',
-            image: 'images/dominion-monarch/front-cover-outside-trim.png',
-            imageId: '',
-            caption: '',
-            description: '<p><span class="dropCap">F</span>amily from Struthers, Ohio near Youngstown. Attending Houghton college when began training</p>',
+            image: 'images/Mendelshamairfield-18jan47.png',
+            imageId: 'missions',
+            caption: 'Wikipedia',
+            description: '<p><span class="dropCap">8</span>th Airforce, 34th bomb group, 7th squadron. Other groups were also present before and during. Spends about four months total here. Plays basketball, goes to London, sees a play, attends church, receives and sends letters (?), ride a bike, and flies missions</p>',
             location: {
-                center: [-39.43332, 44.67845],
-                zoom: 1,
+                center: [1.1210006854646852, 52.23269925011281],
+                zoom: 13,
+                pitch: 0,
+                bearing: 16
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: '35-missions',
+            section: 1,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: '35 Missions',
+            date: '',
+            image: 'images/missions-card-small.png',
+            imageId: 'idCardFront',
+            caption: '',
+            description: '<p><span class="dropCap">F</span>lies 35 missions over Germany. Some short, some long trips. Some repeated targets. Some taregets not hit. An accident. A recall.</p>',
+            location: {
+                center: [3.11114, 51.00934],
+                zoom: 3,
                 pitch: 0,
                 bearing: 0
             },
@@ -165,19 +165,89 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {
-                    layer: 'journey',
+                    layer: 'routes',
                     opacity: 1,
                     duration: 300
-                }
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
             ],
             onChapterExit: [
                 {
-                    layer: 'journey',
+                    layer: 'routes',
                     opacity: 0,
                     duration: 300
-                }
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
             ]
         },
+        {
+            id: 'break-1',
+            section: '',
+            alignment: 'full',
+            hidden: false,
+            daterank: '',
+            title: 'The Green Journal',
+            date: '',
+            image: '',
+            imageId: '',
+            caption: '',
+            description: '',
+            location: {
+                center: [3.11114, 51.00934],
+                zoom: 3,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+                id: 'the-green-journal',
+                section: 2,
+                alignment: 'left',
+                hidden: false,
+                daterank: '',
+                title: 'Front Cover',
+                date: '',
+                image: 'images/dominion-monarch/front-cover-outside-trim.png',
+                imageId: '',
+                caption: '',
+                description: '<p><span class="dropCap">T</span>his is a hardcover, two-ring journal measuring XX by XX. It includes XX entries that cover Lt. Sheesley\'s journey to England, from Camp Kilmer, NY, to New York Docks, Plymouth Bay, Plymouth Docks, Stone and Yarnfield. The entries are dated between XX and XX. The journal also includes pages of tecnical training notes and one sketch of a B-17. </p>',
+                location: {
+                    center: [-39.43332, 44.67845],
+                    zoom: 1,
+                    pitch: 0,
+                    bearing: 0
+                },
+                mapAnimation: 'flyTo',
+                rotateAnimation: false,
+                callback: '',
+                onChapterEnter: [
+                    {
+                        layer: 'journey',
+                        opacity: 1,
+                        duration: 300
+                    }
+                ],
+                onChapterExit: [
+                    {
+                        layer: 'journey',
+                        opacity: 0,
+                        duration: 300
+                    }
+                ]
+            },
         {
             id: 'new-york-docks',
             section: 2,
@@ -827,74 +897,28 @@ var config = {
             ]
         },
         {
-            id: 'mendlesham-airfield',
-            section: 3,
-            alignment: 'left',
+            id: 'break-2',
+            section: '',
+            alignment: 'full',
             hidden: false,
             daterank: '',
-            title: 'Mendlesham Airfield',
+            title: 'A Line A Day',
             date: '',
-            image: 'images/Mendelshamairfield-18jan47.png',
-            imageId: 'missions',
-            caption: 'Wikipedia',
-            description: '<p><span class="dropCap">8</span>th Airforce, 34th bomb group, 7th squadron. Other groups were also present before and during. Spends about four months total here. Plays basketball, goes to London, sees a play, attends church, receives and sends letters (?), ride a bike, and flies missions</p>',
-            location: {
-                center: [1.1210006854646852, 52.23269925011281],
-                zoom: 13,
-                pitch: 0,
-                bearing: 16
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: 'mendleshamMarker',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-        {
-            id: '35-missions',
-            section: 3,
-            alignment: 'left',
-            hidden: false,
-            daterank: '',
-            title: '35 Missions',
-            date: '',
-            image: 'images/missions-card-small.png',
-            imageId: 'idCardFront',
+            image: '',
+            imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">F</span>lies 35 missions over Germany. Some short, some long trips. Some repeated targets. Some taregets not hit. An accident. A recall.</p>',
+            description: '',
             location: {
-                center: [3.11114, 51.00934],
-                zoom: 3,
+                center: [-86.18510, 35.05642],
+                zoom: 4,
                 pitch: 0,
                 bearing: 0
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [
-                {
-                    layer: 'routes',
-                    opacity: 1,
-                    duration: 300
-                },
-                {
-                    layer: 'recall',
-                    opacity: 1,
-                    duration: 300
-                },
-            ],
-            onChapterExit: [
-                {
-                    layer: 'routes',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
-                    layer: 'recall',
-                    opacity: 0,
-                    duration: 300
-                },
-            ]
+            onChapterEnter: [],
+            onChapterExit: []
         },
         {
             id: 'a-line-a-day',
@@ -902,7 +926,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             daterank: '',
-            title: 'A Line A Day',
+            title: 'Front Cover',
             date: '',
             image: 'images/journal/front-cover-1.png',
             imageId: 'idCardFront',

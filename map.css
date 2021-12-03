@@ -236,7 +236,7 @@ img {
 }
 
 #header h1 {
-	font-family: 'IBM Plex Sans Condensed', sans-serif;
+	//font-family: 'IBM Plex Sans Condensed', sans-serif;
 	font-weight: 600;
 	padding: 60px 0px 30px;
 	font-size: 3em;
@@ -246,13 +246,13 @@ img {
 
 #header h2 {
 	padding-bottom: 15px;
-	opacity: 0.6;
+	//opacity: 0.6;
 	margin: 0;
 }
 
 #header p {
-	opacity: 0.6;
-	font-size: 1.25em;
+	//opacity: 0.6;
+	font-size: 2em;
 	font-weight: 700;
 	margin: 0;
 }
@@ -549,6 +549,20 @@ a[href*="break"] {
 	display: none;
 }
 
+#break-1 .light{
+	background-color: #7D7E69;
+	color: #fff;
+}
+
+#break-2 .light{
+	background-color: #846966;
+	color: #fff;
+}
+	
+#break-1 h3, #break-2 h3 {
+	font-size: 3em;
+}
+
 /* Fix issue on mobile browser where scroll breaks */
 .mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan,
 .mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan .mapboxgl-canvas {
@@ -803,10 +817,15 @@ a[href*="break"] {
 	
 	.centered,
 	.lefty,
-	.righty,
-	.fully {
+	.righty {
 		width: 90vw;
 		margin: 0 auto;
+	}
+	
+	.fully {
+		width: 100vw;
+		margin: 0 auto;
+		overflow-x: hidden;
 	}
 	
 	.step {
