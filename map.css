@@ -350,27 +350,24 @@ img {
 }
 
 #chapterListContainer {
-	position: sticky;
-	position: -webkit-sticky;
-	position: -moz-sticky;
-	position: -o-sticky;
-	position: -ms-sticky;
+	position: fixed;
 	top: 100px;
+	right: 0px;
 	float: right;
 	opacity: 1;
 	width: 220px;
 	max-height: 80vh;
-	overflow: auto;
+	overflow: hidden;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 	z-index: 9999;
 	pointer-events: none;
-	overflow-x: hidden;
 }
 
 #chapterListContainer.activeState {
 	pointer-events: auto;
 	opacity: 0.9;
+	overflow: auto;
 }
 
 .chapterListHeader {
@@ -486,12 +483,25 @@ img {
 }
 .fully {
 	width: 100%;
+	//min-height: 100vh;
 	margin: auto;
 }
 .light {
 	color: #1a1a1a;
 	background-color: #fafafa;
 }
+
+.fully .light {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	border-radius: 0px;
+	min-height: 100vh;
+	min-width: 90%;
+}
+
 .dark {
 	color: #fff;
 	background-color: #647D79;
