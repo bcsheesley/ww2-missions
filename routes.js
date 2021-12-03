@@ -34,7 +34,7 @@ var plymouthBay = [-4.156, 50.3266];
 var plymouthDock = [-4.1556, 50.3640];
 
 //Yarnfield Park
-var yarnfield = [-2.1965, 52.8950];
+var yarnfield = [-2.1990963667560663, 52.895682841527304];
  
 // Destinations
 var berlin = [13.404954, 52.520006];

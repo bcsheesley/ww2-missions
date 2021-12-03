@@ -59,7 +59,7 @@ li:first-of-type {
 .date {
 	margin-top: 0;
 	font-weight: 400;
-	//color: #666;;
+	display: block;
 }
 
 blockquote {

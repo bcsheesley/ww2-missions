@@ -201,7 +201,7 @@ var config = {
             image: 'images/dominion-monarch/19441022-trim-blur.png',
             imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in posuere orci. Aliquam dolor urna, efficitur eget sollicitudin et, mattis id enim. Aliquam in vulputate lectus. Aliquam nec varius mi. Nullam mauris lectus, laoreet vitae ante placerat, suscipit rutrum quam. In sollicitudin massa velit, in consectetur tortor molestie vitae. Nulla molestie iaculis tortor. Quisque non tortor orci. Phasellus fringilla nunc a lectus auctor, cursus euismod elit facilisis. Morbi feugiat neque sit amet dignissim sagittis.</p>',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">U</span>p for breakfast at 8:00. Ship left dock about 9:00. No one was allowed on deck but we looked out through our porthole. It was a nice day, but pretty cool. Water was pretty smooth all day & no one got sick. It would have been swell for flying. Counted 40 some ships in the convoy. Navy blimp overhead. Wonder if Mary is in N.Y.C. Played some chess & checkers with Brydge</p>',
             location: {
                 center: [-70.6691, 41.10970],
                 zoom: 6,
@@ -237,7 +237,7 @@ var config = {
             image: 'images/dominion-monarch/19441023-trim-blur.png',
             imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in posuere orci. Aliquam dolor urna, efficitur eget sollicitudin et, mattis id enim. Aliquam in vulputate lectus. Aliquam nec varius mi. Nullam mauris lectus, laoreet vitae ante placerat, suscipit rutrum quam. In sollicitudin massa velit, in consectetur tortor molestie vitae. Nulla molestie iaculis tortor. Quisque non tortor orci. Phasellus fringilla nunc a lectus auctor, cursus euismod elit facilisis. Morbi feugiat neque sit amet dignissim sagittis.</p>',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">A</span> nice day for sailing, -- not a cloud in the sky and quite warm. Navy blimp gone. A PBM (Martin Mariner) buzzed our convoy then disappeared. Rumor is that we are waiting for more boats from Boston. Some of the Engineers got sick, but the A.C. is in good shape. I first noticed the change in sunset & sunrise. At 7:30pm night had set in</p>',
             location: {
                 center: [-66.49730984863106, 43.09594080607482],
                 zoom: 5,
@@ -273,7 +273,7 @@ var config = {
             image: 'images/dominion-monarch/19441024-trim-blur.png',
             imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in posuere orci. Aliquam dolor urna, efficitur eget sollicitudin et, mattis id enim. Aliquam in vulputate lectus. Aliquam nec varius mi. Nullam mauris lectus, laoreet vitae ante placerat, suscipit rutrum quam. In sollicitudin massa velit, in consectetur tortor molestie vitae. Nulla molestie iaculis tortor. Quisque non tortor orci. Phasellus fringilla nunc a lectus auctor, cursus euismod elit facilisis. Morbi feugiat neque sit amet dignissim sagittis.</p>',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">W</span>eather was fine. Cumulus clouds passed over about noon, but left leaving the water the smoothest to date. The ships from Boston arrived and a PBY (Catalina) flew around us. I read some of the biography of Ethan Allen. Brydge & I played some checkers with him in the lead--revenge tomorrow! It certainly has been a beautiful trip--would be complete if Mary were along!!! We set the clock ahead one hour tonight.</p>',
             location: {
                 center: [-60.18472272639963, 45.59582421709126],
                 zoom: 4,
@@ -309,7 +309,7 @@ var config = {
             image: 'images/dominion-monarch/19441025-trim-blur.png',
             imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in posuere orci. Aliquam dolor urna, efficitur eget sollicitudin et, mattis id enim. Aliquam in vulputate lectus. Aliquam nec varius mi. Nullam mauris lectus, laoreet vitae ante placerat, suscipit rutrum quam. In sollicitudin massa velit, in consectetur tortor molestie vitae. Nulla molestie iaculis tortor. Quisque non tortor orci. Phasellus fringilla nunc a lectus auctor, cursus euismod elit facilisis. Morbi feugiat neque sit amet dignissim sagittis.</p>',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">T</span>he sea was a little more rough today. We set the clock ahead again on hour today. Rough weather is promised.</p>',
             location: {
                 center: [-53.63687116389963, 47.61823809916669],
                 zoom: 3,
@@ -345,7 +345,7 @@ var config = {
             image: 'images/dominion-monarch/19441026-trim-blur.png',
             imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in posuere orci. Aliquam dolor urna, efficitur eget sollicitudin et, mattis id enim. Aliquam in vulputate lectus. Aliquam nec varius mi. Nullam mauris lectus, laoreet vitae ante placerat, suscipit rutrum quam. In sollicitudin massa velit, in consectetur tortor molestie vitae. Nulla molestie iaculis tortor. Quisque non tortor orci. Phasellus fringilla nunc a lectus auctor, cursus euismod elit facilisis. Morbi feugiat neque sit amet dignissim sagittis.</p>',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">I</span>\'ve changed my mind about a trip like this for a honeymoon! Not so good. Some of the smaller boats are dipping their bows in the brine. Ours is fairly stable, but dips too much. I am sick.</p>',
             location: {
                 center: [-46.869293038899514, 49.25081403213443],
                 zoom: 2,
@@ -381,7 +381,7 @@ var config = {
             image: 'images/dominion-monarch/19441027-trim-blur.png',
             imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in posuere orci. Aliquam dolor urna, efficitur eget sollicitudin et, mattis id enim. Aliquam in vulputate lectus. Aliquam nec varius mi. Nullam mauris lectus, laoreet vitae ante placerat, suscipit rutrum quam. In sollicitudin massa velit, in consectetur tortor molestie vitae. Nulla molestie iaculis tortor. Quisque non tortor orci. Phasellus fringilla nunc a lectus auctor, cursus euismod elit facilisis. Morbi feugiat neque sit amet dignissim sagittis.</p>',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">I</span> was on detail in the enlisted mens quarters this morning from 5:00am to noon. What a time we had getting them up. In my mind they are very poor soldiers. I resolve to do something about it in my own crew. Some of them I had to give six invitations to get up and then had to stand there until they got up. I was pretty sick all day and ate very little.</p>',
             location: {
                 center: [-40.277496163899514, 50.328843938377474],
                 zoom: 2,
@@ -417,7 +417,7 @@ var config = {
             image: 'images/dominion-monarch/19441028-trim-blur.png',
             imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in posuere orci. Aliquam dolor urna, efficitur eget sollicitudin et, mattis id enim. Aliquam in vulputate lectus. Aliquam nec varius mi. Nullam mauris lectus, laoreet vitae ante placerat, suscipit rutrum quam. In sollicitudin massa velit, in consectetur tortor molestie vitae. Nulla molestie iaculis tortor. Quisque non tortor orci. Phasellus fringilla nunc a lectus auctor, cursus euismod elit facilisis. Morbi feugiat neque sit amet dignissim sagittis.</p>',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">I</span> feel pretty good today. The clock was moved up an hour after midnight and I didn\'t know it so I missed breakfast. Sure miss good American food. I\'ve just been thinking--no more ice cream or cold drinks no more ice. Fish, fish, fish--that\'s my present impression of the British food. I\'ve been looking over the English money system getting ready.</p>',
             location: {
                 center: [-33.20230085139934, 51.10787025644228],
                 zoom: 2,
@@ -453,7 +453,7 @@ var config = {
             image: 'images/dominion-monarch/19441029-trim-blur.png',
             imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in posuere orci. Aliquam dolor urna, efficitur eget sollicitudin et, mattis id enim. Aliquam in vulputate lectus. Aliquam nec varius mi. Nullam mauris lectus, laoreet vitae ante placerat, suscipit rutrum quam. In sollicitudin massa velit, in consectetur tortor molestie vitae. Nulla molestie iaculis tortor. Quisque non tortor orci. Phasellus fringilla nunc a lectus auctor, cursus euismod elit facilisis. Morbi feugiat neque sit amet dignissim sagittis.</p>',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">C</span>hurch was held in the officers lounge The clock was moved forward another hour.</p>',
             location: {
                 center: [-25.951324288899173, 51.382960620270325],
                 zoom: 2,
@@ -489,7 +489,7 @@ var config = {
             image: 'images/dominion-monarch/19441030-trim-blur.png',
             imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in posuere orci. Aliquam dolor urna, efficitur eget sollicitudin et, mattis id enim. Aliquam in vulputate lectus. Aliquam nec varius mi. Nullam mauris lectus, laoreet vitae ante placerat, suscipit rutrum quam. In sollicitudin massa velit, in consectetur tortor molestie vitae. Nulla molestie iaculis tortor. Quisque non tortor orci. Phasellus fringilla nunc a lectus auctor, cursus euismod elit facilisis. Morbi feugiat neque sit amet dignissim sagittis.</p>',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">T</span>his trip is getting awfully monotonous. We were told that we are going to Plymouth, England. We won\'t have more than 2 more days on ship. We changed our position from the front to the rear of the convoy today. The weather is cloudy & cold.</p>',
             location: {
                 center: [-18.78823835139906, 51.24562111169806],
                 zoom: 2,
@@ -525,7 +525,7 @@ var config = {
             image: 'images/dominion-monarch/19441031-trim-blur.png',
             imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in posuere orci. Aliquam dolor urna, efficitur eget sollicitudin et, mattis id enim. Aliquam in vulputate lectus. Aliquam nec varius mi. Nullam mauris lectus, laoreet vitae ante placerat, suscipit rutrum quam. In sollicitudin massa velit, in consectetur tortor molestie vitae. Nulla molestie iaculis tortor. Quisque non tortor orci. Phasellus fringilla nunc a lectus auctor, cursus euismod elit facilisis. Morbi feugiat neque sit amet dignissim sagittis.</p>',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">T</span>oday is pay day, but no pay today--have to wait until we land. The convoy has split up. I went on duty at E.M\'s quarters this morning last night from 2300 to 0500 with Lt. Brydge. The clock was set up another hour. Had a sandwich and coffee from Steward. Finished reading "The Christ of the American Road" by E. Stanley Jones.</p>',
             location: {
                 center: [-11.669097726398945, 50.664298274616186],
                 zoom: 5,
@@ -561,7 +561,7 @@ var config = {
             image: 'images/dominion-monarch/19441101-trim-blur.png',
             imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in posuere orci. Aliquam dolor urna, efficitur eget sollicitudin et, mattis id enim. Aliquam in vulputate lectus. Aliquam nec varius mi. Nullam mauris lectus, laoreet vitae ante placerat, suscipit rutrum quam. In sollicitudin massa velit, in consectetur tortor molestie vitae. Nulla molestie iaculis tortor. Quisque non tortor orci. Phasellus fringilla nunc a lectus auctor, cursus euismod elit facilisis. Morbi feugiat neque sit amet dignissim sagittis.</p>',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">O</span>ff duty at 0500--went to bed & awoke at 1100. Land sighted about 1400. Convoy split again. K rations for 3 meals issued. Clothes are packed ready to go. Land faded from view and night came on. Some thought it was Ireland. Tipped our waiter $2.00 & our stewart $1.00.</p>',
             location: {
                 center: [-5.6964, 49.8167],
                 zoom: 8,
@@ -597,7 +597,7 @@ var config = {
             image: 'images/dominion-monarch/19441102-trim-blur.png',
             imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in posuere orci. Aliquam dolor urna, efficitur eget sollicitudin et, mattis id enim. Aliquam in vulputate lectus. Aliquam nec varius mi. Nullam mauris lectus, laoreet vitae ante placerat, suscipit rutrum quam. In sollicitudin massa velit, in consectetur tortor molestie vitae. Nulla molestie iaculis tortor. Quisque non tortor orci. Phasellus fringilla nunc a lectus auctor, cursus euismod elit facilisis. Morbi feugiat neque sit amet dignissim sagittis.</p>',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">T</span>he ship was anchored at the mouth of the bay river waiting to move to Plymouth to unload. Fog was heavy until about 1300 & lifted exposing to view a beautiful country side & town. A couple hurricanes kept buzzing us all day & we watched (Smoley & I) a couple Sunderlands take off & land in the bay. A flock of destroyers moved by us up the river. A British band came aboard and played until 1900. The air marshall spoke to us. We were told that we wouldn\'t start to leave the boat until 1400 tomorrow.</p>',
             location: {
                 center: [-4.156, 50.3266],
                 zoom: 10,
@@ -633,7 +633,7 @@ var config = {
             image: 'images/dominion-monarch/19441103-trim-blur.png',
             imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in posuere orci. Aliquam dolor urna, efficitur eget sollicitudin et, mattis id enim. Aliquam in vulputate lectus. Aliquam nec varius mi. Nullam mauris lectus, laoreet vitae ante placerat, suscipit rutrum quam. In sollicitudin massa velit, in consectetur tortor molestie vitae. Nulla molestie iaculis tortor. Quisque non tortor orci. Phasellus fringilla nunc a lectus auctor, cursus euismod elit facilisis. Morbi feugiat neque sit amet dignissim sagittis.</p>',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">I</span> awoke with the sound of hymns and a preacher speaking over the broadcasting system. I liked it. After breakfast at 08:00 I discovered that we were moving up the river bay. At 10:00 we were tied to a dock. Some bomb ruins could be seen but the town looked to be in fair shape. Half the navy seems to be in this river. Destroyers, cruisers & battleships. A King George battleship is being repaired & a A.C. carrier also. This is said to be the 2nd transport in the harbor since the French coast has been cleared. (At breakfast a racial argument flared in which Lt. Brydge suffered severely.) The enlisted men on our crews left the boat at 10:00pm.</p>',
             location: {
                 center: [-4.1556, 50.3640],
                 zoom: 13,
@@ -659,19 +659,19 @@ var config = {
             ]
         },
         {
-            id: 'stone-yarnfield-pt1',
+            id: 'day-1-at-stone-p1',
             section: 2,
             alignment: 'left',
             hidden: false,
             daterank: '',
-            title: 'Stone (Yarnfield)',
-            date: '11/4/1944, pt. 1',
+            title: 'Day 1 at Stone, p. 1',
+            date: '11/4/1944',
             image: 'images/dominion-monarch/19441104-1-trim-blur.png',
             imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in posuere orci. Aliquam dolor urna, efficitur eget sollicitudin et, mattis id enim. Aliquam in vulputate lectus. Aliquam nec varius mi. Nullam mauris lectus, laoreet vitae ante placerat, suscipit rutrum quam. In sollicitudin massa velit, in consectetur tortor molestie vitae. Nulla molestie iaculis tortor. Quisque non tortor orci. Phasellus fringilla nunc a lectus auctor, cursus euismod elit facilisis. Morbi feugiat neque sit amet dignissim sagittis.</p>',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">A</span>t 0015 we left the boat and walked to a railroad where we boarded a train for the replacement center at Stone. Before the train pulled out the British navy gave us cups of coffee which wasn\'t drinkable and we ate our K ration breakfast. At 0900 I awoke, the train was rolling. At the rear of the train car I watched the country side--quite nice looking country. Farms very neat and every field in use. Towns not so appealing. Railroads are toy-like. Boxcars are very small. Passenger cars are quite comfortable. We arrived at Stone at 1400 and got in trucks which brought us to the camp. We were put into stone barracks shaped like an H. Poorly heated they are. The British [...]</p>',
             location: {
-                center: [-2.1965, 52.8950],
+                center: [-2.1990963667560663, 52.895682841527304],
                 zoom: 12,
                 pitch: 0,
                 bearing: 0
@@ -695,20 +695,92 @@ var config = {
             ]
         },
         {
-            id: 'stone-yarnfield-pt2',
+            id: 'day-1-at-stone-p2',
             section: 2,
             alignment: 'left',
             hidden: false,
             daterank: '',
-            title: 'Stone (Yarnfield)',
-            date: '11/4/1944, pt. 2',
+            title: 'Day 1 at Stone, p. 2',
+            date: '11/4/1944',
             image: 'images/dominion-monarch/19441104-2-trim-blur.png',
             imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">L</span>orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in posuere orci. Aliquam dolor urna, efficitur eget sollicitudin et, mattis id enim. Aliquam in vulputate lectus. Aliquam nec varius mi. Nullam mauris lectus, laoreet vitae ante placerat, suscipit rutrum quam. In sollicitudin massa velit, in consectetur tortor molestie vitae. Nulla molestie iaculis tortor. Quisque non tortor orci. Phasellus fringilla nunc a lectus auctor, cursus euismod elit facilisis. Morbi feugiat neque sit amet dignissim sagittis.</p>',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p>[...] call them "BLOCKS" & the whole camp is called a "HALL". We are in Beatty Hall, Block I, Room 16. I sent cablegrams to the folks & Mary. Missed my supper.</p>',
             location: {
-                center: [-2.1965, 52.8950],
-                zoom: 12,
+                center: [-2.1990963667560663, 52.895682841527304],
+                zoom: 15,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'yarnfieldMarker',
+            onChapterEnter: [
+                {
+                    layer: 'journey',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'journey',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: 'day-2-at-stone',
+            section: 2,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Day 2 at Stone',
+            date: '11/5/1944',
+            image: 'images/dominion-monarch/19441105-trim-blur.png',
+            imageId: '',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">B</span><p>rydge, Smoley & I went to church at 1100. Dinner was very good. While filling out pay voucher a fellow tapped me on the shoulder and asked me if I was from Houghton. It was Burlingame. He came over to my room and we talked for quite a while. Went to hymn sing at 1900 at Duncan Hall chapel. I\'m going to the officers club at 2200 to get cake and tea which they are supposed to give out.</p>',
+            location: {
+                center: [-2.1990963667560663, 52.895682841527304],
+                zoom: 15,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'yarnfieldMarker',
+            onChapterEnter: [
+                {
+                    layer: 'journey',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'journey',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: 'day-3-at-stone',
+            section: 2,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Day 3 at Stone',
+            date: '11/6/1944',
+            image: 'images/dominion-monarch/19441106-trim-blur.png',
+            imageId: '',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">W</span><p>e processed today – orientation lecture – gas lecture and physical exam. Played ball with Smoley & Brydge for a couple hours. Some fellows went out on pass tonight. Going for cake & coffee again.</p>',
+            location: {
+                center: [-2.1990963667560663, 52.895682841527304],
+                zoom: 15,
                 pitch: 0,
                 bearing: 0
             },
@@ -847,13 +919,13 @@ var config = {
             ]
         },
         {
-            id: '1-berlin-pt1',
+            id: '1-berlin-p1',
             section: 3,
             alignment: 'left',
             hidden: false,
             daterank: '1',
-            title: 'Berlin',
-            date: '12/5/1944, p. 1',
+            title: 'Berlin, p. 1',
+            date: '12/5/1944',
             image: 'images/journal/19441205-1-trim.png',
             imageId: 'dec5a',
             caption: '',
@@ -903,13 +975,13 @@ var config = {
             ]
         },
         {
-            id: '1-berlin-pt2',
+            id: '1-berlin-p2',
             section: 3,
             alignment: 'left',
             hidden: false,
             daterank: '1',
-            title: 'Berlin',
-            date: '12/5/1944, p. 2',
+            title: 'Berlin, p. 2',
+            date: '12/5/1944',
             image: 'images/journal/19441205-2-trim.png',
             imageId: 'dec5b',
             caption: '',
