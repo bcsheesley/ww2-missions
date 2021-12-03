@@ -1,7 +1,6 @@
 html {
 	scroll-behavior: smooth;
-	//scroll-padding-top: 100px;
-	scroll-padding: 100px 0 0 0;
+	//scroll-padding: 100px 0 0 0;
 }
 
 body {
@@ -350,7 +349,7 @@ img {
 }
 
 #chapterListContainer {
-	position: fixed;
+	position: sticky;
 	top: 100px;
 	right: 0px;
 	float: right;
@@ -544,6 +543,10 @@ img {
 
 #missionPulse:hover {
 	background-color: #fff;
+}
+
+a[href*="break"] {
+	display: none;
 }
 
 /* Fix issue on mobile browser where scroll breaks */
