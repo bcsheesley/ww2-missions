@@ -68,7 +68,6 @@ map.on('load', function() {
 						]
 					}
 				},
-				routeSea,
 				{
 					"type": "Feature",
 					"properties": {
@@ -119,6 +118,7 @@ map.on('load', function() {
 						]
 					}
 				},
+				routeSea,
 				{
 					"type": "Feature",
 					"properties": {
@@ -130,8 +130,8 @@ map.on('load', function() {
 						"coordinates": [
 							/* sea11 */
 							[
-								-5.6964,
-								49.8167
+								-8.382820088197718,
+								50.241322780820326
 							  ],
 							  [
 								-5.3696,

@@ -527,8 +527,8 @@ var config = {
             caption: '',
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">T</span>oday is pay day, but no pay today--have to wait until we land. The convoy has split up. I went on duty at E.M\'s quarters this morning last night from 2300 to 0500 with Lt. Brydge. The clock was set up another hour. Had a sandwich and coffee from Steward. Finished reading "The Christ of the American Road" by E. Stanley Jones.</p>',
             location: {
-                center: [-11.669097726398945, 50.664298274616186],
-                zoom: 5,
+                center: [-14.360748117024855, 50.935102571605825],
+                zoom: 3,
                 pitch: 0,
                 bearing: 0
             },
@@ -563,8 +563,8 @@ var config = {
             caption: '',
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">O</span>ff duty at 0500--went to bed & awoke at 1100. Land sighted about 1400. Convoy split again. K rations for 3 meals issued. Clothes are packed ready to go. Land faded from view and night came on. Some thought it was Ireland. Tipped our waiter $2.00 & our stewart $1.00.</p>',
             location: {
-                center: [-5.6964, 49.8167],
-                zoom: 8,
+                center: [-8.382820088197718, 50.241322780820326],
+                zoom: 5,
                 pitch: 0,
                 bearing: 0
             },
@@ -600,7 +600,7 @@ var config = {
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">T</span>he ship was anchored at the mouth of the bay river waiting to move to Plymouth to unload. Fog was heavy until about 1300 & lifted exposing to view a beautiful country side & town. A couple hurricanes kept buzzing us all day & we watched (Smoley & I) a couple Sunderlands take off & land in the bay. A flock of destroyers moved by us up the river. A British band came aboard and played until 1900. The air marshall spoke to us. We were told that we wouldn\'t start to leave the boat until 1400 tomorrow.</p>',
             location: {
                 center: [-4.156, 50.3266],
-                zoom: 10,
+                zoom: 9,
                 pitch: 0,
                 bearing: 0
             },
@@ -636,7 +636,7 @@ var config = {
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">I</span> awoke with the sound of hymns and a preacher speaking over the broadcasting system. I liked it. After breakfast at 08:00 I discovered that we were moving up the river bay. At 10:00 we were tied to a dock. Some bomb ruins could be seen but the town looked to be in fair shape. Half the navy seems to be in this river. Destroyers, cruisers & battleships. A King George battleship is being repaired & a A.C. carrier also. This is said to be the 2nd transport in the harbor since the French coast has been cleared. (At breakfast a racial argument flared in which Lt. Brydge suffered severely.) The enlisted men on our crews left the boat at 10:00pm.</p>',
             location: {
                 center: [-4.1556, 50.3640],
-                zoom: 13,
+                zoom: 12,
                 pitch: 0,
                 bearing: 0
             },
