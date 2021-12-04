@@ -8,7 +8,7 @@ var config = {
     title: 'The World War Ⅱ Journals',
     subtitle: 'of',
     byline: 'Lt. Byron E. Sheesley',
-    footer: 'Journal entry dates and targets align with official mission records of the 8th Air Force as well as individual flight records issued by the War Department now preserved in a small document archive saved by family members. Source: source citations, etc.',
+    footer: 'Source: source citations, etc.',
     chapters: [
         {
             id: 'about-this-map',
@@ -21,7 +21,7 @@ var config = {
             image: '',
             imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">L</span>t. Byron E. Sheesley kept two short journals while serving in the United States Army Air Forces (USAAF) during World War Ⅱ.</p><p>One journal documents his nearly two-week-long journey from Camp Kilmer, New Jersey to a USAAF replacement center in Staffordshire, England via troopship and train in late October and early November, 1944.</p><p>The other summarizes many of the 35 combat missions he flew over enemy targets in Germany as pilot of a B-17 heavy bomber between December 1944 and March 1945. It also describes aspects of his daily life on base and on pass. Sheesley was stationed in Mendlesham, England with the 7th Squadron of the 34th Bomb Group in the "Mighty" 8th Air Force.</p><p>Overall, both journals are written in a consice and matter-of-fact style. They are short on commentary. Given the pressures he faced, it\'s perhaps not surprising that only the most salient details made it onto the page.</p><p>That said, some entries are quite powerful and moving. For example, the 22-year-old pilot writes about an intense <a href="#1-berlin-pt1">first mission</a> to Berlin, where he had been sent by mistake as a "green crew" without the proper training. Similarly, after completing his <a href="#35-hanover">last mission</a> – a trip to Hanover, three-and-a-half months later – he expresses a mix of joy, relief, and determination to reunite with his fiancé, the 19-year-old Mary E. Clark: <blockquote>... Happy Day! No more flack, fighters, gas, oxygen or bomb runs to sweat out. Mary, here I come.</blockquote></p><p>This map connects entries in the two journals with the places they describe. <b>Scroll down to read more.</b></p>',
+            description: '<p><span class="dropCap">L</span>t. Byron E. Sheesley kept two short journals while serving in the United States Army Air Forces (USAAF) during World War Ⅱ.</p><p>One journal documents his nearly two-week-long journey from Camp Kilmer, New Jersey to a USAAF replacement center near Stone, England by troopship and train between late October and early November, 1944.</p><p>The other summarizes many of the 35 combat missions he flew over enemy targets in Germany as pilot of a B-17 heavy bomber between December 1944 and March 1945. It also describes aspects of his daily life on base and on pass. Sheesley was stationed in Mendlesham, England with the 7th Squadron of the 34th Bomb Group in the "Mighty" 8th Air Force.</p><p>In general, the journals were written in a consice and matter-of-fact style. That said, some entries are quite powerful and moving. For example, the 22-year-old pilot wrote about an intense <a href="#1-berlin-pt1">first mission</a> to Berlin where he was sent by mistake as a "green crew" without any combat experience. Similarly, after completing his <a href="#35-hanover">last mission</a> – a trip to Hanover, three-and-a-half months later – he expressed a mix of joy, relief, and determination to reunite with his fiancé, the 19-year-old Mary E. Clark: <blockquote>... Happy Day! No more flack, fighters, gas, oxygen or bomb runs to sweat out. Mary, here I come.</blockquote></p><p>This map connects entries in the two journals with the places they describe. <b>Scroll down to read more.</b></p>',
             location: {
                 center: [-95.96827, 39.03594],
                 zoom: 2,
@@ -40,7 +40,7 @@ var config = {
             alignment: 'full',
             hidden: false,
             daterank: '',
-            title: 'Background',
+            title: 'Context',
             date: '',
             image: '',
             imageId: '',
@@ -117,7 +117,7 @@ var config = {
             image: 'images/dominion-monarch4.jpg',
             imageId: 'dominion-monarch',
             caption: 'Alexander Turnbull Library',
-            description: '<p><span class="dropCap">D</span>eparts from NYC Harbor aboard the Dominion Monarch, pictured above, a cruise liner converted to troopship during the war. Arrives in Portsmouth, England after more than a week at sea. Travels by train to the town of Stone, Staffordshire, England, where the center is setup in nearby Yarnfield.</p>',
+            description: '<p><span class="dropCap">D</span>eparts from NYC Harbor aboard the Dominion Monarch, pictured above, a cruise liner converted to troopship during the war. Arrives in Portsmouth, England after more than a week at sea. Travels by train to the town of Stone, Staffordshire, England, where the center is setup in nearby Yarnfield. Entries in the Green Journal were written during this journey.</p>',
             location: {
                 center: [-39.43332, 44.67845],
                 zoom: 1,
@@ -153,7 +153,7 @@ var config = {
             image: 'images/Mendelshamairfield-18jan47.png',
             imageId: 'missions',
             caption: 'Wikipedia',
-            description: '<p><span class="dropCap">8</span>th Airforce, 34th bomb group, 7th squadron. Other groups were also present before and during. Spends about four months total here. Plays basketball, goes to London, sees a play, attends church, receives and sends letters (?), ride a bike, and flies missions</p>',
+            description: '<p><span class="dropCap">8</span>th Airforce, 34th bomb group, 7th squadron. Other groups were also present here before and during. Spends about four months total here. Plays basketball, goes to London, sees a play, attends church, receives and sends letters (?), ride a bike, and flies missions. This is where entries in the A Line A Day journal were written. The journal was a gift from Mary Sheesley, and on the front leaf has a quote from her, "".</p>',
             location: {
                 center: [1.1210006854646852, 52.23269925011281],
                 zoom: 13,
@@ -177,7 +177,7 @@ var config = {
             image: 'images/missions-card-small.png',
             imageId: 'idCardFront',
             caption: '',
-            description: '<p><span class="dropCap">F</span>lies 35 missions over Germany. Some short, some long trips. Some repeated targets. Some taregets not hit. An accident. A recall.</p>',
+            description: '<p><span class="dropCap">F</span>lies 35 missions over Germany. Some short, some long trips. Some repeated targets. Some taregets not hit. An accident. A recall.</p><p>The record on this index card matches dates in the journal and also aligns with official individual flight records that were issued to Lt. Sheesley by the War Department.</p>',
             location: {
                 center: [3.11114, 51.00934],
                 zoom: 3,
