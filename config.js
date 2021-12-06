@@ -21,7 +21,7 @@ var config = {
             image: '',
             imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">L</span>t. Byron E. Sheesley kept two short journals while serving in the United States Army Air Forces (USAAF) during World War Ⅱ.</p><p>One journal documents his nearly two-week-long journey from Camp Kilmer, New Jersey to a USAAF replacement center near Stone, England by troopship and train in late October and early November, 1944.</p><p>The other summarizes many of the 35 combat missions he flew over enemy targets in Germany as pilot of a B-17 heavy bomber between December 1944 and March 1945. It also describes aspects of his daily life on base and on pass. Sheesley was stationed in Mendlesham, England with the 7th Squadron of the 34th Bomb Group in the "Mighty" 8th Air Force.</p><p>The journals were written in a consice and matter-of-fact style that is full of details yet at times powerful and moving. For example, the 22-year-old pilot wrote about an intense <a href="#1-berlin-pt1">first mission</a> to Berlin where he was sent by mistake as a "green crew" without any combat experience. Similarly, after completing his <a href="#35-hanover">last mission</a> – a trip to Hanover, three-and-a-half months later – he expressed a mix of joy, relief, and determination to reunite with his fiancé, the 19-year-old Mary E. Clark: <blockquote>... Happy Day! No more flack, fighters, gas, oxygen or bomb runs to sweat out. Mary, here I come.</blockquote></p><p>This map connects entries in the two journals with the places they describe. <b>Scroll down to read more.</b></p>',
+            description: '<p><span class="dropCap">L</span>t. Byron E. Sheesley kept two short journals while serving in the United States Army Air Forces (USAAF) during World War Ⅱ.</p><p>One journal documents his nearly two-week-long journey from Camp Kilmer, New Jersey to a USAAF replacement center near Stone, England by troopship and train in late October and early November, 1944.</p><p>The other summarizes many of the 35 combat missions he flew over enemy targets in Germany as pilot of a B-17 heavy bomber between December 1944 and March 1945. It also describes aspects of his daily life on base and on pass. Sheesley was stationed in Mendlesham, England with the 7th Squadron of the 34th Bomb Group in the "Mighty" 8th Air Force.</p><p>The 22-year-old pilot wrote in a consice and matter-of-fact style. Entries are full of details and at times powerful and moving, like his description of an intense <a href="#1-berlin-p1">first mission</a> to Berlin where his crew was sent by mistake and barely made it back alive, or his expression of joy, relief, and determination to reunite with his fiancé, 19-year-old Mary E. Clark, after completing his <a href="#35-hanover">last mission</a>: <blockquote>... Happy Day! No more flack, fighters, gas, oxygen or bomb runs to sweat out. Mary, here I come.</blockquote></p><p>This map connects entries in the two journals with the places they describe. <b>Scroll down to read more.</b></p>',
             location: {
                 center: [-95.96827, 39.03594],
                 zoom: 2,
@@ -45,7 +45,7 @@ var config = {
             image: '',
             imageId: '',
             caption: '',
-            description: '',
+            description: '<p>Lt. Byron E. Sheesley</p><p>Pilot Training</p><p>Journey to England</p><p>Mendlesham Airfield</p><p>35 Missions<p>',
             location: {
                 center: [-95.96827, 39.03594],
                 zoom: 2,
@@ -223,7 +223,7 @@ var config = {
             image: '',
             imageId: '',
             caption: '',
-            description: '',
+            description: '<p>17 entries<br>10/21/1944 – 11/6/1944</br></p>',
             location: {
                 center: [3.11114, 51.00934],
                 zoom: 3,
@@ -271,7 +271,43 @@ var config = {
                         duration: 300
                     }
                 ]
-            },
+        },
+    {
+                id: 'the-green-journal-b17-sketch',
+                section: 2,
+                alignment: 'left',
+                hidden: false,
+                daterank: '',
+                title: 'Page Divider',
+                date: '',
+                image: 'images/dominion-monarch/drawing-b17-trim.png',
+                imageId: '',
+                caption: '',
+                description: '<p><span class="dropCap">U</span>ndated sketch of a B-17 bomber drawn on an unlined page in the journal that serves as a section divider.',
+                location: {
+                    center: [-39.43332, 44.67845],
+                    zoom: 1,
+                    pitch: 0,
+                    bearing: 0
+                },
+                mapAnimation: 'flyTo',
+                rotateAnimation: false,
+                callback: '',
+                onChapterEnter: [
+                    {
+                        layer: 'journey',
+                        opacity: 1,
+                        duration: 300
+                    }
+                ],
+                onChapterExit: [
+                    {
+                        layer: 'journey',
+                        opacity: 0,
+                        duration: 300
+                    }
+                ]
+        },
         {
             id: 'new-york-docks',
             section: 2,
@@ -931,7 +967,7 @@ var config = {
             image: '',
             imageId: '',
             caption: '',
-            description: '',
+            description: '<p>78 entries<br>12/5/1944 – 5/14/1945</br></p>',
             location: {
                 center: [-86.18510, 35.05642],
                 zoom: 4,
@@ -956,6 +992,52 @@ var config = {
             imageId: 'idCardFront',
             caption: '',
             description: '<p><span class="dropCap">B</span>egins with a surprise mission, battles weather, cold, exhaustion, equipment, oxygen, nerves, flack, uncertainty, longing for Mary. Experiences scary moments and moments of comfort in the sky. Receives honors (but never recorded in these pages).</p>',
+            location: {
+                center: [3.11114, 51.00934],
+                zoom: 3,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+            ]
+        },
+        {
+            id: 'a-line-a-day-front-leaf',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Front Leaf',
+            date: '',
+            image: 'images/journal/front-leaf-right-trim.png',
+            imageId: '',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p>To Byron<br>from Mary</br></p><p>Remember dear each day you write brings you nearer the day when we\'ll be together again.</p><p>Overseas Christmas October 15, 1944</p>',
             location: {
                 center: [3.11114, 51.00934],
                 zoom: 3,
