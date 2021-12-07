@@ -40,7 +40,7 @@ var config = {
             alignment: 'full',
             hidden: false,
             daterank: '',
-            title: 'Context',
+            title: 'Background',
             date: '',
             image: '',
             imageId: '',
@@ -69,7 +69,7 @@ var config = {
             image: 'images/id-card-front-trim.png',
             imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">B</span>yron E. Sheesley was born July 11, 1922 to parents Earl Sylvester and Ethel (Eckelberger) Sheesley. Along with Robert and Richard, he was the middle child of three boys. The Sheesley\'s lived at 324 Lincoln Avenue, Struthers, Ohio near the larger city of Youngstown. In 1942, Byron was employed as a payroll clerk by Youngstown Sheet and Tube Company. He then attended Houghton College, in Houghton, New York, and majored in Religious Education. Midway through Sophomore year, on February 28, 1943, he paused his education, entered active duty, and begin to train as a pilot with the Army Air Force.</p>',
+            description: '<p><span class="dropCap">B</span>yron E. Sheesley was born July 11, 1922 to parents Earl Sylvester and Ethel (Eckelberger) Sheesley. He was the middle child of three boys that included brothers Robert and Richard. The Sheesley family lived at 324 Lincoln Avenue, Struthers, Ohio near the larger city of Youngstown. In 1942, Byron was employed as a payroll clerk by Youngstown Sheet and Tube Company. He then attended Houghton College, in Houghton, New York, and majored in Religious Education. On February 28, 1943, at just 21 years of age and halfway through his sophomore year in college, he entered active duty with the Army Air Force and began training to become a pilot.</p>',
             location: {
                 center: [-80.60282, 41.05850],
                 zoom: 7,
@@ -223,7 +223,7 @@ var config = {
             image: '',
             imageId: '',
             caption: '',
-            description: '<p>17 entries<br>10/21/1944 – 11/6/1944</br></p>',
+            description: '<p><b>17 entries</b><br>10/21/1944 – 11/6/1944</br></p>',
             location: {
                 center: [3.11114, 51.00934],
                 zoom: 3,
@@ -967,7 +967,7 @@ var config = {
             image: '',
             imageId: '',
             caption: '',
-            description: '<p>78 entries<br>12/5/1944 – 5/14/1945</br></p>',
+            description: '<p><b>78 entries</b><br>12/5/1944 – 5/14/1945</br></p>',
             location: {
                 center: [-86.18510, 35.05642],
                 zoom: 4,
@@ -1192,10 +1192,10 @@ var config = {
             daterank: '5',
             title: 'Kassel',
             date: '12/30/1944',
-            image: 'images/journal/19441230.jpeg',
+            image: 'images/journal/19441230-trim.png',
             imageId: 'dec30',
             caption: '',
-            description: '<span class="dropQuote">&ldquo;</span><p><span class="dropCap">B</span> riefing this morning was at 04:00. Our target for today was a marshalling yard at <s>Castle</s> Kassel, Germany. We took off and hit a low ceiling and climbed in solid overcast up to 11,000 ft. Our position was 4–3 in High squadron. Overcast 10/10 over target—results not observed. Flack was dense and we got our first hits. Our gas tank in right wing had to be replaced upon return. Oxygen system was leaking and was empty as we reached 10,000\' on descending—sweating it out. Visibility very poor upon return—we made 6 passes at field before getting in. Went to bed at 20:00 hours.</p>',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">B</span>riefing this morning was at 04:00. Our target for today was a marshalling yard at <s>Castle</s> Kassel, Germany. We took off and hit a low ceiling and climbed in solid overcast up to 11,000 ft. Our position was 4–3 in High squadron. Overcast 10/10 over target—results not observed. Flack was dense and we got our first hits. Our gas tank in right wing had to be replaced upon return. Oxygen system was leaking and was empty as we reached 10,000\' on descending—sweating it out. Visibility very poor upon return—we made 6 passes at field before getting in. Went to bed at 20:00 hours.</p>',
             location: {
                 center: [9.480, 51.312],
                 zoom: 12,
@@ -1235,6 +1235,62 @@ var config = {
                 },
                 {
                     layer: 'routeKassel',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '6-misburg',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '6',
+            title: 'Misburg',
+            date: '12/31/1944',
+            image: 'images/journal/19441231-trim.png',
+            imageId: 'dec31',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">I</span> was awakened at 02:30 for 04:00 briefing, went back asleep and luckily awoke again at 03:30, rushed around & made it. The target for today was an oil refinery at Misberg near Hanover. It was snowing at take off and I flew 30 min. A.I. to a pre dawn assembly. Weather was fine—visual over target and we had a good hit. One ship in [at] high squadron was hit and caught fire and one blew up at R.P. of another group. Furtado\'s guns went off badly damaging a ship. We will probably lose him from crew. We were given a new ship tonight —haven\'t seen it yet. I went to church with Brydge and I stayed for communion. Mission today was #6 and we flew in position 2–1.</p>',
+            location: {
+                center: [9.833661, 52.391297],
+                zoom: 12,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'misburgMarker',
+            onChapterEnter: [
+            {
+                layer: 'routes',
+                opacity: 1,
+                duration: 300
+            },
+            {
+                layer: 'recall',
+                opacity: 1,
+                duration: 300
+            },
+            {
+                layer: 'routeMisburg',
+                opacity: 1,
+                duration: 300
+            }
+        ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeMisburg',
                     opacity: 0,
                     duration: 300
                 }

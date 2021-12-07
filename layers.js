@@ -382,7 +382,7 @@ map.on('load', function() {
 			'paint': {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
-				'line-color': '#CDA076'
+				'line-color': 'rgba(255,255,133,1)'
 			},
 			'layout': {
 				'line-cap': 'round'
