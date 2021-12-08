@@ -463,9 +463,10 @@ map.on("load", function() {
         }
     
         var highlight = response.element.id
-        var test = 'a[href="#' + highlight + '"]';
-        document.querySelector(test).style.color = "red";
-        console.log(test);
+        var highlightID = 'a[href="#' + highlight + '"]';
+        document.querySelector(highlightID).style.color = 'rgba(255,255,133,1)';
+        document.querySelector(highlightID).style.fontWeight = '700';
+        //console.log(highlightID);
     })
     .onStepExit(response => {
         var chapter = config.chapters.find(chap => chap.id === response.element.id);
@@ -490,9 +491,9 @@ map.on("load", function() {
         //flash.classList.remove('active');
         
         var highlight = response.element.id
-        var test = 'a[href="#' + highlight + '"]';
-        document.querySelector(test).style.color = "white";
-        console.log(test);
+        var highlightID = 'a[href="#' + highlight + '"]';
+        document.querySelector(highlightID).style.color = "white";
+        document.querySelector(highlightID).style.fontWeight = '400';
     });
 });
 
