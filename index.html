@@ -620,19 +620,20 @@ function berlinMarker() {
 
 function kasselMarker() {
   missionMarker.setLngLat(kassel).addTo(map);
-    /*
-    map.once('moveend',() => {
-        if (checkbox.checked == true){
-          shake.classList.add('shake');
-          flash.classList.add('active');
-        }
-    });
-    */
 };
 
 function misburgMarker() {
   //missionMarker.setLngLat(misburg).addTo(map);
   missionMarker.setLngLat([9.833661, 52.391297]).addTo(map);
+};
+
+function pforzheimMarker() {
+  missionMarker.setLngLat(pforzheim).addTo(map);
+};
+
+function bielefeldMarker() {
+  //missionMarker.setLngLat(misburg).addTo(map);
+  missionMarker.setLngLat(bielefeld).addTo(map);
 };
 
 /*

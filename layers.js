@@ -248,9 +248,7 @@ map.on('load', function() {
 		'filter': ['!in','name','Recall'],
 		'paint': {
 			'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
-			//'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
 			'line-opacity': 0,
-			//'line-color': '#CDA076'
 			// The feature-state dependent line-color expression will render
 			// the color when a feature's hover state is set to true
 			'line-color': [
@@ -398,7 +396,7 @@ map.on('load', function() {
 			'paint': {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
-				'line-color': '#CDA076'
+				'line-color': 'rgba(255,255,133,1)'
 			},
 			'layout': {
 				'line-cap': 'round'
@@ -414,7 +412,7 @@ map.on('load', function() {
 			'paint': {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
-				'line-color': '#CDA076'
+				'line-color': 'rgba(255,255,133,1)'
 			},
 			'layout': {
 				'line-cap': 'round'
@@ -430,7 +428,7 @@ map.on('load', function() {
 			'paint': {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
-				'line-color': '#CDA076'
+				'line-color': 'rgba(255,255,133,1)'
 			},
 			'layout': {
 				'line-cap': 'round'
@@ -446,7 +444,7 @@ map.on('load', function() {
 			'paint': {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
-				'line-color': '#CDA076'
+				'line-color': 'rgba(255,255,133,1)'
 			},
 			'layout': {
 				'line-cap': 'round'
@@ -462,7 +460,7 @@ map.on('load', function() {
 			'paint': {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
-				'line-color': '#CDA076'
+				'line-color': 'rgba(255,255,133,1)'
 			},
 			'layout': {
 				'line-cap': 'round'
@@ -478,7 +476,7 @@ map.on('load', function() {
 			'paint': {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
-				'line-color': '#CDA076'
+				'line-color': 'rgba(255,255,133,1)'
 			},
 			'layout': {
 				'line-cap': 'round'
@@ -494,7 +492,7 @@ map.on('load', function() {
 			'paint': {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
-				'line-color': '#CDA076'
+				'line-color': 'rgba(255,255,133,1)'
 			},
 			'layout': {
 				'line-cap': 'round'
@@ -510,7 +508,7 @@ map.on('load', function() {
 			'paint': {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
-				'line-color': '#CDA076'
+				'line-color': 'rgba(255,255,133,1)'
 			},
 			'layout': {
 				'line-cap': 'round'
@@ -526,7 +524,7 @@ map.on('load', function() {
 			'paint': {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
-				'line-color': '#CDA076'
+				'line-color': 'rgba(255,255,133,1)'
 			},
 			'layout': {
 				'line-cap': 'round'
@@ -542,7 +540,7 @@ map.on('load', function() {
 			'paint': {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
-				'line-color': '#CDA076'
+				'line-color': 'rgba(255,255,133,1)'
 			},
 			'layout': {
 				'line-cap': 'round'
@@ -558,7 +556,7 @@ map.on('load', function() {
 			'paint': {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
-				'line-color': '#CDA076'
+				'line-color': 'rgba(255,255,133,1)'
 			},
 			'layout': {
 				'line-cap': 'round'
@@ -574,7 +572,7 @@ map.on('load', function() {
 			'paint': {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
-				'line-color': '#CDA076'
+				'line-color': 'rgba(255,255,133,1)'
 			},
 			'layout': {
 				'line-cap': 'round'
@@ -590,7 +588,7 @@ map.on('load', function() {
 			'paint': {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
-				'line-color': '#CDA076'
+				'line-color': 'rgba(255,255,133,1)'
 			},
 			'layout': {
 				'line-cap': 'round'
@@ -606,7 +604,7 @@ map.on('load', function() {
 			'paint': {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
-				'line-color': '#CDA076'
+				'line-color': 'rgba(255,255,133,1)'
 			},
 			'layout': {
 				'line-cap': 'round'
@@ -622,7 +620,7 @@ map.on('load', function() {
 			'paint': {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
-				'line-color': '#CDA076'
+				'line-color': 'rgba(255,255,133,1)'
 			},
 			'layout': {
 				'line-cap': 'round'
@@ -638,7 +636,7 @@ map.on('load', function() {
 			'paint': {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
-				'line-color': '#CDA076'
+				'line-color': 'rgba(255,255,133,1)'
 			},
 			'layout': {
 				'line-cap': 'round'
@@ -654,7 +652,7 @@ map.on('load', function() {
 			'paint': {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
-				'line-color': '#CDA076'
+				'line-color': 'rgba(255,255,133,1)'
 			},
 			'layout': {
 				'line-cap': 'round'
@@ -670,7 +668,7 @@ map.on('load', function() {
 			'paint': {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
-				'line-color': '#CDA076'
+				'line-color': 'rgba(255,255,133,1)'
 			},
 			'layout': {
 				'line-cap': 'round'
@@ -686,7 +684,7 @@ map.on('load', function() {
 			'paint': {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
-				'line-color': '#CDA076'
+				'line-color': 'rgba(255,255,133,1)'
 			},
 			'layout': {
 				'line-cap': 'round'
@@ -702,7 +700,7 @@ map.on('load', function() {
 			'paint': {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
-				'line-color': '#CDA076'
+				'line-color': 'rgba(255,255,133,1)'
 			},
 			'layout': {
 				'line-cap': 'round'
@@ -718,7 +716,7 @@ map.on('load', function() {
 			'paint': {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
-				'line-color': '#CDA076'
+				'line-color': 'rgba(255,255,133,1)'
 			},
 			'layout': {
 				'line-cap': 'round'
@@ -734,7 +732,7 @@ map.on('load', function() {
 			'paint': {
 				'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 				'line-opacity': 0,
-				'line-color': '#CDA076'
+				'line-color': 'rgba(255,255,133,1)'
 			},
 			'layout': {
 				'line-cap': 'round'
@@ -750,7 +748,7 @@ map.on('load', function() {
 		'paint': {
 			'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
 			'line-opacity': 0,
-			'line-color': '#CDA076',
+			'line-color': 'rgba(255,255,133,1)',
 			'line-dasharray': [2,2]
 		}
 	},

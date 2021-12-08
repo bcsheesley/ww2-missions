@@ -21,7 +21,7 @@ var config = {
             image: '',
             imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">L</span>t. Byron E. Sheesley kept two short journals while serving in the United States Army Air Forces (USAAF) during World War Ⅱ.</p><p>One journal documents his nearly two-week-long journey from Camp Kilmer, New Jersey to a USAAF replacement center near Stone, England by troopship and train in late October and early November, 1944.</p><p>The other summarizes many of the 35 combat missions he flew over enemy targets in Germany as pilot of a B-17 heavy bomber between December 1944 and March 1945. It also describes aspects of his daily life on base and on pass. Sheesley was stationed in Mendlesham, England with the 7th Squadron of the 34th Bomb Group in the "Mighty" 8th Air Force.</p><p>The 22-year-old pilot wrote in a consice and matter-of-fact style. Entries are full of details and at times powerful and moving, like his description of an intense <a href="#1-berlin-p1">first mission</a> to Berlin where his crew was sent by mistake and barely made it back alive, or his expression of joy, relief, and determination to reunite with his fiancé, 19-year-old Mary E. Clark, after completing his <a href="#35-hanover">last mission</a>: <blockquote>... Happy Day! No more flack, fighters, gas, oxygen or bomb runs to sweat out. Mary, here I come.</blockquote></p><p>This map connects entries in the two journals with the places they describe. <b>Scroll down to read more.</b></p>',
+            description: '<p><span class="dropCap">L</span>t. Byron E. Sheesley kept two short journals while serving in the United States Army Air Forces (USAAF) during World War Ⅱ.</p><p>One journal documents his nearly two-week-long journey from Camp Kilmer, New Jersey to a USAAF replacement center near Stone, England by troopship and train in late October and early November, 1944.</p><p>The other summarizes many of the 35 combat missions he flew over enemy targets in Germany as pilot of a B-17 heavy bomber between December 1944 and March 1945. It also describes aspects of his daily life on base and on pass. Sheesley was stationed in Mendlesham, England with the 7th Squadron of the 34th Bomb Group in the "Mighty" 8th Air Force.</p><p>Most entries are concise and matter-of-fact. They are full of detail about people and places, bomber formations and targets, weather conditions and flack, as well as playing games, riding bikes, doing laundry, eating meals, attending chapel, and reading books.</p><p>Some, however, are particularly powerful and moving. The most notable example is the description of an intense <a href="#1-berlin-p1">first mission</a> to Berlin where his crew was sent by mistake and barely made it back alive. In another entry, his relief and determination to reunite with his fiancé, Mary E. Clark, after completing his <a href="#35-hanover">last mission</a>, is undeniably heartening: <blockquote>... Happy Day! No more flack, fighters, gas, oxygen or bomb runs to sweat out. Mary, here I come.</blockquote></p><p>This map connects entries in the two journals with the places they describe. <b>Scroll down to read more.</b></p>',
             location: {
                 center: [-95.96827, 39.03594],
                 zoom: 2,
@@ -40,8 +40,8 @@ var config = {
             alignment: 'full',
             hidden: false,
             daterank: '',
-            title: 'Background',
-            date: '',
+            title: 'Part 1',
+            date: 'Background',
             image: '',
             imageId: '',
             caption: '',
@@ -218,8 +218,8 @@ var config = {
             alignment: 'full',
             hidden: false,
             daterank: '',
-            title: 'The Green Journal',
-            date: '',
+            title: 'Part 2',
+            date: 'The Green Journal',
             image: '',
             imageId: '',
             caption: '',
@@ -278,7 +278,7 @@ var config = {
                 alignment: 'left',
                 hidden: false,
                 daterank: '',
-                title: 'Page Divider',
+                title: 'B-17 Sketch',
                 date: '',
                 image: 'images/dominion-monarch/drawing-b17-trim.png',
                 imageId: '',
@@ -962,8 +962,8 @@ var config = {
             alignment: 'full',
             hidden: false,
             daterank: '',
-            title: 'A Line A Day',
-            date: '',
+            title: 'Part 3',
+            date: 'A Line A Day',
             image: '',
             imageId: '',
             caption: '',
@@ -1032,7 +1032,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             daterank: '',
-            title: 'Front Leaf',
+            title: 'Dedication Page',
             date: '',
             image: 'images/journal/front-leaf-right-trim.png',
             imageId: '',
@@ -1079,9 +1079,9 @@ var config = {
             hidden: false,
             daterank: '1',
             title: 'Berlin, p. 1',
-            date: '12/5/1944',
+            date: 'Tuesday, 12/5/1944',
             image: 'images/journal/19441205-1-trim.png',
-            imageId: 'dec5a',
+            imageId: 'dec05a',
             caption: '',
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">I</span> was awakened at 0400 expecting to ride as copilot for my 1st mission. At the briefing block I was surprised, alarmed and frightened when I learned that we would go as a crew and I didn\'t know the score at all and had never flown above 20,000 ft. In a daze we went to our ship and somehow got ready and took off. After what seemed ages the formation got together in a pre-dawn assembly and away we went for BERLIN.</p><p>On the climb we stayed right in. Then we leveled off for the run in and it happened. That which is most disastrous happened—we fell behind. Opening her wide open we oh! so slowly crept back up. Come the IP and it happened again. I took over the ship again—the bombays were open—target just ahead—we had to get back in! If fighters hit we would have been sunk.</p><p>All our hearts were pounding—nerves at the break point-sweat rolling at 40° below. I quickly turned on the emergency turbo and the engines were giving all they had—they shook and shuddered and whined as if to say "we can\'t take this long." We were pulling 54" and I wondered how long those engines would hold. We just didn\'t seem to gain a bit, but kept falling back & dropping.</p><p>Finally we were down with the low element when we stopped losing. I uttered a little prayer and as a plant grows [...]</p>',
             location: {
@@ -1135,9 +1135,9 @@ var config = {
             hidden: false,
             daterank: '1',
             title: 'Berlin, p. 2',
-            date: '12/5/1944',
+            date: 'Tuesday, 12/5/1944',
             image: 'images/journal/19441205-2-trim.png',
-            imageId: 'dec5b',
+            imageId: 'dec05b',
             caption: '',
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p>[...] the airspeed moved to 140, then 141, then 142; it seemed to stop and my heart seemed to stop then it moved to 145 and we began to move up again. Carefully I lifted her up as we gained on our lead. Just as we dropped the bombs we got back in place, but low.</p><p>That was it—the quick turn to escape flack and we were homeward bound. The 10 minutes from the IP to the target were the longest and most tense, exhausting ones of my life. At the Rally point I looked down just in time to see a lone B-17 spin down through the clouds below.</p><p>When we landed the squadron C.O. and all were there to meet us. Then we realized that, as I suspected, we had been sent by mistake—a green crew. They didn\'t think we would make it—we weren\'t even operational yet. "We had it!" Brydge was so frightened he made only 3 entries in his log: "(1) took off (2) Bombs away (3) landed." The hot cocoa sure tasted good. Next day we went on pass and sure needed it!</p>',
             location: {
@@ -1191,7 +1191,7 @@ var config = {
             hidden: false,
             daterank: '5',
             title: 'Kassel',
-            date: '12/30/1944',
+            date: 'Saturday, 12/30/1944',
             image: 'images/journal/19441230-trim.png',
             imageId: 'dec30',
             caption: '',
@@ -1247,7 +1247,7 @@ var config = {
             hidden: false,
             daterank: '6',
             title: 'Misburg',
-            date: '12/31/1944',
+            date: 'Sunday, 12/31/1944',
             image: 'images/journal/19441231-trim.png',
             imageId: 'dec31',
             caption: '',
@@ -1295,6 +1295,286 @@ var config = {
                     duration: 300
                 }
             ]
+        },
+        {
+            id: '19450101',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Mendlesham Airfield',
+            date: 'Monday, 1/1/1945',
+            image: 'images/journal/19450101-trim.png',
+            imageId: 'jan01',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">W</span>e sat on the ground today. Furtado was taken from the crew and put in the motor pool. I sure feel bad about it. Turkey dinner today.</p>',
+            location: {
+                center: [1.1210006854646852, 52.23269925011281],
+                zoom: 13,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: '19450102',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Mendlesham Airfield',
+            date: 'Tuesday, 1/2/1945',
+            image: 'images/journal/19450102-trim.png',
+            imageId: 'jan02',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">G</span>rounded again. Recommended Stevens and Bulis for Tech Sarg. Heard that Hoffman is missing from yesterday. He never met the formation—no one knows a thing about him—swell guy.</p>',
+            location: {
+                center: [1.1210006854646852, 52.23269925011281],
+                zoom: 13,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: '19450103',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '7',
+            title: 'Pforzheim',
+            date: 'Wednesday, 1/3/1945',
+            image: 'images/journal/19450103-trim.png',
+            imageId: 'jan03',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">B</span>riefing was early as usual and today it was Prozeheim [Pforzheim]. It was a long haul, but we didn\'t see a speck of flack. We flew our new plane today and 1 1/2 hours before target the oxygen back of the bombay began to leak out and all except the ball G. had to ride the rest of the way on the bottle. The plane is fine flying though. We had a new ball gunner.</p>',
+            location: {
+                center: [8.694629, 48.892186],
+                zoom: 12,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'pforzheimMarker',
+            onChapterEnter: [
+            {
+                layer: 'routes',
+                opacity: 1,
+                duration: 300
+            },
+            {
+                layer: 'recall',
+                opacity: 1,
+                duration: 300
+            },
+            {
+                layer: 'routePforzheim',
+                opacity: 1,
+                duration: 300
+            }
+        ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routePforzheim',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450104',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Mendlesham Airfield',
+            date: 'Thursday, 1/4/1945',
+            image: 'images/journal/19450104-trim.png',
+            imageId: 'jan04',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">S</span>tood down for training, I flew co-pilot for Lt. Col. Lee Bally taking a McTaggart crew to pick up a new ship. Got a package from Mary. The picture was in it (her picture).</p>',
+            location: {
+                center: [1.1210006854646852, 52.23269925011281],
+                zoom: 13,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: '19450105',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Mendlesham Airfield',
+            date: 'Friday, 1/5/1945',
+            image: 'images/journal/19450105-trim.png',
+            imageId: 'jan05',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">S</span>tood down for training and flew practice mission. We flew 3–1 position. It sure was a mess. I took my laundry to "Mom at Magpie. A new crew overshot a landing on runway 28 and wrecked a new B-17. That makes 2 of them across that road in a month.</p>',
+            location: {
+                center: [1.1210006854646852, 52.23269925011281],
+                zoom: 13,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: '19450106',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Mendlesham Airfield',
+            date: 'Saturday, 1/6/1945',
+            image: 'images/journal/19450106-trim.png',
+            imageId: 'jan06',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">U</span>p for a mission, but it was scrubbed before we started engines. Back to sack we went until noon—missed ground school.</p>',
+            location: {
+                center: [1.1210006854646852, 52.23269925011281],
+                zoom: 13,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: '19450107',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '8',
+            title: 'Bielefeld',
+            date: 'Sunday, 1/7/1945',
+            image: 'images/journal/19450107-trim.png',
+            imageId: 'jan07',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">B</span>riefing at 0500. We took 6x1000 lb. bombs to Bielefeld to get a bridge but cloud cover made us hit rail station in town instead. We flew 3–2 on Mowers wing. It was #2 in our new plane and everything went fine. We had a ball gunner who was new & he was a little nervous. Church at 1800.</p>',
+            location: {
+                center: [8.532471, 52.030229],
+                zoom: 12,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'bielefeldMarker',
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeBielefeld',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeBielefeld',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450108',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Mendlesham Airfield',
+            date: 'Monday, 1/8/1945',
+            image: 'images/journal/19450108-trim.png',
+            imageId: 'jan08',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">W</span>ent to bed alerted, but it was scrubbed at 0200. Cleaned up our stove and house cleaned in general. Made curtains for my boxes and overhauled my razor at bomb sight maintenance vault. It snowed today and it stayed with us. It sure is cold.</p>',
+            location: {
+                center: [1.1210006854646852, 52.23269925011281],
+                zoom: 13,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: '19450109',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Mendlesham Airfield',
+            date: 'Tuesday, 1/9/1945',
+            image: 'images/journal/19450109-trim.png',
+            imageId: 'jan09',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">S</span>tood down for training. Had Squadron meeting. There was a two inch snow cover all over this morning. Reminded me of winter at home. Brydge biked to Magpie for bike spokes & a wheel. Roads were icy and Brydge fell 5 times—NICELY—me once.</p>',
+            location: {
+                center: [1.1210006854646852, 52.23269925011281],
+                zoom: 13,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [],
+            onChapterExit: []
         }
     ]
 };

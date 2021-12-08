@@ -1,5 +1,5 @@
 html {
-	scroll-behavior: smooth;
+	//scroll-behavior: smooth;
 	scroll-padding: 100px 0 0 0;
 }
 
@@ -514,14 +514,14 @@ img {
 
 #missionPulse {
 	background-color: rgba(0,0,0,1);
-	width: 20px;
-	height: 20px;
+	width: 40px;
+	height: 40px;
 	border-radius: 50%;
 	border: 2px solid rgba(235,235,235,1);
 	cursor: auto;
-	opacity: 0.8;
+	opacity: 0.6;
 	transform: scale(1);
-	box-shadow: 0 0 0 0 rgba(255,255,255,1);
+	box-shadow: 0 0 0 0 rgba(0,0,0,1);
 	animation: pulse 2s infinite;
 }
 
@@ -529,23 +529,24 @@ img {
 	0% {
 		transform: scale(0.6);
 		//box-shadow: 0 0 0 0 rgba(0,170,255,1); //blue
-		box-shadow: 0 0 0 0 rgba(255,255,255,1);
+		box-shadow: 0 0 0 0 rgba(0,0,0,1);
 	}
 
 	70% {
 		transform: scale(1);
-		box-shadow: 0 0 0 50px rgba(255,255,255,0);
+		box-shadow: 0 0 0 50px rgba(0,0,0,0);
 	}
 
 	100% {
 		transform: scale(0.6);
-		box-shadow: 0 0 0 0 rgba(255,255,255,0);
+		box-shadow: 0 0 0 0 rgba(0,0,0,0);
 	}
 }
-
+/*
 #missionPulse:hover {
 	background-color: #fff;
 }
+*/
 
 a[href*="break"] {
 	display: none;
