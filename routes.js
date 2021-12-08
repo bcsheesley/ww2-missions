@@ -509,36 +509,36 @@ var routeRecall = {
 };
 
 // Calculate the distance in kilometers between route start/end points.
-var lineDistanceSea = turf.length(routeSea);
-var lineDistanceBerlin = turf.length(routeBerlin);
-var lineDistanceDarmstadt = turf.length(routeDarmstadt);
-var lineDistanceHanover = turf.length(routeHanover);
-var lineDistanceAndernach = turf.length(routeAndernach);
-var lineDistanceKassel = turf.length(routeKassel);
-var lineDistanceMisburg = turf.length(routeMisburg);
-var lineDistancePforzheim = turf.length(routePforzheim);
-var lineDistanceBielefeld = turf.length(routeBielefeld);
-var lineDistanceCologne = turf.length(routeCologne);
-var lineDistanceDerben = turf.length(routeDerben);
-var lineDistanceAugsburg = turf.length(routeAugsburg);
-var lineDistanceBitterfeld = turf.length(routeBitterfeld);
-var lineDistanceDuisburg = turf.length(routeDuisburg);
-var lineDistanceDulmen = turf.length(routeDulmen);
-var lineDistanceCottbus = turf.length(routeCottbus);
-var lineDistanceBremen = turf.length(routeBremen);
-var lineDistanceLudwigsfelde = turf.length(routeLudwigsfelde);
-var lineDistanceDresden = turf.length(routeDresden);
-var lineDistanceDedenhausen = turf.length(routeDedenhausen);
-var lineDistanceDatteln = turf.length(routeDatteln);
-var lineDistanceSoest = turf.length(routeSoest);
-var lineDistanceHamburg = turf.length(routeHamburg);
-var lineDistanceSwinoujscie = turf.length(routeSwinoujscie);
-var lineDistanceJena = turf.length(routeJena);
-var lineDistanceMarxen = turf.length(routeMarxen);
-var lineDistanceRatingen = turf.length(routeRatingen);
-var lineDistanceGeisecke = turf.length(routeGeisecke);
-var lineDistanceBadZwischenahn = turf.length(routeBadZwischenahn);
-var lineDistanceRecall = turf.length(routeRecall);
+var lineDistanceSea = turf.length.default(routeSea);
+var lineDistanceBerlin = turf.length.default(routeBerlin);
+var lineDistanceDarmstadt = turf.length.default(routeDarmstadt);
+var lineDistanceHanover = turf.length.default(routeHanover);
+var lineDistanceAndernach = turf.length.default(routeAndernach);
+var lineDistanceKassel = turf.length.default(routeKassel);
+var lineDistanceMisburg = turf.length.default(routeMisburg);
+var lineDistancePforzheim = turf.length.default(routePforzheim);
+var lineDistanceBielefeld = turf.length.default(routeBielefeld);
+var lineDistanceCologne = turf.length.default(routeCologne);
+var lineDistanceDerben = turf.length.default(routeDerben);
+var lineDistanceAugsburg = turf.length.default(routeAugsburg);
+var lineDistanceBitterfeld = turf.length.default(routeBitterfeld);
+var lineDistanceDuisburg = turf.length.default(routeDuisburg);
+var lineDistanceDulmen = turf.length.default(routeDulmen);
+var lineDistanceCottbus = turf.length.default(routeCottbus);
+var lineDistanceBremen = turf.length.default(routeBremen);
+var lineDistanceLudwigsfelde = turf.length.default(routeLudwigsfelde);
+var lineDistanceDresden = turf.length.default(routeDresden);
+var lineDistanceDedenhausen = turf.length.default(routeDedenhausen);
+var lineDistanceDatteln = turf.length.default(routeDatteln);
+var lineDistanceSoest = turf.length.default(routeSoest);
+var lineDistanceHamburg = turf.length.default(routeHamburg);
+var lineDistanceSwinoujscie = turf.length.default(routeSwinoujscie);
+var lineDistanceJena = turf.length.default(routeJena);
+var lineDistanceMarxen = turf.length.default(routeMarxen);
+var lineDistanceRatingen = turf.length.default(routeRatingen);
+var lineDistanceGeisecke = turf.length.default(routeGeisecke);
+var lineDistanceBadZwischenahn = turf.length.default(routeBadZwischenahn);
+var lineDistanceRecall = turf.length.default(routeRecall);
  
 var arcSea = [];
 var arcBerlin = [];
@@ -607,123 +607,123 @@ var stepsRecall = 500;
  
 // Draw an arc between the origin & destination points
 for (var i = 0; i < lineDistanceSea; i += lineDistanceSea / stepsSea) {
-	  var segmentSea = turf.along(routeSea, i);
+	  var segmentSea = turf.along.default(routeSea, i);
 	  arcSea.push(segmentSea.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceBerlin; i += lineDistanceBerlin / stepsBerlin) {
-	var segmentBerlin = turf.along(routeBerlin, i);
+	var segmentBerlin = turf.along.default(routeBerlin, i);
 	arcBerlin.push(segmentBerlin.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceDarmstadt; i += lineDistanceDarmstadt / stepsDarmstadt) {
-	var segmentDarmstadt = turf.along(routeDarmstadt, i);
+	var segmentDarmstadt = turf.along.default(routeDarmstadt, i);
 	arcDarmstadt.push(segmentDarmstadt.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceHanover; i += lineDistanceHanover / stepsHanover) {
-	var segmentHanover = turf.along(routeHanover, i);
+	var segmentHanover = turf.along.default(routeHanover, i);
 	arcHanover.push(segmentHanover.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceAndernach; i += lineDistanceAndernach / stepsAndernach) {
-	var segmentAndernach = turf.along(routeAndernach, i);
+	var segmentAndernach = turf.along.default(routeAndernach, i);
 	arcAndernach.push(segmentAndernach.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceKassel; i += lineDistanceKassel / stepsKassel) {
-	var segmentKassel = turf.along(routeKassel, i);
+	var segmentKassel = turf.along.default(routeKassel, i);
 	arcKassel.push(segmentKassel.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceMisburg; i += lineDistanceMisburg / stepsMisburg) {
-	var segmentMisburg = turf.along(routeMisburg, i);
+	var segmentMisburg = turf.along.default(routeMisburg, i);
 	arcMisburg.push(segmentMisburg.geometry.coordinates);
 }
 for (var i = 0; i < lineDistancePforzheim; i += lineDistancePforzheim / stepsPforzheim) {
-	var segmentPforzheim = turf.along(routePforzheim, i);
+	var segmentPforzheim = turf.along.default(routePforzheim, i);
 	arcPforzheim.push(segmentPforzheim.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceBielefeld; i += lineDistanceBielefeld / stepsBielefeld) {
-	var segmentBielefeld = turf.along(routeBielefeld, i);
+	var segmentBielefeld = turf.along.default(routeBielefeld, i);
 	arcBielefeld.push(segmentBielefeld.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceCologne; i += lineDistanceCologne / stepsCologne) {
-	var segmentCologne = turf.along(routeCologne, i);
+	var segmentCologne = turf.along.default(routeCologne, i);
 	arcCologne.push(segmentCologne.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceDerben; i += lineDistanceDerben / stepsDerben) {
-	var segmentDerben = turf.along(routeDerben, i);
+	var segmentDerben = turf.along.default(routeDerben, i);
 	arcDerben.push(segmentDerben.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceAugsburg; i += lineDistanceAugsburg / stepsAugsburg) {
-	var segmentAugsburg = turf.along(routeAugsburg, i);
+	var segmentAugsburg = turf.along.default(routeAugsburg, i);
 	arcAugsburg.push(segmentAugsburg.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceBitterfeld; i += lineDistanceBitterfeld / stepsBitterfeld) {
-	var segmentBitterfeld = turf.along(routeBitterfeld, i);
+	var segmentBitterfeld = turf.along.default(routeBitterfeld, i);
 	arcBitterfeld.push(segmentBitterfeld.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceDuisburg; i += lineDistanceDuisburg / stepsDuisburg) {
-	var segmentDuisburg = turf.along(routeDuisburg, i);
+	var segmentDuisburg = turf.along.default(routeDuisburg, i);
 	arcDuisburg.push(segmentDuisburg.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceDulmen; i += lineDistanceDulmen / stepsDulmen) {
-	var segmentDulmen = turf.along(routeDulmen, i);
+	var segmentDulmen = turf.along.default(routeDulmen, i);
 	arcDulmen.push(segmentDulmen.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceCottbus; i += lineDistanceCottbus / stepsCottbus) {
-	var segmentCottbus = turf.along(routeCottbus, i);
+	var segmentCottbus = turf.along.default(routeCottbus, i);
 	arcCottbus.push(segmentCottbus.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceBremen; i += lineDistanceBremen / stepsBremen) {
-	var segmentBremen = turf.along(routeBremen, i);
+	var segmentBremen = turf.along.default(routeBremen, i);
 	arcBremen.push(segmentBremen.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceLudwigsfelde; i += lineDistanceLudwigsfelde / stepsLudwigsfelde) {
-	var segmentLudwigsfelde = turf.along(routeLudwigsfelde, i);
+	var segmentLudwigsfelde = turf.along.default(routeLudwigsfelde, i);
 	arcLudwigsfelde.push(segmentLudwigsfelde.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceDresden; i += lineDistanceDresden / stepsDresden) {
-	var segmentDresden = turf.along(routeDresden, i);
+	var segmentDresden = turf.along.default(routeDresden, i);
 	arcDresden.push(segmentDresden.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceDedenhausen; i += lineDistanceDedenhausen / stepsDedenhausen) {
-	var segmentDedenhausen = turf.along(routeDedenhausen, i);
+	var segmentDedenhausen = turf.along.default(routeDedenhausen, i);
 	arcDedenhausen.push(segmentDedenhausen.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceDatteln; i += lineDistanceDatteln / stepsDatteln) {
-	var segmentDatteln = turf.along(routeDatteln, i);
+	var segmentDatteln = turf.along.default(routeDatteln, i);
 	arcDatteln.push(segmentDatteln.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceSoest; i += lineDistanceSoest / stepsSoest) {
-	var segmentSoest = turf.along(routeSoest, i);
+	var segmentSoest = turf.along.default(routeSoest, i);
 	arcSoest.push(segmentSoest.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceHamburg; i += lineDistanceHamburg / stepsHamburg) {
-	var segmentHamburg = turf.along(routeHamburg, i);
+	var segmentHamburg = turf.along.default(routeHamburg, i);
 	arcHamburg.push(segmentHamburg.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceSwinoujscie; i += lineDistanceSwinoujscie / stepsSwinoujscie) {
-	var segmentSwinoujscie = turf.along(routeSwinoujscie, i);
+	var segmentSwinoujscie = turf.along.default(routeSwinoujscie, i);
 	arcSwinoujscie.push(segmentSwinoujscie.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceJena; i += lineDistanceJena / stepsJena) {
-	var segmentJena = turf.along(routeJena, i);
+	var segmentJena = turf.along.default(routeJena, i);
 	arcJena.push(segmentJena.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceMarxen; i += lineDistanceMarxen / stepsMarxen) {
-	var segmentMarxen = turf.along(routeMarxen, i);
+	var segmentMarxen = turf.along.default(routeMarxen, i);
 	arcMarxen.push(segmentMarxen.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceRatingen; i += lineDistanceRatingen / stepsRatingen) {
-	var segmentRatingen = turf.along(routeRatingen, i);
+	var segmentRatingen = turf.along.default(routeRatingen, i);
 	arcRatingen.push(segmentRatingen.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceGeisecke; i += lineDistanceGeisecke / stepsGeisecke) {
-	var segmentGeisecke = turf.along(routeGeisecke, i);
+	var segmentGeisecke = turf.along.default(routeGeisecke, i);
 	arcGeisecke.push(segmentGeisecke.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceBadZwischenahn; i += lineDistanceBadZwischenahn / stepsBadZwischenahn) {
-	var segmentBadZwischenahn = turf.along(routeBadZwischenahn, i);
+	var segmentBadZwischenahn = turf.along.default(routeBadZwischenahn, i);
 	arcBadZwischenahn.push(segmentBadZwischenahn.geometry.coordinates);
 }
 for (var i = 0; i < lineDistanceRecall; i += lineDistanceRecall / stepsRecall) {
-	var segmentRecall = turf.along(routeRecall, i);
+	var segmentRecall = turf.along.default(routeRecall, i);
 	arcRecall.push(segmentRecall.geometry.coordinates);
 }
  
