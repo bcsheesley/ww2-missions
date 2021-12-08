@@ -461,6 +461,11 @@ map.on("load", function() {
                 });
             });
         }
+    
+        var highlight = response.element.id
+        var test = 'a[href="#' + highlight + '"]';
+        document.querySelector(test).style.color = "red";
+        console.log(test);
     })
     .onStepExit(response => {
         var chapter = config.chapters.find(chap => chap.id === response.element.id);
@@ -483,6 +488,11 @@ map.on("load", function() {
         popupClick.remove();
         //shake.classList.remove('shake');
         //flash.classList.remove('active');
+        
+        var highlight = response.element.id
+        var test = 'a[href="#' + highlight + '"]';
+        document.querySelector(test).style.color = "white";
+        console.log(test);
     });
 });
 
@@ -634,6 +644,8 @@ function pforzheimMarker() {
 function bielefeldMarker() {
   //missionMarker.setLngLat(misburg).addTo(map);
   missionMarker.setLngLat(bielefeld).addTo(map);
+  //var activeListItem = document.querySelector('a[href="#19450107"]');
+  //activeListItem.classList.toggle('active');
 };
 
 /*
