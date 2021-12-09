@@ -22,13 +22,13 @@ missions.onclick = function(){
   captionText.innerHTML = this.alt;
 }
 
-dec5a.onclick = function(){
+dec05a.onclick = function(){
    modal.style.display = "block";
    modalImg.src = this.src;
    captionText.innerHTML = this.alt;
 }
 
-dec5b.onclick = function(){
+dec05b.onclick = function(){
    modal.style.display = "block";
    modalImg.src = this.src;
    captionText.innerHTML = this.alt;

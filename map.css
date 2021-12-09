@@ -50,6 +50,7 @@ li:first-of-type {
 
 .daterank::before{
 	content: '#';
+	font-weight: 400;
 	//color: #666;
 }
 
@@ -106,6 +107,11 @@ figcaption {
 }
 
 .itemRank {
+	background-color: rgba(0,170,255,0.8);
+	color: white;
+	padding: 0px 4px;
+	border-radius: 5px;
+	font-size: 1em;
 	display: inline-block;
 	margin-right: 6px;
 }

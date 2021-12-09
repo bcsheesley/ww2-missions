@@ -464,9 +464,16 @@ map.on("load", function() {
     
         var highlight = response.element.id
         var highlightID = 'a[href="#' + highlight + '"]';
+        var highlightBkg = 'a[href="#' + highlight + '"] .itemRank';
+        var highlightRank = document.querySelector(highlightBkg)||false;
+        
+        if (highlightRank) {
+          document.querySelector(highlightBkg).style.backgroundColor = 'rgba(255,255,133,1)';
+          document.querySelector(highlightBkg).style.color = 'rgba(0,0,0,1)';
+          //console.log(highlightRank);
+        }
         document.querySelector(highlightID).style.color = 'rgba(255,255,133,1)';
-        document.querySelector(highlightID).style.fontWeight = '700';
-        //console.log(highlightID);
+        //document.querySelector(highlightID).style.fontWeight = '700';
     })
     .onStepExit(response => {
         var chapter = config.chapters.find(chap => chap.id === response.element.id);
@@ -492,7 +499,14 @@ map.on("load", function() {
         
         var highlight = response.element.id
         var highlightID = 'a[href="#' + highlight + '"]';
-        document.querySelector(highlightID).style.color = "white";
+        var highlightBkg = 'a[href="#' + highlight + '"] .itemRank';
+        var highlightRank = document.querySelector(highlightBkg)||false;
+        
+        if (highlightRank) {
+          document.querySelector(highlightBkg).style.backgroundColor = 'rgba(0,170,255,0.8)';
+          document.querySelector(highlightBkg).style.color = 'white';
+        }
+        document.querySelector(highlightID).style.color = 'white';
         document.querySelector(highlightID).style.fontWeight = '400';
     });
 });
