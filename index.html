@@ -475,6 +475,11 @@ map.on("load", function() {
         } else {
           document.querySelector(highlightName).style.borderLeft = 'solid 2px white';
           document.querySelector(highlightName).style.paddingLeft = '10px';
+          document.querySelector(highlightName).style.marginLeft = '-12px';
+          
+          document.querySelector('a[href="#about-this-map"] .itemName').style.borderLeft = 'solid 0px white';
+          document.querySelector('a[href="#about-this-map"] .itemName').style.paddingLeft = '0px';
+          document.querySelector('a[href="#about-this-map"] .itemName').style.marginLeft = '0px';
         }
         
         //document.querySelector(highlightID).style.color = 'rgba(255,255,133,1)';
@@ -514,6 +519,11 @@ map.on("load", function() {
         } else {
           document.querySelector(highlightName).style.borderLeft = 'solid 0px white';
           document.querySelector(highlightName).style.paddingLeft = '0px';
+          document.querySelector(highlightName).style.marginLeft = '0px';
+          
+          document.querySelector('a[href="#about-this-map"] .itemName').style.borderLeft = 'solid 0px white';
+          document.querySelector('a[href="#about-this-map"] .itemName').style.paddingLeft = '0px';
+          document.querySelector('a[href="#about-this-map"] .itemName').style.marginLeft = '0px';
         }
         
         //document.querySelector(highlightID).style.color = 'white';
@@ -667,10 +677,11 @@ function pforzheimMarker() {
 };
 
 function bielefeldMarker() {
-  //missionMarker.setLngLat(misburg).addTo(map);
   missionMarker.setLngLat(bielefeld).addTo(map);
-  //var activeListItem = document.querySelector('a[href="#19450107"]');
-  //activeListItem.classList.toggle('active');
+};
+
+function cologneMarker() {
+  missionMarker.setLngLat(cologne).addTo(map);
 };
 
 /*

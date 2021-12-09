@@ -21,7 +21,7 @@ var config = {
             image: '',
             imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">L</span>t. Byron E. Sheesley kept two short journals while serving in the United States Army Air Forces (USAAF) during World War Ⅱ.</p><p>One journal documents his nearly two-week-long journey from Camp Kilmer, New Jersey to a USAAF replacement center near Stone, England by troopship and train in late October and early November, 1944.</p><p>The other summarizes many of the 35 combat missions he flew over enemy targets in Germany as pilot of a B-17 heavy bomber between December 1944 and March 1945. It also describes aspects of his daily life on base and on pass. Sheesley was stationed in Mendlesham, England with the 7th Squadron of the 34th Bomb Group in the "Mighty" 8th Air Force.</p><p>For the most part, entries in both journals are concise and matter-of-fact. There are details about people and places, bomber formations and targets, weather conditions and flack, as well as time spent playing games, riding bikes, doing laundry, eating meals, attending chapel, and reading books.</p><p>Some entries can also be quite powerful and moving. Perhaps the most notable example is Lt. Sheesley\'s description of an intense <a href="#1-berlin-p1">first mission</a> to Berlin where his crew was sent by mistake, barely making it home in one piece. In another entry, after completing his <a href="#35-hanover">last mission</a>, Sheesley\'s expression of relief and determination to reunite with his fiancé, Mary E. Clark, is undeniably heartening: <blockquote>... Happy Day! No more flack, fighters, gas, oxygen or bomb runs to sweat out. Mary, here I come.</blockquote></p><p>This map connects entries in the two journals with the places they describe. <b>Scroll down to read more.</b></p>',
+            description: '<p><span class="dropCap">L</span>t. Byron E. Sheesley kept two short journals while serving in the United States Army Air Forces (USAAF) during World War Ⅱ.</p><p>One journal documents his nearly two-week-long journey from Camp Kilmer, New Jersey to a USAAF replacement center near Stone, England by troopship and train in late October and early November, 1944.</p><p>The other summarizes many of the 35 combat missions he flew over enemy targets in Germany as pilot of a B-17 heavy bomber between December 1944 and March 1945. It also describes aspects of his daily life on base and on pass. Sheesley was stationed in Mendlesham, England with the 7th Squadron of the 34th Bomb Group in the "Mighty" 8th Air Force.</p><p>Many of the journal entries are concise and matter-of-fact. There are details about people and places, bomber formations and targets, weather conditions and flack, as well as time spent playing games, riding bikes, doing laundry, eating meals, attending chapel, and reading books.</p><p>Other entries, however, are quite powerful and moving. For example, in one entry Lt. Sheesley describes an intense <a href="#1-berlin-p1">first mission</a> to Berlin where his crew was sent by mistake and barely made it home alive. In another, after completing his <a href="#hanover">last mission</a>, Lt. Sheesley expresses his relief and determination to reunite with his fiancé, Mary E. Clark: <blockquote>... Happy Day! No more flack, fighters, gas, oxygen or bomb runs to sweat out. Mary, here I come.</blockquote></p><p>This map connects entries in the two journals with the places they describe. <b>Scroll down to read more.</b></p>',
             location: {
                 center: [-95.96827, 39.03594],
                 zoom: 2,
@@ -34,7 +34,7 @@ var config = {
             onChapterEnter: [],
             onChapterExit: []
         },
-    {
+        {
             id: 'break-1',
             section: '',
             alignment: 'full',
@@ -1575,6 +1575,62 @@ var config = {
             callback: 'mendleshamMarker',
             onChapterEnter: [],
             onChapterExit: []
+        },
+        {
+            id: '19450110',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '9',
+            title: 'Cologne',
+            date: 'Wednesday, 1/10/1945',
+            image: 'images/journal/19450110-trim.png',
+            imageId: 'jan10',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">T</span>arget: a bridge at Cologne. We dropped 6–1000 pounders. It was rough getting off because of snow packed taxi strips & runways. One of our planes ran off runway halfway down but luckily no damage was done. Our squadron left with but six ships, but more caught up later. Saw a huge flash of flame about 5 mile south of our field as we taxied. A plane at Debich exploded. Our bomb doors had to cranked open & we dropped 20 sec. late. Those old men & boys sure are sharp with the flack. Those puffs walked right up to us and we picked up plenty of holes in our new plane. Today\'s was #9. Went to S.M.C.L. at the chapel. Ceiling was at 400 ft. when we came back</p>',
+            location: {
+                center: [6.960965, 50.93753],
+                zoom: 12,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'cologneMarker',
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeCologne',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeCologne',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
         }
     ]
 };
