@@ -227,7 +227,7 @@ map.on('load', function() {
 		'source': 'journey',
 		'type': 'line',
 		'paint': {
-			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,2,10,24],
+			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],
 			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
 			'line-color': 'rgba(255,126,126,0.9)',
 			'line-opacity': 0,
