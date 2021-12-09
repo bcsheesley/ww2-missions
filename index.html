@@ -465,14 +465,19 @@ map.on("load", function() {
         var highlight = response.element.id
         var highlightID = 'a[href="#' + highlight + '"]';
         var highlightBkg = 'a[href="#' + highlight + '"] .itemRank';
+        var highlightName = 'a[href="#' + highlight + '"] .itemName';
         var highlightRank = document.querySelector(highlightBkg)||false;
         
         if (highlightRank) {
           document.querySelector(highlightBkg).style.backgroundColor = 'rgba(255,255,133,1)';
           document.querySelector(highlightBkg).style.color = 'rgba(0,0,0,1)';
           //console.log(highlightRank);
+        } else {
+          document.querySelector(highlightName).style.borderLeft = 'solid 2px white';
+          document.querySelector(highlightName).style.paddingLeft = '10px';
         }
-        document.querySelector(highlightID).style.color = 'rgba(255,255,133,1)';
+        
+        //document.querySelector(highlightID).style.color = 'rgba(255,255,133,1)';
         //document.querySelector(highlightID).style.fontWeight = '700';
     })
     .onStepExit(response => {
@@ -500,14 +505,19 @@ map.on("load", function() {
         var highlight = response.element.id
         var highlightID = 'a[href="#' + highlight + '"]';
         var highlightBkg = 'a[href="#' + highlight + '"] .itemRank';
+        var highlightName = 'a[href="#' + highlight + '"] .itemName';
         var highlightRank = document.querySelector(highlightBkg)||false;
         
         if (highlightRank) {
           document.querySelector(highlightBkg).style.backgroundColor = 'rgba(0,170,255,0.8)';
           document.querySelector(highlightBkg).style.color = 'white';
+        } else {
+          document.querySelector(highlightName).style.borderLeft = 'solid 0px white';
+          document.querySelector(highlightName).style.paddingLeft = '0px';
         }
-        document.querySelector(highlightID).style.color = 'white';
-        document.querySelector(highlightID).style.fontWeight = '400';
+        
+        //document.querySelector(highlightID).style.color = 'white';
+        //document.querySelector(highlightID).style.fontWeight = '400';
     });
 });
 

@@ -229,7 +229,7 @@ map.on('load', function() {
 		'paint': {
 			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,2,10,24],
 			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
-			'line-color': 'rgba(0,170,255,0.8)',
+			'line-color': 'rgba(255,126,126,0.9)',
 			'line-opacity': 0,
 			'line-dasharray': [2,2]
 		},
