@@ -1727,6 +1727,90 @@ var config = {
             callback: 'derbenMarker',
             onChapterEnter: [],
             onChapterExit: []
+        },
+        {
+            id: '19450115',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '11',
+            title: 'Augsburg',
+            date: 'Monday, 1/15/1945',
+            image: 'images/journal/19450115-trim.png',
+            imageId: 'jan15',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">W</span>e started out for an air field at Letchfeild [Lechfeld] but a 10/10 cloud cover sent us PFF to a marshaling yard at Augsburg. We started out in 3–2 but had to move up to 3–1 when Peterson lost a turbo about 20 min. before the IP. Flack was way off the left wing. Results of bombing unobserved. It was a long 8 hour haul. We\'re on the loading list for tomorrow.</p>',
+            location: {
+                center: augsburg,
+                zoom: 12,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'augsburgMarker',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: '19450116',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '12',
+            title: 'Bitterfeld',
+            date: 'Tuesday, 1/16/1945',
+            image: 'images/journal/19450116-trim.png',
+            imageId: 'jan16',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">T</span>hree missions in as many days. Today was our cluster mission—#12. We flew 4–2 in the high at the start. Our squad. lead aborted so we were moved up to 2–2 where we flew until we got back to France & then because Vick was such a sad rocker-trombone lead I went back down to 4–2. At briefing they had two plans & didn\'t know which we would take. At the plane we were told by radio that "Plan A"—a fighter bait tour of Germany was it. The target was a jet engine factory near Cottbus. Our course looked thus [small inline drawing of a circular route, with arrows and a point marked] & was an 8 hr. haul but weather closed our field so we were diverted to Marston Moor making it 9:10 flight. A ship in the lead squad. caught fire before we left England and the crew baild out. The ball gunner chuted ok, but was found dead near the remains of the plane. Target was covered so PFF was used. Snow covered all the route—pretty. We got flack at battle line, accurate. I watched one flack shell come up from the ground & explode. Gas was plenty low when we got back to earth. Good food at M. M. & went to bed early.</p>',
+            location: {
+                center: bitterfeld,
+                zoom: 12,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'bitterfeldMarker',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: '19450117',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Marston Moor - Mendlesham',
+            date: 'Wednesday, 1/17/1945',
+            image: 'images/journal/19450117-trim.png',
+            imageId: 'jan17',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">T</span>hree missions in as many days. Today was our cluster mission—#12. We flew 4–2 in the high at the start. Our squad. lead aborted so we were moved up to 2–2 where we flew until we got back to France & then because Vick was such a sad rocker-trombone lead I went back down to 4–2. At briefing they had two plans & didn\'t know which we would take. At the plane we were told by radio that "Plan A"—a fighter bait tour of Germany was it. The target was a jet engine factory near Cottbus. Our course looked thus [small inline drawing of a circular route, with arrows and a point marked] & was an 8 hr. haul but weather closed our field so we were diverted to Marston Moor making it 9:10 flight. A ship in the lead squad. caught fire before we left England and the crew baild out. The ball gunner chuted ok, but was found dead near the remains of the plane. Target was covered so PFF was used. Snow covered all the route—pretty. We got flack at battle line, accurate. I watched one flack shell come up from the ground & explode. Gas was plenty low when we got back to earth. Good food at M. M. & went to bed early.</p>',
+            location: {
+                center: mendlesham,
+                zoom: 12,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [
+                {
+                    layer: 'marstonmoor',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'marstonmoor',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
         }
     ]
 };

@@ -4,6 +4,9 @@ var struthers = [-80.60282, 41.05850];
 // Mendlesham
 var mendlesham = [1.121001, 52.232699];
 
+// RAF Marston Moor
+var marstonmoor = [-1.2989809701184143, 53.96346655488253];
+
 // Kilmer
 var kilmer = [-74.4458, 40.5167];
 
@@ -68,6 +71,19 @@ var ratingen = [6.840184, 51.296415];
 var geisecke = [7.619401, 51.458441];
 var badZwischenahn = [8.009877, 53.181440];
 var recall = [6.605980, 49.311541];
+
+// Simple line
+var routeMarstonMoor = {
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [marstonmoor, mendlesham]
+	},
+	'properties': {
+		'name': 'Marston Moor',
+		'date1': '1/17/1945'
+	}
+};
 
 // Simple line
 var routeSea = {

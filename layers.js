@@ -221,10 +221,40 @@ map.on('load', function() {
 		}
 	});
 	
+	// Add marston moor trip source
+	map.addSource('marstonmoor', {
+		'type': 'geojson',
+		'data': {
+			'type': 'FeatureCollection',
+			'features': [
+				routeMarstonMoor
+			] 
+		}
+	});
+	
 	// Add journey to England line layer
 	map.addLayer({
 		'id': 'journey',
 		'source': 'journey',
+		'type': 'line',
+		'paint': {
+			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],
+			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
+			'line-color': 'rgba(255,126,126,0.9)',
+			'line-opacity': 0,
+			'line-dasharray': [2,2]
+		},
+		'layout': {
+			//'line-cap': 'round'
+		}
+	},
+	'waterway-label'
+	);
+	
+	// Add Marston Moor trip line layer
+	map.addLayer({
+		'id': 'marstonmoor',
+		'source': 'marstonmoor',
 		'type': 'line',
 		'paint': {
 			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],
