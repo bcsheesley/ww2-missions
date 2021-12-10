@@ -1725,8 +1725,40 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: 'derbenMarker',
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeDerben',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeDerben',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
         },
         {
             id: '19450115',
@@ -1749,8 +1781,40 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: 'augsburgMarker',
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeAugsburg',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeAugsburg',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
         },
         {
             id: '19450116',
@@ -1773,8 +1837,40 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: 'bitterfeldMarker',
-            onChapterEnter: [],
-            onChapterExit: []
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeBitterfeld',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeBitterfeld',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
         },
         {
             id: '19450117',
@@ -1782,12 +1878,12 @@ var config = {
             alignment: 'left',
             hidden: false,
             daterank: '',
-            title: 'Marston Moor - Mendlesham',
+            title: 'Mendlesham',
             date: 'Wednesday, 1/17/1945',
             image: 'images/journal/19450117-trim.png',
             imageId: 'jan17',
             caption: '',
-            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">T</span>hree missions in as many days. Today was our cluster mission—#12. We flew 4–2 in the high at the start. Our squad. lead aborted so we were moved up to 2–2 where we flew until we got back to France & then because Vick was such a sad rocker-trombone lead I went back down to 4–2. At briefing they had two plans & didn\'t know which we would take. At the plane we were told by radio that "Plan A"—a fighter bait tour of Germany was it. The target was a jet engine factory near Cottbus. Our course looked thus [small inline drawing of a circular route, with arrows and a point marked] & was an 8 hr. haul but weather closed our field so we were diverted to Marston Moor making it 9:10 flight. A ship in the lead squad. caught fire before we left England and the crew baild out. The ball gunner chuted ok, but was found dead near the remains of the plane. Target was covered so PFF was used. Snow covered all the route—pretty. We got flack at battle line, accurate. I watched one flack shell come up from the ground & explode. Gas was plenty low when we got back to earth. Good food at M. M. & went to bed early.</p>',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">D</span>idn\'t sleep too well. Breakfast at 0830 & were told to take off soon as possible for home. The General Partridge was to be here to inspect today. We were ready to go at 10:00, but our new ball gunner was missing. Col. LaBally told us to take off without him if he didn\'t come by 1130 so we did. I guess he has had enough of war and decided on a rest. We got here at 1230. Someone (probably Hendricks) gave our shack a good buzzing in a P51. We got Furtado back on the crew again. Went to the chapel to S.M.C.L.</p>',
             location: {
                 center: mendlesham,
                 zoom: 12,

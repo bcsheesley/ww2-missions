@@ -34,6 +34,29 @@ map.on('mouseleave', 'journey', () => {
 	popupHover.remove();
 });
 
+// Marston Moor hover popup
+map.on('mousemove', 'marstonmoor', (e) => {
+	const paintProperty = map.getPaintProperty('marstonmoor', 'line-opacity');
+	const name = e.features[0].properties.name;
+	const date = e.features[0].properties.date;
+	//console.log(paintProperty);
+	
+	if (paintProperty > 0) {
+		map.getCanvas().style.cursor = 'pointer';
+		
+		popupHover
+		.setHTML(`<h3>${name}</h3><p>${date}</p>`)
+		.addTo(map)
+		.setLngLat(e.lngLat)
+		.trackPointer();
+	}
+});
+
+map.on('mouseleave', 'marstonmoor', () => {
+	map.getCanvas().style.cursor = '';
+	popupHover.remove();
+});
+
 
 // Mission routes hover popup
 let routeID = null;

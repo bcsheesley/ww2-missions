@@ -1,17 +1,4 @@
 // Simple line
-var routeMarstonMoor = {
-	'type': 'Feature',
-	'geometry': {
-		'type': 'LineString',
-		'coordinates': [marstonmoor, mendlesham]
-	},
-	'properties': {
-		'name': 'Marston Moor',
-		'date1': '1/17/1945'
-	}
-};
-
-// Simple line
 var routeSea = {
 	'type': 'Feature',
 	'geometry': {
