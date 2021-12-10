@@ -1,4 +1,17 @@
 // Simple line
+var routeMarstonMoor = {
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [marstonmoor, mendlesham]
+	},
+	'properties': {
+		'name': 'Marston Moor – Mendlesham',
+		'date': '1/17/1945'
+	}
+};
+
+// Simple line
 var routeSea = {
 	'type': 'Feature',
 	'geometry': {
@@ -468,6 +481,7 @@ var lineDistanceRatingen = turf.length.default(routeRatingen);
 var lineDistanceGeisecke = turf.length.default(routeGeisecke);
 var lineDistanceBadZwischenahn = turf.length.default(routeBadZwischenahn);
 var lineDistanceRecall = turf.length.default(routeRecall);
+var lineDistanceMarstonMoor = turf.length.default(routeMarstonMoor);
  
 var arcSea = [];
 var arcBerlin = [];
@@ -499,6 +513,7 @@ var arcRatingen = [];
 var arcGeisecke = [];
 var arcBadZwischenahn = [];
 var arcRecall = [];
+var arcMarstonMoor = [];
  
 // Number of steps to use in the arc and animation, more steps means
 // a smoother arc and animation, but too many steps will result in a
@@ -533,6 +548,7 @@ var stepsRatingen = 500;
 var stepsGeisecke = 500;
 var stepsBadZwischenahn = 500;
 var stepsRecall = 500;
+var stepsMarstonMoor = 500;
  
 // Draw an arc between the origin & destination points
 for (var i = 0; i < lineDistanceSea; i += lineDistanceSea / stepsSea) {
@@ -655,6 +671,10 @@ for (var i = 0; i < lineDistanceRecall; i += lineDistanceRecall / stepsRecall) {
 	var segmentRecall = turf.along.default(routeRecall, i);
 	arcRecall.push(segmentRecall.geometry.coordinates);
 }
+for (var i = 0; i < lineDistanceMarstonMoor; i += lineDistanceMarstonMoor / stepsMarstonMoor) {
+	var segmentMarstonMoor = turf.along.default(routeMarstonMoor, i);
+	arcMarstonMoor.push(segmentMarstonMoor.geometry.coordinates);
+}
  
 // Update the route with calculated arc coordinates
 routeSea.geometry.coordinates = arcSea;
@@ -687,3 +707,4 @@ routeRatingen.geometry.coordinates = arcRatingen;
 routeGeisecke.geometry.coordinates = arcGeisecke;
 routeBadZwischenahn.geometry.coordinates = arcBadZwischenahn;
 routeRecall.geometry.coordinates = arcRecall;
+routeMarstonMoor.geometry.coordinates = arcMarstonMoor;

@@ -221,30 +221,13 @@ map.on('load', function() {
 		}
 	});
 	
-	// Add marston moor trip source
+	// Add marston moor route source
 	map.addSource('marstonmoor', {
 		'type': 'geojson',
 		'data': {
 			'type': 'FeatureCollection',
 			'features': [
-				{
-					'type': 'Feature',
-					'geometry': {
-						'type': 'LineString',
-						'coordinates': [
-							marstonmoor,
-							[-1.038230, 53.594761],
-							[-0.552340, 53.230290],
-							[0.159567, 52.663024],
-							[0.655585, 52.446504],
-							mendlesham
-						]
-					},
-					'properties': {
-						'name': 'Marston Moor – Mendlesham',
-						'date': '1/17/1945'
-					}
-				}
+				routeMarstonMoor
 			] 
 		}
 	});
