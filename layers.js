@@ -181,12 +181,71 @@ map.on('load', function() {
 	});
 	
 	// Add marston moor route source
-	map.addSource('marstonmoor', {
+	map.addSource('marstonMoor', {
 		'type': 'geojson',
 		'data': {
 			'type': 'FeatureCollection',
 			'features': [
-				routeMarstonMoor
+				routeFromMarstonMoor,
+				routeToMarstonMoor
+			] 
+		}
+	});
+	
+	// Add London trip source
+	map.addSource('london', {
+		'type': 'geojson',
+		'data': {
+			'type': 'FeatureCollection',
+				'features': [
+					{
+					'type': 'Feature',
+					'geometry': {
+						'type': 'LineString',
+						'coordinates': [
+							mendlesham,
+							ipswich,
+							goring
+						]
+					},
+					'properties': {
+						'name': 'Mendlesham – London',
+						'date': '1/18/1945',
+						'direction': 'away'
+					}
+				},
+				{
+					'type': 'Feature',
+					'geometry': {
+						'type': 'LineString',
+						'coordinates': [
+							goring,
+							richmond
+						]
+					},
+					'properties': {
+						'name': 'London – Richmond',
+						'date': '1/19/1945',
+						'direction': 'away'
+					}
+				},
+				{
+					'type': 'Feature',
+					'geometry': {
+						'type': 'LineString',
+						'coordinates': [
+							richmond,
+							goring,
+							ipswich,
+							mendlesham
+						]
+					},
+					'properties': {
+						'name': 'Richmond – Mendlesham',
+						'date': '1/20/1945',
+						'direction': 'home'
+					}
+				}
 			] 
 		}
 	});
@@ -210,11 +269,88 @@ map.on('load', function() {
 	'waterway-label'
 	);
 	
-	// Add Marston Moor trip line layer
+	// Add Marston Moor - Mendlesham route line layer
 	map.addLayer({
-		'id': 'marstonmoor',
-		'source': 'marstonmoor',
+		'id': 'fromMarstonMoor',
+		'source': 'marstonMoor',
 		'type': 'line',
+		'filter': [
+			'==',
+			['get','direction'],
+			'from'
+		],
+		'paint': {
+			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],
+			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
+			'line-color': 'rgba(255,126,126,0.9)',
+			'line-opacity': 0,
+			'line-dasharray': [2,2]
+		},
+		'layout': {
+			//'line-cap': 'round'
+		}
+	},
+	'waterway-label'
+	);
+	
+	// Add Bitterfeld - Marston Moor -  route line layer
+	map.addLayer({
+		'id': 'toMarstonMoor',
+		'source': 'marstonMoor',
+		'type': 'line',
+		'filter': [
+			'==',
+			['get','direction'],
+			'to'
+		],
+		'paint': {
+			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],
+			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
+			'line-color': 'rgba(255,126,126,0.9)',
+			'line-opacity': 0,
+			'line-dasharray': [2,2]
+		},
+		'layout': {
+			//'line-cap': 'round'
+		}
+	},
+	'waterway-label'
+	);
+	
+	// Add London trip line layer - Away
+	map.addLayer({
+		'id': 'pass1-away',
+		'source': 'london',
+		'type': 'line',
+		'filter': [
+			'==',
+			['get','direction'],
+			'away'
+		],
+		'paint': {
+			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],
+			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
+			'line-color': 'rgba(255,126,126,0.9)',
+			'line-opacity': 0,
+			'line-dasharray': [2,2]
+		},
+		'layout': {
+			//'line-cap': 'round'
+		}
+	},
+	'waterway-label'
+	);
+	
+	// Add London trip line layer - Home
+	map.addLayer({
+		'id': 'pass1-home',
+		'source': 'london',
+		'type': 'line',
+		'filter': [
+			'==',
+			['get','direction'],
+			'home'
+		],
 		'paint': {
 			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],
 			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],

@@ -7,6 +7,15 @@ var mendlesham = [1.121001, 52.232699];
 // RAF Marston Moor
 var marstonmoor = [-1.2989809701184143, 53.96346655488253];
 
+// Ipswich
+var ipswich = [1.149745, 52.053802];
+
+// London
+var goring = [-0.14558788476690832, 51.49756722240319];
+
+// Richmond
+var richmond = [-0.30366232808394145, 51.46162396581376];
+
 // Kilmer
 var kilmer = [-74.4458, 40.5167];
 

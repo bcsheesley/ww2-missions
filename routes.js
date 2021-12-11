@@ -1,5 +1,5 @@
 // Simple line
-var routeMarstonMoor = {
+var routeFromMarstonMoor = {
 	'type': 'Feature',
 	'geometry': {
 		'type': 'LineString',
@@ -7,7 +7,21 @@ var routeMarstonMoor = {
 	},
 	'properties': {
 		'name': 'Marston Moor – Mendlesham',
-		'date': '1/17/1945'
+		'date': '1/17/1945',
+		'direction': 'from'
+	}
+};
+
+var routeToMarstonMoor = {
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [bitterfeld, marstonmoor]
+	},
+	'properties': {
+		'name': 'Bitterfeld – Marston Moor',
+		'date': '1/16/1945',
+		'direction': 'to'
 	}
 };
 
@@ -481,7 +495,8 @@ var lineDistanceRatingen = turf.length.default(routeRatingen);
 var lineDistanceGeisecke = turf.length.default(routeGeisecke);
 var lineDistanceBadZwischenahn = turf.length.default(routeBadZwischenahn);
 var lineDistanceRecall = turf.length.default(routeRecall);
-var lineDistanceMarstonMoor = turf.length.default(routeMarstonMoor);
+var lineDistanceFromMarstonMoor = turf.length.default(routeFromMarstonMoor);
+var lineDistanceToMarstonMoor = turf.length.default(routeToMarstonMoor);
  
 var arcSea = [];
 var arcBerlin = [];
@@ -513,7 +528,8 @@ var arcRatingen = [];
 var arcGeisecke = [];
 var arcBadZwischenahn = [];
 var arcRecall = [];
-var arcMarstonMoor = [];
+var arcFromMarstonMoor = [];
+var arcToMarstonMoor = [];
  
 // Number of steps to use in the arc and animation, more steps means
 // a smoother arc and animation, but too many steps will result in a
@@ -548,7 +564,8 @@ var stepsRatingen = 500;
 var stepsGeisecke = 500;
 var stepsBadZwischenahn = 500;
 var stepsRecall = 500;
-var stepsMarstonMoor = 500;
+var stepsFromMarstonMoor = 500;
+var stepsToMarstonMoor = 500;
  
 // Draw an arc between the origin & destination points
 for (var i = 0; i < lineDistanceSea; i += lineDistanceSea / stepsSea) {
@@ -671,9 +688,13 @@ for (var i = 0; i < lineDistanceRecall; i += lineDistanceRecall / stepsRecall) {
 	var segmentRecall = turf.along.default(routeRecall, i);
 	arcRecall.push(segmentRecall.geometry.coordinates);
 }
-for (var i = 0; i < lineDistanceMarstonMoor; i += lineDistanceMarstonMoor / stepsMarstonMoor) {
-	var segmentMarstonMoor = turf.along.default(routeMarstonMoor, i);
-	arcMarstonMoor.push(segmentMarstonMoor.geometry.coordinates);
+for (var i = 0; i < lineDistanceFromMarstonMoor; i += lineDistanceFromMarstonMoor / stepsFromMarstonMoor) {
+	var segmentFromMarstonMoor = turf.along.default(routeFromMarstonMoor, i);
+	arcFromMarstonMoor.push(segmentFromMarstonMoor.geometry.coordinates);
+}
+for (var i = 0; i < lineDistanceToMarstonMoor; i += lineDistanceToMarstonMoor / stepsToMarstonMoor) {
+	var segmentToMarstonMoor = turf.along.default(routeToMarstonMoor, i);
+	arcToMarstonMoor.push(segmentToMarstonMoor.geometry.coordinates);
 }
  
 // Update the route with calculated arc coordinates
@@ -707,4 +728,5 @@ routeRatingen.geometry.coordinates = arcRatingen;
 routeGeisecke.geometry.coordinates = arcGeisecke;
 routeBadZwischenahn.geometry.coordinates = arcBadZwischenahn;
 routeRecall.geometry.coordinates = arcRecall;
-routeMarstonMoor.geometry.coordinates = arcMarstonMoor;
+routeFromMarstonMoor.geometry.coordinates = arcFromMarstonMoor;
+routeToMarstonMoor.geometry.coordinates = arcToMarstonMoor;

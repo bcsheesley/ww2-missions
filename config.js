@@ -21,7 +21,7 @@ var config = {
             image: '',
             imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">L</span>t. Byron E. Sheesley kept two short journals while serving in the United States Army Air Forces (USAAF) during World War Ⅱ.</p><p>One journal documents his nearly two-week-long journey from Camp Kilmer, New Jersey to a USAAF replacement center near Stone, England by troopship and train in late October and early November, 1944.</p><p>The other summarizes many of the 35 combat missions he flew over enemy targets in Germany as pilot of a B-17 heavy bomber between December 1944 and March 1945. It also describes aspects of his daily life on base and on pass. Sheesley was stationed in Mendlesham, England with the 7th Squadron of the 34th Bomb Group in the "Mighty" 8th Air Force.</p><p>Many of the journal entries are concise and matter-of-fact. There are details about people and places, bomber formations and targets, weather conditions and flack, as well as time spent playing games, riding bikes, doing laundry, eating meals, attending chapel, and reading books.</p><p>Other entries, however, are quite powerful and moving. For example, in one entry Lt. Sheesley describes an intense <a href="#1-berlin-p1">first mission</a> to Berlin where his crew was sent by mistake and barely made it home alive. In another, after completing his <a href="#hanover">last mission</a>, Lt. Sheesley expresses his relief and determination to reunite with his fiancé, Mary E. Clark: <blockquote>... Happy Day! No more flack, fighters, gas, oxygen or bomb runs to sweat out. Mary, here I come.</blockquote></p><p>This map connects entries in the two journals with the places they describe. <b>Scroll down to read more.</b></p>',
+            description: '<p><span class="dropCap">L</span>t. Byron E. Sheesley kept two short journals while serving in the United States Army Air Forces (USAAF) during World War Ⅱ.</p><p>One journal documents his nearly two-week-long journey from Camp Kilmer, New Jersey to a USAAF replacement center near Stone, England by troopship and train in late October and early November, 1944.</p><p>The other summarizes many of the 35 combat missions he flew over enemy targets in Germany as pilot of a B-17 heavy bomber between December 1944 and March 1945. It also describes aspects of his daily life on base and on pass. Sheesley was stationed in Mendlesham, England with the 7th Squadron of the 34th Bomb Group in the "Mighty" 8th Air Force.</p><p>Many of the journal entries are concise and matter-of-fact. There are details about people and places, bomber formations and targets, weather conditions and flack, as well as time spent playing games, riding bikes, doing laundry, eating meals, attending chapel, and reading books.</p><p>Others, however, are quite powerful and moving. For example, in one entry Lt. Sheesley describes an intense <a href="#1-berlin-p1">first mission</a> to Berlin where his crew was sent by mistake and barely made it home alive. In another, after completing his <a href="#hanover">last mission</a>, he expresses joy, relief, and determination to reunite with his fiancé, Mary E. Clark: <blockquote>... Happy Day! No more flack, fighters, gas, oxygen or bomb runs to sweat out. Mary, here I come.</blockquote></p><p>This map connects entries in the two journals with the places they describe. <b>Scroll down to read more.</b></p>',
             location: {
                 center: [-95.96827, 39.03594],
                 zoom: 2,
@@ -1839,6 +1839,11 @@ var config = {
             callback: 'bitterfeldMarker',
             onChapterEnter: [
                 {
+                    layer: 'toMarstonMoor',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
                     layer: 'routes',
                     opacity: 1,
                     duration: 300
@@ -1855,6 +1860,11 @@ var config = {
                 }
             ],
             onChapterExit: [
+                {
+                    layer: 'toMarstonMoor',
+                    opacity: 0,
+                    duration: 300
+                },
                 {
                     layer: 'routes',
                     opacity: 0,
@@ -1886,7 +1896,7 @@ var config = {
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">D</span>idn\'t sleep too well. Breakfast at 0830 & were told to take off soon as possible for home. The General Partridge was to be here to inspect today. We were ready to go at 10:00, but our new ball gunner was missing. Col. LaBally told us to take off without him if he didn\'t come by 1130 so we did. I guess he has had enough of war and decided on a rest. We got here at 1230. Someone (probably Hendricks) gave our shack a good buzzing in a P51. We got Furtado back on the crew again. Went to the chapel to S.M.C.L.</p>',
             location: {
                 center: mendlesham,
-                zoom: 12,
+                zoom: 6,
                 pitch: 0,
                 bearing: 0
             },
@@ -1895,18 +1905,160 @@ var config = {
             callback: 'mendleshamMarker',
             onChapterEnter: [
                 {
-                    layer: 'marstonmoor',
+                    layer: 'toMarstonMoor',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'fromMarstonMoor',
                     opacity: 1,
                     duration: 300
                 }
             ],
             onChapterExit: [
                 {
-                    layer: 'marstonmoor',
+                    layer: 'toMarstonMoor',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'fromMarstonMoor',
                     opacity: 0,
                     duration: 300
                 }
             ]
+        },
+        {
+            id: '19450118',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Goring Hotel, London',
+            date: 'Thursday, 1/18/1945',
+            image: 'images/journal/19450118-trim.png',
+            imageId: 'jan18',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">G</span>ot up about 1000, got ready for pass and took off. I got a ride to Ipswich and got there just in time to catch London train. Found Phillip & we got a room at the Goring hotel.</p>',
+            location: {
+                center: goring,
+                zoom: 10,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'londonMarker',
+            onChapterEnter: [
+                {
+                    layer: 'pass1-away',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'pass1-away',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450119',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Richmond',
+            date: 'Friday, 1/19/1945',
+            image: 'images/journal/19450119-trim.png',
+            imageId: 'jan19',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">B</span>ought blouse and had it cut into a little jacket. Pee Wee and I finished our London tour. I went with him as far as Richmond where we watched the ice skating. I stayed at the Red Cross Rainbow Club over night.</p>',
+            location: {
+                center: richmond,
+                zoom: 12,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'richmondMarker',
+            onChapterEnter: [
+                {
+                    layer: 'pass1-away',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'pass1-away',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450120',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Mendlesham',
+            date: 'Saturday, 1/20/1945',
+            image: 'images/journal/19450120-trim.png',
+            imageId: 'jan20',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">C</span>ame back to the base. End of pass. Bought Mom & Mary a couple presents in Ipswich.</p>',
+            location: {
+                center: mendlesham,
+                zoom: 13,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [
+                {
+                    layer: 'pass1-home',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'pass1-home',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450121',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Mendlesham',
+            date: 'Sunday, 1/21/1945',
+            image: 'images/journal/19450121-trim.png',
+            imageId: 'jan21',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">I</span>flew as command pilot with Bloomquist on a practice mission. Went to the chapel for the evening service.</p>',
+            location: {
+                center: mendlesham,
+                zoom: 13,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [],
+            onChapterExit: []
         }
     ]
 };
