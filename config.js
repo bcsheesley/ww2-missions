@@ -2139,7 +2139,7 @@ var config = {
             hidden: false,
             daterank: '',
             title: 'Mendlesham',
-            date: 'Saturday, 1/24/1947',
+            date: 'Saturday, 1/27/1945',
             image: 'images/journal/19450127-trim.png',
             imageId: 'jan27',
             caption: '',
@@ -2155,6 +2155,62 @@ var config = {
             callback: 'mendleshamMarker',
             onChapterEnter: [],
             onChapterExit: []
+        },
+        {
+            id: '19450128',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '13',
+            title: 'Duisburg',
+            date: 'Sunday, 1/28/1945',
+            image: 'images/journal/19450128-trim.png',
+            imageId: 'jan28',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">W</span>e always fly on Sunday. Between snow flurries 13 planes of us got off—just made it on short runway 100°. Target was marshaling yard Hohenbudburg Duisburg—just over the battle line. We missed it. Flack was too accurate—tracked us. A piece broke the outer pane of my windshield. I don\'t see how they miss us. Bulis hurt his arm in the turret. We had a camera man along.</p>',
+            location: {
+                center: duisburg,
+                zoom: 12,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'duisburgMarker',
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeDuisburg',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeDuisburg',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
         }
     ]
 };
