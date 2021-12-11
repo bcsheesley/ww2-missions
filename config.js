@@ -2059,6 +2059,102 @@ var config = {
             callback: 'mendleshamMarker',
             onChapterEnter: [],
             onChapterExit: []
+        },
+        {
+            id: '19450122',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Mendlesham',
+            date: 'Monday, 1/22/1945',
+            image: 'images/journal/19450122-trim.png',
+            imageId: 'jan22',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">F</span>ixed up my bike again & took laundry to Mrs. Easter by the Magpie. Played basketball. We beat the 4th Sqdn.</p>',
+            location: {
+                center: mendlesham,
+                zoom: 13,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: '19450123',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Mendlesham',
+            date: 'Tuesday, 1/23/1945',
+            image: 'images/journal/19450123-trim.png',
+            imageId: 'jan23',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">S</span>wung the compass in our ship this morning. Spent the afternoon trying to smooth out childish squabbling between King and the rest of the boys.</p>',
+            location: {
+                center: mendlesham,
+                zoom: 13,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: '19450124',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Mendlesham',
+            date: 'Wednesday, 1/24/1945',
+            image: 'images/journal/19450124-trim.png',
+            imageId: 'jan24',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">M</span>ails packages to Mom & Mary. Rode to Mendlesham with Scimeca and got a loaf of bread. Visited the old fashioned shoe repair shop. S.M.C.L. at chapel.</p>',
+            location: {
+                center: mendlesham,
+                zoom: 13,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: '19450127',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Mendlesham',
+            date: 'Saturday, 1/24/1947',
+            image: 'images/journal/19450127-trim.png',
+            imageId: 'jan27',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">M</span>ails packages to Mom & Mary. Rode to Mendlesham with Scimeca and got a loaf of bread. Visited the old fashioned shoe repair shop. S.M.C.L. at chapel.</p>',
+            location: {
+                center: mendlesham,
+                zoom: 13,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [],
+            onChapterExit: []
         }
     ]
 };
