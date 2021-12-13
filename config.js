@@ -1086,7 +1086,7 @@ var config = {
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">I</span> was awakened at 0400 expecting to ride as copilot for my 1st mission. At the briefing block I was surprised, alarmed and frightened when I learned that we would go as a crew and I didn\'t know the score at all and had never flown above 20,000 ft. In a daze we went to our ship and somehow got ready and took off. After what seemed ages the formation got together in a pre-dawn assembly and away we went for BERLIN.</p><p>On the climb we stayed right in. Then we leveled off for the run in and it happened. That which is most disastrous happened—we fell behind. Opening her wide open we oh! so slowly crept back up. Come the IP and it happened again. I took over the ship again—the bombays were open—target just ahead—we had to get back in! If fighters hit we would have been sunk.</p><p>All our hearts were pounding—nerves at the break point-sweat rolling at 40° below. I quickly turned on the emergency turbo and the engines were giving all they had—they shook and shuddered and whined as if to say "we can\'t take this long." We were pulling 54" and I wondered how long those engines would hold. We just didn\'t seem to gain a bit, but kept falling back & dropping.</p><p>Finally we were down with the low element when we stopped losing. I uttered a little prayer and as a plant grows [...]</p>',
             location: {
                 center: berlin,
-                zoom: 12,
+                zoom: 8,
                 pitch: 0,
                 bearing: 0
             },
@@ -1142,7 +1142,7 @@ var config = {
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p>[...] the airspeed moved to 140, then 141, then 142; it seemed to stop and my heart seemed to stop then it moved to 145 and we began to move up again. Carefully I lifted her up as we gained on our lead. Just as we dropped the bombs we got back in place, but low.</p><p>That was it—the quick turn to escape flack and we were homeward bound. The 10 minutes from the IP to the target were the longest and most tense, exhausting ones of my life. At the Rally point I looked down just in time to see a lone B-17 spin down through the clouds below.</p><p>When we landed the squadron C.O. and all were there to meet us. Then we realized that, as I suspected, we had been sent by mistake—a green crew. They didn\'t think we would make it—we weren\'t even operational yet. "We had it!" Brydge was so frightened he made only 3 entries in his log: "(1) took off (2) Bombs away (3) landed." The hot cocoa sure tasted good. Next day we went on pass and sure needed it!</p>',
             location: {
                 center: berlin,
-                zoom: 12,
+                zoom: 8,
                 pitch: 0,
                 bearing: 0
             },
@@ -1198,7 +1198,7 @@ var config = {
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">B</span>riefing this morning was at 04:00. Our target for today was a marshalling yard at <s>Castle</s> Kassel, Germany. We took off and hit a low ceiling and climbed in solid overcast up to 11,000 ft. Our position was 4–3 in High squadron. Overcast 10/10 over target—results not observed. Flack was dense and we got our first hits. Our gas tank in right wing had to be replaced upon return. Oxygen system was leaking and was empty as we reached 10,000\' on descending—sweating it out. Visibility very poor upon return—we made 6 passes at field before getting in. Went to bed at 20:00 hours.</p>',
             location: {
                 center: kassel,
-                zoom: 12,
+                zoom: 8,
                 pitch: 0,
                 bearing: 0
             },
@@ -1254,7 +1254,7 @@ var config = {
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">I</span> was awakened at 02:30 for 04:00 briefing, went back asleep and luckily awoke again at 03:30, rushed around & made it. The target for today was an oil refinery at Misberg near Hanover. It was snowing at take off and I flew 30 min. A.I. to a pre dawn assembly. Weather was fine—visual over target and we had a good hit. One ship in [at] high squadron was hit and caught fire and one blew up at R.P. of another group. Furtado\'s guns went off badly damaging a ship. We will probably lose him from crew. We were given a new ship tonight —haven\'t seen it yet. I went to church with Brydge and I stayed for communion. Mission today was #6 and we flew in position 2–1.</p>',
             location: {
                 center: misburg,
-                zoom: 12,
+                zoom: 9,
                 pitch: 0,
                 bearing: 0
             },
@@ -1358,7 +1358,7 @@ var config = {
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">B</span>riefing was early as usual and today it was Prozeheim [Pforzheim]. It was a long haul, but we didn\'t see a speck of flack. We flew our new plane today and 1 1/2 hours before target the oxygen back of the bombay began to leak out and all except the ball G. had to ride the rest of the way on the bottle. The plane is fine flying though. We had a new ball gunner.</p>',
             location: {
                 center: pforzheim,
-                zoom: 12,
+                zoom: 8,
                 pitch: 0,
                 bearing: 0
             },
@@ -1486,7 +1486,7 @@ var config = {
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">B</span>riefing at 0500. We took 6x1000 lb. bombs to Bielefeld to get a bridge but cloud cover made us hit rail station in town instead. We flew 3–2 on Mowers wing. It was #2 in our new plane and everything went fine. We had a ball gunner who was new & he was a little nervous. Church at 1800.</p>',
             location: {
                 center: bielefeld,
-                zoom: 12,
+                zoom: 8,
                 pitch: 0,
                 bearing: 0
             },
@@ -1590,7 +1590,7 @@ var config = {
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">T</span>arget: a bridge at Cologne. We dropped 6–1000 pounders. It was rough getting off because of snow packed taxi strips & runways. One of our planes ran off runway halfway down but luckily no damage was done. Our squadron left with but six ships, but more caught up later. Saw a huge flash of flame about 5 mile south of our field as we taxied. A plane at Debich exploded. Our bomb doors had to cranked open & we dropped 20 sec. late. Those old men & boys sure are sharp with the flack. Those puffs walked right up to us and we picked up plenty of holes in our new plane. Today\'s was #9. Went to S.M.C.L. at the chapel. Ceiling was at 400 ft. when we came back</p>',
             location: {
                 center: cologne,
-                zoom: 12,
+                zoom: 8,
                 pitch: 0,
                 bearing: 0
             },
@@ -1718,7 +1718,7 @@ var config = {
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">T</span>arget today was an oil storage area near Derben. Formed at 6,000\' & went up across the North Sea. Just inside coast at Cookshaven [Cuxhaven] flack hit two ships, direct in their wing. Carter was first—it hit his right wing and he hurtled down through the formation into a tight spiral. Almost immediately I looked to the right, saw Raver\'s left wing tip disappear and he did a wing over and Red saw him spin. No shutes seen. Pretty good gunners down there. Remainder of trip uneventful. We missed the target. We picked up a couple holes in wing & waist. Bandits were around, but never got up to us. I was a scared boy—thought I had it. Had another new ball gunner today. Before we took off he was going to fly 2 tours here, but when we landed he decided to quit right now. Went to chapel after chow. Bed time. We flew 4–3.</p>',
             location: {
                 center: derben,
-                zoom: 13,
+                zoom: 8,
                 pitch: 0,
                 bearing: 0
             },
@@ -1774,7 +1774,7 @@ var config = {
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">W</span>e started out for an air field at Letchfeild [Lechfeld] but a 10/10 cloud cover sent us PFF to a marshaling yard at Augsburg. We started out in 3–2 but had to move up to 3–1 when Peterson lost a turbo about 20 min. before the IP. Flack was way off the left wing. Results of bombing unobserved. It was a long 8 hour haul. We\'re on the loading list for tomorrow.</p>',
             location: {
                 center: augsburg,
-                zoom: 12,
+                zoom: 8,
                 pitch: 0,
                 bearing: 0
             },
@@ -1830,7 +1830,7 @@ var config = {
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">T</span>hree missions in as many days. Today was our cluster mission—#12. We flew 4–2 in the high at the start. Our squad. lead aborted so we were moved up to 2–2 where we flew until we got back to France & then because Vick was such a sad rocker-trombone lead I went back down to 4–2. At briefing they had two plans & didn\'t know which we would take. At the plane we were told by radio that "Plan A"—a fighter bait tour of Germany was it. The target was a jet engine factory near Cottbus. Our course looked thus [small inline drawing of a circular route, with arrows and a point marked] & was an 8 hr. haul but weather closed our field so we were diverted to Marston Moor making it 9:10 flight. A ship in the lead squad. caught fire before we left England and the crew baild out. The ball gunner chuted ok, but was found dead near the remains of the plane. Target was covered so PFF was used. Snow covered all the route—pretty. We got flack at battle line, accurate. I watched one flack shell come up from the ground & explode. Gas was plenty low when we got back to earth. Good food at M. M. & went to bed early.</p>',
             location: {
                 center: bitterfeld,
-                zoom: 12,
+                zoom: 9,
                 pitch: 0,
                 bearing: 0
             },
@@ -1896,7 +1896,7 @@ var config = {
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">D</span>idn\'t sleep too well. Breakfast at 0830 & were told to take off soon as possible for home. The General Partridge was to be here to inspect today. We were ready to go at 10:00, but our new ball gunner was missing. Col. LaBally told us to take off without him if he didn\'t come by 1130 so we did. I guess he has had enough of war and decided on a rest. We got here at 1230. Someone (probably Hendricks) gave our shack a good buzzing in a P51. We got Furtado back on the crew again. Went to the chapel to S.M.C.L.</p>',
             location: {
                 center: mendlesham,
-                zoom: 6,
+                zoom: 5,
                 pitch: 0,
                 bearing: 0
             },
@@ -1942,7 +1942,7 @@ var config = {
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">G</span>ot up about 1000, got ready for pass and took off. I got a ride to Ipswich and got there just in time to catch London train. Found Phillip & we got a room at the Goring hotel.</p>',
             location: {
                 center: goring,
-                zoom: 10,
+                zoom: 8,
                 pitch: 0,
                 bearing: 0
             },
@@ -1978,7 +1978,7 @@ var config = {
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">B</span>ought blouse and had it cut into a little jacket. Pee Wee and I finished our London tour. I went with him as far as Richmond where we watched the ice skating. I stayed at the Red Cross Rainbow Club over night.</p>',
             location: {
                 center: richmond,
-                zoom: 12,
+                zoom: 8,
                 pitch: 0,
                 bearing: 0
             },
@@ -2143,7 +2143,7 @@ var config = {
             image: 'images/journal/19450127-trim.png',
             imageId: 'jan27',
             caption: '',
-            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">M</span>ails packages to Mom & Mary. Rode to Mendlesham with Scimeca and got a loaf of bread. Visited the old fashioned shoe repair shop. S.M.C.L. at chapel.</p>',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">W</span>ent down to Mrs. Easters to get my laundry. She wanted me down for tea, but I played ball so I didn\'t go. We played the 4th Eng. and won.</p>',
             location: {
                 center: mendlesham,
                 zoom: 13,
@@ -2170,7 +2170,7 @@ var config = {
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">W</span>e always fly on Sunday. Between snow flurries 13 planes of us got off—just made it on short runway 100°. Target was marshaling yard Hohenbudburg Duisburg—just over the battle line. We missed it. Flack was too accurate—tracked us. A piece broke the outer pane of my windshield. I don\'t see how they miss us. Bulis hurt his arm in the turret. We had a camera man along.</p>',
             location: {
                 center: duisburg,
-                zoom: 12,
+                zoom: 8,
                 pitch: 0,
                 bearing: 0
             },
@@ -2207,6 +2207,342 @@ var config = {
                 },
                 {
                     layer: 'routeDuisburg',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450131',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Mendlesham',
+            date: 'Wednesday, 1/31/1945',
+            image: 'images/journal/19450131-trim.png',
+            imageId: 'jan31',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">W</span>e were going to Berlin today, but weather kept us on the ground. I just got to the ship when it was scrubbed. I went back to bed and got up at noon. Today was payday. Went to S.M.C.L. Had a sandwich & glass of ginger ale at the club. Pay Day</p>',
+            location: {
+                center: mendlesham,
+                zoom: 13,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: '19450201',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Mendlesham',
+            date: 'Thursday, 2/1/1945',
+            image: 'images/journal/19450201-trim.png',
+            imageId: 'feb01',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">S</span>tood down for training. I flew as command pilot with Hicks in a mission over England to determine the effectiveness & a way to beat the German radar guns captured in the Ardennes.</p>',
+            location: {
+                center: mendlesham,
+                zoom: 13,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: '19450202',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Mendlesham',
+            date: 'Friday, 2/2/1945',
+            image: 'images/journal/19450202-trim.png',
+            imageId: 'feb02',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">B</span>riefed for a trip to Berlin, but weather over the island kept us on the ground so back to bed until noon I went. The whole 8th A.F. was going to Berlin today.</p>',
+            location: {
+                center: mendlesham,
+                zoom: 13,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: '19450203',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '14',
+            title: 'Berlin',
+            date: 'Saturday, 2/3/1945',
+            image: 'images/journal/19450203-trim.png',
+            imageId: 'feb03',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">A</span> big one to Berlin. We carried 5x1,000. It was a long haul. I never saw so many planes in my life. Every where there were planes. The bomber stream stretched from the channel to Berlin. Flack wasn\'t bad. We were in the air 7 1/2 hours. I cracked up my plane. I locked the controls while rolling down the runway and Red hit the brakes. It went up on the nose, bent the inboard props and the chin turret. Then it fell hard on the tail, collapsing the tail wheel & breaking the fuselage. I don\'t know what will happen to me, but something should. Sure was a dumb trick. A perfect airplane ruined for no reason. Tired</p>',
+            location: {
+                center: berlin,
+                zoom: 8,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'berlinMarker',
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeBerlin',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeBerlin',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450204',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Mendlesham',
+            date: 'Sunday, 2/4/1945',
+            image: 'images/journal/19450204-trim.png',
+            imageId: 'feb04',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">W</span>ent to church. Each sermon makes my convictions grow stronger in favor of holiness. "You have to sin" theology is sooo thin & hopeless—so compromising—so contradictory—so false—so unfruitful. Flew the blind landing range. Wrote up a report on the wreck.</p>',
+            location: {
+                center: mendlesham,
+                zoom: 13,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: '19450209',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '15',
+            title: 'Dülmen',
+            date: 'Friday, 2/9/1945',
+            image: 'images/journal/19450209-trim.png',
+            imageId: 'feb09',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">M</span>ission to Dulmen. It was our secondary target. Primary was visual only. We dropped them thru clouds_flack was inaccurate.</p>',
+            location: {
+                center: dulmen,
+                zoom: 9,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'dulmenMarker',
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeDulmen',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeDulmen',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450212',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Mendlesham',
+            date: 'Monday, 2/12/1945',
+            image: 'images/journal/19450212-trim.png',
+            imageId: 'feb12',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">W</span>e were ground spare today, but mission was scrubbed after briefing.</p>',
+            location: {
+                center: mendlesham,
+                zoom: 13,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: '19450213',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Mendlesham',
+            date: 'Tuesday, 2/13/1945',
+            image: 'images/journal/19450213-trim.png',
+            imageId: 'feb13',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">U</span>p for briefing, but she was scrubbed just as I got to the ship. Read J. Wesley\'s sermon on Christian Perfection. Mailed package to Mary.</p>',
+            location: {
+                center: mendlesham,
+                zoom: 13,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: '19450214',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Mendlesham',
+            date: 'Wednesday, 2/14/1945',
+            image: 'images/journal/19450214-trim.png',
+            imageId: 'feb14',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">F</span>lew a camera gunnery mission, but camera\'s would not work & fighters didn\'t come so we came home.</p>',
+            location: {
+                center: mendlesham,
+                zoom: 13,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: '19450215',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '16',
+            title: 'Mendlesham',
+            date: 'Thursday, 2/15/1945',
+            image: 'images/journal/19450215-trim.png',
+            imageId: 'feb15',
+            caption: '',
+            description: '<p></p>',
+            location: {
+                center: cottbus,
+                zoom: 8,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'cottbusMarker',
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeCottbus',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeCottbus',
                     opacity: 0,
                     duration: 300
                 }
