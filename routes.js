@@ -1,4 +1,32 @@
 // Simple line
+var routeFromBrussels = {
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [brussels, mendlesham]
+	},
+	'properties': {
+		'name': 'Brussels – Mendlesham',
+		'date': '2/21/1945',
+		'direction': 'from'
+	}
+};
+
+// Simple line
+var routeToBrussels = {
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [cottbus, brussels]
+	},
+	'properties': {
+		'name': 'Cottbus – Brussels',
+		'date': '2/15/1945',
+		'direction': 'to'
+	}
+};
+
+// Simple line
 var routeFromMarstonMoor = {
 	'type': 'Feature',
 	'geometry': {
@@ -12,6 +40,7 @@ var routeFromMarstonMoor = {
 	}
 };
 
+// Simple line
 var routeToMarstonMoor = {
 	'type': 'Feature',
 	'geometry': {
@@ -497,6 +526,8 @@ var lineDistanceBadZwischenahn = turf.length.default(routeBadZwischenahn);
 var lineDistanceRecall = turf.length.default(routeRecall);
 var lineDistanceFromMarstonMoor = turf.length.default(routeFromMarstonMoor);
 var lineDistanceToMarstonMoor = turf.length.default(routeToMarstonMoor);
+var lineDistanceFromBrussels = turf.length.default(routeFromBrussels);
+var lineDistanceToBrussels = turf.length.default(routeToBrussels);
  
 var arcSea = [];
 var arcBerlin = [];
@@ -530,6 +561,8 @@ var arcBadZwischenahn = [];
 var arcRecall = [];
 var arcFromMarstonMoor = [];
 var arcToMarstonMoor = [];
+var arcFromBrussels = [];
+var arcToBrussels = [];
  
 // Number of steps to use in the arc and animation, more steps means
 // a smoother arc and animation, but too many steps will result in a
@@ -566,6 +599,8 @@ var stepsBadZwischenahn = 500;
 var stepsRecall = 500;
 var stepsFromMarstonMoor = 500;
 var stepsToMarstonMoor = 500;
+var stepsFromBrussels = 500;
+var stepsToBrussels = 500;
  
 // Draw an arc between the origin & destination points
 for (var i = 0; i < lineDistanceSea; i += lineDistanceSea / stepsSea) {
@@ -696,6 +731,14 @@ for (var i = 0; i < lineDistanceToMarstonMoor; i += lineDistanceToMarstonMoor / 
 	var segmentToMarstonMoor = turf.along.default(routeToMarstonMoor, i);
 	arcToMarstonMoor.push(segmentToMarstonMoor.geometry.coordinates);
 }
+for (var i = 0; i < lineDistanceFromBrussels; i += lineDistanceFromBrussels / stepsFromBrussels) {
+	var segmentFromBrussels = turf.along.default(routeFromBrussels, i);
+	arcFromBrussels.push(segmentFromBrussels.geometry.coordinates);
+}
+for (var i = 0; i < lineDistanceToBrussels; i += lineDistanceToBrussels / stepsToBrussels) {
+	var segmentToBrussels = turf.along.default(routeToBrussels, i);
+	arcToBrussels.push(segmentToBrussels.geometry.coordinates);
+}
  
 // Update the route with calculated arc coordinates
 routeSea.geometry.coordinates = arcSea;
@@ -730,3 +773,5 @@ routeBadZwischenahn.geometry.coordinates = arcBadZwischenahn;
 routeRecall.geometry.coordinates = arcRecall;
 routeFromMarstonMoor.geometry.coordinates = arcFromMarstonMoor;
 routeToMarstonMoor.geometry.coordinates = arcToMarstonMoor;
+routeFromBrussels.geometry.coordinates = arcFromBrussels;
+routeToBrussels.geometry.coordinates = arcToBrussels;

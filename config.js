@@ -2498,7 +2498,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             daterank: '16',
-            title: 'Mendlesham',
+            title: 'Cottbus',
             date: 'Thursday, 2/15/1945',
             image: 'images/journal/19450215-trim.png',
             imageId: 'feb15',
@@ -2528,6 +2528,11 @@ var config = {
                     layer: 'routeCottbus',
                     opacity: 1,
                     duration: 300
+                },
+                {
+                    layer: 'toBrussels',
+                    opacity: 1,
+                    duration: 300
                 }
             ],
             onChapterExit: [
@@ -2543,6 +2548,57 @@ var config = {
                 },
                 {
                     layer: 'routeCottbus',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'toBrussels',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450221',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Mendlesham',
+            date: 'Wednesday, 2/21/1945',
+            image: 'images/journal/19450221-trim.png',
+            imageId: 'feb21',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">G</span>ot back from Belgium by way of Canadian transport. Landed at &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; & got back here by truck.</p>',
+            location: {
+                center: mendlesham,
+                zoom: 13,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [
+                {
+                    layer: 'toBrussels',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'fromBrussels',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'toBrussels',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'fromBrussels',
                     opacity: 0,
                     duration: 300
                 }

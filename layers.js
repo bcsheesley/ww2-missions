@@ -192,6 +192,18 @@ map.on('load', function() {
 		}
 	});
 	
+	// Add brussels route source
+	map.addSource('brussels', {
+		'type': 'geojson',
+		'data': {
+			'type': 'FeatureCollection',
+			'features': [
+				routeFromBrussels,
+				routeToBrussels
+			] 
+		}
+	});
+	
 	// Add London trip source
 	map.addSource('london', {
 		'type': 'geojson',
@@ -293,7 +305,7 @@ map.on('load', function() {
 	'waterway-label'
 	);
 	
-	// Add Bitterfeld - Marston Moor -  route line layer
+	// Add Bitterfeld - Marston Moor route line layer
 	map.addLayer({
 		'id': 'toMarstonMoor',
 		'source': 'marstonMoor',
@@ -350,6 +362,54 @@ map.on('load', function() {
 			'==',
 			['get','direction'],
 			'home'
+		],
+		'paint': {
+			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],
+			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
+			'line-color': 'rgba(255,126,126,0.9)',
+			'line-opacity': 0,
+			'line-dasharray': [2,2]
+		},
+		'layout': {
+			//'line-cap': 'round'
+		}
+	},
+	'waterway-label'
+	);
+	
+	// Add Brussels - Mendlesham route line layer
+	map.addLayer({
+		'id': 'fromBrussels',
+		'source': 'brussels',
+		'type': 'line',
+		'filter': [
+			'==',
+			['get','direction'],
+			'from'
+		],
+		'paint': {
+			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],
+			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
+			'line-color': 'rgba(255,126,126,0.9)',
+			'line-opacity': 0,
+			'line-dasharray': [2,2]
+		},
+		'layout': {
+			//'line-cap': 'round'
+		}
+	},
+	'waterway-label'
+	);
+	
+	// Add Cottbus - Brussels route line layer
+	map.addLayer({
+		'id': 'toBrussels',
+		'source': 'brussels',
+		'type': 'line',
+		'filter': [
+			'==',
+			['get','direction'],
+			'to'
 		],
 		'paint': {
 			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],

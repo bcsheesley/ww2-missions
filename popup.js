@@ -75,7 +75,48 @@ map.on('mousemove', 'toMarstonMoor', (e) => {
 	}
 });
 
-map.on('mouseleave', 'toMarstonMoor', () => {
+// From Brussels hover popup
+map.on('mousemove', 'fromBrussels', (e) => {
+	const paintProperty = map.getPaintProperty('fromBrussels', 'line-opacity');
+	const name = e.features[0].properties.name;
+	const date = e.features[0].properties.date;
+	//console.log(paintProperty);
+	
+	if (paintProperty > 0) {
+		map.getCanvas().style.cursor = 'pointer';
+		
+		popupHover
+		.setHTML(`<h3>${name}</h3><p>${date}</p>`)
+		.addTo(map)
+		.setLngLat(e.lngLat)
+		.trackPointer();
+	}
+});
+
+map.on('mouseleave', 'fromBrussels', () => {
+	map.getCanvas().style.cursor = '';
+	popupHover.remove();
+});
+
+// To Brussels hover popup
+map.on('mousemove', 'toBrussels', (e) => {
+	const paintProperty = map.getPaintProperty('toBrussels', 'line-opacity');
+	const name = e.features[0].properties.name;
+	const date = e.features[0].properties.date;
+	//console.log(paintProperty);
+	
+	if (paintProperty > 0) {
+		map.getCanvas().style.cursor = 'pointer';
+		
+		popupHover
+		.setHTML(`<h3>${name}</h3><p>${date}</p>`)
+		.addTo(map)
+		.setLngLat(e.lngLat)
+		.trackPointer();
+	}
+});
+
+map.on('mouseleave', 'toBrussels', () => {
 	map.getCanvas().style.cursor = '';
 	popupHover.remove();
 });
