@@ -436,7 +436,7 @@ map.on("load", function() {
     scroller
     .setup({
         step: '.step',
-        offset: 0.75,
+        offset: 0.5,
         progress: true
     })
     .onStepEnter(response => {
@@ -664,6 +664,18 @@ function berlinMarker() {
     */
 };
 
+function darmstadtMarker() {
+  missionMarker.setLngLat(darmstadt).addTo(map);
+};
+
+function hanoverMarker() {
+  missionMarker.setLngLat(hanover).addTo(map);
+};
+
+function andernachMarker() {
+  missionMarker.setLngLat(andernach).addTo(map);
+};
+
 function kasselMarker() {
   missionMarker.setLngLat(kassel).addTo(map);
 };
@@ -727,6 +739,14 @@ function ludwigsfeldeMarker() {
 
 function dresdenMarker() {
   missionMarker.setLngLat(dresden).addTo(map);
+};
+
+function dedenhausenMarker() {
+  missionMarker.setLngLat(dedenhausen).addTo(map);
+};
+
+function recallMarker() {
+  missionMarker.setLngLat(recall).addTo(map);
 };
 
 /*

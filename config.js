@@ -1150,22 +1150,22 @@ var config = {
             rotateAnimation: false,
             callback: 'berlinMarker',
             onChapterEnter: [
-            {
-                layer: 'routes',
-                opacity: 1,
-                duration: 300
-            },
-            {
-                layer: 'recall',
-                opacity: 1,
-                duration: 300
-            },
-            {
-                layer: 'routeBerlin',
-                opacity: 1,
-                duration: 300
-            }
-        ],
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeBerlin',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
             onChapterExit: [
                 {
                     layer: 'routes',
@@ -1179,6 +1179,174 @@ var config = {
                 },
                 {
                     layer: 'routeBerlin',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19441212',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '2',
+            title: 'Darmstadt',
+            date: 'Tuesday, 12/12/1944',
+            image: '',
+            imageId: '',
+            caption: '',
+            description: '<i style="color: #999;">Note: No entry exists for this date.</i>',
+            location: {
+                center: darmstadt,
+                zoom: 8,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'darmstadtMarker',
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeDarmstadt',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeDarmstadt',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19441215',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '3',
+            title: 'Hanover',
+            date: 'Friday, 12/15/1944',
+            image: '',
+            imageId: '',
+            caption: '',
+            description: '<i style="color: #999;">Note: No entry exists for this date.</i>',
+            location: {
+                center: hanover,
+                zoom: 8,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'hanoverMarker',
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeHanover',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeHanover',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19441227',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '4',
+            title: 'Andernach',
+            date: 'Wednesday, 12/27/1944',
+            image: '',
+            imageId: '',
+            caption: '',
+            description: '<i style="color: #999;">Note: No entry exists for this date.</i>',
+            location: {
+                center: andernach,
+                zoom: 8,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'andernachMarker',
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeAndernach',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeAndernach',
                     opacity: 0,
                     duration: 300
                 }
@@ -2983,6 +3151,142 @@ var config = {
                     duration: 300
                 }
             ]
+        },
+        {
+            id: '19450303',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '21',
+            title: 'Dedenhausen',
+            date: 'Saturday, 3/3/1945',
+            image: 'images/journal/19450303-trim.png',
+            imageId: 'mar03',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">U</span>p at 0230 for another mission. We flew the 2–2 spot. Our target was a fuel dump near Hannover. Bombardiers couldn\'t pick up the target in time so we missed. No flak to speak of. German fighters were over England from 11:00p.m. to 0200 a.m. Bombs were dropped on Ipswich and Great Ashfield. One plane straffed [strafed] our base, but no damage was done.</p>',
+            location: {
+                center: dedenhausen,
+                zoom: 8,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'dedenhausenMarker',
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeDedenhausen',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeDedenhausen',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450304',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '22',
+            title: 'Recall',
+            date: 'Sunday, 3/4/1945',
+            image: 'images/journal/19450304-trim.png',
+            imageId: 'mar04',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">F</span>or the third day in succession we arose at 0230 to bomb the enemy. Ship by ship we went to France to form there. Cirrus clouds at formation alt. made things bad. Two ships in the 18th Sqdn collided. Our "G" box was out & we couldn\'t get the buncher so we didn\'t get to the formation until the last moment. We flew the 4–1 position. We had just crossed the battle line, got some accurate flack, but no hits and the wing was recalled without going on to target. We got mission credit though.— Went to the chapel.</p>',
+            location: {
+                center: recall,
+                zoom: 8,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'recallMarker',
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeRecall',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeRecall',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450305',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Mendlesham',
+            date: 'Monday, 3/5/1945',
+            image: 'images/journal/19450305-trim.png',
+            imageId: 'mar05',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">D</span>own for training today.<br>&nbsp;</br></p>',
+            location: {
+                center: mendlesham,
+                zoom: 13,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [],
+            onChapterExit: []
         }
     ]
 };
