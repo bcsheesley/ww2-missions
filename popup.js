@@ -167,6 +167,52 @@ map.on('mouseleave', 'pass1-home', () => {
 	popupHover.remove();
 });
 
+// Pass2 to London hover popup - Away
+map.on('mousemove', 'pass2-away', (e) => {
+	const paintProperty = map.getPaintProperty('pass2-away', 'line-opacity');
+	const name = e.features[0].properties.name;
+	const date = e.features[0].properties.date;
+	//console.log(paintProperty);
+	
+	if (paintProperty > 0) {
+		map.getCanvas().style.cursor = 'pointer';
+		
+		popupHover
+		.setHTML(`<h3>${name}</h3><p>${date}</p>`)
+		.addTo(map)
+		.setLngLat(e.lngLat)
+		.trackPointer();
+	}
+});
+
+map.on('mouseleave', 'pass2-away', () => {
+	map.getCanvas().style.cursor = '';
+	popupHover.remove();
+});
+
+// Pass2 to London hover popup - Away
+map.on('mousemove', 'pass2-home', (e) => {
+	const paintProperty = map.getPaintProperty('pass2-home', 'line-opacity');
+	const name = e.features[0].properties.name;
+	const date = e.features[0].properties.date;
+	//console.log(paintProperty);
+	
+	if (paintProperty > 0) {
+		map.getCanvas().style.cursor = 'pointer';
+		
+		popupHover
+		.setHTML(`<h3>${name}</h3><p>${date}</p>`)
+		.addTo(map)
+		.setLngLat(e.lngLat)
+		.trackPointer();
+	}
+});
+
+map.on('mouseleave', 'pass2-home', () => {
+	map.getCanvas().style.cursor = '';
+	popupHover.remove();
+});
+
 
 // Mission routes hover popup
 let routeID = null;

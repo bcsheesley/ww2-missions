@@ -1934,7 +1934,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             daterank: '',
-            title: 'Goring Hotel, London',
+            title: 'London',
             date: 'Thursday, 1/18/1945',
             image: 'images/journal/19450118-trim.png',
             imageId: 'jan18',
@@ -2569,7 +2569,7 @@ var config = {
             image: 'images/journal/19450221-trim.png',
             imageId: 'feb21',
             caption: '',
-            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">G</span>ot back from Belgium by way of Canadian transport. Landed at &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; & got back here by truck.</p>',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">G</span>ot back from Belgium by way of Canadian transport. Landed at &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; & got back here by truck.</p><i style="color: #999;">Note: Original entry is misdated.</i>',
             location: {
                 center: mendlesham,
                 zoom: 13,
@@ -2599,6 +2599,386 @@ var config = {
                 },
                 {
                     layer: 'fromBrussels',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450222',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Mendlesham',
+            date: 'Thursday, 2/22/1945',
+            image: 'images/journal/19450222-trim.png',
+            imageId: 'feb22',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">S</span>low timed T-tare.<br>&nbsp;</br></p><i style="color: #999;">Note: Original entry is misdated.</i>',
+            location: {
+                center: mendlesham,
+                zoom: 13,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: '19450223',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Mendlesham',
+            date: 'Friday, 2/23/1945',
+            image: 'images/journal/19450223-trim.png',
+            imageId: 'feb23',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">S</span>low timed C-charlie. Weather was bad so we only put 4 hours on it.</p><i style="color: #999;">Note: Original entry is misdated.</i>',
+            location: {
+                center: mendlesham,
+                zoom: 13,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: '19450224',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '17',
+            title: 'Bremen',
+            date: 'Saturday, 2/24/1945',
+            image: 'images/journal/19450224-trim.png',
+            imageId: 'feb24',
+            caption: '',
+            description: '<i style="color: #999;">Note: Original entry is misdated.</i>',
+            location: {
+                center: bremen,
+                zoom: 8,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'bremenMarker',
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeBremen',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeBremen',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450225',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '18',
+            title: 'Ludwigsfelde',
+            date: 'Sunday, 2/25/1945',
+            image: 'images/journal/19450225-trim.png',
+            imageId: 'feb25',
+            caption: '',
+            description: '<i style="color: #999;">Note: Original entry is misdated.</i>',
+            location: {
+                center: ludwigsfelde,
+                zoom: 8,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'ludwigsfeldeMarker',
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeLudwigsfelde',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeLudwigsfelde',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450226',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '19',
+            title: 'Berlin',
+            date: 'Monday, 2/26/1945',
+            image: 'images/journal/19450226-trim.png',
+            imageId: 'feb26',
+            caption: '',
+            description: '<i style="color: #999;">Note: Original entry is misdated.</i>',
+            location: {
+                center: berlin,
+                zoom: 8,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'berlinMarker',
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeBerlin',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeBerlin',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450227',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'London',
+            date: 'Tuesday, 2/27/1945',
+            image: 'images/journal/19450227-trim.png',
+            imageId: 'feb27',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">H</span>itch hiked to Ipswitch [Ipswich] with Red & caught a train to London. Saw "Hamlet". Stayed at Princess Gardens.</p><i style="color: #999;">Note: Original entry is misdated.</i>',
+            location: {
+                center: goring,
+                zoom: 6,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'londonMarker',
+            onChapterEnter: [
+                {
+                    layer: 'pass2-away',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'pass2-away',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450228',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'London',
+            date: 'Wednesday, 2/28/1945',
+            image: 'images/journal/19450228-trim.png',
+            imageId: 'feb28',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">S</span>pent the day wandering around London and getting in touch with Phillip. Had some ice cream at ¢.20 (1 shilling) per dip. Pee Wee & I went to see "Midsummer Nights Dream. Stayed overnight at "Boom Gardens".</p><i style="color: #999;">Note: Original entry is misdated.</i>',
+            location: {
+                center: goring,
+                zoom: 8,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'londonMarker',
+            onChapterEnter: [
+                {
+                    layer: 'pass2-away',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'pass2-away',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450301',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Mendlesham',
+            date: 'Thursday, 3/1/1945',
+            image: 'images/journal/19450301-trim.png',
+            imageId: 'mar01',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">J</span>ust got back from pass.<br>&nbsp;</br></p><i style="color: #999;">Note: Original entry is misdated.</i>',
+            location: {
+                center: mendlesham,
+                zoom: 13,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [
+                {
+                    layer: 'pass2-home',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'pass2-home',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450302',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '20',
+            title: 'Dresden',
+            date: 'Friday, 3/2/1945',
+            image: 'images/journal/19450302-trim.png',
+            imageId: 'mar02',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">B</span>riefed at 0330 for a marshaling yard at Dresden. At the I.P. we were met by enemy fighters. We were in the 4–1 & behind because we had just been scattered by prop wash. Why we weren\'t hit I don\'t know but we poured on the coal & got in formation. McTaggart was behind us & was hit but got back on two engines. A waist gunner was killed in the lead ship. That formation really tightened up, but quick so the fighters hit the 385th behind us. The ball gunner in the ship in front of us shot out the glass in our top turret. We were very fortunate</p>',
+            location: {
+                center: dresden,
+                zoom: 8,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'dresdenMarker',
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeDresden',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeDresden',
                     opacity: 0,
                     duration: 300
                 }

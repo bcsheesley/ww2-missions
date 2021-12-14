@@ -223,7 +223,7 @@ map.on('load', function() {
 					'properties': {
 						'name': 'Mendlesham – London',
 						'date': '1/18/1945',
-						'direction': 'away'
+						'direction': 'pass1-away'
 					}
 				},
 				{
@@ -238,7 +238,7 @@ map.on('load', function() {
 					'properties': {
 						'name': 'London – Richmond',
 						'date': '1/19/1945',
-						'direction': 'away'
+						'direction': 'pass1-away'
 					}
 				},
 				{
@@ -255,7 +255,39 @@ map.on('load', function() {
 					'properties': {
 						'name': 'Richmond – Mendlesham',
 						'date': '1/20/1945',
-						'direction': 'home'
+						'direction': 'pass1-home'
+					}
+				},
+				{
+					'type': 'Feature',
+					'geometry': {
+						'type': 'LineString',
+						'coordinates': [
+							mendlesham,
+							ipswich,
+							goring
+						]
+					},
+					'properties': {
+						'name': 'Mendlesham – London',
+						'date': '2/27/1945',
+						'direction': 'pass2-away'
+					}
+				},
+				{
+					'type': 'Feature',
+					'geometry': {
+						'type': 'LineString',
+						'coordinates': [
+							goring,
+							ipswich,
+							mendlesham
+						]
+					},
+					'properties': {
+						'name': 'London – Mendlesham',
+						'date': '3/1/1945',
+						'direction': 'pass2-home'
 					}
 				}
 			] 
@@ -329,7 +361,7 @@ map.on('load', function() {
 	'waterway-label'
 	);
 	
-	// Add London trip line layer - Away
+	// Add Pass 1 - London trip line layer - Away
 	map.addLayer({
 		'id': 'pass1-away',
 		'source': 'london',
@@ -337,7 +369,7 @@ map.on('load', function() {
 		'filter': [
 			'==',
 			['get','direction'],
-			'away'
+			'pass1-away'
 		],
 		'paint': {
 			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],
@@ -353,7 +385,7 @@ map.on('load', function() {
 	'waterway-label'
 	);
 	
-	// Add London trip line layer - Home
+	// Add Pass 1 - London trip line layer - Home
 	map.addLayer({
 		'id': 'pass1-home',
 		'source': 'london',
@@ -361,7 +393,55 @@ map.on('load', function() {
 		'filter': [
 			'==',
 			['get','direction'],
-			'home'
+			'pass1-home'
+		],
+		'paint': {
+			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],
+			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
+			'line-color': 'rgba(255,126,126,0.9)',
+			'line-opacity': 0,
+			'line-dasharray': [2,2]
+		},
+		'layout': {
+			//'line-cap': 'round'
+		}
+	},
+	'waterway-label'
+	);
+	
+	// Add Pass 2 - London trip line layer - Away
+	map.addLayer({
+		'id': 'pass2-away',
+		'source': 'london',
+		'type': 'line',
+		'filter': [
+			'==',
+			['get','direction'],
+			'pass2-away'
+		],
+		'paint': {
+			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],
+			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
+			'line-color': 'rgba(255,126,126,0.9)',
+			'line-opacity': 0,
+			'line-dasharray': [2,2]
+		},
+		'layout': {
+			//'line-cap': 'round'
+		}
+	},
+	'waterway-label'
+	);
+	
+	// Add Pass 2 - London trip line layer - Home
+	map.addLayer({
+		'id': 'pass2-home',
+		'source': 'london',
+		'type': 'line',
+		'filter': [
+			'==',
+			['get','direction'],
+			'pass2-home'
 		],
 		'paint': {
 			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],
