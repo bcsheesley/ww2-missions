@@ -190,7 +190,7 @@ map.on('mouseleave', 'pass2-away', () => {
 	popupHover.remove();
 });
 
-// Pass2 to London hover popup - Away
+// Pass2 to London hover popup - Home
 map.on('mousemove', 'pass2-home', (e) => {
 	const paintProperty = map.getPaintProperty('pass2-home', 'line-opacity');
 	const name = e.features[0].properties.name;
@@ -209,6 +209,98 @@ map.on('mousemove', 'pass2-home', (e) => {
 });
 
 map.on('mouseleave', 'pass2-home', () => {
+	map.getCanvas().style.cursor = '';
+	popupHover.remove();
+});
+
+// Pass3 to London hover popup - Away
+map.on('mousemove', 'pass3-away', (e) => {
+	const paintProperty = map.getPaintProperty('pass3-away', 'line-opacity');
+	const name = e.features[0].properties.name;
+	const date = e.features[0].properties.date;
+	//console.log(paintProperty);
+	
+	if (paintProperty > 0) {
+		map.getCanvas().style.cursor = 'pointer';
+		
+		popupHover
+		.setHTML(`<h3>${name}</h3><p>${date}</p>`)
+		.addTo(map)
+		.setLngLat(e.lngLat)
+		.trackPointer();
+	}
+});
+
+map.on('mouseleave', 'pass3-away', () => {
+	map.getCanvas().style.cursor = '';
+	popupHover.remove();
+});
+
+// Pass3 to London hover popup - Home
+map.on('mousemove', 'pass3-home', (e) => {
+	const paintProperty = map.getPaintProperty('pass3-home', 'line-opacity');
+	const name = e.features[0].properties.name;
+	const date = e.features[0].properties.date;
+	//console.log(paintProperty);
+	
+	if (paintProperty > 0) {
+		map.getCanvas().style.cursor = 'pointer';
+		
+		popupHover
+		.setHTML(`<h3>${name}</h3><p>${date}</p>`)
+		.addTo(map)
+		.setLngLat(e.lngLat)
+		.trackPointer();
+	}
+});
+
+map.on('mouseleave', 'pass3-home', () => {
+	map.getCanvas().style.cursor = '';
+	popupHover.remove();
+});
+
+// Pass4 to London hover popup - Away
+map.on('mousemove', 'pass4-away', (e) => {
+	const paintProperty = map.getPaintProperty('pass4-away', 'line-opacity');
+	const name = e.features[0].properties.name;
+	const date = e.features[0].properties.date;
+	//console.log(paintProperty);
+	
+	if (paintProperty > 0) {
+		map.getCanvas().style.cursor = 'pointer';
+		
+		popupHover
+		.setHTML(`<h3>${name}</h3><p>${date}</p>`)
+		.addTo(map)
+		.setLngLat(e.lngLat)
+		.trackPointer();
+	}
+});
+
+map.on('mouseleave', 'pass4-away', () => {
+	map.getCanvas().style.cursor = '';
+	popupHover.remove();
+});
+
+// Pass4 to London hover popup - Home
+map.on('mousemove', 'pass4-home', (e) => {
+	const paintProperty = map.getPaintProperty('pass4-home', 'line-opacity');
+	const name = e.features[0].properties.name;
+	const date = e.features[0].properties.date;
+	//console.log(paintProperty);
+	
+	if (paintProperty > 0) {
+		map.getCanvas().style.cursor = 'pointer';
+		
+		popupHover
+		.setHTML(`<h3>${name}</h3><p>${date}</p>`)
+		.addTo(map)
+		.setLngLat(e.lngLat)
+		.trackPointer();
+	}
+});
+
+map.on('mouseleave', 'pass4-home', () => {
 	map.getCanvas().style.cursor = '';
 	popupHover.remove();
 });

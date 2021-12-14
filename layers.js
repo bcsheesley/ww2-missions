@@ -289,6 +289,86 @@ map.on('load', function() {
 						'date': '3/1/1945',
 						'direction': 'pass2-home'
 					}
+				},
+				{
+					'type': 'Feature',
+					'geometry': {
+						'type': 'LineString',
+						'coordinates': [
+							mendlesham,
+							ipswich
+						]
+					},
+					'properties': {
+						'name': 'Mendlesham – Ipswich',
+						'date': '3/14/1945',
+						'direction': 'pass3-away'
+					}
+				},
+				{
+					'type': 'Feature',
+					'geometry': {
+						'type': 'LineString',
+						'coordinates': [
+							ipswich,
+							goring,
+							ascot
+						]
+					},
+					'properties': {
+						'name': 'Ipswich – Ascot',
+						'date': '3/15/1945',
+						'direction': 'pass3-away'
+					}
+				},
+				{
+					'type': 'Feature',
+					'geometry': {
+						'type': 'LineString',
+						'coordinates': [
+							ascot,
+							goring,
+							ipswich,
+							mendlesham
+						]
+					},
+					'properties': {
+						'name': 'Ascot – Mendlesham',
+						'date': '3/16/1945',
+						'direction': 'pass3-home'
+					}
+				},
+				{
+					'type': 'Feature',
+					'geometry': {
+						'type': 'LineString',
+						'coordinates': [
+							mendlesham,
+							ipswich,
+							goring
+						]
+					},
+					'properties': {
+						'name': 'Mendlesham – London',
+						'date': '3/25/1945',
+						'direction': 'pass4-away'
+					}
+				},
+				{
+					'type': 'Feature',
+					'geometry': {
+						'type': 'LineString',
+						'coordinates': [
+							goring,
+							ipswich,
+							mendlesham
+						]
+					},
+					'properties': {
+						'name': 'London – Mendlesham',
+						'date': '3/27/1945',
+						'direction': 'pass4-home'
+					}
 				}
 			] 
 		}
@@ -442,6 +522,102 @@ map.on('load', function() {
 			'==',
 			['get','direction'],
 			'pass2-home'
+		],
+		'paint': {
+			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],
+			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
+			'line-color': 'rgba(255,126,126,0.9)',
+			'line-opacity': 0,
+			'line-dasharray': [2,2]
+		},
+		'layout': {
+			//'line-cap': 'round'
+		}
+	},
+	'waterway-label'
+	);
+	
+	// Add Pass 3 - London trip line layer - Away
+	map.addLayer({
+		'id': 'pass3-away',
+		'source': 'london',
+		'type': 'line',
+		'filter': [
+			'==',
+			['get','direction'],
+			'pass3-away'
+		],
+		'paint': {
+			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],
+			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
+			'line-color': 'rgba(255,126,126,0.9)',
+			'line-opacity': 0,
+			'line-dasharray': [2,2]
+		},
+		'layout': {
+			//'line-cap': 'round'
+		}
+	},
+	'waterway-label'
+	);
+	
+	// Add Pass 3 - London trip line layer - Home
+	map.addLayer({
+		'id': 'pass3-home',
+		'source': 'london',
+		'type': 'line',
+		'filter': [
+			'==',
+			['get','direction'],
+			'pass3-home'
+		],
+		'paint': {
+			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],
+			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
+			'line-color': 'rgba(255,126,126,0.9)',
+			'line-opacity': 0,
+			'line-dasharray': [2,2]
+		},
+		'layout': {
+			//'line-cap': 'round'
+		}
+	},
+	'waterway-label'
+	);
+	
+	// Add Pass 4 - London trip line layer - Away
+	map.addLayer({
+		'id': 'pass4-away',
+		'source': 'london',
+		'type': 'line',
+		'filter': [
+			'==',
+			['get','direction'],
+			'pass4-away'
+		],
+		'paint': {
+			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],
+			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
+			'line-color': 'rgba(255,126,126,0.9)',
+			'line-opacity': 0,
+			'line-dasharray': [2,2]
+		},
+		'layout': {
+			//'line-cap': 'round'
+		}
+	},
+	'waterway-label'
+	);
+	
+	// Add Pass 4 - London trip line layer - Home
+	map.addLayer({
+		'id': 'pass4-home',
+		'source': 'london',
+		'type': 'line',
+		'filter': [
+			'==',
+			['get','direction'],
+			'pass4-home'
 		],
 		'paint': {
 			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],

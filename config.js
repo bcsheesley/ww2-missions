@@ -21,7 +21,7 @@ var config = {
             image: '',
             imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">L</span>t. Byron E. Sheesley kept two short journals while serving in the United States Army Air Forces (USAAF) during World War Ⅱ.</p><p>One journal documents his nearly two-week-long journey from Camp Kilmer, New Jersey to a USAAF replacement center near Stone, England by troopship and train in late October and early November, 1944.</p><p>The other summarizes many of the 35 combat missions he flew over enemy targets in Germany as pilot of a B-17 heavy bomber between December 1944 and March 1945. It also describes aspects of his daily life on base and on pass. Sheesley was stationed in Mendlesham, England with the 7th Squadron of the 34th Bomb Group in the "Mighty" 8th Air Force.</p><p>Many of the journal entries are concise and matter-of-fact. There are details about people and places, bomber formations and targets, weather conditions and flack, as well as time spent playing games, riding bikes, doing laundry, eating meals, attending chapel, and reading books.</p><p>Others, however, are quite powerful and moving. For example, in one entry Lt. Sheesley describes an intense <a href="#1-berlin-p1">first mission</a> to Berlin where his crew was sent by mistake and barely made it home alive. In another, after completing his <a href="#hanover">last mission</a>, he expresses joy, relief, and determination to reunite with his fiancé, Mary E. Clark: <blockquote>... Happy Day! No more flack, fighters, gas, oxygen or bomb runs to sweat out. Mary, here I come.</blockquote></p><p>This map connects entries in the two journals with the places they describe. <b>Scroll down to read more.</b></p>',
+            description: '<p><span class="dropCap">L</span>t. Byron E. Sheesley kept two short journals while serving in the United States Army Air Forces (USAAF) during World War Ⅱ.</p><p>One journal documents his nearly two-week-long journey from Camp Kilmer, New Jersey to a USAAF replacement center near Stone, England by troopship and train in late October and early November, 1944.</p><p>The other summarizes many of the 35 combat missions he flew over enemy targets in Germany as pilot of a B-17 heavy bomber between December 1944 and March 1945. It also describes aspects of his daily life on base and on pass. Sheesley was stationed in Mendlesham, England with the 7th Squadron of the 34th Bomb Group in the "Mighty" 8th Air Force.</p><p>Many of the journal entries are concise and matter-of-fact. They are full of details about people and places, bomber formations and targets, weather conditions and flack, as well as time spent playing games, riding bikes, doing laundry, eating meals, attending chapel, and reading books. At a certain point, even flying missions was portrayed as routine work:<blockquote>We always fly on Sunday...</blockquote>Or again, after some time on pass:<blockquote>Right back to work. Up at 0330 to bomb the Germans...</blockquote></p><p>Other entries, however, are quite powerful and moving. For example, Lt. Sheesley describes an intense <a href="#1-berlin-p1">first mission</a> to Berlin where his crew was sent by mistake and barely made it home alive:<blockquote>All our hearts were pounding—nerves at the break point-sweat rolling at 40° below...They didn\'t think we would make it—we weren\'t even operational yet.</blockquote>In another, after his <a href="#hanover">last mission</a>, he is joyful, relieved, and determined to reunite with his fiancé, Mary E. Clark: <blockquote>... Happy Day! No more flack, fighters, gas, oxygen or bomb runs to sweat out. Mary, here I come.</blockquote></p><p>This map visually connects entries with the places they describe. The journals are old and dusty and otherwise hard to share. <b>Scroll down to read more.</b></p>',
             location: {
                 center: [-95.96827, 39.03594],
                 zoom: 2,
@@ -1363,7 +1363,7 @@ var config = {
             image: 'images/journal/19441230-trim.png',
             imageId: 'dec30',
             caption: '',
-            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">B</span>riefing this morning was at 04:00. Our target for today was a marshalling yard at <s>Castle</s> Kassel, Germany. We took off and hit a low ceiling and climbed in solid overcast up to 11,000 ft. Our position was 4–3 in High squadron. Overcast 10/10 over target—results not observed. Flack was dense and we got our first hits. Our gas tank in right wing had to be replaced upon return. Oxygen system was leaking and was empty as we reached 10,000\' on descending—sweating it out. Visibility very poor upon return—we made 6 passes at field before getting in. Went to bed at 20:00 hours.</p>',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">B</span>riefing this morning was at 04:00. Our target for today was a marshalling yard at <strike>Castle</strike> Kassel, Germany. We took off and hit a low ceiling and climbed in solid overcast up to 11,000 ft. Our position was 4–3 in High squadron. Overcast 10/10 over target—results not observed. Flack was dense and we got our first hits. Our gas tank in right wing had to be replaced upon return. Oxygen system was leaking and was empty as we reached 10,000\' on descending—sweating it out. Visibility very poor upon return—we made 6 passes at field before getting in. Went to bed at 20:00 hours.</p>',
             location: {
                 center: kassel,
                 zoom: 8,
@@ -3287,6 +3287,966 @@ var config = {
             callback: 'mendleshamMarker',
             onChapterEnter: [],
             onChapterExit: []
+        },
+        {
+            id: '19450306',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Mendlesham',
+            date: 'Tuesday, 3/6/1945',
+            image: 'images/journal/19450306-trim.png',
+            imageId: 'mar06',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">S</span>tand down for training. Had Link trainer. Mailed a couple packages</p>',
+            location: {
+                center: mendlesham,
+                zoom: 13,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: '19450307',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '23',
+            title: 'Datteln',
+            date: 'Wednesday, 3/7/1945',
+            image: 'images/journal/19450307-trim.png',
+            imageId: 'mar07',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">B</span>riefed at 0430 for a bengal plant in Happy Valley! Bengal is supposed to be their substitute for gasoline. We flew 2–3 in the low sqdn. It is doubtful as to hit possibilities. We lost #4 engine just at bombs away and the formation got away from us. I requested little friends and two came up to fly with us. They flew just off our wing tips almost to the coast. They looked wonderful out there. One of them was named "Hurry Home Honey". One pilot talked to us addressing us as "Bottoms Up", the name on our ship.</p>',
+            location: {
+                center: datteln,
+                zoom: 9,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'dattelnMarker',
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeDatteln',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeDatteln',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450308',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Mendlesham',
+            date: 'Thursday, 3/8/1945',
+            image: 'images/journal/19450308-trim.png',
+            imageId: 'mar08',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">W</span>e were a spare today but Brydge flew with another crew. Had Link trainer and almost had a slow time.</p>',
+            location: {
+                center: mendlesham,
+                zoom: 13,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: '19450309',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Mendlesham',
+            date: 'Friday, 3/9/1945',
+            image: 'images/journal/19450309-trim.png',
+            imageId: 'mar09',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">S</span>tand dow for training. We flew a practice mission.<br>&nbsp;</br></p>',
+            location: {
+                center: mendlesham,
+                zoom: 13,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: '19450310',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '24',
+            title: 'Soest',
+            date: 'Saturday, 3/10/1945',
+            image: 'images/journal/19450310-trim.png',
+            imageId: 'mar10',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">B</span>ombed a marshalling yard PFF at Soest. We lost an engine just after leaving target. It was #4. We came back in formation all right anyway. We flew 4–1. Used Barron for navigation from Davis\' crew. Took 42–100 pounders.</p>',
+            location: {
+                center: soest,
+                zoom: 8,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'soestMarker',
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeSoest',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeSoest',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450311',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '25',
+            title: 'Hamburg',
+            date: 'Sunday, 3/11/1945',
+            image: 'images/journal/19450311-trim.png',
+            imageId: 'mar11',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">W</span>e always fly on Sunday. Today we hit PFF an oil refinery at Hamburg. Cloud cover was 10/10. Black smoke was seen billowing up through the clouds. Flack was inaccurate. We carried 6–1000 pounders.</p>',
+            location: {
+                center: hamburg,
+                zoom: 8,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'hamburgMarker',
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeHamburg',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeHamburg',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450313',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '26',
+            title: 'Świnoujście',
+            date: 'Tuesday, 3/13/1945',
+            image: 'images/journal/19450313-trim.png',
+            imageId: 'mar13',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">I</span>t was a long overwater haul today to hit Swinemunde\'s docks. The Russians are only about ten mile away. It was a good mission—P.F.F.  Flack was inaccurate. Black smoke burst up through the clouds where someone hit.</p>',
+            location: {
+                center: swinoujscie,
+                zoom: 8,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'swinoujscieMarker',
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeSwinoujscie',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeSwinoujscie',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450314',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Ipswich',
+            date: 'Wednesday, 3/14/1945',
+            image: 'images/journal/19450314-trim.png',
+            imageId: 'mar14',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">W</span>ent on pass. Hitch hiked to Ipswitch. Got a ride in a jeep.</p>',
+            location: {
+                center: ipswich,
+                zoom: 9,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'ipswichMarker',
+            onChapterEnter: [
+                {
+                    layer: 'pass3-away',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'pass3-away',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450315',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Ascot',
+            date: 'Thursday, 3/15/1945',
+            image: 'images/journal/19450315-trim.png',
+            imageId: 'mar15',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">W</span>ent to Ascot to see Phillip. We made a mess of pictures. Slept in his barracks</p>',
+            location: {
+                center: ascot,
+                zoom: 9,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'ascotMarker',
+            onChapterEnter: [
+                {
+                    layer: 'pass3-away',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'pass3-away',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450316',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Mendlesham',
+            date: 'Friday, 3/16/1945',
+            image: 'images/journal/19450316-trim.png',
+            imageId: 'mar16',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">P</span>hillip & I went into London to Princes Gardens Red Cross club. Played ping pong—I got beat 3 of 5. Left for here on 5:06 train</p>',
+            location: {
+                center: mendlesham,
+                zoom: 9,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [
+                {
+                    layer: 'pass3-home',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'pass3-home',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450317',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '27',
+            title: 'Bitterfeld',
+            date: 'Saturday, 3/17/1945',
+            image: 'images/journal/19450317-trim.png',
+            imageId: 'mar17',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">R</span>ight back to work. Up at 0330 to bomb the Germans. We PFF\'d the town of Bitterfeld. We didn\'t hit a thing I don\'t think. Weather was lousy. Contrails dense and haze and cirrus clouds up to 26,000\'. We spent most of the time in the clouds and our squadron got lost from our group. We got to the target though. Our lead & low got flack damage over battle line so it was just as well for us that we were alone because we missed the flack.</p>',
+            location: {
+                center: bitterfeld,
+                zoom: 8,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'bitterfeldMarker',
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeBitterfeld',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeBitterfeld',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450318',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '28',
+            title: 'Berlin',
+            date: 'Sunday, 3/18/1945',
+            image: 'images/journal/19450318-trim.png',
+            imageId: 'mar18',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">A</span>s usual we make missions on Sunday. Again we go to Berlin. We got into yesterdays weather again, but our leader is quite sure we hit the MPI. Flack was too accurate, but we escaped without any damage.</p>',
+            location: {
+                center: berlin,
+                zoom: 8,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'berlinMarker',
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeBerlin',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeBerlin',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450319',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '29',
+            title: 'Jena',
+            date: 'Monday, 3/19/1945',
+            image: 'images/journal/19450319-trim.png',
+            imageId: 'mar19',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">S</span>tarted for Lutzkendorf. Twenty minutes before target #1 blew some cylinders & prop ran wild—couldn\'t feather it. Engine shook violently, caught fire, shook itself off fuselage.</p>',
+            location: {
+                center: jena,
+                zoom: 8,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'jenaMarker',
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeJena',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeJena',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450320',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '30',
+            title: 'Hamburg',
+            date: 'Tuesday, 3/20/1945',
+            image: 'images/journal/19450320-trim.png',
+            imageId: 'mar20',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">S</span>tand down cancelled at noon. We took off at 12:30 for Hamburg\'s docks. Got back at 1900.</p>',
+            location: {
+                center: hamburg,
+                zoom: 8,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'hamburgMarker',
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeHamburg',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeHamburg',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450321',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '31',
+            title: 'Marxen',
+            date: 'Wednesday, 3/21/1945',
+            image: 'images/journal/19450321-trim.png',
+            imageId: 'mar21',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">U</span>p at 0230 for a nice one. Shorty to an airfield near Marx. No flack, no nothin. Only 5:00 hrs. chaulk to chaulk.</p>',
+            location: {
+                center: marxen,
+                zoom: 8,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'marxenMarker',
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeMarxen',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeMarxen',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450323',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '33',
+            title: 'Geisecke',
+            date: 'Friday, 3/23/1945',
+            image: 'images/journal/19450323-trim.png',
+            imageId: 'mar23',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">U</span>Hit a concentration of Nazi officers & men by the little town of &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.</p>',
+            location: {
+                center: geisecke,
+                zoom: 8,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'geiseckeMarker',
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeGeisecke',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeGeisecke',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450324',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '34',
+            title: 'Bad Zwischenahn',
+            date: 'Saturday, 3/24/1945',
+            image: 'images/journal/19450324-trim.png',
+            imageId: 'mar24',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">B</span>ombed an airfield at &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;. No flack—no fighters. Good mission—5:45 was all the longer. <strike>Started out</strike> Flew 3–2 in T-tare.</p>',
+            location: {
+                center: badZwischenahn,
+                zoom: 8,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'badZwischenahnMarker',
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeBadZwischenahn',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeBadZwischenahn',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450325',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'London',
+            date: 'Sunday, 3/25/1945',
+            image: 'images/journal/19450325-trim.png',
+            imageId: 'mar25',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">R</span>ecalled after we were formed. A ship broke in the air & fell to the field just a short distance from where we sat on the runway. Caught fire—exploded upon hitting. A huge ball of fire rose above the ship as large as a house—floated toward us and went out just above us. We sat there awaiting developments and they developed. A 1000 pounder exploded spreading debree all over the field. Our ship had quite a jar, but wasn\'t hit at all. We cut the engines quick like and got out. Left for London at 4:30 to see about the broadcast.</p>',
+            location: {
+                center: goring,
+                zoom: 6,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'londonMarker',
+            onChapterEnter: [
+                {
+                    layer: 'pass4-away',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'pass4-away',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450326',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'London',
+            date: 'Monday, 3/26/1945',
+            image: 'images/journal/19450326-trim.png',
+            imageId: 'mar26',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">W</span>ent to ABSIF at Gaumont Pictures to see about the recording. Spent an hour preparing and 3 1/2 minutes making the record. Waste of time. I went to see Phillip & developed some film.</p>',
+            location: {
+                center: goring,
+                zoom: 10,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'londonMarker',
+            onChapterEnter: [
+                {
+                    layer: 'pass4-away',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'pass4-away',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450327',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Mendlesham',
+            date: 'Tuesday, 3/27/1945',
+            image: 'images/journal/19450327-trim.png',
+            imageId: 'mar27',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">C</span>ame home<br>&nbsp;</br></p>',
+            location: {
+                center: mendlesham,
+                zoom: 13,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'mendleshamMarker',
+            onChapterEnter: [
+                {
+                    layer: 'pass4-home',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'pass4-home',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450328',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '35',
+            title: 'Hanover',
+            date: 'Wednesday, 3/28/1945',
+            image: 'images/journal/19450328-trim.png',
+            imageId: 'mar28',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">F</span>or four months we\'ve looked forward to today. Weather was terrific. We assembled over France & went on from there. I had to climb on instruments from 1 to 22 thousand feet. At 7,000 the pitot tube froze so I had to climb on up without airspeed indication. What a job—flying a B-17 by the seat of ones pants—I was almost screaming when we broke out. We went to Hannover through clouds—P.F.F.— & came half way home through the same. We, the happy warriors left formation at coast out and came home at 210–220. Happy Day! No more flack, fighters, gas, oxygen or bomb runs to sweat out. Mary, here I come.</p>',
+            location: {
+                center: hanover,
+                zoom: 8,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'hanoverMarker',
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeHanover',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeHanover',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
         }
     ]
 };
