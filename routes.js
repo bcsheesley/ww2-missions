@@ -67,6 +67,45 @@ var routeSea = {
 	}
 };
 
+// Simple line
+var routeStone = {
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [mendlesham, yarnfield]
+	},
+	'properties': {
+		'name': 'Mendlesham – Stone',
+		'date': '4/12/1945'
+	}
+};
+
+// Simple line
+var routeBoston = {
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [sea11, boston]
+	},
+	'properties': {
+		'name': 'Plymouth – Boston',
+		'date': 'May 1 – May 13, 1945'
+	}
+};
+
+// Simple line
+var routeAtterbury = {
+	'type': 'Feature',
+	'geometry': {
+		'type': 'LineString',
+		'coordinates': [boston, atterbury]
+	},
+	'properties': {
+		'name': 'Boston – Camp Atterbury',
+		'date': '5/14/1944'
+	}
+};
+
 // Lines for each mission
 var routeBerlin = {
 	'type': 'Feature',
@@ -528,6 +567,9 @@ var lineDistanceFromMarstonMoor = turf.length.default(routeFromMarstonMoor);
 var lineDistanceToMarstonMoor = turf.length.default(routeToMarstonMoor);
 var lineDistanceFromBrussels = turf.length.default(routeFromBrussels);
 var lineDistanceToBrussels = turf.length.default(routeToBrussels);
+var lineDistanceStone = turf.length.default(routeStone);
+var lineDistanceBoston = turf.length.default(routeBoston);
+var lineDistanceAtterbury = turf.length.default(routeAtterbury);
  
 var arcSea = [];
 var arcBerlin = [];
@@ -563,6 +605,9 @@ var arcFromMarstonMoor = [];
 var arcToMarstonMoor = [];
 var arcFromBrussels = [];
 var arcToBrussels = [];
+var arcStone = [];
+var arcBoston = [];
+var arcAtterbury = [];
  
 // Number of steps to use in the arc and animation, more steps means
 // a smoother arc and animation, but too many steps will result in a
@@ -601,6 +646,9 @@ var stepsFromMarstonMoor = 500;
 var stepsToMarstonMoor = 500;
 var stepsFromBrussels = 500;
 var stepsToBrussels = 500;
+var stepsStone = 500;
+var stepsBoston = 500;
+var stepsAtterbury = 500;
  
 // Draw an arc between the origin & destination points
 for (var i = 0; i < lineDistanceSea; i += lineDistanceSea / stepsSea) {
@@ -739,6 +787,18 @@ for (var i = 0; i < lineDistanceToBrussels; i += lineDistanceToBrussels / stepsT
 	var segmentToBrussels = turf.along.default(routeToBrussels, i);
 	arcToBrussels.push(segmentToBrussels.geometry.coordinates);
 }
+for (var i = 0; i < lineDistanceStone; i += lineDistanceStone / stepsStone) {
+	var segmentStone = turf.along.default(routeStone, i);
+	arcStone.push(segmentStone.geometry.coordinates);
+}
+for (var i = 0; i < lineDistanceBoston; i += lineDistanceBoston / stepsBoston) {
+	var segmentBoston = turf.along.default(routeBoston, i);
+	arcBoston.push(segmentBoston.geometry.coordinates);
+}
+for (var i = 0; i < lineDistanceAtterbury; i += lineDistanceAtterbury / stepsAtterbury) {
+	var segmentAtterbury = turf.along.default(routeAtterbury, i);
+	arcAtterbury.push(segmentAtterbury.geometry.coordinates);
+}
  
 // Update the route with calculated arc coordinates
 routeSea.geometry.coordinates = arcSea;
@@ -775,3 +835,6 @@ routeFromMarstonMoor.geometry.coordinates = arcFromMarstonMoor;
 routeToMarstonMoor.geometry.coordinates = arcToMarstonMoor;
 routeFromBrussels.geometry.coordinates = arcFromBrussels;
 routeToBrussels.geometry.coordinates = arcToBrussels;
+routeStone.geometry.coordinates = arcStone;
+routeBoston.geometry.coordinates = arcBoston;
+routeAtterbury.geometry.coordinates = arcAtterbury;

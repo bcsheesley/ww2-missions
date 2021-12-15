@@ -21,7 +21,7 @@ var config = {
             image: '',
             imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">L</span>t. Byron E. Sheesley kept two short journals while serving in the United States Army Air Forces (USAAF) during World War Ⅱ.</p><p>One journal documents his nearly two-week-long journey from Camp Kilmer, New Jersey to a USAAF replacement center near Stone, England by troopship and train in late October and early November, 1944.</p><p>The other summarizes many of the 35 combat missions he flew over enemy targets in Germany as pilot of a B-17 heavy bomber between December 1944 and March 1945. It also describes aspects of his daily life on base and on pass. Sheesley was stationed in Mendlesham, England with the 7th Squadron of the 34th Bomb Group in the "Mighty" 8th Air Force.</p><p>Many of the journal entries are concise and matter-of-fact. They include details about people and places, bomber formations and targets, weather conditions and flack, as well as time spent playing games, riding bikes, doing laundry, eating meals, attending chapel, and reading books. Some aspects of life, and even flying missions became routine. According to Sheesley:<blockquote>We always fly on Sunday...</blockquote>And:<blockquote>Right back to work. Up at 0330 to bomb the Germans...</blockquote></p><p>Other entries, however, are quite powerful and moving. For example, Lt. Sheesley describes an intense <a href="#1-berlin-p1">first mission</a> to Berlin where his crew was sent by mistake and barely made it home alive:<blockquote>All our hearts were pounding—nerves at the break point-sweat rolling at 40° below...They didn\'t think we would make it—we weren\'t even operational yet.</blockquote>In another, after his <a href="#hanover">last mission</a>, he is joyful, relieved, and determined to reunite with his fiancé, Mary E. Clark: <blockquote>... Happy Day! No more flack, fighters, gas, oxygen or bomb runs to sweat out. Mary, here I come.</blockquote></p><p>This map connects entries with the places they describe. <b>Scroll down to read more.</b></p>',
+            description: '<p><span class="dropCap">L</span>t. Byron E. Sheesley kept two short journals while serving in the United States Army Air Forces (USAAF) during World War Ⅱ.</p><p>One journal documents his nearly two-week-long journey from Camp Kilmer, New Jersey to a USAAF replacement center near Stone, England by troopship and train in late October and early November, 1944.</p><p>The other summarizes many of the 35 combat missions he flew over enemy targets in Germany as pilot of a B-17 heavy bomber between December 1944 and March 1945. It also describes aspects of his daily life on base and on pass. Sheesley was stationed in Mendlesham, England with the 7th Squadron of the 34th Bomb Group in the "Mighty" 8th Air Force.</p><p>The journal entries are often concise and matter-of-fact. They include details about people and places, bomber formations and targets, weather conditions and flack, as well as time spent playing games, riding bikes, doing laundry, eating meals, attending chapel, and reading books. Routines developed, like going to London on pass four times. Flying missions, too, became somewhat job-like over time. After returning from London on one occasion, Sheesley says:<blockquote>Right back to work. Up at 0330 to bomb the Germans...</blockquote></p><p>Some entries, however, are quite powerful and moving. For example, Lt. Sheesley describes an intense <a href="#1-berlin-p1">first mission</a> to Berlin where his crew was sent by mistake and barely made it home alive:<blockquote>All our hearts were pounding—nerves at the break point—sweat rolling at 40° below...They didn\'t think we would make it...</blockquote>In another, after his <a href="#hanover">last mission</a>, he is joyful, relieved, and determined to reunite with his fiancé, Mary E. Clark: <blockquote>... Happy Day! No more flack, fighters, gas, oxygen or bomb runs to sweat out. Mary, here I come.</blockquote></p><p>This map connects entries with the places they describe. <b>Scroll down to read more.</b></p>',
             location: {
                 center: [-95.96827, 39.03594],
                 zoom: 2,
@@ -4243,6 +4243,186 @@ var config = {
                 },
                 {
                     layer: 'routeHanover',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450412',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Stone (Yarnfield)',
+            date: 'Thursday, 4/12/1945',
+            image: 'images/journal/19450412-trim.png',
+            imageId: 'apr12',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">L</span>eft the 34th B.G. for Stone with Red, Shaky, Eisenberg, Maj. Young & Maj. Ritchie. We flew over. Pres. Roosevelt died - too bad.</p>',
+            location: {
+                center: yarnfield,
+                zoom: 8,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'yarnfieldMarker',
+            onChapterEnter: [
+                {
+                    layer: 'routeStone',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'routeStone',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450501',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Plymouth Docks',
+            date: 'Tuesday, 5/1/1945',
+            image: 'images/journal/19450501-trim.png',
+            imageId: 'may01',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">L</span>eft Stone 70th B.D. for the boat.<br></br></p>',
+            location: {
+                center: plymouthDock,
+                zoom: 8,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'plymouthMarker',
+            onChapterEnter: [
+                {
+                    layer: 'journey-home',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'journey-home',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450502',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Day 1 at Sea',
+            date: 'Wednesday, 5/2/1945',
+            image: 'images/journal/19450502-trim.png',
+            imageId: 'may02',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">W</span>ent out to sea.<br></br></p>',
+            location: {
+                center: sea11,
+                zoom: 5,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'sea11Marker',
+            onChapterEnter: [
+                {
+                    layer: 'journey-home',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'journey-home',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450513',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Boston',
+            date: 'Sunday, 5/13/1945',
+            image: 'images/journal/19450513-trim.png',
+            imageId: 'may13',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">G</span>ot off the boat at Boston & went to camp. Called Mary. Happy Day! Called Mom too.</p>',
+            location: {
+                center: boston,
+                zoom: 8,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'bostonMarker',
+            onChapterEnter: [
+                {
+                    layer: 'journey-home',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'journey-home',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
+        },
+        {
+            id: '19450514',
+            section: 3,
+            alignment: 'left',
+            hidden: false,
+            daterank: '',
+            title: 'Camp Atterbury',
+            date: 'Monday, 5/14/1945',
+            image: 'images/journal/19450514-trim.png',
+            imageId: 'may14',
+            caption: '',
+            description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">S</span>tarted for Atterbury by Pullman.<br></br></p>',
+            location: {
+                center: atterbury,
+                zoom: 6,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'atterburyMarker',
+            onChapterEnter: [
+                {
+                    layer: 'journey-home',
+                    opacity: 1,
+                    duration: 300
+                }
+            ],
+            onChapterExit: [
+                {
+                    layer: 'journey-home',
                     opacity: 0,
                     duration: 300
                 }

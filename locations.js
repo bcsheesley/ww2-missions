@@ -22,11 +22,17 @@ var brussels = [4.3500902551569425, 50.84916709236049];
 // Ascot
 var ascot = [-0.6680911351901386, 51.410093594049926];
 
-// Kilmer
+// Camp Kilmer
 var kilmer = [-74.4458, 40.5167];
 
 // New York Harbor
 var newyork = [-74.0460, 40.6683];
+
+// Boston Harbor
+var boston = [-71.03815118450984, 42.35796831378744];
+
+// Camp Atterbury
+var atterbury = [-86.03003679420416, 39.36088301093322];
 
 // At sea start
 var sea1 = [-70.6691, 41.1097];

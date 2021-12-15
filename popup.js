@@ -305,6 +305,52 @@ map.on('mouseleave', 'pass4-home', () => {
 	popupHover.remove();
 });
 
+// Route from Mendlesham to Stone
+map.on('mousemove', 'routeStone', (e) => {
+	const paintProperty = map.getPaintProperty('routeStone', 'line-opacity');
+	const name = e.features[0].properties.name;
+	const date = e.features[0].properties.date;
+	//console.log(paintProperty);
+	
+	if (paintProperty > 0) {
+		map.getCanvas().style.cursor = 'pointer';
+		
+		popupHover
+		.setHTML(`<h3>${name}</h3><p>${date}</p>`)
+		.addTo(map)
+		.setLngLat(e.lngLat)
+		.trackPointer();
+	}
+});
+
+map.on('mouseleave', 'routeStone', () => {
+	map.getCanvas().style.cursor = '';
+	popupHover.remove();
+});
+
+// Journey Home
+map.on('mousemove', 'journey-home', (e) => {
+	const paintProperty = map.getPaintProperty('journey-home', 'line-opacity');
+	const name = e.features[0].properties.name;
+	const date = e.features[0].properties.date;
+	//console.log(paintProperty);
+	
+	if (paintProperty > 0) {
+		map.getCanvas().style.cursor = 'pointer';
+		
+		popupHover
+		.setHTML(`<h3>${name}</h3><p>${date}</p>`)
+		.addTo(map)
+		.setLngLat(e.lngLat)
+		.trackPointer();
+	}
+});
+
+map.on('mouseleave', 'journey-home', () => {
+	map.getCanvas().style.cursor = '';
+	popupHover.remove();
+});
+
 
 // Mission routes hover popup
 let routeID = null;

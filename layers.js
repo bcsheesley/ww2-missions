@@ -180,6 +180,90 @@ map.on('load', function() {
 		}
 	});
 	
+	// Add Stone route source
+	map.addSource('routeStone', {
+		'type': 'geojson',
+		'data': {
+			'type': 'FeatureCollection',
+			'features': [
+				routeStone
+			] 
+		}
+	});
+	
+	// Add journey Home source
+	map.addSource('journey-home', {
+		'type': 'geojson',
+		'data': {
+			'type': 'FeatureCollection',
+			'features': [
+				{
+					"type": "Feature",
+					"properties": {
+						'name': 'Stone (Yarnfield) – Plymouth',
+						'date': '5/1/1945'
+					},
+					"geometry": {
+						"type": "LineString",
+						"coordinates": [
+							plymouthDock,
+							[
+							-3.5266,
+							50.7225
+							],
+							[
+							-3.0295,
+							51.0518
+							],
+							[
+							-2.5873,
+							51.4437
+							],
+							[
+							-2.2536,
+							51.8578
+							],
+							[
+							-2.0050,
+							52.4861
+							],
+							  yarnfield
+						]
+					}
+				},
+				{
+					"type": "Feature",
+					"properties": {
+						'name': 'Plymouth – Boston',
+						'date': 'May 1 – May 13, 1945'
+					},
+					"geometry": {
+						"type": "LineString",
+						"coordinates": [
+							sea11,
+							[
+							-5.3696,
+							49.8398
+							],
+							[
+							-5.0565,
+							49.907
+							],
+							plymouthBay,
+							[
+							-4.1467,
+							50.3452
+							], 
+							plymouthDock
+						]
+					}
+				},
+				routeBoston,
+				routeAtterbury
+			] 
+		}
+	});
+	
 	// Add marston moor route source
 	map.addSource('marstonMoor', {
 		'type': 'geojson',
@@ -378,6 +462,42 @@ map.on('load', function() {
 	map.addLayer({
 		'id': 'journey',
 		'source': 'journey',
+		'type': 'line',
+		'paint': {
+			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],
+			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
+			'line-color': 'rgba(255,126,126,0.9)',
+			'line-opacity': 0,
+			'line-dasharray': [2,2]
+		},
+		'layout': {
+			//'line-cap': 'round'
+		}
+	},
+	'waterway-label'
+	);
+	
+	map.addLayer({
+		'id': 'routeStone',
+		'source': 'routeStone',
+		'type': 'line',
+		'paint': {
+			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],
+			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
+			'line-color': 'rgba(255,126,126,0.9)',
+			'line-opacity': 0,
+			'line-dasharray': [2,2]
+		},
+		'layout': {
+			//'line-cap': 'round'
+		}
+	},
+	'waterway-label'
+	);
+	
+	map.addLayer({
+		'id': 'journey-home',
+		'source': 'journey-home',
 		'type': 'line',
 		'paint': {
 			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],
