@@ -206,6 +206,7 @@ config.chapters.forEach((record, idx) => {
     var chapter = document.createElement('div');
     var itemLink = document.createElement('a');
     var itemContainer = document.createElement('div');
+    var aircraftDetailsContainer = document.createElement('div');
     itemLink.appendChild(itemContainer);
     
     if (record.section === 1) {
@@ -291,7 +292,46 @@ config.chapters.forEach((record, idx) => {
         story.innerHTML = record.description;
         chapter.appendChild(story);
     }
-
+    
+    if (record.aircraftHeading) {
+        var aircraftHeadingContainer = document.createElement('div');
+        var aircraftHeading = document.createElement('h4');
+        aircraftHeading.innerHTML = record.aircraftHeading;
+        aircraftHeadingContainer.appendChild(aircraftHeading);
+        chapter.appendChild(aircraftHeadingContainer);
+    }
+    
+    if (record.aircraftTable) {
+        var aircraftTable = document.createElement('table');
+        aircraftTable.innerHTML = record.aircraftTable;
+        aircraftDetailsContainer.appendChild(aircraftTable);
+    }
+    
+    if (record.imageAircraft) {
+        var imageAircraft = new Image();
+        imageAircraft.src = record.imageAircraft;
+        aircraftDetailsContainer.appendChild(imageAircraft);
+    }
+    
+    if (record.imageAircraftId) {
+        imageAircraft.id = record.imageAircraftId;
+    }
+    
+    if (record.imageAircraftLink) {
+        var imageAircraftLink = document.createElement('a');
+        imageAircraftLink.setAttribute('href', record.imageAircraftLink);
+        imageAircraftLink.innerText = record.imageAircraftLink;
+        aircraftDetailsContainer.appendChild(imageAircraftLink);
+    }
+    
+    chapter.appendChild(aircraftDetailsContainer);
+    
+    if (record.missionDetails) {
+        var missionDetails = document.createElement('p');
+        missionDetails.innerHTML = record.missionDetails;
+        chapter.appendChild(missionDetails);
+    }
+    
     container.setAttribute('id', record.id);
     container.classList.add('step');
     if (idx === 0) {
@@ -662,6 +702,10 @@ function berlinMarker() {
         }
     });
     */
+    var learnMoreContainer = document.createElement('div');
+    learnMoreContainer.setAttribute('id', 'learnMore');
+    //var description = config.description;
+    //description.appendChild(learnMoreContainer);
 };
 
 function darmstadtMarker() {
