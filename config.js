@@ -1089,7 +1089,8 @@ var config = {
             imageAircraft: 'images/aircraft/test.png',
             imageAircraftId: 'test',
             imageAircraftLink: 'http://www.axismaps.com',
-            missionDetails: 'mission details',
+            missionHeading: 'mission details',
+            missionDetails: 'test content',
             location: {
                 center: berlin,
                 zoom: 8,

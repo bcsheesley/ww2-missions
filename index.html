@@ -207,6 +207,7 @@ config.chapters.forEach((record, idx) => {
     var itemLink = document.createElement('a');
     var itemContainer = document.createElement('div');
     var aircraftDetailsContainer = document.createElement('div');
+    aircraftDetailsContainer.setAttribute("class", "aircraftDetailsContainer");
     itemLink.appendChild(itemContainer);
     
     if (record.section === 1) {
@@ -299,12 +300,15 @@ config.chapters.forEach((record, idx) => {
         aircraftHeading.innerHTML = record.aircraftHeading;
         aircraftHeadingContainer.appendChild(aircraftHeading);
         chapter.appendChild(aircraftHeadingContainer);
+        aircraftHeadingContainer.setAttribute("class", "aircraftHeadingContainer");
+        aircraftHeading.setAttribute("class", "aircraftHeading");
     }
     
     if (record.aircraftTable) {
         var aircraftTable = document.createElement('table');
         aircraftTable.innerHTML = record.aircraftTable;
         aircraftDetailsContainer.appendChild(aircraftTable);
+        aircraftTable.setAttribute("class", "aircraftTable");
     }
     
     if (record.imageAircraft) {
@@ -321,15 +325,30 @@ config.chapters.forEach((record, idx) => {
         var imageAircraftLink = document.createElement('a');
         imageAircraftLink.setAttribute('href', record.imageAircraftLink);
         imageAircraftLink.innerText = record.imageAircraftLink;
+        imageAircraftLink.setAttribute("id", "imageAircraftLink");
         aircraftDetailsContainer.appendChild(imageAircraftLink);
     }
     
     chapter.appendChild(aircraftDetailsContainer);
     
+    if (record.missionHeading) {
+        var missionHeadingContainer = document.createElement('div');
+        var missionHeading = document.createElement('h4');
+        missionHeading.innerHTML = record.missionHeading;
+        missionHeadingContainer.appendChild(missionHeading);
+        chapter.appendChild(missionHeadingContainer);
+        missionHeadingContainer.setAttribute('class', 'missionHeadingContainer');
+        missionHeading.setAttribute('class', 'missionHeading');
+    }
+    
     if (record.missionDetails) {
+        var missionDetailsContainer = document.createElement('div');
         var missionDetails = document.createElement('p');
         missionDetails.innerHTML = record.missionDetails;
-        chapter.appendChild(missionDetails);
+        missionDetailsContainer.appendChild(missionDetails);
+        chapter.appendChild(missionDetailsContainer);
+        missionDetailsContainer.setAttribute('class', 'missionDetailsContainer');
+        missionDetails.setAttribute('class', 'missionDetails');
     }
     
     container.setAttribute('id', record.id);
