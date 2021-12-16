@@ -612,6 +612,18 @@ a[href*="break"] {
 	font-size: 3em;
 }
 
+#image-break img {
+	margin: 0;
+}
+
+#image-break .light {
+	padding: 0;
+}
+
+#image-break .title {
+	display: none;
+}
+
 /* Fix issue on mobile browser where scroll breaks */
 .mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan,
 .mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan .mapboxgl-canvas {
@@ -721,6 +733,11 @@ a[href*="break"] {
 	#features img:hover {
 		opacity: 0.7;
 		cursor: pointer;
+	}
+	
+	#image-break img:hover {
+		opacity: 1;
+		cursor: default;
 	}
 }
 

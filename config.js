@@ -1085,7 +1085,7 @@ var config = {
             caption: '',
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">I</span> was awakened at 0400 expecting to ride as copilot for my 1st mission. At the briefing block I was surprised, alarmed and frightened when I learned that we would go as a crew and I didn\'t know the score at all and had never flown above 20,000 ft. In a daze we went to our ship and somehow got ready and took off. After what seemed ages the formation got together in a pre-dawn assembly and away we went for BERLIN.</p><p>On the climb we stayed right in. Then we leveled off for the run in and it happened. That which is most disastrous happened—we fell behind. Opening her wide open we oh! so slowly crept back up. Come the IP and it happened again. I took over the ship again—the bombays were open—target just ahead—we had to get back in! If fighters hit we would have been sunk.</p><p>All our hearts were pounding—nerves at the break point-sweat rolling at 40° below. I quickly turned on the emergency turbo and the engines were giving all they had—they shook and shuddered and whined as if to say "we can\'t take this long." We were pulling 54" and I wondered how long those engines would hold. We just didn\'t seem to gain a bit, but kept falling back & dropping.</p><p>Finally we were down with the low element when we stopped losing. I uttered a little prayer and as a plant grows [...]</p>',
             aircraftHeading: 'Aircraft Details',
-            aircraftTable: 'aircraft table',
+            aircraftTable: '[Name] [Serial] [# Missions]',
             imageAircraft: 'images/aircraft/test.png',
             imageAircraftId: 'test',
             imageAircraftLink: 'http://www.axismaps.com',
@@ -1190,6 +1190,54 @@ var config = {
                     duration: 300
                 }
             ]
+        },
+        {
+            id: 'image-break',
+            section: '',
+            alignment: 'full',
+            hidden: false,
+            daterank: '',
+            title: 'Test Title',
+            date: '',
+            image: 'images/journal/19441205-2-trim.png',
+            imageId: '',
+            caption: '',
+            description: '',
+            location: {
+                center: [3.11114, 51.00934],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'image-break',
+            section: '',
+            alignment: 'full',
+            hidden: false,
+            daterank: '',
+            title: 'Test Title',
+            date: '',
+            image: 'images/journal/19441205-2-trim.png',
+            imageId: '',
+            caption: '',
+            description: '',
+            location: {
+                center: [3.11114, 51.00934],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
         },
         {
             id: '19441212',
