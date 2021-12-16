@@ -346,6 +346,37 @@ img {
 	opacity: 0.9;
 }
 
+.step .detailsHeading {
+	padding: 0px 0px 0px 0px;
+	border-top: 1px solid #999;
+	border-radius: 0;
+}
+
+.aircraftHeading, .missionHeading {
+	margin: 0;
+	padding: 20px 0;
+}
+
+.step .aircraftDetailsContainer {
+	display: none;
+	padding: 0 0 20px 0;
+}
+
+.step .missionDetailsContainer {
+	display: none;
+	padding: 0 0 20px 0;
+}
+
+p.missionDetails {
+	margin: 0;
+}
+
+table.aircraftTable {
+	border-bottom: 0;
+	padding-bottom: 10px;
+	margin-bottom: 0;
+}
+
 .listTitle::before {
 	content: "Contents";
 }
@@ -453,13 +484,21 @@ img {
 	margin-top: 0px;
 }
 
-.chapterSectionHeader .listIcon {
+.chapterSectionHeader .listIcon, .detailsHeading .listIcon {
 	font-size: 20px;
 	transform: rotate(-90deg);
 	padding-bottom: 8px;
 }
 
-.chapterSectionHeader.activeState .listIcon {
+.detailsHeading {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+
+.chapterSectionHeader.activeState .listIcon, .detailsHeading.activeState .listIcon {
 	transform: rotate(0deg);
 }
 
@@ -667,6 +706,11 @@ a[href*="break"] {
 	.chapterSectionHeader:hover {
 		color: #bbb;
 		text-decoration: none;
+		cursor: pointer;
+	}
+	
+	.detailsHeading:hover {
+		color: #666;
 		cursor: pointer;
 	}
 	

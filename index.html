@@ -89,6 +89,8 @@ var chapterSectionTitle3 = document.createElement('div');
 var sectionIcon1 = document.createElement('span');
 var sectionIcon2 = document.createElement('span');
 var sectionIcon3 = document.createElement('span');
+var detailsIcon1 = document.createElement('span');
+var detailsIcon2 = document.createElement('span');
 
 //var settings = document.createElement('div');
 //var checkbox = document.createElement('input');
@@ -113,6 +115,8 @@ listIcon.setAttribute('class', 'listIcon');
 sectionIcon1.setAttribute('class', 'listIcon');
 sectionIcon2.setAttribute('class', 'listIcon');
 sectionIcon3.setAttribute('class', 'listIcon');
+detailsIcon1.setAttribute('class', 'listIcon');
+detailsIcon2.setAttribute('class', 'listIcon');
 //settings.setAttribute('id', 'settings');
 /*
 Object.assign(checkbox, {
@@ -163,6 +167,8 @@ close.innerHTML = '&times;';
 sectionIcon1.innerHTML = '&#9013;';
 sectionIcon2.innerHTML = '&#9013;';
 sectionIcon3.innerHTML = '&#9013;';
+detailsIcon1.innerHTML = '&#9013;';
+detailsIcon2.innerHTML = '&#9013;';
 chapterSectionTitle1.innerText = "Background";
 chapterSectionTitle2.innerText = "The Green Journal";
 chapterSectionTitle3.innerText = "A Line A Day";
@@ -170,10 +176,10 @@ chapterSectionTitle3.innerText = "A Line A Day";
 chapterListHeader.onclick = function() {
   chapterListContainer.classList.toggle("activeState");
   chapterListContent.classList.toggle("activeState");
-  listIcon.classList.toggle("activeState");
-  sectionIcon1.classList.toggle("activeState");
-  sectionIcon2.classList.toggle("activeState");
-  sectionIcon3.classList.toggle("activeState");
+  //listIcon.classList.toggle("activeState");
+  //sectionIcon1.classList.toggle("activeState");
+  //sectionIcon2.classList.toggle("activeState");
+  //sectionIcon3.classList.toggle("activeState");
   chapterListHeader.classList.toggle("activeState");
 }
 
@@ -228,10 +234,10 @@ config.chapters.forEach((record, idx) => {
       if(x.matches) {
       chapterListContainer.classList.toggle("activeState");
       chapterListContent.classList.toggle("activeState");
-      listIcon.classList.toggle("activeState");
-      sectionIcon1.classList.toggle("activeState");
-      sectionIcon2.classList.toggle("activeState");
-      sectionIcon3.classList.toggle("activeState");
+      //listIcon.classList.toggle("activeState");
+      //sectionIcon1.classList.toggle("activeState");
+      //sectionIcon2.classList.toggle("activeState");
+      //sectionIcon3.classList.toggle("activeState");
       chapterListHeader.classList.toggle("activeState");
       }
     }
@@ -299,8 +305,9 @@ config.chapters.forEach((record, idx) => {
         var aircraftHeading = document.createElement('h4');
         aircraftHeading.innerHTML = record.aircraftHeading;
         aircraftHeadingContainer.appendChild(aircraftHeading);
+        aircraftHeadingContainer.appendChild(detailsIcon1);
         chapter.appendChild(aircraftHeadingContainer);
-        aircraftHeadingContainer.setAttribute("class", "aircraftHeadingContainer");
+        aircraftHeadingContainer.setAttribute("class", "detailsHeading");
         aircraftHeading.setAttribute("class", "aircraftHeading");
     }
     
@@ -336,8 +343,9 @@ config.chapters.forEach((record, idx) => {
         var missionHeading = document.createElement('h4');
         missionHeading.innerHTML = record.missionHeading;
         missionHeadingContainer.appendChild(missionHeading);
+        missionHeadingContainer.appendChild(detailsIcon2);
         chapter.appendChild(missionHeadingContainer);
-        missionHeadingContainer.setAttribute('class', 'missionHeadingContainer');
+        missionHeadingContainer.setAttribute('class', 'detailsHeading');
         missionHeading.setAttribute('class', 'missionHeading');
     }
     
@@ -405,6 +413,7 @@ window.addEventListener("scroll", event => {
   });
 */
 
+// Menu accordion
 var acc = document.getElementsByClassName("chapterSectionHeader");
 var i;
 
@@ -419,6 +428,22 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+// Chapter accordion
+var accDetails = document.getElementsByClassName("detailsHeading");
+
+for (i = 0; i < accDetails.length; i++) {
+  accDetails[i].addEventListener("click", function() {
+    this.classList.toggle("activeState");
+    var detailSection = this.nextElementSibling;
+    if (detailSection.style.display === "block") {
+      detailSection.style.display = "none";
+    } else {
+      detailSection.style.display = "block";
+    }
+  });
+}
+
 
 mapboxgl.accessToken = config.accessToken;
 
