@@ -301,11 +301,7 @@ var config = {
                     }
                 ],
                 onChapterExit: [
-                    {
-                        layer: 'journey',
-                        opacity: 0,
-                        duration: 300
-                    }
+                    
                 ]
         },
         {
@@ -337,11 +333,7 @@ var config = {
                 }
             ],
             onChapterExit: [
-                {
-                    layer: 'journey',
-                    opacity: 0,
-                    duration: 300
-                }
+                
             ]
         },
         {
@@ -373,11 +365,7 @@ var config = {
                 }
             ],
             onChapterExit: [
-                {
-                    layer: 'journey',
-                    opacity: 0,
-                    duration: 300
-                }
+                
             ]
         },
         {
