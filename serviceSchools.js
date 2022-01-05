@@ -14,7 +14,7 @@ const serviceSchools = {
 			"properties": {
 				"name": "Maxwell Field",
 				"place": "Montgomery, Alabama",
-				"course": "Pre-Flight School",
+				"course": "Pre-Flight School (9 wks)",
 				"duration": "9 weeks"
 			}
 		},
@@ -31,7 +31,7 @@ const serviceSchools = {
 			"properties": {
 				"name": "Lafayette Regional Airport",
 				"place": "Lafayette, Louisianna",
-				"course": "Primary School",
+				"course": "Primary School (9 wks)",
 				"duration": "9 weeks"
 			}
 		},
@@ -48,7 +48,7 @@ const serviceSchools = {
 			"properties": {
 				"name": "Walnut Ridge Army Airfield",
 				"place": "Walnut Ridge, Arkansas",
-				"course": "Basic School",
+				"course": "Basic School (9 wks)",
 				"duration": "9 weeks"
 			}
 		},
@@ -65,7 +65,7 @@ const serviceSchools = {
 			"properties": {
 				"name": "Blytheville Army Airfield",
 				"place": "Blytheville, Arkansas",
-				"course": "Advanced School (Twin Engine)",
+				"course": "Advanced School (9 wks)",
 				"duration": "9 weeks"
 			}
 		},
@@ -82,7 +82,7 @@ const serviceSchools = {
 			"properties": {
 				"name": "Lockbourne Army Airfield",
 				"place": "Columbus, Ohio",
-				"course": "Specialized School (4-Engine)",
+				"course": "Specialized Training (9 wks)",
 				"duration": "9 weeks"
 			}
 		},
@@ -99,7 +99,7 @@ const serviceSchools = {
 			"properties": {
 				"name": "Duquense University",
 				"place": "Pittsburg, Pennsylvania",
-				"course": "College Training",
+				"course": "College Training (6 wks)",
 				"duration": "6 weeks"
 			}
 		}

@@ -630,7 +630,11 @@ el.addEventListener('mouseenter', () => missionPopup.addTo(map));
 el.addEventListener('mouseleave', () => missionPopup.remove());
 el.addEventListener('touchstart', () => missionPopup.addTo(map));
 
-function addSchools(){
+function break1() {
+  missionMarker.remove();
+}
+
+function addSchools() {
   missionMarker.remove();
   
     for (const schoolsMarker of serviceSchools.features){
@@ -658,7 +662,7 @@ function addSchools(){
         .setPopup(
             schoolsPopup
                 .setHTML(
-                    `<h3>${name}</h3><p>${course}</p><p>${duration}</p>`
+                    `<h3>${name}</h3><p>${course}</p>`
                 )
         )
         .addTo(map);
@@ -670,7 +674,7 @@ function addSchools(){
     }
 }
 
-function struthersMarker(){
+function struthersMarker() {
   missionMarker.setLngLat(struthers)
   .setPopup(
       missionPopup
@@ -679,8 +683,6 @@ function struthersMarker(){
           )
   )
   .addTo(map);
-  
-  
   
   if (document.querySelector('#schoolMarker')) {
       var schoolMarkerList = document.querySelectorAll('#schoolMarker');
@@ -691,7 +693,7 @@ function struthersMarker(){
   }
 }
 
-function journeyEngland(){
+function journeyEngland() {
   missionMarker.remove();
   
   if (document.querySelector('#schoolMarker')) {
@@ -703,7 +705,7 @@ function journeyEngland(){
   }
 }
 
-function kilmerMarker(){
+function kilmerMarker() {
   missionMarker.setLngLat(kilmer).addTo(map);
 }
 

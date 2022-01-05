@@ -54,7 +54,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: '',
+            callback: 'break1',
             onChapterEnter: [],
             onChapterExit: []
         },
@@ -93,7 +93,7 @@ var config = {
             image: 'images/training_tree_orig.jpeg',
             imageId: 'idCardFront',
             caption: 'Douglas 63rd Preservation Society',
-            description: '<p><span class="dropCap">S</span>heesley followed the pathway for "Classified Pilots" shown in the left-hand column of the above cadet training flow chart. He was a member of the Class of 44-C and commissioned 2nd Lieutenant on March 12, 1944. (He was later promoted to 1st lieutenant on February 5, 1945).</p><p>Sheesley trained for 9 weeks at each of 4 airfileds in the Southeast Air Corps Training Center (SEACTC), and spent an additional 15 weeks in college (6 wks) and specialized (9 wks) training centers, as shown in the table below. Overall, he spent nearly a full year training for the war.</p><ul><lh>Training Schedule</lh><li><b>College Training (6 wks)</b><br>Duquense University, PA</br></li><li><b>Pre-Flight School (9 wks)</b><br>Maxwell Field, AL</br></li><li><b>Primary School (9 wks)</b><br>Lafayette Regional Airport, LA</li><li><b>Basic School (9 wks)</b><br>Walnut Ridge Army Airfield, AR</br></li><li><b>Advanced School (9 wks)</b><br>Blytheville Army Airfield, AR</br></li><li><b>Specialized School (9 wks)</b><br>Lockbourne Army Airfield, OH</br></li></ul>',
+            description: '<p><span class="dropCap">S</span>heesley followed the pathway for "Classified Pilots" shown in the left-hand column of the above cadet training flow chart. He was a member of the Class of 44-C and commissioned 2nd Lieutenant on March 12, 1944. (He was later promoted to 1st lieutenant on February 5, 1945).</p><p>Sheesley trained for 9 weeks at each of 4 airfileds in the Southeast Air Corps Training Center (SEACTC), and spent an additional 15 weeks in college (6 wks) and specialized (9 wks) training centers, as shown in the table below. Overall, he spent nearly a full year training for the war.</p><ul><lh>Training Schedule</lh><li><b>College Training (6 wks)</b><br>Duquense University, PA</br></li><li><b>Pre-Flight School (9 wks)</b><br>Maxwell Field, AL</br></li><li><b>Primary School (9 wks)</b><br>Lafayette Regional Airport, LA</li><li><b>Basic School (9 wks)</b><br>Walnut Ridge Army Airfield, AR</br></li><li><b>Advanced School (9 wks)</b><br>Blytheville Army Airfield, AR</br></li><li><b>Specialized Training (9 wks)</b><br>Lockbourne Army Airfield, OH</br></li></ul>',
             location: {
                 center: [-86.18510, 35.05642],
                 zoom: 4,
