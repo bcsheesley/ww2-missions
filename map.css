@@ -136,6 +136,10 @@ h3 {
 	line-height: 16px;
 }
 
+.missionPopup {
+	z-index: 9999;
+}
+
 .mapboxgl-popup-content i {
 	color: #999;
 }

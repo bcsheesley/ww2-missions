@@ -63,7 +63,7 @@ var routeSea = {
 	},
 	'properties': {
 		'name': 'New York – Plymouth Bay',
-		'date': 'Oct 22 – Nov 2, 1944'
+		'date': 'Oct 21 – Nov 2, 1944'
 	}
 };
 

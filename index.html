@@ -578,9 +578,6 @@ map.on("load", function() {
             chapter.onChapterExit.forEach(setLayerOpacity);
             }
         
-        
-        
-        //missionMarker.remove();
         popupClick.remove();
         //shake.classList.remove('shake');
         //flash.classList.remove('active');
@@ -623,7 +620,8 @@ var missionMarker = new mapboxgl.Marker(el);
 const missionPopup = new mapboxgl.Popup({
     closeButton: false,
     closeOnClick: true,
-    offset: 25
+    offset: 25,
+    className: 'missionPopup'
     });
     
 el.addEventListener('mouseenter', () => missionPopup.addTo(map));
@@ -684,24 +682,27 @@ function struthersMarker() {
   )
   .addTo(map);
   
-  if (document.querySelector('#schoolMarker')) {
-      var schoolMarkerList = document.querySelectorAll('#schoolMarker');
-      
-  for (var i = 0, len = schoolMarkerList.length; i < len; i++){
+  var schoolMarkerList = document.querySelectorAll('#schoolMarker');
+  for (var i = 0, len = schoolMarkerList.length; i < len; i++) {
       schoolMarkerList[i].remove();
-      }
   }
 }
 
 function journeyEngland() {
   missionMarker.remove();
   
-  if (document.querySelector('#schoolMarker')) {
-      var schoolMarkerList = document.querySelectorAll('#schoolMarker');
-      
-  for (var i = 0, len = schoolMarkerList.length; i < len; i++){
+  var schoolMarkerList = document.querySelectorAll('#schoolMarker');
+  for (var i = 0, len = schoolMarkerList.length; i < len; i++) {
       schoolMarkerList[i].remove();
-      }
+  }
+}
+
+function thirtyFiveMissions() {
+  missionMarker.remove();
+  
+  var schoolMarkerList = document.querySelectorAll('#schoolMarker');
+  for (var i = 0, len = schoolMarkerList.length; i < len; i++) {
+      schoolMarkerList[i].remove();
   }
 }
 
@@ -770,7 +771,18 @@ function yarnfieldMarker() {
 };
 
 function mendleshamMarker() {
-  missionMarker.setLngLat(mendlesham).addTo(map);
+  missionMarker.setLngLat(mendlesham).addTo(map).setPopup(
+      missionPopup
+          .setHTML(
+              `<h3>Mendlesham Airfield</h3>`
+          )
+  )
+  .addTo(map);
+  
+  var schoolMarkerList = document.querySelectorAll('#schoolMarker');
+  for (var i = 0, len = schoolMarkerList.length; i < len; i++) {
+      schoolMarkerList[i].remove();
+  }
 };
 
 function berlinMarker() {

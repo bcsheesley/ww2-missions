@@ -63,7 +63,7 @@ map.on('load', function() {
 					"type": "Feature",
 					"properties": {
 						'name': 'New York – Plymouth Bay',
-						'date': 'Oct 22 – Nov 2, 1944'
+						'date': 'Oct 21 – Nov 2, 1944'
 					},
 					"geometry": {
 						"type": "LineString",
@@ -106,7 +106,7 @@ map.on('load', function() {
 					"type": "Feature",
 					"properties": {
 						'name': 'New York – Plymouth Bay',
-						'date': 'Oct 22 – Nov 2, 1944'
+						'date': 'Oct 21 – Nov 2, 1944'
 					},
 					"geometry": {
 						"type": "LineString",
@@ -801,6 +801,29 @@ map.on('load', function() {
 	'waterway-label'
 	);
 
+	// Add Recall route layer
+	map.addLayer({
+		'id': 'recall',
+		'source': 'routes',
+		'type': 'line',
+		'filter': ['==',['get','name'],'Recall'],
+		'paint': {
+			'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
+			'line-opacity': 0,
+			'line-dasharray': [2,2],
+			// The feature-state dependent line-color expression will render
+			// the color when a feature's hover state is set to true
+			'line-color': [
+				'case',
+				['boolean', ['feature-state', 'hover'], false],
+				'rgba(255,255,133,0.8)',
+				'rgba(0,170,255,0.8)'
+			]
+		}
+	},
+	'waterway-label'
+	);
+
 	// Add layer displaying ALL mission routes except Recall
 	map.addLayer({
 		'id': 'routes',
@@ -821,29 +844,6 @@ map.on('load', function() {
 		},
 		'layout': {
 			'line-cap': 'round'
-		}
-	},
-	'waterway-label'
-	);
-	
-	// Add Recall route layer
-	map.addLayer({
-		'id': 'recall',
-		'source': 'routes',
-		'type': 'line',
-		'filter': ['==',['get','name'],'Recall'],
-		'paint': {
-			'line-width': ['interpolate',['exponential',1.6],['zoom'],5,2,10,24],
-			'line-opacity': 0,
-			'line-dasharray': [2,2],
-			// The feature-state dependent line-color expression will render
-			// the color when a feature's hover state is set to true
-			'line-color': [
-				'case',
-				['boolean', ['feature-state', 'hover'], false],
-				'rgba(255,255,133,0.8)',
-				'rgba(0,170,255,0.8)'
-			]
 		}
 	},
 	'waterway-label'
