@@ -578,15 +578,8 @@ map.on("load", function() {
             chapter.onChapterExit.forEach(setLayerOpacity);
             }
         
-        if (document.querySelector('#schoolMarker')) {
-            //console.log('remove schools');
-            //console.log(test.length);
-            var schoolMarkerList = document.querySelectorAll('#schoolMarker');
-            
-        for (var i = 0, len = schoolMarkerList.length; i < len; i++){
-            schoolMarkerList[i].remove();
-            }
-        }
+        
+        
         //missionMarker.remove();
         popupClick.remove();
         //shake.classList.remove('shake');
@@ -627,6 +620,8 @@ el.appendChild(elChild);
 var missionMarker = new mapboxgl.Marker(el);
 
 function addSchools(){
+  missionMarker.remove();
+  
     for (const schoolsMarker of serviceSchools.features){
         const name = schoolsMarker.properties.name;
         const course = schoolsMarker.properties.course;
@@ -666,6 +661,26 @@ function addSchools(){
 
 function struthersMarker(){
   missionMarker.setLngLat(struthers).addTo(map);
+  
+  if (document.querySelector('#schoolMarker')) {
+      var schoolMarkerList = document.querySelectorAll('#schoolMarker');
+      
+  for (var i = 0, len = schoolMarkerList.length; i < len; i++){
+      schoolMarkerList[i].remove();
+      }
+  }
+}
+
+function journeyEngland(){
+  missionMarker.remove();
+  
+  if (document.querySelector('#schoolMarker')) {
+      var schoolMarkerList = document.querySelectorAll('#schoolMarker');
+      
+  for (var i = 0, len = schoolMarkerList.length; i < len; i++){
+      schoolMarkerList[i].remove();
+      }
+  }
 }
 
 function kilmerMarker(){

@@ -126,7 +126,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: '',
+            callback: 'journeyEngland',
             onChapterEnter: [
                 {
                     layer: 'journey',
