@@ -619,6 +619,17 @@ el.appendChild(elChild);
 
 var missionMarker = new mapboxgl.Marker(el);
 
+//Create the mission marker popup
+const missionPopup = new mapboxgl.Popup({
+    closeButton: false,
+    closeOnClick: true,
+    offset: 25
+    });
+    
+el.addEventListener('mouseenter', () => missionPopup.addTo(map));
+el.addEventListener('mouseleave', () => missionPopup.remove());
+el.addEventListener('touchstart', () => missionPopup.addTo(map));
+
 function addSchools(){
   missionMarker.remove();
   
@@ -660,7 +671,16 @@ function addSchools(){
 }
 
 function struthersMarker(){
-  missionMarker.setLngLat(struthers).addTo(map);
+  missionMarker.setLngLat(struthers)
+  .setPopup(
+      missionPopup
+          .setHTML(
+              `<h3>Struthers, OH</h3>`
+          )
+  )
+  .addTo(map);
+  
+  
   
   if (document.querySelector('#schoolMarker')) {
       var schoolMarkerList = document.querySelectorAll('#schoolMarker');
