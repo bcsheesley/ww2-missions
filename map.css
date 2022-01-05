@@ -1,6 +1,6 @@
 html {
 	//scroll-behavior: smooth;
-	scroll-padding: 100px 0 0 0;
+	scroll-padding: 0px 0 0 0;
 }
 
 body {
@@ -589,7 +589,7 @@ table.aircraftTable {
 }
 */
 
-a[href*="break"] {
+#chapterListContainer a[href*="break"] {
 	display: none;
 }
 
@@ -610,6 +610,10 @@ a[href*="break"] {
 	
 #break-1 h3, #break-2 h3, #break-3 h3 {
 	font-size: 3em;
+}
+
+#break-1 p:last-child, #break-2 p:last-child, #break-3 p:last-child {
+	padding-top: 40px;
 }
 
 #image-break img {
