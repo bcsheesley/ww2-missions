@@ -635,6 +635,11 @@ function break1() {
 function addSchools() {
   missionMarker.remove();
   
+  var schoolMarkerList = document.querySelectorAll('#schoolMarker');
+  
+ console.log(schoolMarkerList.length);
+ 
+  if (schoolMarkerList.length == 0) { 
     for (const schoolsMarker of serviceSchools.features){
         const name = schoolsMarker.properties.name;
         const course = schoolsMarker.properties.course;
@@ -670,6 +675,7 @@ function addSchools() {
         el.addEventListener('touchstart', () => schoolsPopup.addTo(map));
         //el.addEventListener('touchend', () => schoolsPopup.remove());
     }
+  }
 }
 
 function struthersMarker() {
