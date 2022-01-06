@@ -42,6 +42,32 @@ li:first-of-type {
 	padding-top: 10px;
 }
 
+#pageTop {
+	position: fixed;
+	right: 10px;
+	bottom: -60px;
+	z-index: 9999;
+	transition: bottom 0.3s, opacity 0.3s;
+}
+
+#returnLink {
+	text-decoration: none;
+	background-color: rgba(51,51,51,1);
+	border-radius: 50%;
+	color: white;
+	font-size: 1.5em;
+	padding: 15px 17px 7px;
+}
+
+.hideLink {
+	opacity: 1;
+}
+
+.showLink {
+	opacity: 1;
+}
+
+
 .daterank {
 	padding-right: 10px;
 	font-size: 1.5em;
@@ -738,6 +764,10 @@ table.aircraftTable {
 		cursor: pointer;
 	}
 	
+	#returnLink:hover {
+		color: #bbb;
+	}
+	
 	.detailsHeading:hover {
 		color: #666;
 		cursor: pointer;
@@ -768,6 +798,10 @@ table.aircraftTable {
 		color: #fff;
 	}
 	
+	#returnLink:hover {
+		color: #fff;
+	}
+	
 	.chapterListContent a:hover {
 		opacity: 1;
 	}
@@ -789,6 +823,10 @@ table.aircraftTable {
 	
 	body {
 		font-size: 1.2em;
+	}
+	
+	#returnLink {
+		background-color: #fff;
 	}
 	
 	.step .dropCap {

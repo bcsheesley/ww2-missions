@@ -18,6 +18,10 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;500;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,700;1,400;1,700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 <body>
+  
+<div id="pageTop">
+  <a id="returnLink" href="#top">&#8963;</a>
+</div>
 
 <div id="map">
   <div id="flash"></div>
@@ -32,6 +36,37 @@
 </div>
 
 <script>
+
+// When the user scrolls down, hide the top link. When the user scrolls up, show the top link.
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var x = window.matchMedia("(max-width: 768px)");
+  var y = window.scrollY;
+  var currentScrollPos = window.pageYOffset;
+  
+  if (y >= 800) {
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("pageTop").style.bottom = "30px";
+    } else {
+      document.getElementById("pageTop").style.bottom = "-60px";
+    }
+    
+    if (x.matches) {
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("pageTop").style.bottom = "120px";
+      } else {
+        document.getElementById("pageTop").style.bottom = "-60px";
+      }
+    }
+  }
+  
+  if (y <800) {
+    document.getElementById("pageTop").style.bottom = "-60px";
+  }
+  
+  prevScrollpos = currentScrollPos;
+}
+
 var layerTypes = {
     'fill': ['fill-opacity'],
     'line': ['line-opacity'],
