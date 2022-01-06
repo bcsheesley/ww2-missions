@@ -21,7 +21,7 @@ var config = {
             image: '',
             imageId: '',
             caption: '',
-            description: '<p><span class="dropCap">L</span>t. Byron E. Sheesley kept two short journals while serving in the United States Army Air Forces (USAAF) during World War Ⅱ.</p><p>One journal documents his nearly two-week-long journey from Camp Kilmer, New Jersey to a USAAF replacement center near Stone, England by troopship and train in late October and early November, 1944.</p><p>The other summarizes many of the 35 combat missions he flew over enemy targets in Germany as pilot of a B-17 heavy bomber between December 1944 and March 1945. It also describes aspects of his daily life on base and on pass. Sheesley was stationed in Mendlesham, England with the 7th Squadron of the 34th Bomb Group in the "Mighty" 8th Air Force.</p><p>Journal entries are typically concise and matter-of-fact. They include details about people and places, bomber formations and targets, weather conditions and flack, as well as time spent playing games, riding bikes, doing laundry, eating meals, attending chapel, and reading books. Once, after returning to base from London on pass, he began:</p><blockquote>Right back to work. Up at 0330 to bomb the Germans...</blockquote>Other entries, however, are powerful and moving. For example, Lt. Sheesley described an intense <a href="#1-berlin-p1">first mission</a> to Berlin where his crew was sent by mistake and barely made it home alive:<blockquote>All our hearts were pounding—nerves at the break point—sweat rolling at 40° below...They didn\'t think we would make it...</blockquote>In another, after his <a href="#hanover">last mission</a>, he was joyful, relieved, and determined to reunite with his fiancé, Mary E. Clark: <blockquote>... Happy Day! No more flack, fighters, gas, oxygen or bomb runs to sweat out. Mary, here I come.</blockquote><p>This map connects entries with the places they describe.<ul><lh><b>Contents</b></lh><li><b><a href="#break-1">Part 1: Background</a></b><br>Context for Lt. Byron E. Sheesley\'s military service and life before and after the war.</br></li><li><b><a href="#break-2">Part 2: The Green Journal</a></b><br>Entries covering Sheesley\'s journey to England on the Dominion Monarch troopship.</br></li><li><b><a href="#break-3">Part 3: A Line a Day</a></b><br>Entries covering Sheesley\'s bomber missions over Germany and daily life while stationed in Mendlesham, England.</br></li></ul></p><b>Scroll down to read more...</b>',
+            description: '<p><span class="dropCap">L</span>t. Byron E. Sheesley kept two short journals while serving in the United States Army Air Forces (USAAF) during World War Ⅱ.</p><p>One journal documents his nearly two-week-long journey from Camp Kilmer, New Jersey to a USAAF replacement center near Stone, England by troopship and train in late October and early November, 1944.</p><p>The other summarizes many of the 35 combat missions he flew over enemy targets in Germany as pilot of a B-17 heavy bomber between December 1944 and March 1945. It also describes aspects of his daily life on base and on pass. Sheesley was stationed in Mendlesham, England with the 7th Squadron of the 34th Bomb Group in the "Mighty" 8th Air Force.</p><p>Journal entries are typically concise and matter-of-fact in style. They include details about bomber formations, German targets, weather conditions, and flack. They also describe free time spent playing games, riding bikes, doing laundry, eating meals, attending chapel, reading books, and traveling to London. He noted upon returning from London on one occasion, in characteristic style:</p><blockquote>Right back to work. Up at 0330 to bomb the Germans...</blockquote>Other entries, however, are powerful and moving. For example, Lt. Sheesley described an intense <a href="#1-berlin-p1">first mission</a> to Berlin where his crew was sent by mistake and barely made it home alive:<blockquote>All our hearts were pounding—nerves at the break point—sweat rolling at 40° below...They didn\'t think we would make it...</blockquote>In another, after his <a href="#hanover">last mission</a>, he was joyful, relieved, and determined to reunite with his fiancé, Mary E. Clark: <blockquote>... Happy Day! No more flack, fighters, gas, oxygen or bomb runs to sweat out. Mary, here I come.</blockquote><p>This map connects entries with the places they describe.<ul><lh><b>Contents</b></lh><li><b><a href="#break-1">Part 1: Background</a></b><br>Context for Lt. Byron E. Sheesley\'s military service and life before and after the war.</br></li><li><b><a href="#break-2">Part 2: The Green Journal</a></b><br>Entries covering Sheesley\'s journey to England on the Dominion Monarch troopship.</br></li><li><b><a href="#break-3">Part 3: A Line a Day</a></b><br>Entries covering Sheesley\'s bomber missions over Germany and daily life while stationed in Mendlesham, England.</br></li></ul></p><b>Scroll down to read more...</b>',
             location: {
                 center: [-95.96827, 39.03594],
                 zoom: 2,
@@ -1061,7 +1061,7 @@ var config = {
             ]
         },
         {
-            id: '1-berlin-p1',
+            id: '19441205-1',
             section: 3,
             alignment: 'left',
             hidden: false,
@@ -1124,7 +1124,7 @@ var config = {
             ]
         },
         {
-            id: '1-berlin-p2',
+            id: '19441205-2',
             section: 3,
             alignment: 'left',
             hidden: false,
@@ -1187,37 +1187,13 @@ var config = {
             daterank: '',
             title: 'Test Title',
             date: '',
-            image: 'images/journal/19441205-2-trim.png',
+            image: 'images/006-bombs.jpg',
             imageId: '',
-            caption: '',
+            caption: 'Image Credit: Byron E. Sheesley',
             description: '',
             location: {
-                center: [3.11114, 51.00934],
-                zoom: 4,
-                pitch: 0,
-                bearing: 0
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-        {
-            id: 'image-break',
-            section: '',
-            alignment: 'full',
-            hidden: false,
-            daterank: '',
-            title: 'Test Title',
-            date: '',
-            image: 'images/journal/19441205-2-trim.png',
-            imageId: '',
-            caption: '',
-            description: '',
-            location: {
-                center: [3.11114, 51.00934],
-                zoom: 4,
+                center: berlin,
+                zoom: 8,
                 pitch: 0,
                 bearing: 0
             },

@@ -80,6 +80,13 @@ figcaption {
  //text-align: right;
 }
 
+#image-break figcaption {
+	position: relative;
+	bottom: 40px;
+	color: white;
+	text-shadow: 1px 1px 1px #666;
+}
+
 .chapterListContent a {
 	padding: 10px 0 10px 10px;
 	display: block;
@@ -622,10 +629,12 @@ table.aircraftTable {
 
 #image-break img {
 	margin: 0;
+	border-radius: 0;
 }
 
 #image-break .light {
 	padding: 0;
+	background-color: rgba(0,0,0,0);
 }
 
 #image-break .title {
