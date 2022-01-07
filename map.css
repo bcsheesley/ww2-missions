@@ -258,7 +258,7 @@ th {
 }
 
 .step div {
-	//padding: 10px 25px;
+	overflow-x: hidden;
 	padding: 0px 25px 10px;
 	border-radius: 10px;
 }
