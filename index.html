@@ -708,6 +708,7 @@ function addSchools() {
         const schoolsPopup = new mapboxgl.Popup({
             closeButton: false,
             closeOnClick: true,
+            closeOnMove: true,
             offset: 25
             });
             
@@ -726,6 +727,8 @@ function addSchools() {
         el.addEventListener('mouseleave', () => schoolsPopup.remove());
         el.addEventListener('touchstart', () => schoolsPopup.addTo(map));
         //el.addEventListener('touchend', () => schoolsPopup.remove());
+        
+        
     }
   }
 }
