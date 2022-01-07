@@ -19,10 +19,10 @@
 </head>
 <body>
   
-  <a name="top"></a>
+  <a id="hero"></a>
   
 <div id="pageTop">
-  <a id="returnLink" href="#top">&#8963;</a>
+  <a id="returnLink" onclick="gotoHero()">&#8963;</a>
 </div>
 
 <div id="map">
@@ -38,6 +38,11 @@
 </div>
 
 <script>
+
+function gotoHero() {
+  var hero = document.getElementById("hero");
+  hero.scrollIntoView();
+}
 
 // When the user scrolls down, hide the top link. When the user scrolls up, show the top link.
 var prevScrollpos = window.pageYOffset;
