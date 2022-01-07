@@ -672,6 +672,7 @@ var missionMarker = new mapboxgl.Marker(el);
 const missionPopup = new mapboxgl.Popup({
     closeButton: false,
     closeOnClick: true,
+    closeOnMove: true,
     offset: 25,
     className: 'missionPopup'
     });

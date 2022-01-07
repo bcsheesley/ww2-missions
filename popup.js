@@ -1,7 +1,8 @@
 // Create a popup, but don't add it to the map yet.
 var popupHover = new mapboxgl.Popup({
 	closeButton: false,
-	closeOnClick: true
+	closeOnClick: true,
+	closeOnMove: true
 });
 	
 var popupClick = new mapboxgl.Popup({
