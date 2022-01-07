@@ -46,7 +46,7 @@ li:first-of-type {
 	position: fixed;
 	right: 10px;
 	bottom: -60px;
-	background-color: rgba(51,51,51,1);
+	background-color: rgba(51,51,51,0.9);
 	width: 60px;
 	height: 60px;
 	border-radius: 50%;
@@ -430,7 +430,7 @@ table.aircraftTable {
 	top: 100px;
 	right: 0px;
 	float: right;
-	opacity: 1;
+	opacity: 0.9;
 	width: 220px;
 	max-height: 80vh;
 	overflow: hidden;
@@ -544,6 +544,26 @@ table.aircraftTable {
 
 .chapterSectionHeader.activeState .listIcon, .detailsHeading.activeState .listIcon {
 	transform: rotate(0deg);
+}
+
+#legend {
+	padding: 10px 0 10px 10px;
+}
+
+#legendItem {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: rgba(0,170,255,0.8);
+	display: inline-block;
+}
+
+#legendText {
+	color: white;
+	opacity: 0.5;
+	font-style: italic;
+	padding-left: 10px;
+	display: inline-block;
 }
 
 #features {

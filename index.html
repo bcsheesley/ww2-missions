@@ -130,6 +130,9 @@ var chapterSectionTitle3 = document.createElement('div');
 var sectionIcon1 = document.createElement('span');
 var sectionIcon2 = document.createElement('span');
 var sectionIcon3 = document.createElement('span');
+var legend = document.createElement('div');
+var legendItem = document.createElement('div');
+var legendText = document.createElement('div');
 var detailsIcon1 = document.createElement('span');
 var detailsIcon2 = document.createElement('span');
 
@@ -156,6 +159,9 @@ listIcon.setAttribute('class', 'listIcon');
 sectionIcon1.setAttribute('class', 'listIcon');
 sectionIcon2.setAttribute('class', 'listIcon');
 sectionIcon3.setAttribute('class', 'listIcon');
+legend.setAttribute('id', 'legend');
+legendItem.setAttribute('id', 'legendItem');
+legendText.setAttribute('id', 'legendText');
 detailsIcon1.setAttribute('class', 'listIcon');
 detailsIcon2.setAttribute('class', 'listIcon');
 //settings.setAttribute('id', 'settings');
@@ -197,6 +203,10 @@ chapterSectionHeader3.appendChild(chapterSectionTitle3);
 chapterSectionHeader3.appendChild(sectionIcon3);
 chapterListContent.appendChild(chapterSection3);
 
+chapterSection3.appendChild(legend);
+legend.appendChild(legendItem);
+legend.appendChild(legendText);
+
 //chapterListContent.appendChild(settings);
 //settings.appendChild(checkbox);
 //settings.appendChild(checklabel);
@@ -213,6 +223,7 @@ detailsIcon2.innerHTML = '&#9013;';
 chapterSectionTitle1.innerText = "Background";
 chapterSectionTitle2.innerText = "The Green Journal";
 chapterSectionTitle3.innerText = "A Line A Day";
+legendText.innerText = "Combat mission";
 
 chapterListHeader.onclick = function() {
   chapterListContainer.classList.toggle("activeState");
