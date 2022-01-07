@@ -46,18 +46,23 @@ li:first-of-type {
 	position: fixed;
 	right: 10px;
 	bottom: -60px;
+	background-color: rgba(51,51,51,1);
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
 	z-index: 9999;
+	cursor: pointer;
 	transition: bottom 0.3s, opacity 0.3s;
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 #returnLink {
 	text-decoration: none;
-	background-color: rgba(51,51,51,1);
-	border-radius: 50%;
 	color: white;
 	font-size: 1.5em;
-	padding: 15px 17px 7px;
-	cursor: pointer;
 }
 
 .hideLink {
@@ -824,10 +829,6 @@ table.aircraftTable {
 	
 	body {
 		font-size: 1.2em;
-	}
-	
-	#returnLink {
-		background-color: rgba(51, 51, 51, 0.5);
 	}
 	
 	.step .dropCap {

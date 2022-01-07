@@ -19,10 +19,8 @@
 </head>
 <body>
   
-  <a id="hero"></a>
-  
-<div id="pageTop">
-  <a id="returnLink" onclick="gotoHero()">&#8963;</a>
+<div id="pageTop" onclick="gotoHero()">
+  <a id="returnLink">&#8963;</a>
 </div>
 
 <div id="map">
@@ -40,7 +38,7 @@
 <script>
 
 function gotoHero() {
-  var hero = document.getElementById("hero");
+  var hero = document.getElementById("story");
   hero.scrollIntoView();
 }
 
@@ -60,7 +58,7 @@ window.onscroll = function() {
     
     if (x.matches) {
       if (prevScrollpos > currentScrollPos) {
-        document.getElementById("pageTop").style.bottom = "120px";
+        document.getElementById("pageTop").style.bottom = "60px";
       } else {
         document.getElementById("pageTop").style.bottom = "-60px";
       }
