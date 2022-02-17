@@ -292,6 +292,46 @@ config.chapters.forEach((record, idx) => {
       //sectionIcon3.classList.toggle("activeState");
       chapterListHeader.classList.toggle("activeState");
       }
+      
+      missionMarker.remove();
+      
+      var schoolMarkerList = document.querySelectorAll('#schoolMarker');
+      for (var i = 0, len = schoolMarkerList.length; i < len; i++) {
+          schoolMarkerList[i].remove();
+      }
+      
+      //Hide layers that exist for more than one chapter when navigating from the menu (because they are not hidden onChapterExit in the config)
+      map.setPaintProperty(
+          'pass1-away',
+          'line-opacity',
+          0
+      );
+      map.setPaintProperty(
+          'pass2-away',
+          'line-opacity',
+          0
+      );
+      map.setPaintProperty(
+          'journey',
+          'line-opacity',
+          0
+      );
+      map.setPaintProperty(
+          'routes',
+          'line-opacity',
+          0
+      );
+      map.setPaintProperty(
+          'recall',
+          'line-opacity',
+          0
+      );
+      map.setPaintProperty(
+          'routeBerlin',
+          'line-opacity',
+          0
+      );
+      
     }
 
     if (record.daterank) {
@@ -685,6 +725,18 @@ function break1() {
   missionMarker.remove();
 }
 
+function break2() {
+  missionMarker.remove();
+}
+
+function break3() {
+  missionMarker.remove();
+}
+
+function breakImage1() {
+  missionMarker.remove();
+}
+
 function addSchools() {
   missionMarker.remove();
   
@@ -772,6 +824,10 @@ function kilmerMarker() {
   missionMarker.setLngLat(kilmer).addTo(map);
 }
 
+function sketch() {
+  missionMarker.remove();
+};
+
 function newyorkMarker() {
   missionMarker.setLngLat(newyork).addTo(map);
 };
@@ -840,11 +896,11 @@ function mendleshamMarker() {
           )
   )
   .addTo(map);
-  
+  /*
   var schoolMarkerList = document.querySelectorAll('#schoolMarker');
   for (var i = 0, len = schoolMarkerList.length; i < len; i++) {
       schoolMarkerList[i].remove();
-  }
+  }*/
 };
 
 function berlinMarker() {

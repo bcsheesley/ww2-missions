@@ -46,7 +46,7 @@ map.on('mousemove', 'fromMarstonMoor', (e) => {
 		map.getCanvas().style.cursor = 'pointer';
 		
 		popupHover
-		.setHTML(`<h3>${name}</h3><p>${date}</p>`)
+		.setHTML(`<h3>${name}</h3><p>${date}</p><p><i>Click to fly to Marston Moor...</i></p>`)
 		.addTo(map)
 		.setLngLat(e.lngLat)
 		.trackPointer();
@@ -56,6 +56,13 @@ map.on('mousemove', 'fromMarstonMoor', (e) => {
 map.on('mouseleave', 'fromMarstonMoor', () => {
 	map.getCanvas().style.cursor = '';
 	popupHover.remove();
+});
+
+map.on('click', 'fromMarstonMoor', () => {
+	map.flyTo({
+		center: marstonmoor,
+		zoom: 13
+	});
 });
 
 // To Marston Moor hover popup
@@ -69,11 +76,23 @@ map.on('mousemove', 'toMarstonMoor', (e) => {
 		map.getCanvas().style.cursor = 'pointer';
 		
 		popupHover
-		.setHTML(`<h3>${name}</h3><p>${date}</p>`)
+		.setHTML(`<h3>${name}</h3><p>${date}</p><p><i>Click to fly to Marston Moor...</i></p>`)
 		.addTo(map)
 		.setLngLat(e.lngLat)
 		.trackPointer();
 	}
+});
+
+map.on('mouseleave', 'toMarstonMoor', () => {
+	map.getCanvas().style.cursor = '';
+	popupHover.remove();
+});
+
+map.on('click', 'toMarstonMoor', () => {
+	map.flyTo({
+		center: marstonmoor,
+		zoom: 13
+	});
 });
 
 // From Brussels hover popup

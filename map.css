@@ -176,6 +176,10 @@ h3 {
 	line-height: 16px;
 }
 
+.mapboxgl-popup-content p {
+	padding-bottom: 3px;
+}
+
 .missionPopup {
 	z-index: 9999;
 }
