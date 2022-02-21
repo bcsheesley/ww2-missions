@@ -303,6 +303,11 @@ config.chapters.forEach((record, idx) => {
       //Hide layers that exist for more than one chapter when navigating from the menu (because they are not hidden onChapterExit in the config)
       
       map.setPaintProperty(
+          'routeBerlin',
+          'line-opacity',
+          0
+      );
+      map.setPaintProperty(
           'journey',
           'line-opacity',
           0
