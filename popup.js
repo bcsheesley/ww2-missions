@@ -129,7 +129,7 @@ map.on('mousemove', 'toBrussels', (e) => {
 		map.getCanvas().style.cursor = 'pointer';
 		
 		popupHover
-		.setHTML(`<h3>${name}</h3><p>${date}</p>`)
+		.setHTML(`<h3>${name}</h3><p>${date}</p><p><i>Click to fly to Brussels...</i></p>`)
 		.addTo(map)
 		.setLngLat(e.lngLat)
 		.trackPointer();
@@ -139,6 +139,13 @@ map.on('mousemove', 'toBrussels', (e) => {
 map.on('mouseleave', 'toBrussels', () => {
 	map.getCanvas().style.cursor = '';
 	popupHover.remove();
+});
+
+map.on('click', 'toBrussels', () => {
+	map.flyTo({
+		center: brussels,
+		zoom: 13
+	});
 });
 
 // Pass1 to London hover popup - Away

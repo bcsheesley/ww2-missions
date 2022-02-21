@@ -1732,18 +1732,7 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: 'mendleshamMarker',
-            onChapterEnter: [
-                {
-                    layer: 'routes',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
-                    layer: 'recall',
-                    opacity: 0,
-                    duration: 300
-                }
-            ],
+            onChapterEnter: [],
             onChapterExit: []
         },
         {
@@ -1965,11 +1954,6 @@ var config = {
                     layer: 'recall',
                     opacity: 0,
                     duration: 300
-                },
-                {
-                    layer: 'pass1-away',
-                    opacity: 0,
-                    duration: 300
                 }
             ],
             onChapterExit: [
@@ -2003,12 +1987,18 @@ var config = {
             callback: 'londonMarker',
             onChapterEnter: [
                 {
-                    layer: 'pass1-away',
+                    layer: 'pass1-away-london',
                     opacity: 1,
                     duration: 300
                 }
             ],
-            onChapterExit: []
+            onChapterExit: [
+                {
+                    layer: 'pass1-away-london',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
         },
         {
             id: '19450119',
@@ -2033,17 +2023,18 @@ var config = {
             callback: 'richmondMarker',
             onChapterEnter: [
                 {
-                    layer: 'pass1-away',
+                    layer: 'pass1-away-richmond',
                     opacity: 1,
-                    duration: 300
-                },
-                {
-                    layer: 'pass1-home',
-                    opacity: 0,
                     duration: 300
                 }
             ],
-            onChapterExit: []
+            onChapterExit: [
+                {
+                    layer: 'pass1-away-richmond',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
         },
         {
             id: '19450120',
@@ -2067,11 +2058,6 @@ var config = {
             rotateAnimation: false,
             callback: 'mendleshamMarker',
             onChapterEnter: [
-                {
-                    layer: 'pass1-away',
-                    opacity: 0,
-                    duration: 300
-                },
                 {
                     layer: 'pass1-home',
                     opacity: 1,
@@ -2203,7 +2189,18 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: 'mendleshamMarker',
-            onChapterEnter: [],
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                }
+            ],
             onChapterExit: []
         },
         {
@@ -2246,16 +2243,6 @@ var config = {
             ],
             onChapterExit: [
                 {
-                    layer: 'routes',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
-                    layer: 'recall',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
                     layer: 'routeDuisburg',
                     opacity: 0,
                     duration: 300
@@ -2283,7 +2270,18 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: 'mendleshamMarker',
-            onChapterEnter: [],
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                }
+            ],
             onChapterExit: []
         },
         {
@@ -2331,7 +2329,18 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: 'mendleshamMarker',
-            onChapterEnter: [],
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                }
+            ],
             onChapterExit: []
         },
         {
@@ -2374,16 +2383,6 @@ var config = {
             ],
             onChapterExit: [
                 {
-                    layer: 'routes',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
-                    layer: 'recall',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
                     layer: 'routeBerlin',
                     opacity: 0,
                     duration: 300
@@ -2411,7 +2410,18 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: 'mendleshamMarker',
-            onChapterEnter: [],
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                }
+            ],
             onChapterExit: []
         },
         {
@@ -2454,16 +2464,6 @@ var config = {
             ],
             onChapterExit: [
                 {
-                    layer: 'routes',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
-                    layer: 'recall',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
                     layer: 'routeDulmen',
                     opacity: 0,
                     duration: 300
@@ -2491,7 +2491,18 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: 'mendleshamMarker',
-            onChapterEnter: [],
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                }
+            ],
             onChapterExit: []
         },
         {
@@ -2539,7 +2550,18 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: 'mendleshamMarker',
-            onChapterEnter: [],
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                }
+            ],
             onChapterExit: []
         },
         {
@@ -2583,19 +2605,14 @@ var config = {
                     layer: 'toBrussels',
                     opacity: 1,
                     duration: 300
+                },
+                {
+                    layer: 'belgium-mask',
+                    opacity: 0,
+                    duration: 300
                 }
             ],
             onChapterExit: [
-                {
-                    layer: 'routes',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
-                    layer: 'recall',
-                    opacity: 0,
-                    duration: 300
-                },
                 {
                     layer: 'routeCottbus',
                     opacity: 0,
@@ -2604,6 +2621,11 @@ var config = {
                 {
                     layer: 'toBrussels',
                     opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'belgium-mask',
+                    opacity: 0.6,
                     duration: 300
                 }
             ]
@@ -2631,8 +2653,13 @@ var config = {
             callback: 'mendleshamMarker',
             onChapterEnter: [
                 {
-                    layer: 'toBrussels',
-                    opacity: 1,
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
                     duration: 300
                 },
                 {
@@ -2642,11 +2669,6 @@ var config = {
                 }
             ],
             onChapterExit: [
-                {
-                    layer: 'toBrussels',
-                    opacity: 0,
-                    duration: 300
-                },
                 {
                     layer: 'fromBrussels',
                     opacity: 0,
@@ -2699,7 +2721,18 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: 'mendleshamMarker',
-            onChapterEnter: [],
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                }
+            ],
             onChapterExit: []
         },
         {
@@ -2741,16 +2774,6 @@ var config = {
                 }
             ],
             onChapterExit: [
-                {
-                    layer: 'routes',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
-                    layer: 'recall',
-                    opacity: 0,
-                    duration: 300
-                },
                 {
                     layer: 'routeBremen',
                     opacity: 0,
@@ -2798,16 +2821,6 @@ var config = {
             ],
             onChapterExit: [
                 {
-                    layer: 'routes',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
-                    layer: 'recall',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
                     layer: 'routeLudwigsfelde',
                     opacity: 0,
                     duration: 300
@@ -2850,24 +2863,9 @@ var config = {
                     layer: 'routeBerlin',
                     opacity: 1,
                     duration: 300
-                },
-                {
-                    layer: 'pass2-away',
-                    opacity: 0,
-                    duration: 300
                 }
             ],
             onChapterExit: [
-                {
-                    layer: 'routes',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
-                    layer: 'recall',
-                    opacity: 0,
-                    duration: 300
-                },
                 {
                     layer: 'routeBerlin',
                     opacity: 0,
@@ -2889,7 +2887,7 @@ var config = {
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">H</span>itch hiked to Ipswitch [Ipswich] with Red & caught a train to London. Saw "Hamlet". Stayed at Princess Gardens.</p><i style="color: #999;">Note: Original entry is misdated.</i>',
             location: {
                 center: goring,
-                zoom: 6,
+                zoom: 12,
                 pitch: 0,
                 bearing: 0
             },
@@ -2898,12 +2896,28 @@ var config = {
             callback: 'londonMarker',
             onChapterEnter: [
                 {
-                    layer: 'pass2-away',
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'pass2-away-london',
                     opacity: 1,
                     duration: 300
                 }
             ],
-            onChapterExit: []
+            onChapterExit: [
+                {
+                    layer: 'pass2-away-london',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
         },
         {
             id: '19450228',
@@ -2919,27 +2933,15 @@ var config = {
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">S</span>pent the day wandering around London and getting in touch with Phillip. Had some ice cream at ¢.20 (1 shilling) per dip. Pee Wee & I went to see "Midsummer Nights Dream. Stayed overnight at "Boom Gardens".</p><i style="color: #999;">Note: Original entry is misdated.</i>',
             location: {
                 center: goring,
-                zoom: 8,
+                zoom: 12,
                 pitch: 0,
                 bearing: 0
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: 'londonMarker',
-            onChapterEnter: [
-                {
-                    layer: 'pass2-away',
-                    opacity: 1,
-                    duration: 300
-                }
-            ],
-            onChapterExit: [
-                {
-                    layer: 'pass2-away',
-                    opacity: 0,
-                    duration: 300
-                }
-            ]
+            onChapterEnter: [],
+            onChapterExit: []
         },
         {
             id: '19450301',
@@ -2963,6 +2965,16 @@ var config = {
             rotateAnimation: false,
             callback: 'mendleshamMarker',
             onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
                 {
                     layer: 'pass2-home',
                     opacity: 1,
@@ -3017,16 +3029,6 @@ var config = {
             ],
             onChapterExit: [
                 {
-                    layer: 'routes',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
-                    layer: 'recall',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
                     layer: 'routeDresden',
                     opacity: 0,
                     duration: 300
@@ -3072,16 +3074,6 @@ var config = {
                 }
             ],
             onChapterExit: [
-                {
-                    layer: 'routes',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
-                    layer: 'recall',
-                    opacity: 0,
-                    duration: 300
-                },
                 {
                     layer: 'routeDedenhausen',
                     opacity: 0,
@@ -3129,16 +3121,6 @@ var config = {
             ],
             onChapterExit: [
                 {
-                    layer: 'routes',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
-                    layer: 'recall',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
                     layer: 'routeRecall',
                     opacity: 0,
                     duration: 300
@@ -3166,7 +3148,18 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: 'mendleshamMarker',
-            onChapterEnter: [],
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                }
+            ],
             onChapterExit: []
         },
         {
@@ -3233,16 +3226,6 @@ var config = {
             ],
             onChapterExit: [
                 {
-                    layer: 'routes',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
-                    layer: 'recall',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
                     layer: 'routeDatteln',
                     opacity: 0,
                     duration: 300
@@ -3270,7 +3253,18 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: 'mendleshamMarker',
-            onChapterEnter: [],
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                }
+            ],
             onChapterExit: []
         },
         {
@@ -3294,7 +3288,18 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: 'mendleshamMarker',
-            onChapterEnter: [],
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                }
+            ],
             onChapterExit: []
         },
         {
@@ -3336,16 +3341,6 @@ var config = {
                 }
             ],
             onChapterExit: [
-                {
-                    layer: 'routes',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
-                    layer: 'recall',
-                    opacity: 0,
-                    duration: 300
-                },
                 {
                     layer: 'routeSoest',
                     opacity: 0,
@@ -3393,16 +3388,6 @@ var config = {
             ],
             onChapterExit: [
                 {
-                    layer: 'routes',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
-                    layer: 'recall',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
                     layer: 'routeHamburg',
                     opacity: 0,
                     duration: 300
@@ -3449,16 +3434,6 @@ var config = {
             ],
             onChapterExit: [
                 {
-                    layer: 'routes',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
-                    layer: 'recall',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
                     layer: 'routeSwinoujscie',
                     opacity: 0,
                     duration: 300
@@ -3479,7 +3454,7 @@ var config = {
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">W</span>ent on pass. Hitch hiked to Ipswitch. Got a ride in a jeep.</p>',
             location: {
                 center: ipswich,
-                zoom: 9,
+                zoom: 12,
                 pitch: 0,
                 bearing: 0
             },
@@ -3488,14 +3463,24 @@ var config = {
             callback: 'ipswichMarker',
             onChapterEnter: [
                 {
-                    layer: 'pass3-away',
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'pass3-away-ipswich',
                     opacity: 1,
                     duration: 300
                 }
             ],
             onChapterExit: [
                 {
-                    layer: 'pass3-away',
+                    layer: 'pass3-away-ipswich',
                     opacity: 0,
                     duration: 300
                 }
@@ -3515,7 +3500,7 @@ var config = {
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">W</span>ent to Ascot to see Phillip. We made a mess of pictures. Slept in his barracks</p>',
             location: {
                 center: ascot,
-                zoom: 9,
+                zoom: 12,
                 pitch: 0,
                 bearing: 0
             },
@@ -3524,14 +3509,14 @@ var config = {
             callback: 'ascotMarker',
             onChapterEnter: [
                 {
-                    layer: 'pass3-away',
+                    layer: 'pass3-away-ascot',
                     opacity: 1,
                     duration: 300
                 }
             ],
             onChapterExit: [
                 {
-                    layer: 'pass3-away',
+                    layer: 'pass3-away-ascot',
                     opacity: 0,
                     duration: 300
                 }
@@ -3551,7 +3536,7 @@ var config = {
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">P</span>hillip & I went into London to Princes Gardens Red Cross club. Played ping pong—I got beat 3 of 5. Left for here on 5:06 train</p>',
             location: {
                 center: mendlesham,
-                zoom: 9,
+                zoom: 13,
                 pitch: 0,
                 bearing: 0
             },
@@ -3559,6 +3544,16 @@ var config = {
             rotateAnimation: false,
             callback: 'mendleshamMarker',
             onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
                 {
                     layer: 'pass3-home',
                     opacity: 1,
@@ -3613,16 +3608,6 @@ var config = {
             ],
             onChapterExit: [
                 {
-                    layer: 'routes',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
-                    layer: 'recall',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
                     layer: 'routeBitterfeld',
                     opacity: 0,
                     duration: 300
@@ -3668,16 +3653,6 @@ var config = {
                 }
             ],
             onChapterExit: [
-                {
-                    layer: 'routes',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
-                    layer: 'recall',
-                    opacity: 0,
-                    duration: 300
-                },
                 {
                     layer: 'routeBerlin',
                     opacity: 0,
@@ -3725,16 +3700,6 @@ var config = {
             ],
             onChapterExit: [
                 {
-                    layer: 'routes',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
-                    layer: 'recall',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
                     layer: 'routeJena',
                     opacity: 0,
                     duration: 300
@@ -3780,16 +3745,6 @@ var config = {
                 }
             ],
             onChapterExit: [
-                {
-                    layer: 'routes',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
-                    layer: 'recall',
-                    opacity: 0,
-                    duration: 300
-                },
                 {
                     layer: 'routeHamburg',
                     opacity: 0,
@@ -3837,16 +3792,6 @@ var config = {
             ],
             onChapterExit: [
                 {
-                    layer: 'routes',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
-                    layer: 'recall',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
                     layer: 'routeMarxen',
                     opacity: 0,
                     duration: 300
@@ -3892,16 +3837,6 @@ var config = {
                 }
             ],
             onChapterExit: [
-                {
-                    layer: 'routes',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
-                    layer: 'recall',
-                    opacity: 0,
-                    duration: 300
-                },
                 {
                     layer: 'routeGeisecke',
                     opacity: 0,
@@ -3949,16 +3884,6 @@ var config = {
             ],
             onChapterExit: [
                 {
-                    layer: 'routes',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
-                    layer: 'recall',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
                     layer: 'routeBadZwischenahn',
                     opacity: 0,
                     duration: 300
@@ -3979,7 +3904,7 @@ var config = {
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">R</span>ecalled after we were formed. A ship broke in the air & fell to the field just a short distance from where we sat on the runway. Caught fire—exploded upon hitting. A huge ball of fire rose above the ship as large as a house—floated toward us and went out just above us. We sat there awaiting developments and they developed. A 1000 pounder exploded spreading debree all over the field. Our ship had quite a jar, but wasn\'t hit at all. We cut the engines quick like and got out. Left for London at 4:30 to see about the broadcast.</p>',
             location: {
                 center: goring,
-                zoom: 6,
+                zoom: 12,
                 pitch: 0,
                 bearing: 0
             },
@@ -3987,6 +3912,16 @@ var config = {
             rotateAnimation: false,
             callback: 'londonMarker',
             onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
                 {
                     layer: 'pass4-away',
                     opacity: 1,
@@ -4015,27 +3950,15 @@ var config = {
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">W</span>ent to ABSIF at Gaumont Pictures to see about the recording. Spent an hour preparing and 3 1/2 minutes making the record. Waste of time. I went to see Phillip & developed some film.</p>',
             location: {
                 center: goring,
-                zoom: 10,
+                zoom: 12,
                 pitch: 0,
                 bearing: 0
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: 'londonMarker',
-            onChapterEnter: [
-                {
-                    layer: 'pass4-away',
-                    opacity: 1,
-                    duration: 300
-                }
-            ],
-            onChapterExit: [
-                {
-                    layer: 'pass4-away',
-                    opacity: 0,
-                    duration: 300
-                }
-            ]
+            onChapterEnter: [],
+            onChapterExit: []
         },
         {
             id: '19450327',
@@ -4113,16 +4036,6 @@ var config = {
             ],
             onChapterExit: [
                 {
-                    layer: 'routes',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
-                    layer: 'recall',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
                     layer: 'routeHanover',
                     opacity: 0,
                     duration: 300
@@ -4143,7 +4056,7 @@ var config = {
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">L</span>eft the 34th B.G. for Stone with Red, Shaky, Eisenberg, Maj. Young & Maj. Ritchie. We flew over. Pres. Roosevelt died - too bad.</p>',
             location: {
                 center: yarnfield,
-                zoom: 8,
+                zoom: 13,
                 pitch: 0,
                 bearing: 0
             },
@@ -4179,7 +4092,7 @@ var config = {
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">L</span>eft Stone 70th B.D. for the boat.<br></br></p>',
             location: {
                 center: plymouthDock,
-                zoom: 8,
+                zoom: 10,
                 pitch: 0,
                 bearing: 0
             },
@@ -4188,14 +4101,24 @@ var config = {
             callback: 'plymouthMarker',
             onChapterEnter: [
                 {
-                    layer: 'journey-home',
+                    layer: 'journey-home-plymouthDock',
                     opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'journey-home-sea11',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'journey-home-boston',
+                    opacity: 0,
                     duration: 300
                 }
             ],
             onChapterExit: [
                 {
-                    layer: 'journey-home',
+                    layer: 'journey-home-plymouthDock',
                     opacity: 0,
                     duration: 300
                 }
@@ -4224,18 +4147,17 @@ var config = {
             callback: 'sea11Marker',
             onChapterEnter: [
                 {
-                    layer: 'journey-home',
+                    layer: 'journey-home-sea11',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'journey-home-boston',
                     opacity: 1,
                     duration: 300
                 }
             ],
-            onChapterExit: [
-                {
-                    layer: 'journey-home',
-                    opacity: 0,
-                    duration: 300
-                }
-            ]
+            onChapterExit: []
         },
         {
             id: '19450513',
@@ -4251,7 +4173,7 @@ var config = {
             description: '<p class="divider"><span class="dividerLine"></span><span class="dropQuote">&ldquo;&rdquo;</span><span class="dividerLine"></span></p><p><span class="dropCap">G</span>ot off the boat at Boston & went to camp. Called Mary. Happy Day! Called Mom too.</p>',
             location: {
                 center: boston,
-                zoom: 8,
+                zoom: 10,
                 pitch: 0,
                 bearing: 0
             },
@@ -4260,18 +4182,17 @@ var config = {
             callback: 'bostonMarker',
             onChapterEnter: [
                 {
-                    layer: 'journey-home',
+                    layer: 'journey-home-sea11',
+                    opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'journey-home-boston',
                     opacity: 1,
                     duration: 300
                 }
             ],
-            onChapterExit: [
-                {
-                    layer: 'journey-home',
-                    opacity: 0,
-                    duration: 300
-                }
-            ]
+            onChapterExit: []
         },
         {
             id: '19450514',
@@ -4296,14 +4217,24 @@ var config = {
             callback: 'atterburyMarker',
             onChapterEnter: [
                 {
-                    layer: 'journey-home',
+                    layer: 'journey-home-sea11',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'journey-home-boston',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'journey-home-atterbury',
                     opacity: 1,
                     duration: 300
                 }
             ],
             onChapterExit: [
                 {
-                    layer: 'journey-home',
+                    layer: 'journey-home-atterbury',
                     opacity: 0,
                     duration: 300
                 }

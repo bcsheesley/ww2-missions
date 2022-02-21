@@ -201,7 +201,8 @@ map.on('load', function() {
 					"type": "Feature",
 					"properties": {
 						'name': 'Stone (Yarnfield) – Plymouth',
-						'date': '5/1/1945'
+						'date': '5/1/1945',
+						'place': 'plymouthDock'
 					},
 					"geometry": {
 						"type": "LineString",
@@ -235,7 +236,8 @@ map.on('load', function() {
 					"type": "Feature",
 					"properties": {
 						'name': 'Plymouth – Boston',
-						'date': 'May 1 – May 13, 1945'
+						'date': 'May 1 – May 13, 1945',
+						'place': 'sea11'
 					},
 					"geometry": {
 						"type": "LineString",
@@ -307,7 +309,8 @@ map.on('load', function() {
 					'properties': {
 						'name': 'Mendlesham – London',
 						'date': '1/18/1945',
-						'direction': 'pass1-away'
+						'direction': 'pass1-away',
+						'place': 'london'
 					}
 				},
 				{
@@ -322,7 +325,8 @@ map.on('load', function() {
 					'properties': {
 						'name': 'London – Richmond',
 						'date': '1/19/1945',
-						'direction': 'pass1-away'
+						'direction': 'pass1-away',
+						'place': 'richmond'
 					}
 				},
 				{
@@ -339,7 +343,8 @@ map.on('load', function() {
 					'properties': {
 						'name': 'Richmond – Mendlesham',
 						'date': '1/20/1945',
-						'direction': 'pass1-home'
+						'direction': 'pass1-home',
+						'place': 'mendlesham'
 					}
 				},
 				{
@@ -355,7 +360,8 @@ map.on('load', function() {
 					'properties': {
 						'name': 'Mendlesham – London',
 						'date': '2/27/1945',
-						'direction': 'pass2-away'
+						'direction': 'pass2-away',
+						'place': 'london'
 					}
 				},
 				{
@@ -371,7 +377,8 @@ map.on('load', function() {
 					'properties': {
 						'name': 'London – Mendlesham',
 						'date': '3/1/1945',
-						'direction': 'pass2-home'
+						'direction': 'pass2-home',
+						'place': 'mendlesham'
 					}
 				},
 				{
@@ -386,7 +393,8 @@ map.on('load', function() {
 					'properties': {
 						'name': 'Mendlesham – Ipswich',
 						'date': '3/14/1945',
-						'direction': 'pass3-away'
+						'direction': 'pass3-away',
+						'place': 'ipswich'
 					}
 				},
 				{
@@ -402,7 +410,8 @@ map.on('load', function() {
 					'properties': {
 						'name': 'Ipswich – Ascot',
 						'date': '3/15/1945',
-						'direction': 'pass3-away'
+						'direction': 'pass3-away',
+						'place': 'ascot'
 					}
 				},
 				{
@@ -419,7 +428,8 @@ map.on('load', function() {
 					'properties': {
 						'name': 'Ascot – Mendlesham',
 						'date': '3/16/1945',
-						'direction': 'pass3-home'
+						'direction': 'pass3-home',
+						'place': 'mendlesham'
 					}
 				},
 				{
@@ -435,7 +445,8 @@ map.on('load', function() {
 					'properties': {
 						'name': 'Mendlesham – London',
 						'date': '3/25/1945',
-						'direction': 'pass4-away'
+						'direction': 'pass4-away',
+						'place': 'london'
 					}
 				},
 				{
@@ -451,7 +462,8 @@ map.on('load', function() {
 					'properties': {
 						'name': 'London – Mendlesham',
 						'date': '3/27/1945',
-						'direction': 'pass4-home'
+						'direction': 'pass4-home',
+						'place': 'mendlesham'
 					}
 				}
 			] 
@@ -495,10 +507,88 @@ map.on('load', function() {
 	'waterway-label'
 	);
 	
+	// Add Yarnfield - Plymouth Dock - Home route line layer
 	map.addLayer({
-		'id': 'journey-home',
+		'id': 'journey-home-plymouthDock',
 		'source': 'journey-home',
 		'type': 'line',
+		'filter': [
+			'==',
+			['get','place'],
+			'plymouthDock'
+		],
+		'paint': {
+			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],
+			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
+			'line-color': 'rgba(255,126,126,0.9)',
+			'line-opacity': 0,
+			'line-dasharray': [2,2]
+		},
+		'layout': {
+			//'line-cap': 'round'
+		}
+	},
+	'waterway-label'
+	);
+	
+	// Add Plymouth Dock - Sea11 - Home route line layer
+	map.addLayer({
+		'id': 'journey-home-sea11',
+		'source': 'journey-home',
+		'type': 'line',
+		'filter': [
+			'==',
+			['get','place'],
+			'sea11'
+		],
+		'paint': {
+			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],
+			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
+			'line-color': 'rgba(255,126,126,0.9)',
+			'line-opacity': 0,
+			'line-dasharray': [2,2]
+		},
+		'layout': {
+			//'line-cap': 'round'
+		}
+	},
+	'waterway-label'
+	);
+	
+	// Add Sea11 - Boston - Home route line layer
+	map.addLayer({
+		'id': 'journey-home-boston',
+		'source': 'journey-home',
+		'type': 'line',
+		'filter': [
+			'==',
+			['get','place'],
+			'boston'
+		],
+		'paint': {
+			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],
+			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
+			'line-color': 'rgba(255,126,126,0.9)',
+			'line-opacity': 0,
+			'line-dasharray': [2,2]
+		},
+		'layout': {
+			//'line-cap': 'round'
+		}
+	},
+	'waterway-label'
+	);
+	
+	// Add Boston - Atterbury - Home route line layer
+	map.addLayer({
+		'id': 'journey-home-atterbury',
+		'source': 'journey-home',
+		'type': 'line',
+		'filter': [
+			'==',
+			['get','place'],
+			'atterbury'
+		],
 		'paint': {
 			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],
 			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
@@ -561,15 +651,23 @@ map.on('load', function() {
 	'waterway-label'
 	);
 	
-	// Add Pass 1 - London trip line layer - Away
+	// Add Pass 1 -  Away - London line layer
 	map.addLayer({
-		'id': 'pass1-away',
+		'id': 'pass1-away-london',
 		'source': 'london',
 		'type': 'line',
 		'filter': [
-			'==',
-			['get','direction'],
-			'pass1-away'
+			'all',
+				[
+					'==',
+					['get','direction'],
+					'pass1-away'
+				],
+				[
+					'==',
+					['get', 'place'],
+					'london'
+				]
 		],
 		'paint': {
 			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],
@@ -577,9 +675,35 @@ map.on('load', function() {
 			'line-color': 'rgba(255,126,126,0.9)',
 			'line-opacity': 0,
 			'line-dasharray': [2,2]
-		},
-		'layout': {
-			//'line-cap': 'round'
+		}
+	},
+	'waterway-label'
+	);
+	
+	// Add Pass 1 - Away - Richmond line layer
+	map.addLayer({
+		'id': 'pass1-away-richmond',
+		'source': 'london',
+		'type': 'line',
+		'filter': [
+			'all',
+				[
+					'==',
+					['get','direction'],
+					'pass1-away'
+				],
+				[
+					'==',
+					['get', 'place'],
+					'richmond'
+				]
+		],
+		'paint': {
+			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],
+			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
+			'line-color': 'rgba(255,126,126,0.9)',
+			'line-opacity': 0,
+			'line-dasharray': [2,2]
 		}
 	},
 	'waterway-label'
@@ -611,7 +735,7 @@ map.on('load', function() {
 	
 	// Add Pass 2 - London trip line layer - Away
 	map.addLayer({
-		'id': 'pass2-away',
+		'id': 'pass2-away-london',
 		'source': 'london',
 		'type': 'line',
 		'filter': [
@@ -657,15 +781,55 @@ map.on('load', function() {
 	'waterway-label'
 	);
 	
-	// Add Pass 3 - London trip line layer - Away
+	// Add Pass 3 - Ipswich trip line layer - Away
 	map.addLayer({
-		'id': 'pass3-away',
+		'id': 'pass3-away-ipswich',
 		'source': 'london',
 		'type': 'line',
 		'filter': [
-			'==',
-			['get','direction'],
-			'pass3-away'
+			'all',
+				[
+					'==',
+					['get','direction'],
+					'pass3-away'
+				],
+				[
+					'==',
+					['get', 'place'],
+					'ipswich'
+				]
+		],
+		'paint': {
+			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],
+			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
+			'line-color': 'rgba(255,126,126,0.9)',
+			'line-opacity': 0,
+			'line-dasharray': [2,2]
+		},
+		'layout': {
+			//'line-cap': 'round'
+		}
+	},
+	'waterway-label'
+	);
+	
+	// Add Pass 3 - Ascot trip line layer - Away
+	map.addLayer({
+		'id': 'pass3-away-ascot',
+		'source': 'london',
+		'type': 'line',
+		'filter': [
+			'all',
+				[
+					'==',
+					['get','direction'],
+					'pass3-away'
+				],
+				[
+					'==',
+					['get', 'place'],
+					'ascot'
+				]
 		],
 		'paint': {
 			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],

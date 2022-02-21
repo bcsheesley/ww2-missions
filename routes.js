@@ -89,7 +89,8 @@ var routeBoston = {
 	},
 	'properties': {
 		'name': 'Plymouth – Boston',
-		'date': 'May 1 – May 13, 1945'
+		'date': 'May 1 – May 13, 1945',
+		'place': 'boston'
 	}
 };
 
@@ -102,7 +103,8 @@ var routeAtterbury = {
 	},
 	'properties': {
 		'name': 'Boston – Camp Atterbury',
-		'date': '5/14/1944'
+		'date': '5/14/1944',
+		'place': 'atterbury'
 	}
 };
 

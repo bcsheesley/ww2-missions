@@ -301,16 +301,7 @@ config.chapters.forEach((record, idx) => {
       }
       
       //Hide layers that exist for more than one chapter when navigating from the menu (because they are not hidden onChapterExit in the config)
-      map.setPaintProperty(
-          'pass1-away',
-          'line-opacity',
-          0
-      );
-      map.setPaintProperty(
-          'pass2-away',
-          'line-opacity',
-          0
-      );
+      
       map.setPaintProperty(
           'journey',
           'line-opacity',
@@ -327,11 +318,15 @@ config.chapters.forEach((record, idx) => {
           0
       );
       map.setPaintProperty(
-          'routeBerlin',
+          'journey-home-sea11',
           'line-opacity',
           0
       );
-      
+      map.setPaintProperty(
+          'journey-home-boston',
+          'line-opacity',
+          0
+      );
     }
 
     if (record.daterank) {
@@ -648,7 +643,7 @@ map.on("load", function() {
         if (highlightRank) {
           document.querySelector(highlightBkg).style.backgroundColor = 'rgba(255,255,133,1)';
           document.querySelector(highlightBkg).style.color = 'rgba(0,0,0,1)';
-          //console.log(highlightRank);
+          document.querySelector(highlightID).style.pointerEvents = 'none';
         } else {
           document.querySelector(highlightName).style.borderLeft = 'solid 2px white';
           document.querySelector(highlightName).style.paddingLeft = '10px';
@@ -657,6 +652,8 @@ map.on("load", function() {
           document.querySelector('a[href="#about-this-map"] .itemName').style.borderLeft = 'solid 0px white';
           document.querySelector('a[href="#about-this-map"] .itemName').style.paddingLeft = '0px';
           document.querySelector('a[href="#about-this-map"] .itemName').style.marginLeft = '0px';
+          
+          document.querySelector(highlightID).style.pointerEvents = 'none';
         }
         
         //document.querySelector(highlightID).style.color = 'rgba(255,255,133,1)';
@@ -683,6 +680,7 @@ map.on("load", function() {
         if (highlightRank) {
           document.querySelector(highlightBkg).style.backgroundColor = 'rgba(0,170,255,0.8)';
           document.querySelector(highlightBkg).style.color = 'white';
+          document.querySelector(highlightID).style.pointerEvents = 'auto';
         } else {
           document.querySelector(highlightName).style.borderLeft = 'solid 0px white';
           document.querySelector(highlightName).style.paddingLeft = '0px';
@@ -691,6 +689,8 @@ map.on("load", function() {
           document.querySelector('a[href="#about-this-map"] .itemName').style.borderLeft = 'solid 0px white';
           document.querySelector('a[href="#about-this-map"] .itemName').style.paddingLeft = '0px';
           document.querySelector('a[href="#about-this-map"] .itemName').style.marginLeft = '0px';
+          
+          document.querySelector(highlightID).style.pointerEvents = 'auto';
         }
         
         //document.querySelector(highlightID).style.color = 'white';
