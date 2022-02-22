@@ -49,7 +49,8 @@ map.on('load', function() {
 					"type": "Feature",
 					"properties": {
 						'name': 'Camp Kilmer – New York',
-						'date': 'Oct 21, 1944'
+						'date': 'Oct 21, 1944',
+						'place': 'newyork'
 					},
 					"geometry": {
 						"type": "LineString",
@@ -63,7 +64,8 @@ map.on('load', function() {
 					"type": "Feature",
 					"properties": {
 						'name': 'New York – Plymouth Bay',
-						'date': 'Oct 21 – Nov 2, 1944'
+						'date': 'Oct 21 – Nov 2, 1944',
+						'place': 'sea1'
 					},
 					"geometry": {
 						"type": "LineString",
@@ -106,7 +108,8 @@ map.on('load', function() {
 					"type": "Feature",
 					"properties": {
 						'name': 'New York – Plymouth Bay',
-						'date': 'Oct 21 – Nov 2, 1944'
+						'date': 'Oct 21 – Nov 2, 1944',
+						'place': 'plymouthBay'
 					},
 					"geometry": {
 						"type": "LineString",
@@ -128,7 +131,8 @@ map.on('load', function() {
 					"type": "Feature",
 					"properties": {
 						'name': 'Plymouth Bay – Plymouth',
-						'date': 'Nov 3, 1944'
+						'date': 'Nov 3, 1944',
+						'place': 'plymouthDock'
 					},
 					"geometry": {
 						"type": "LineString",
@@ -146,7 +150,8 @@ map.on('load', function() {
 					"type": "Feature",
 					"properties": {
 						'name': 'Plymouth – Stone (Yarnfield)',
-						'date': 'Nov 4, 1944'
+						'date': 'Nov 4, 1944',
+						'place': 'yarnfield'
 					},
 					"geometry": {
 						"type": "LineString",
@@ -470,11 +475,43 @@ map.on('load', function() {
 		}
 	});
 	
-	// Add journey to England line layer
+	// Add journey by ship line layer
 	map.addLayer({
-		'id': 'journey',
+		'id': 'journey-voyage',
 		'source': 'journey',
 		'type': 'line',
+		'filter': [
+					'in',
+					'place',
+					'sea1',
+					'sea11',
+					'plymouthBay',
+					'plymouthDock'
+		],
+		'paint': {
+			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],
+			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
+			'line-color': 'rgba(255,126,126,0.9)',
+			'line-opacity': 0,
+			'line-dasharray': [2,2]
+		},
+		'layout': {
+			//'line-cap': 'round'
+		}
+	},
+	'waterway-label'
+	);
+	
+	// Add New York Docks line layer
+	map.addLayer({
+		'id': 'newyork-docks',
+		'source': 'journey',
+		'type': 'line',
+		'filter': [
+					'==',
+					'place',
+					'newyork'
+		],
 		'paint': {
 			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],
 			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
@@ -490,7 +527,30 @@ map.on('load', function() {
 	);
 	
 	map.addLayer({
-		'id': 'routeStone',
+		'id': 'routeStone-away',
+		'source': 'journey',
+		'type': 'line',
+		'filter': [
+					'==',
+					'place',
+					'yarnfield'
+		],
+		'paint': {
+			'line-width': ['interpolate',['exponential',1.6],['zoom'],2,4,10,24],
+			'line-opacity': ['interpolate',['exponential',1.0],['zoom'],7,1,10,0.5],
+			'line-color': 'rgba(255,126,126,0.9)',
+			'line-opacity': 0,
+			'line-dasharray': [2,2]
+		},
+		'layout': {
+			//'line-cap': 'round'
+		}
+	},
+	'waterway-label'
+	);
+	
+	map.addLayer({
+		'id': 'routeStone-home',
 		'source': 'routeStone',
 		'type': 'line',
 		'paint': {

@@ -129,14 +129,14 @@ var config = {
             callback: 'journeyEngland',
             onChapterEnter: [
                 {
-                    layer: 'journey',
+                    layer: 'journey-voyage',
                     opacity: 1,
                     duration: 300
                 }
             ],
             onChapterExit: [
                 {
-                    layer: 'journey',
+                    layer: 'journey-voyage',
                     opacity: 0,
                     duration: 300
                 }
@@ -163,7 +163,18 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: 'mendleshamMarker',
-            onChapterEnter: [],
+            onChapterEnter: [
+                {
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                }
+            ],
             onChapterExit: []
         },
         {
@@ -197,20 +208,9 @@ var config = {
                     layer: 'recall',
                     opacity: 1,
                     duration: 300
-                },
+                }
             ],
-            onChapterExit: [
-                {
-                    layer: 'routes',
-                    opacity: 0,
-                    duration: 300
-                },
-                {
-                    layer: 'recall',
-                    opacity: 0,
-                    duration: 300
-                },
-            ]
+            onChapterExit: []
         },
         {
             id: 'break-2',
@@ -235,7 +235,17 @@ var config = {
             callback: 'break2',
             onChapterEnter: [
                 {
-                    layer: 'journey',
+                    layer: 'routes',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'recall',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'journey-voyage',
                     opacity: 0,
                     duration: 300
                 }
@@ -265,7 +275,7 @@ var config = {
             callback: '',
             onChapterEnter: [
                 {
-                    layer: 'journey',
+                    layer: 'journey-voyage',
                     opacity: 1,
                     duration: 300
                 }
@@ -295,7 +305,7 @@ var config = {
             callback: 'sketch',
             onChapterEnter: [
                 {
-                    layer: 'journey',
+                    layer: 'journey-voyage',
                     opacity: 1,
                     duration: 300
                 }
@@ -325,12 +335,23 @@ var config = {
             callback: 'newyorkMarker',
             onChapterEnter: [
                 {
-                    layer: 'journey',
+                    layer: 'journey-voyage',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'newyork-docks',
                     opacity: 1,
                     duration: 300
                 }
             ],
-            onChapterExit: []
+            onChapterExit: [
+                {
+                    layer: 'newyork-docks',
+                    opacity: 0,
+                    duration: 300
+                }
+            ]
         },
         {
             id: 'day-1-at-sea',
@@ -355,7 +376,7 @@ var config = {
             callback: 'sea1Marker',
             onChapterEnter: [
                 {
-                    layer: 'journey',
+                    layer: 'journey-voyage',
                     opacity: 1,
                     duration: 300
                 }
@@ -385,7 +406,7 @@ var config = {
             callback: 'sea2Marker',
             onChapterEnter: [
                 {
-                    layer: 'journey',
+                    layer: 'journey-voyage',
                     opacity: 1,
                     duration: 300
                 }
@@ -415,7 +436,7 @@ var config = {
             callback: 'sea3Marker',
             onChapterEnter: [
                 {
-                    layer: 'journey',
+                    layer: 'journey-voyage',
                     opacity: 1,
                     duration: 300
                 }
@@ -445,7 +466,7 @@ var config = {
             callback: 'sea4Marker',
             onChapterEnter: [
                 {
-                    layer: 'journey',
+                    layer: 'journey-voyage',
                     opacity: 1,
                     duration: 300
                 }
@@ -475,7 +496,7 @@ var config = {
             callback: 'sea5Marker',
             onChapterEnter: [
                 {
-                    layer: 'journey',
+                    layer: 'journey-voyage',
                     opacity: 1,
                     duration: 300
                 }
@@ -505,7 +526,7 @@ var config = {
             callback: 'sea6Marker',
             onChapterEnter: [
                 {
-                    layer: 'journey',
+                    layer: 'journey-voyage',
                     opacity: 1,
                     duration: 300
                 }
@@ -535,7 +556,7 @@ var config = {
             callback: 'sea7Marker',
             onChapterEnter: [
                 {
-                    layer: 'journey',
+                    layer: 'journey-voyage',
                     opacity: 1,
                     duration: 300
                 }
@@ -565,7 +586,7 @@ var config = {
             callback: 'sea8Marker',
             onChapterEnter: [
                 {
-                    layer: 'journey',
+                    layer: 'journey-voyage',
                     opacity: 1,
                     duration: 300
                 }
@@ -595,7 +616,7 @@ var config = {
             callback: 'sea9Marker',
             onChapterEnter: [
                 {
-                    layer: 'journey',
+                    layer: 'journey-voyage',
                     opacity: 1,
                     duration: 300
                 }
@@ -625,7 +646,7 @@ var config = {
             callback: 'sea10Marker',
             onChapterEnter: [
                 {
-                    layer: 'journey',
+                    layer: 'journey-voyage',
                     opacity: 1,
                     duration: 300
                 }
@@ -655,7 +676,7 @@ var config = {
             callback: 'sea11Marker',
             onChapterEnter: [
                 {
-                    layer: 'journey',
+                    layer: 'journey-voyage',
                     opacity: 1,
                     duration: 300
                 }
@@ -685,7 +706,7 @@ var config = {
             callback: 'plymouthBayMarker',
             onChapterEnter: [
                 {
-                    layer: 'journey',
+                    layer: 'journey-voyage',
                     opacity: 1,
                     duration: 300
                 }
@@ -715,8 +736,13 @@ var config = {
             callback: 'plymouthMarker',
             onChapterEnter: [
                 {
-                    layer: 'journey',
+                    layer: 'journey-voyage',
                     opacity: 1,
+                    duration: 300
+                },
+                {
+                    layer: 'routeStone-away',
+                    opacity: 0,
                     duration: 300
                 }
             ],
@@ -745,7 +771,12 @@ var config = {
             callback: 'yarnfieldMarker',
             onChapterEnter: [
                 {
-                    layer: 'journey',
+                    layer: 'journey-voyage',
+                    opacity: 0,
+                    duration: 300
+                },
+                {
+                    layer: 'routeStone-away',
                     opacity: 1,
                     duration: 300
                 }
@@ -775,7 +806,7 @@ var config = {
             callback: 'yarnfieldMarker',
             onChapterEnter: [
                 {
-                    layer: 'journey',
+                    layer: 'routeStone-away',
                     opacity: 1,
                     duration: 300
                 }
@@ -805,7 +836,7 @@ var config = {
             callback: 'yarnfieldMarker',
             onChapterEnter: [
                 {
-                    layer: 'journey',
+                    layer: 'routeStone-away',
                     opacity: 0,
                     duration: 300
                 }
@@ -4065,14 +4096,14 @@ var config = {
             callback: 'yarnfieldMarker',
             onChapterEnter: [
                 {
-                    layer: 'routeStone',
+                    layer: 'routeStone-home',
                     opacity: 1,
                     duration: 300
                 }
             ],
             onChapterExit: [
                 {
-                    layer: 'routeStone',
+                    layer: 'routeStone-home',
                     opacity: 0,
                     duration: 300
                 }
