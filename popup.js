@@ -38,20 +38,20 @@ map.on('mouseleave', 'newyork-docks', () => {
 
 //var iClick = 0;
 map.on('click', 'newyork-docks', () => {
-	if(iClick === 0){
+	const paintProperty = map.getPaintProperty('newyork-docks', 'line-opacity');
+	if(iClick === 0 && paintProperty > 0){
 		map.flyTo({
 			center: kilmer,
 			zoom: 13
 		});
 		iClick = 1;
-	} else {
+	} else if (paintProperty > 0){
 		map.flyTo({
 			center: newyork,
 			zoom: 10
 		});
 		iClick = 0;
 	};
-	console.log(iClick);
 });
 
 // From Marston Moor hover popup
@@ -78,13 +78,14 @@ map.on('mouseleave', 'fromMarstonMoor', () => {
 });
 
 map.on('click', 'fromMarstonMoor', () => {
-	if(iClick === 0){
+	const paintProperty = map.getPaintProperty('fromMarstonMoor', 'line-opacity');
+	if(iClick === 0 && paintProperty > 0){
 		map.flyTo({
 			center: marstonmoor,
 			zoom: 13
 		});
 		iClick = 1;
-	} else {
+	} else if (paintProperty > 0){
 		map.flyTo({
 			center: mendlesham,
 			zoom: 13
@@ -117,13 +118,14 @@ map.on('mouseleave', 'toMarstonMoor', () => {
 });
 
 map.on('click', 'toMarstonMoor', () => {
-	if(iClick === 0){
+	const paintProperty = map.getPaintProperty('toMarstonMoor', 'line-opacity');
+	if(iClick === 0 && paintProperty > 0){
 		map.flyTo({
 			center: marstonmoor,
 			zoom: 13
 		});
 		iClick = 1;
-	} else {
+	} else if (paintProperty > 0){
 		map.flyTo({
 			center: bitterfeld,
 			zoom: 9
@@ -156,7 +158,7 @@ map.on('mouseleave', 'fromBrussels', () => {
 });
 
 map.on('click', 'fromBrussels', () => {
-	const paintProperty = map.getPaintProperty('toBrussels', 'line-opacity');
+	const paintProperty = map.getPaintProperty('fromBrussels', 'line-opacity');
 	if(iClick === 0 && paintProperty > 0){
 		map.flyTo({
 			center: brussels,
