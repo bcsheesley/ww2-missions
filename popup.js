@@ -156,13 +156,14 @@ map.on('mouseleave', 'fromBrussels', () => {
 });
 
 map.on('click', 'fromBrussels', () => {
-	if(iClick === 0){
+	const paintProperty = map.getPaintProperty('toBrussels', 'line-opacity');
+	if(iClick === 0 && paintProperty > 0){
 		map.flyTo({
 			center: brussels,
 			zoom: 13
 		});
 		iClick = 1;
-	} else {
+	} else if (paintProperty > 0){
 		map.flyTo({
 			center: mendlesham,
 			zoom: 13
@@ -195,13 +196,14 @@ map.on('mouseleave', 'toBrussels', () => {
 });
 
 map.on('click', 'toBrussels', () => {
-	if(iClick === 0){
+	const paintProperty = map.getPaintProperty('toBrussels', 'line-opacity');
+	if (iClick === 0 && paintProperty > 0){
 		map.flyTo({
 			center: brussels,
 			zoom: 13
 		});
 		iClick = 1;
-	} else {
+	} else if (paintProperty > 0){
 		map.flyTo({
 			center: cottbus,
 			zoom: 9
