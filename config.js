@@ -2591,6 +2591,11 @@ var config = {
                     layer: 'recall',
                     opacity: 0,
                     duration: 300
+                },
+                {
+                    layer: 'belgium-mask',
+                    opacity: 0.6,
+                    duration: 300
                 }
             ],
             onChapterExit: []
@@ -2653,11 +2658,6 @@ var config = {
                     layer: 'toBrussels',
                     opacity: 0,
                     duration: 300
-                },
-                {
-                    layer: 'belgium-mask',
-                    opacity: 0.6,
-                    duration: 300
                 }
             ]
         },
@@ -2697,6 +2697,11 @@ var config = {
                     layer: 'fromBrussels',
                     opacity: 1,
                     duration: 300
+                },
+                {
+                    layer: 'belgium-mask',
+                    opacity: 0,
+                    duration: 300
                 }
             ],
             onChapterExit: [
@@ -2728,7 +2733,13 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: 'mendleshamMarker',
-            onChapterEnter: [],
+            onChapterEnter: [
+                {
+                    layer: 'belgium-mask',
+                    opacity: 0.6,
+                    duration: 300
+                }
+            ],
             onChapterExit: []
         },
         {

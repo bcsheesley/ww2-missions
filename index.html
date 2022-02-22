@@ -36,6 +36,7 @@
 </div>
 
 <script>
+var iClick = 0;
 
 function gotoHero() {
   var hero = document.getElementById("story");
@@ -282,6 +283,7 @@ config.chapters.forEach((record, idx) => {
     
     itemLink.onclick = function() {
       var x = window.matchMedia("(max-width: 768px)");
+      iClick = 0;
       
       if(x.matches) {
       chapterListContainer.classList.toggle("activeState");
@@ -336,6 +338,11 @@ config.chapters.forEach((record, idx) => {
           'journey-home-boston',
           'line-opacity',
           0
+      );
+      map.setPaintProperty(
+          'belgium-mask',
+          'line-opacity',
+          0.6
       );
     }
 
@@ -703,6 +710,7 @@ map.on("load", function() {
           document.querySelector(highlightID).style.pointerEvents = 'auto';
         }
         
+        iClick = 0;
         //document.querySelector(highlightID).style.color = 'white';
         //document.querySelector(highlightID).style.fontWeight = '400';
     });

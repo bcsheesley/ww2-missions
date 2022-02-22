@@ -13,8 +13,8 @@ var popupClick = new mapboxgl.Popup({
 });
 
 // Journey hover popup
-map.on('mousemove', 'journey', (e) => {
-	const paintProperty = map.getPaintProperty('journey', 'line-opacity');
+map.on('mousemove', 'newyork-docks', (e) => {
+	const paintProperty = map.getPaintProperty('newyork-docks', 'line-opacity');
 	const name = e.features[0].properties.name;
 	const date = e.features[0].properties.date;
 	//console.log(paintProperty);
@@ -23,16 +23,35 @@ map.on('mousemove', 'journey', (e) => {
 		map.getCanvas().style.cursor = 'pointer';
 		
 		popupHover
-		.setHTML(`<h3>${name}</h3><p>${date}</p>`)
+		.setHTML(`<h3>${name}</h3><p>${date}</p><p><i>Click to fly between places...</i></p>`)
 		.addTo(map)
 		.setLngLat(e.lngLat)
 		.trackPointer();
 	}
 });
 
-map.on('mouseleave', 'journey', () => {
+map.on('mouseleave', 'newyork-docks', () => {
 	map.getCanvas().style.cursor = '';
 	popupHover.remove();
+});
+
+
+//var iClick = 0;
+map.on('click', 'newyork-docks', () => {
+	if(iClick === 0){
+		map.flyTo({
+			center: kilmer,
+			zoom: 13
+		});
+		iClick = 1;
+	} else {
+		map.flyTo({
+			center: newyork,
+			zoom: 10
+		});
+		iClick = 0;
+	};
+	console.log(iClick);
 });
 
 // From Marston Moor hover popup
@@ -46,7 +65,7 @@ map.on('mousemove', 'fromMarstonMoor', (e) => {
 		map.getCanvas().style.cursor = 'pointer';
 		
 		popupHover
-		.setHTML(`<h3>${name}</h3><p>${date}</p><p><i>Click to fly to Marston Moor...</i></p>`)
+		.setHTML(`<h3>${name}</h3><p>${date}</p><p><i>Click to fly between places...</i></p>`)
 		.addTo(map)
 		.setLngLat(e.lngLat)
 		.trackPointer();
@@ -59,10 +78,19 @@ map.on('mouseleave', 'fromMarstonMoor', () => {
 });
 
 map.on('click', 'fromMarstonMoor', () => {
-	map.flyTo({
-		center: marstonmoor,
-		zoom: 13
-	});
+	if(iClick === 0){
+		map.flyTo({
+			center: marstonmoor,
+			zoom: 13
+		});
+		iClick = 1;
+	} else {
+		map.flyTo({
+			center: mendlesham,
+			zoom: 13
+		});
+		iClick = 0;
+	};
 });
 
 // To Marston Moor hover popup
@@ -76,7 +104,7 @@ map.on('mousemove', 'toMarstonMoor', (e) => {
 		map.getCanvas().style.cursor = 'pointer';
 		
 		popupHover
-		.setHTML(`<h3>${name}</h3><p>${date}</p><p><i>Click to fly to Marston Moor...</i></p>`)
+		.setHTML(`<h3>${name}</h3><p>${date}</p><p><i>Click to fly between places...</i></p>`)
 		.addTo(map)
 		.setLngLat(e.lngLat)
 		.trackPointer();
@@ -89,10 +117,19 @@ map.on('mouseleave', 'toMarstonMoor', () => {
 });
 
 map.on('click', 'toMarstonMoor', () => {
-	map.flyTo({
-		center: marstonmoor,
-		zoom: 13
-	});
+	if(iClick === 0){
+		map.flyTo({
+			center: marstonmoor,
+			zoom: 13
+		});
+		iClick = 1;
+	} else {
+		map.flyTo({
+			center: bitterfeld,
+			zoom: 9
+		});
+		iClick = 0;
+	};
 });
 
 // From Brussels hover popup
@@ -106,7 +143,7 @@ map.on('mousemove', 'fromBrussels', (e) => {
 		map.getCanvas().style.cursor = 'pointer';
 		
 		popupHover
-		.setHTML(`<h3>${name}</h3><p>${date}</p>`)
+		.setHTML(`<h3>${name}</h3><p>${date}</p><p><i>Click to fly between places...</i></p>`)
 		.addTo(map)
 		.setLngLat(e.lngLat)
 		.trackPointer();
@@ -116,6 +153,22 @@ map.on('mousemove', 'fromBrussels', (e) => {
 map.on('mouseleave', 'fromBrussels', () => {
 	map.getCanvas().style.cursor = '';
 	popupHover.remove();
+});
+
+map.on('click', 'fromBrussels', () => {
+	if(iClick === 0){
+		map.flyTo({
+			center: brussels,
+			zoom: 13
+		});
+		iClick = 1;
+	} else {
+		map.flyTo({
+			center: mendlesham,
+			zoom: 13
+		});
+		iClick = 0;
+	};
 });
 
 // To Brussels hover popup
@@ -129,7 +182,7 @@ map.on('mousemove', 'toBrussels', (e) => {
 		map.getCanvas().style.cursor = 'pointer';
 		
 		popupHover
-		.setHTML(`<h3>${name}</h3><p>${date}</p><p><i>Click to fly to Brussels...</i></p>`)
+		.setHTML(`<h3>${name}</h3><p>${date}</p><p><i>Click to fly between places...</i></p>`)
 		.addTo(map)
 		.setLngLat(e.lngLat)
 		.trackPointer();
@@ -142,10 +195,19 @@ map.on('mouseleave', 'toBrussels', () => {
 });
 
 map.on('click', 'toBrussels', () => {
-	map.flyTo({
-		center: brussels,
-		zoom: 13
-	});
+	if(iClick === 0){
+		map.flyTo({
+			center: brussels,
+			zoom: 13
+		});
+		iClick = 1;
+	} else {
+		map.flyTo({
+			center: cottbus,
+			zoom: 9
+		});
+		iClick = 0;
+	};
 });
 
 // Pass1 to London hover popup - Away
