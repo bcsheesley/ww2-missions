@@ -735,7 +735,9 @@ const missionPopup = new mapboxgl.Popup({
     className: 'missionPopup'
     });
     
-el.addEventListener('mouseenter', () => missionPopup.addTo(map));
+el.addEventListener('mouseenter', () => {
+  missionPopup.addTo(map);
+});
 el.addEventListener('mouseleave', () => missionPopup.remove());
 el.addEventListener('touchstart', () => missionPopup.addTo(map));
 
@@ -839,7 +841,14 @@ function thirtyFiveMissions() {
 }
 
 function kilmerMarker() {
-  missionMarker.setLngLat(kilmer).addTo(map);
+  missionMarker.setLngLat(kilmer)
+  .setPopup(
+      missionPopup
+          .setHTML(
+              `<h3>Kilmer</h3>`
+          )
+  )
+  .addTo(map);
 }
 
 function sketch() {
@@ -847,7 +856,14 @@ function sketch() {
 };
 
 function newyorkMarker() {
-  missionMarker.setLngLat(newyork).addTo(map);
+  missionMarker.setLngLat(newyork)
+  .setPopup(
+      missionPopup
+          .setHTML(
+              `<h3>New York, NY</h3>`
+          )
+  )
+  .addTo(map);
 };
 
 function sea1Marker() {
@@ -913,7 +929,6 @@ function mendleshamMarker() {
               `<h3>Mendlesham Airfield</h3>`
           )
   )
-  .addTo(map);
   /*
   var schoolMarkerList = document.querySelectorAll('#schoolMarker');
   for (var i = 0, len = schoolMarkerList.length; i < len; i++) {
@@ -922,7 +937,11 @@ function mendleshamMarker() {
 };
 
 function berlinMarker() {
-    missionMarker.setLngLat(berlin).addTo(map);
+  missionMarker.setLngLat(berlin).addTo(map).setPopup(missionPopup
+    .setHTML(
+        `<h3>Berlin</h3>`
+    )
+  );
     /*
     map.once('moveend',() => {
         if (checkbox.checked == true){
@@ -931,10 +950,10 @@ function berlinMarker() {
         }
     });
     */
-    var learnMoreContainer = document.createElement('div');
-    learnMoreContainer.setAttribute('id', 'learnMore');
-    //var description = config.description;
-    //description.appendChild(learnMoreContainer);
+  var learnMoreContainer = document.createElement('div');
+  learnMoreContainer.setAttribute('id', 'learnMore');
+  //var description = config.description;
+  //description.appendChild(learnMoreContainer);
 };
 
 function darmstadtMarker() {

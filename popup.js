@@ -12,14 +12,16 @@ var popupClick = new mapboxgl.Popup({
 	maxWidth: '180px'
 });
 
-// Journey hover popup
+// From Kilmer hover popup
 map.on('mousemove', 'newyork-docks', (e) => {
 	const paintProperty = map.getPaintProperty('newyork-docks', 'line-opacity');
 	const name = e.features[0].properties.name;
 	const date = e.features[0].properties.date;
 	//console.log(paintProperty);
+	const checkOpen = missionPopup.isOpen();
+	//console.log(checkOpen);
 	
-	if (paintProperty > 0) {
+	if (paintProperty > 0 && checkOpen === false) {
 		map.getCanvas().style.cursor = 'pointer';
 		
 		popupHover
@@ -35,8 +37,6 @@ map.on('mouseleave', 'newyork-docks', () => {
 	popupHover.remove();
 });
 
-
-//var iClick = 0;
 map.on('click', 'newyork-docks', () => {
 	const paintProperty = map.getPaintProperty('newyork-docks', 'line-opacity');
 	if(iClick === 0 && paintProperty > 0){
@@ -450,12 +450,10 @@ let routeID = null;
 
 map.on('mousemove', 'routes', (e) => {
 	const paintProperty = map.getPaintProperty('routes', 'line-opacity');
-	
-	const isPopupOpen = popupClick.isOpen();
 	const name = e.features[0].properties.name;
-	//console.log(isPopupOpen);
+	const checkOpen = missionPopup.isOpen();
 	
-	if (isPopupOpen === false && paintProperty > 0) {
+	if (paintProperty > 0 && checkOpen === false) {
 		map.getCanvas().style.cursor = 'pointer';
 		
 		popupHover
@@ -567,11 +565,9 @@ map.on('click', 'routes', (e) => {
 // Recall route hover popup
 map.on('mouseenter', 'recall', (e) => {
 	const paintProperty = map.getPaintProperty('recall', 'line-opacity');
-
-	const isPopupOpen = popupClick.isOpen();
 	const name = e.features[0].properties.name;
 	
-	if (isPopupOpen === false && paintProperty > 0){	
+	if (paintProperty > 0){	
 		map.getCanvas().style.cursor = 'pointer';
 		
 		popupHover
