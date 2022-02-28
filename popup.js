@@ -25,7 +25,7 @@ map.on('mousemove', 'newyork-docks', (e) => {
 		map.getCanvas().style.cursor = 'pointer';
 		
 		popupHover
-		.setHTML(`<h3>${name}</h3><p>${date}</p><p><i>Click to fly between places...</i></p>`)
+		.setHTML(`<h3>${name}</h3><p>${date}</p><p><i>Click to view endpoints...</i></p>`)
 		.addTo(map)
 		.setLngLat(e.lngLat)
 		.trackPointer();
